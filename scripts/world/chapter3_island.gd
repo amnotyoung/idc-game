@@ -36,11 +36,11 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 	match dialogue_id:
 		"ch3_arrive", "ch3_arrive_early":
 			TrustManager.set_flag("ch3_arrived")
-			await get_tree().create_timer(0.5).timeout
+			# Mere와 먼저 대화할 수 있도록 자유 이동 — Ratu는 직접 다가가야 대화
 			if TrustManager.has_flag("sevusevu_prepared"):
-				DialogueManager.start("ch3_ratu_greet_prepared")
+				ratu.dialogue_id = "ch3_ratu_greet_prepared"
 			else:
-				DialogueManager.start("ch3_ratu_greet_basic")
+				ratu.dialogue_id = "ch3_ratu_greet_basic"
 		"ch3_sevusevu_good", "ch3_sevusevu_miss":
 			# 이제 Lani와 대화 가능
 			lani.dialogue_id = "ch3_village_talk"
