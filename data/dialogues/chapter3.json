@@ -198,6 +198,25 @@
       {"speaker": "Lani", "text": "우리 마을에 기술자가 한 명 있어요. Josua 삼촌이요. 배관 좀 알아요."},
       {"speaker": "Lani", "text": "10년 전에 수리 요청했는데 본부에서 '절차상 안 된다'고 했대요. 그래서 탱크가 녹슬었고요."},
       {"speaker": "Lani", "text": "마을 사람이 직접 고칠 수 있게만 해주면... 달라지긴 하겠네요."}
+    ],
+    "choices": [
+      {
+        "text": "\"Josua 삼촌을 운영위원회에 넣겠습니다. Lani 씨도 참여할 수 있어요?\"",
+        "effects": {"lani": 20},
+        "next": "ch3_lani_after_end"
+      },
+      {
+        "text": "\"참고하겠습니다.\"",
+        "effects": {"lani": 5},
+        "next": "ch3_lani_after_end"
+      }
+    ]
+  },
+
+  "ch3_lani_after_end": {
+    "lines": [
+      {"speaker": "Lani", "text": "...저도요?"},
+      {"speaker": "Lani", "text": "진짜 그러면... 네. 해볼게요."}
     ]
   },
 
