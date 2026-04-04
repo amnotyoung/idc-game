@@ -98,6 +98,26 @@
       { "speaker": "Mere", "text": "그러니까 승인 받아도, 주민들 신뢰가 없으면 소용없어요." },
       { "speaker": "",     "text": "Mere는 잠깐 창밖을 봤다." },
       { "speaker": "Mere", "text": "...같이 풀어볼 수 있을 것 같아요. 일단은." }
+    ],
+    "choices": [
+      {
+        "text": "\"Mere 씨가 현장을 더 잘 아시잖아요. 같이 전략을 짜볼 수 있을까요?\"",
+        "effects": { "mere": 15 },
+        "next": "ch1_mere_strategy"
+      },
+      {
+        "text": "\"알겠어요. 우선 정부 쪽부터 풀어볼게요.\"",
+        "effects": { "mere": 5 },
+        "next": "ch1_mere_strategy"
+      }
+    ]
+  },
+
+  "ch1_mere_strategy": {
+    "lines": [
+      { "speaker": "Mere", "text": "좋아요. 한 가지만 기억해요." },
+      { "speaker": "Mere", "text": "이 사업은 서류가 아니라 사람이에요. 수치만 맞추면 되는 게 아니거든요." },
+      { "speaker": "Mere", "text": "10년 전 실패한 이유가 바로 그거예요. 절차만 밟고, 사람은 안 봤어요." }
     ]
   },
 
