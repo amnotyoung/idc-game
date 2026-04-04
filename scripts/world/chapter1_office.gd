@@ -40,8 +40,14 @@ func _process(_delta: float) -> void:
 
 func _setup_free_roam() -> void:
 	# ── 전화기 상태 ──
+	var phone_label: Label = phone.get_node("Label")
 	if TrustManager.has_flag("ch4_tltb_contact") and not TrustManager.has_flag("ch4_sela_contacted"):
 		phone.dialogue_id = "ch4_sela_call"
+		phone_label.text = "[전화: Sela]"
+		phone_label.modulate = Color(1, 1, 0.4, 1)
+	elif TrustManager.has_flag("ch4_sela_contacted"):
+		phone.dialogue_id = ""
+		phone_label.text = "[전화기]"
 	else:
 		phone.dialogue_id = ""
 
