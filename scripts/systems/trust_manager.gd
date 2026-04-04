@@ -64,6 +64,15 @@ func load_game() -> void:
 func has_save() -> bool:
 	return FileAccess.file_exists(SAVE_PATH)
 
+func clear_save() -> void:
+	if FileAccess.file_exists(SAVE_PATH):
+		DirAccess.remove_absolute(SAVE_PATH)
+	_flags = {}
+	_trust = {
+		"timoci": 0, "ratu_josefa": 0, "mere": 0,
+		"james": 0, "lani": 0, "wati": 0,
+	}
+
 func check_ending() -> String:
 	var above_threshold = 0
 	for npc_id in _trust:
