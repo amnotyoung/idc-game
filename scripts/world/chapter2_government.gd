@@ -67,6 +67,10 @@ func _setup_floor3_state() -> void:
 	if not TrustManager.has_flag("ch2_timoci_met"):
 		timoci.dialogue_id = ""          # 접수처 통과 전 직접 접근 차단
 		receptionist.dialogue_id = "ch2_receptionist_2nd"
+	elif TrustManager.has_flag("ch4_consent_obtained"):
+		# 동의서 획득 후 — 새 상황 반영
+		timoci.dialogue_id = "ch2_timoci_after_consent"
+		receptionist.dialogue_id = "ch2_receptionist_after"
 	else:
 		# 면담 완료 후 재방문
 		if TrustManager.has_flag("ch2_meeting_frustrated"):
