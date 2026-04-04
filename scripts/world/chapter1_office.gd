@@ -44,12 +44,16 @@ func _setup_free_roam() -> void:
 	if not TrustManager.has_flag("wati_introduced"):
 		wati.dialogue_id = "ch1_wati_intro"
 	elif not TrustManager.has_flag("appointment_set"):
-		# 밖에 나갔다 돌아왔으면 Wati가 약속을 잡아놓은 상태
 		wati.dialogue_id = "ch1_wati_appointment_ready"
+	elif TrustManager.has_flag("ch3_visited") and not TrustManager.has_flag("ch2_timoci_met"):
+		# 정부청사 안 가고 섬부터 갔다 온 경우
+		wati.dialogue_id = "ch1_wati_island_first"
 	elif TrustManager.has_flag("ch2_timoci_met") and not TrustManager.has_flag("sevusevu_prepared"):
 		wati.dialogue_id = "ch3_wati_island_prep"
+	elif TrustManager.has_flag("sevusevu_prepared"):
+		wati.dialogue_id = "ch3_wati_island_idle"
 	else:
-		wati.dialogue_id = "ch3_wati_island_idle" if TrustManager.has_flag("sevusevu_prepared") else "ch1_wati_idle"
+		wati.dialogue_id = "ch1_wati_idle"
 	_exit_unlocked = true
 
 func _on_dialogue_ended(dialogue_id: String) -> void:
