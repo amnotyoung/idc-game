@@ -314,7 +314,7 @@
     ],
     "choices": [
       {
-        "text": "\"이번엔 마을이 직접 관리합니다. Lani와 Josua가 운영위원회에 참여해요.\"",
+        "text": "\"이번엔 마을이 직접 관리합니다. 마을 청년들이 운영위원회에 참여해요.\"",
         "effects": {"ratu_josefa": 10, "lani": 15},
         "next": "ch3_consent_sign"
       },
