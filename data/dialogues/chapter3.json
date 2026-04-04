@@ -175,5 +175,34 @@
     "lines": [
       {"speaker": "Ratu Josefa", "text": "기다리겠소."}
     ]
+  },
+
+  "ch3_mere_first": {
+    "lines": [
+      {"speaker": "Mere", "text": "아, 왔네요. 저도 어제 도착했어요."},
+      {"speaker": "Mere", "text": "여기 오래된 사업이라서 배경 좀 파봐야 할 것 같아서요."},
+      {"speaker": "Mere", "text": "Ratu Josefa는 만났어요? 어른한테 인사부터 해야 해요. 양고나 챙겼죠?"}
+    ]
+  },
+
+  "ch3_mere_after_ratu": {
+    "lines": [
+      {"speaker": "Mere", "text": "여기 사람들 말 잘 들어봐요. 서류엔 없는 얘기들이에요."},
+      {"speaker": "Mere", "text": "10년 전에 뭐가 잘못됐는지 직접 듣는 게 제일 빨라요."}
+    ]
+  },
+
+  "ch3_mere_after_good": {
+    "lines": [
+      {"speaker": "Mere", "text": "잘 됐네요. Ratu Josefa가 문 열어주는 사람 얼마 없어요."},
+      {"speaker": "Mere", "text": "토지청 서명 받으면 바로 연락하세요. 저는 여기서 좀 더 조사할게요."}
+    ]
+  },
+
+  "ch3_mere_after_neutral": {
+    "lines": [
+      {"speaker": "Mere", "text": "시간이 좀 걸릴 것 같네요."},
+      {"speaker": "Mere", "text": "주민들이랑 신뢰 쌓는 데 서두르지 마요."}
+    ]
   }
 }
