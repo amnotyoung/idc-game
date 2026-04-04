@@ -175,37 +175,59 @@ d.polygon([(TX-8, TY-2), (TX-14, TY-1), (TX-10, TY+2)], fill=(*TURTLE_SKIN, 160)
 # 배
 d.ellipse([TX-6, TY-2, TX+6, TY+4], fill=(*TURTLE_BELLY, 120))
 
-# ═══════════════════ 7. 모터보트 (수면 위) ═══════════════════
-BX, BY = 135, 52  # 수면 바로 위
-# 선체
-hull = [(BX-18, BY+8), (BX-20, BY+2), (BX-16, BY-2),
-        (BX+16, BY-2), (BX+20, BY+2), (BX+20, BY+7)]
-d.polygon(hull, fill=(*BOAT_HULL, 255))
-d.line([(BX-16, BY-2), (BX+16, BY-2)], fill=(*BOAT_LIGHT, 255), width=2)
-# 선내
-d.rectangle([BX-12, BY-1, BX+12, BY+4], fill=(*BOAT_INT, 255))
-# 앞유리
-d.polygon([(BX-8, BY-1), (BX-5, BY-6), (BX+5, BY-6), (BX+8, BY-1)],
-          fill=(*WINDSHIELD, 230))
-# 선외기
-d.rectangle([BX+18, BY, BX+24, BY+6], fill=(*MOTOR, 255))
-d.rectangle([BX+22, BY+6, BX+24, BY+10], fill=(*MOTOR, 255))
-# 물보라 (선미)
-for i in range(8):
-    wx = BX + 25 + i * 5
-    wy = BY + 4 + random.randint(-2, 2)
-    d.ellipse([wx, wy, wx+6, wy+4], fill=(*WAKE, 180 - i*18))
-# 뱃머리 물보라
-for i in range(4):
-    wx = BX - 22 - i * 3
-    wy = BY + 5 + i
-    d.ellipse([wx, wy, wx+4, wy+3], fill=(*FOAM, 150 - i*30))
+# ═══════════════════ 7. 모터보트 (나이탬바/수바 항구와 동일한 배) ═══════════════════
+# 나이탬바 보트와 동일 색상: 파란 유리섬유 선체
+HULL_DARK  = (28, 82, 148)
+HULL_LIGHT = (52, 112, 175)
+INTERIOR   = (218, 212, 200)
+MOTOR_B    = (48, 50, 55)
+MOTOR_A    = (38, 40, 44)
+WSHIELD    = (175, 212, 238)
 
-# 탑승자 실루엣 (2명)
-d.rectangle([BX-4, BY-10, BX-1, BY-2], fill=(35,35,42,230))
-d.rectangle([BX-5, BY-12, BX, BY-10], fill=(35,35,42,230))
-d.rectangle([BX+2, BY-9, BX+5, BY-2], fill=(35,35,42,230))
-d.rectangle([BX+1, BY-11, BX+6, BY-9], fill=(35,35,42,230))
+BX, BY = 135, 52  # 수면 바로 위
+# 선체 (뾰족한 배 형태 — 항구 보트와 동일 구조, 확대)
+hull = [
+    (BX-20, BY+8), (BX-22, BY+3), (BX-18, BY-2),
+    (BX+16, BY-2), (BX+20, BY+2), (BX+20, BY+7)
+]
+d.polygon(hull, fill=(*HULL_DARK, 255))
+# 상단 하이라이트
+d.line([(BX-18, BY-2), (BX+16, BY-2)], fill=(*HULL_LIGHT, 255), width=2)
+d.line([(BX-22, BY+3), (BX-18, BY-2)], fill=(*HULL_LIGHT, 255), width=1)
+# 선내 (베이지)
+d.rectangle([BX-14, BY, BX+14, BY+5], fill=(*INTERIOR, 255))
+# 앞유리 (조종석 바람막이 — 항구 보트와 동일)
+d.polygon([
+    (BX-10, BY), (BX-6, BY-5),
+    (BX+4, BY-5), (BX+8, BY)
+], fill=(*WSHIELD, 230))
+d.line([(BX-10, BY), (BX-6, BY-5)], fill=(120,160,195,255), width=1)
+d.line([(BX-6, BY-5), (BX+4, BY-5)], fill=(120,160,195,255), width=1)
+# 선외기 (오른쪽 끝 — 항구 보트와 동일)
+d.rectangle([BX+18, BY, BX+24, BY+6], fill=(*MOTOR_B, 255))
+d.rectangle([BX+22, BY+6, BX+24, BY+10], fill=(*MOTOR_A, 255))
+d.rectangle([BX+20, BY+9, BX+26, BY+11], fill=(*MOTOR_B, 255))  # 프로펠러
+
+# 물보라 (선외기 뒤)
+for i in range(10):
+    wx = BX + 27 + i * 5
+    wy = BY + 5 + random.randint(-2, 2)
+    alpha = max(40, 200 - i * 18)
+    d.ellipse([wx, wy, wx+7, wy+4], fill=(*WAKE, alpha))
+    d.ellipse([wx+1, wy-1, wx+5, wy+2], fill=(*FOAM, alpha))
+# 뱃머리 물살
+for i in range(5):
+    wx = BX - 24 - i * 4
+    wy = BY + 6 + i * 2
+    d.ellipse([wx, wy, wx+5, wy+3], fill=(*FOAM, 160 - i*28))
+
+# 탑승자 실루엣 (주인공 + 뱃사공)
+# 뱃사공 (선외기 쪽)
+d.rectangle([BX+10, BY-8, BX+14, BY], fill=(35,35,42,230))
+d.rectangle([BX+9, BY-10, BX+15, BY-8], fill=(35,35,42,230))
+# 주인공 (KODA 파란 셔츠 — 앞쪽)
+d.rectangle([BX-6, BY-9, BX-2, BY], fill=(30,80,160,230))  # 파란 셔츠
+d.rectangle([BX-7, BY-12, BX-1, BY-9], fill=(30,20,10,230))  # 머리
 
 # ═══════════════════ 8. 바다새 ═══════════════════
 def draw_bird(bx, by, size=6, open=True):
