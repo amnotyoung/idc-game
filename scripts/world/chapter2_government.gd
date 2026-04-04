@@ -103,7 +103,8 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			_exit_to_street()
 		"ch2_enter_building":
 			TrustManager.set_flag("ch2_arrived")
-			_show_elevator()
+			# 첫 방문은 약속대로 바로 3층 → 접수처
+			_show_floor3()
 		# ── 엘레베이터 ──
 		"ch2_elevator_floor3":
 			_show_floor3()
