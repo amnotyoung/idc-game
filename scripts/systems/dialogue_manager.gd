@@ -1,0 +1,80 @@
+extends Node
+
+signal dialogue_started
+signal dialogue_line_changed(line: Dictionary)
+signal dialogue_choices_presented(choices: Array)
+signal dialogue_ended
+
+var dialogues: Dictionary = {}
+var current_dialogue: Dictionary = {}
+var current_line_index: int = 0
+var is_active: bool = false
+
+const DIALOGUE_FILES = [
+	"res://data/dialogues/chapter1.json"
+]
+
+func _ready() -> void:
+	_load_dialogues()
+
+func _load_dialogues() -> void:
+	for path in DIALOGUE_FILES:
+		var file = FileAccess.open(path, FileAccess.READ)
+		if not file:
+			push_error("Dialogue file not found: " + path)
+			continue
+		var json = JSON.new()
+		var err = json.parse(file.get_as_text())
+		if err != OK:
+			push_error("Failed to parse dialogue: " + path)
+			continue
+		dialogues.merge(json.get_data())
+
+func start(dialogue_id: String) -> void:
+	if not dialogues.has(dialogue_id):
+		push_error("Dialogue not found: " + dialogue_id)
+		return
+	current_dialogue = dialogues[dialogue_id]
+	current_line_index = 0
+	is_active = true
+	emit_signal("dialogue_started")
+	_show_current_line()
+
+func _show_current_line() -> void:
+	var lines: Array = current_dialogue.get("lines", [])
+	if current_line_index >= lines.size():
+		# 모든 라인 끝 — 선택지 또는 종료
+		var choices: Array = current_dialogue.get("choices", [])
+		if choices.size() > 0:
+			emit_signal("dialogue_choices_presented", choices)
+		else:
+			end()
+		return
+	emit_signal("dialogue_line_changed", lines[current_line_index])
+
+func advance() -> void:
+	if not is_active:
+		return
+	current_line_index += 1
+	_show_current_line()
+
+func choose(choice_index: int) -> void:
+	var choices: Array = current_dialogue.get("choices", [])
+	if choice_index >= choices.size():
+		return
+	var choice = choices[choice_index]
+	# 신뢰도 효과 적용
+	var effects: Dictionary = choice.get("effects", {})
+	for npc_id in effects:
+		TrustManager.modify(npc_id, effects[npc_id])
+	# 다음 대화로 이동
+	var next_id: String = choice.get("next", "")
+	end()
+	if next_id != "":
+		start(next_id)
+
+func end() -> void:
+	is_active = false
+	current_dialogue = {}
+	current_line_index = 0
+	emit_signal("dialogue_ended")

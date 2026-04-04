@@ -6,7 +6,7 @@
 
 config/name="Aid World"
 config/description="A game about international development cooperation set in Fiji."
-run/main_scene=""
+run/main_scene="res://scenes/world/chapter1_office.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://assets/sprites/ui/icon.svg"
 
@@ -18,6 +18,11 @@ window/size/window_width_override=960
 window/size/window_height_override=540
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep"
+
+[autoload]
+
+DialogueManager="*res://scripts/systems/dialogue_manager.gd"
+TrustManager="*res://scripts/systems/trust_manager.gd"
 
 [rendering]
 
