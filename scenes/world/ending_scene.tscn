@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/tilesets/office_bg.png" id="1"]
+[ext_resource type="Script" path="res://scripts/world/chapter5_ending.gd" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/dialogue_box.tscn" id="3"]
+[ext_resource type="AudioStream" path="res://assets/music/bgm_office.wav" id="4"]
+
+; ─── 루트 ───
+[node name="EndingScene" type="Node2D"]
+
+; ─── 배경 (컷씬 중 전환됨) ───
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+texture = ExtResource("1")
+texture_filter = 1
+
+; ─── BGM ───
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4")
+autoplay = true
+volume_db = -6.0
+
+; ─── 엔딩 컨트롤러 ───
+[node name="EndingController" type="Node" parent="."]
+script = ExtResource("2")
+
+; ─── 대화창 UI ───
+[node name="DialogueBox" parent="." instance=ExtResource("3")]
