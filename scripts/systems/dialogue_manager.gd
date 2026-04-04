@@ -94,9 +94,15 @@ func choose(choice_index: int) -> void:
 		TrustManager.modify(npc_id, effects[npc_id])
 	# 다음 대화로 이동
 	var next_id: String = choice.get("next", "")
-	end()
 	if next_id != "":
-		start(next_id)
+		# next가 있으면 end() 없이 바로 전환 (대화창 깜빡임 방지)
+		current_dialogue = dialogues[next_id] if dialogues.has(next_id) else {}
+		current_dialogue_id = next_id
+		current_line_index = 0
+		_visible_choices = []
+		_show_current_line()
+	else:
+		end()
 
 func end() -> void:
 	is_active = false
