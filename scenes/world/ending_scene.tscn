@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=12 format=3]
 
 [ext_resource type="Texture2D" path="res://assets/sprites/tilesets/office_bg.png" id="1"]
 [ext_resource type="Script" path="res://scripts/world/chapter5_ending.gd" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/ui/dialogue_box.tscn" id="3"]
 [ext_resource type="AudioStream" path="res://assets/music/bgm_office.wav" id="4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/mere.png" id="mere_tex"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/timoci.png" id="timoci_tex"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/james.png" id="james_tex"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/sela.png" id="sela_tex"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/player.png" id="player_tex"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/ratu_josefa.png" id="ratu_tex"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/lani.png" id="lani_tex"]
 
 ; ─── 루트 ───
 [node name="EndingScene" type="Node2D"]
@@ -19,6 +26,65 @@ texture_filter = 1
 stream = ExtResource("4")
 autoplay = true
 volume_db = -6.0
+
+; ─── 회의 참석자 스프라이트들 (테이블 주변 배치) ───
+[node name="Attendees" type="Node2D" parent="."]
+
+; 주인공 (중앙 아래, 뒷모습)
+[node name="Player" type="Sprite2D" parent="Attendees"]
+position = Vector2(160, 120)
+texture = ExtResource("player_tex")
+region_enabled = true
+region_rect = Rect2(48, 0, 16, 16)
+texture_filter = 1
+
+; Mere (좌측 — 주인공 옆)
+[node name="Mere" type="Sprite2D" parent="Attendees"]
+position = Vector2(120, 105)
+texture = ExtResource("mere_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
+; Timoci (우측 앞)
+[node name="Timoci" type="Sprite2D" parent="Attendees"]
+position = Vector2(200, 100)
+texture = ExtResource("timoci_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
+; James (우측 뒤)
+[node name="James" type="Sprite2D" parent="Attendees"]
+position = Vector2(230, 90)
+texture = ExtResource("james_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
+; Sela (우측 중간)
+[node name="Sela" type="Sprite2D" parent="Attendees"]
+position = Vector2(250, 105)
+texture = ExtResource("sela_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
+; Ratu Josefa (좌측 뒤 — 화상 아닌 직접 참석)
+[node name="RatuJosefa" type="Sprite2D" parent="Attendees"]
+position = Vector2(80, 90)
+texture = ExtResource("ratu_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
+; Lani (좌측 중간)
+[node name="Lani" type="Sprite2D" parent="Attendees"]
+position = Vector2(100, 110)
+texture = ExtResource("lani_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
 
 ; ─── 엔딩 컨트롤러 ───
 [node name="EndingController" type="Node" parent="."]
