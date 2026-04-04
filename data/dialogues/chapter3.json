@@ -248,7 +248,26 @@
   "ch3_mere_after_good": {
     "lines": [
       {"speaker": "Mere", "text": "잘 됐네요. Ratu Josefa가 문 열어주는 사람 얼마 없어요."},
-      {"speaker": "Mere", "text": "토지청 서명 받으면 바로 연락하세요. 저는 여기서 좀 더 조사할게요."}
+      {"speaker": "Mere", "text": "제 조사 결과 공유할게요 — 마을 청년 중에 배관 기술자가 있어요. Josua라는 사람이요."},
+      {"speaker": "Mere", "text": "이 사람을 운영위원회에 넣으면 유지보수 문제가 풀려요."}
+    ],
+    "choices": [
+      {
+        "text": "\"Mere 씨 덕분에 그림이 그려져요. 정말 감사해요.\"",
+        "effects": { "mere": 15 },
+        "next": "ch3_mere_after_good_end"
+      },
+      {
+        "text": "\"알겠어요. 참고할게요.\"",
+        "effects": { "mere": 5 },
+        "next": "ch3_mere_after_good_end"
+      }
+    ]
+  },
+
+  "ch3_mere_after_good_end": {
+    "lines": [
+      {"speaker": "Mere", "text": "토지청 가서 Sela 만나보세요. 저는 여기서 좀 더 조사할게요."}
     ]
   },
 
