@@ -40,6 +40,8 @@ func _on_choices_presented(choices: Array) -> void:
 	for i in choices.size():
 		var btn := Button.new()
 		btn.text = choices[i].get("text", "")
+		btn.add_theme_font_size_override("font_size", 7)
+		btn.custom_minimum_size = Vector2(0, 14)
 		btn.pressed.connect(func(): DialogueManager.choose(i))
 		choices_container.add_child(btn)
 	choices_container.visible = true
