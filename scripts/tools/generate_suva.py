@@ -317,23 +317,58 @@ d.line([185, 40, 248, 40], fill=(*COL_TRIM, 255), width=2)
 d.line([185, 60, 248, 60], fill=(*COL_TRIM, 255), width=1)
 
 # ════════════════════════════════
-# 9. 배경 추가 건물들 (원경, y=55~70)
+# 9. 국제기구 사무소 — Kadavu House 스타일
+#    6층 콘크리트 빌딩, UN 간판, x=268~320, y=8~72
 # ════════════════════════════════
-# 우단 추가 건물 (국제기구 사무소)
-d.rectangle([270, 45, 320, 72], fill=(215, 195, 168, 255))
-for i in range(4):
-    shade = (148, 115, 75) if i%2==0 else (128, 95, 58)
-    d.rectangle([270, 42+i, 320, 44+i], fill=(*shade, 255))
-for wy in range(48, 65, 7):
-    for wx in [274, 285, 307]:
-        d.rectangle([wx, wy, wx+8, wy+5], fill=(*WIN_GLASS, 200))
-# 국제기구 사무소 문 (x=283~297, center=290)
-d.rectangle([283, 62, 297, 72], fill=(*DOOR_W, 255))
-d.rectangle([283, 62, 290, 72], fill=(*DOOR_D, 200))  # 문 그림자
-# 국제기구 간판
-d.rectangle([271, 45, 319, 50], fill=(68, 98, 148, 255))
-for sx in [275, 283, 291, 299, 307]:
-    d.rectangle([sx, 46, sx+4, 49], fill=(230, 235, 245, 255))
+UN_CONC   = (215, 210, 198, 255)   # 크림색 콘크리트
+UN_BAND   = (188, 182, 170, 255)   # 층간 슬래브
+UN_SIDE   = (175, 168, 155, 255)   # 측면 기둥 그림자
+UN_WIN    = (118, 155, 185, 255)   # 창문 유리
+UN_WIN_F  = (95, 90, 82, 255)     # 창문 프레임
+UN_BLUE   = (42, 88, 155, 255)    # UN 파랑
+UN_CANOPY = (38, 42, 52, 255)     # 입구 캐노피
+
+# 건물 본체
+d.rectangle([268, 8, 320, 72], fill=UN_CONC)
+
+# 좌측 수직 기둥 (세로 돌출부)
+d.rectangle([268, 8, 273, 72], fill=UN_SIDE)
+# 우측 기둥 (화면 가장자리)
+d.rectangle([316, 8, 320, 72], fill=UN_SIDE)
+
+# 6개 층 슬래브선 (수평 콘크리트 띠)
+for fy in [8, 18, 28, 38, 48, 58]:
+    d.rectangle([268, fy, 320, fy+2], fill=UN_BAND)
+
+# 창문 그리드 (5개 층, 각 층 4~5개 창)
+for fy in [12, 22, 32, 42, 52]:
+    for wx in [275, 283, 291, 299, 308]:
+        d.rectangle([wx, fy, wx+6, fy+4], fill=UN_WIN_F)
+        d.rectangle([wx+1, fy+1, wx+5, fy+3], fill=UN_WIN)
+
+# UN 간판 (좌측 상단 — 파란 직사각형 + 흰 텍스트)
+d.rectangle([269, 12, 281, 18], fill=UN_BLUE)
+for sx in [271, 274, 277]:
+    d.rectangle([sx, 14, sx+2, 16], fill=(230, 235, 245, 255))
+
+# 1층 입구 캐노피 (어두운 처마)
+d.rectangle([278, 64, 310, 68], fill=UN_CANOPY)
+d.rectangle([280, 68, 308, 72], fill=UN_CANOPY)
+# 입구 유리문 (center=290)
+d.rectangle([283, 66, 297, 72], fill=(85, 128, 165, 255))
+d.line([(290, 66), (290, 72)], fill=UN_WIN_F, width=1)  # 문 중앙선
+# 입구 위 UN 간판
+d.rectangle([282, 63, 298, 66], fill=UN_BLUE)
+for sx in [284, 288, 292]:
+    d.rectangle([sx, 64, sx+2, 65], fill=(230, 235, 245, 255))
+
+# 옥상 처리 (평지붕 + 난간)
+d.rectangle([268, 8, 320, 10], fill=UN_BAND)
+
+# 건물 앞 야자수 (작은 팬 팜)
+d.rectangle([271, 48, 273, 63], fill=(*PAL_TRK, 255))
+for lx, ly in [(-4,-6),(-2,-8),(1,-9),(4,-7),(6,-4)]:
+    d.ellipse([272+lx-2, 48+ly-2, 272+lx+3, 48+ly+3], fill=(*PAL_GR, 255))
 
 # ════════════════════════════════
 # 10. 인도 (y=72~82)
