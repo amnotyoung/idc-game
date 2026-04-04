@@ -12,8 +12,10 @@ func _ready() -> void:
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
 	if not TrustManager.has_flag("ch4_visited"):
-		# 첫 방문 — Timoci 면담 여부로 입장 분기
-		if TrustManager.has_flag("ch2_timoci_met"):
+		# 정부청사 연결 OR 섬 주민 신뢰(good ending) 중 하나면 입장 가능
+		var has_referral = TrustManager.has_flag("ch2_timoci_met")
+		var has_community = TrustManager.has_flag("ch3_good_ending")
+		if has_referral or has_community:
 			DialogueManager.start("ch4_receptionist_intro")
 		else:
 			DialogueManager.start("ch4_no_connection")
