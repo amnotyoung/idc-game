@@ -102,3 +102,4 @@ func _update_village_npcs() -> void:
 	elif TrustManager.has_flag("ch3_good_ending"):
 		if elder: elder.dialogue_id = "island_elder_after"
 		if fisher: fisher.dialogue_id = "island_fisher_after"
+		if woman: woman.dialogue_id = "island_woman_after"
