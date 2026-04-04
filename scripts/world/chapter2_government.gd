@@ -6,6 +6,7 @@ extends Node
 @onready var sela: CharacterBody2D = get_parent().get_node("Sela")
 @onready var bg: Sprite2D = get_parent().get_node("Background")
 
+const LOBBY_BG  = preload("res://assets/sprites/tilesets/lobby_bg.png")
 const FLOOR3_BG = preload("res://assets/sprites/tilesets/government_bg.png")
 const FLOOR5_BG = preload("res://assets/sprites/tilesets/landoffice_bg.png")
 const STREET_SCENE = "res://scenes/world/suva_street.tscn"
