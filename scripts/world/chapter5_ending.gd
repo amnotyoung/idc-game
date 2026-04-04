@@ -34,6 +34,9 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			_show_ending()
 		"ch5_ending_true", "ch5_ending_normal", "ch5_ending_bad":
 			await get_tree().create_timer(1.5).timeout
+			_show_report_card()
+		"ch5_report":
+			await get_tree().create_timer(1.0).timeout
 			DialogueManager.start("ch5_credits")
 		"ch5_credits":
 			TrustManager.set_flag("game_complete")
