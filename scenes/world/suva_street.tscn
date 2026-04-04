@@ -219,9 +219,9 @@ texture_filter = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StreetNPCs/Vendor"]
 shape = SubResource("npc_col")
 
-; NPC 4 — 경찰 (KODA~정부청사 사이 고정)
+; NPC 4 — 경찰 (Parliament 앞 순찰)
 [node name="Police" type="CharacterBody2D" parent="StreetNPCs"]
-position = Vector2(118, 80)
+position = Vector2(200, 82)
 script = ExtResource("7")
 dialogue_id = "police_1"
 walk_range = 18.0
