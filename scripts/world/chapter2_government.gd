@@ -32,7 +32,8 @@ func _ready() -> void:
 	_show_elevator()
 
 func _show_elevator() -> void:
-	# 모든 NPC 숨기고 엘레베이터 선택
+	# 로비 배경 + 모든 NPC 숨기고 엘리베이터 선택
+	bg.texture = LOBBY_BG
 	_hide_all_npcs()
 	DialogueManager.start("ch2_elevator")
 
