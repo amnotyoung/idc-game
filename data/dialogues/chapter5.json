@@ -3,9 +3,13 @@
     "lines": [
       {"speaker": "", "text": "— KODA 사무소, 최종 협의 —"},
       {"speaker": "", "text": "좁은 회의실에 의자가 빼곡하다."},
-      {"speaker": "", "text": "Timoci(국가계획부)가 서류 가방을 내려놓았다. Sela(토지청)가 옆자리에 앉았다."},
-      {"speaker": "", "text": "James(APAT, 호주태평양기술지원기구)가 문을 열고 들어왔다. Mere는 이미 와서 현장 리포트를 펼쳐놓고 있다."},
-      {"speaker": "", "text": "이 사업에 관계된 모든 사람이 처음으로 한 방에 모였다."}
+      {"speaker": "", "text": "테이블 한쪽에 커피, Milo, 비스킷이 놓여 있다. 피지에서 회의는 이렇게 시작한다."},
+      {"speaker": "", "text": "Timoci(국가계획부)가 서류 가방을 내려놓고 Milo를 한 잔 따랐다."},
+      {"speaker": "", "text": "Sela(토지청)가 옆자리에 앉았다. James(APAT, 호주태평양기술지원기구)가 문을 열고 들어왔다."},
+      {"speaker": "", "text": "Ratu Josefa와 Lani가 나이탬바에서 올라왔다. Mere가 자리를 안내했다."},
+      {"speaker": "", "text": "이 사업에 관계된 모든 사람이 처음으로 한 방에 모였다."},
+      {"speaker": "Mere", "text": "커피 있어요. Milo도 있고요. 드시면서 하죠."},
+      {"speaker": "", "text": "잠깐의 tea time. 어색한 공기가 조금씩 풀렸다."}
     ]
   },
 
