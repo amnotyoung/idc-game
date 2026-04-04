@@ -52,7 +52,13 @@ func _show_current_line() -> void:
 		# 모든 라인 끝 — 선택지 또는 종료
 		var choices: Array = current_dialogue.get("choices", [])
 		if choices.size() > 0:
-			emit_signal("dialogue_choices_presented", choices)
+			# condition 필드 있는 선택지는 해당 플래그 있을 때만 표시
+			var visible: Array = []
+			for c in choices:
+				var cond: String = c.get("condition", "")
+				if cond == "" or TrustManager.has_flag(cond):
+					visible.append(c)
+			emit_signal("dialogue_choices_presented", visible)
 		else:
 			end()
 		return
