@@ -92,4 +92,5 @@ func end() -> void:
 	current_dialogue = {}
 	current_dialogue_id = ""
 	current_line_index = 0
+	_visible_choices = []
 	emit_signal("dialogue_ended", ended_id)
