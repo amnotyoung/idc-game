@@ -43,7 +43,7 @@
 
   "street_vendor_yangona": {
     "lines": [
-      { "speaker": "상인", "text": "Bula bro! 오늘은 뭐 필요해요?" }
+      { "speaker": "상인", "text": "Bula bro! Damodar City에서 뭐 찾으세요?" }
     ],
     "choices": [
       {
