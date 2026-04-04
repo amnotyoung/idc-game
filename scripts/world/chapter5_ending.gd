@@ -128,5 +128,5 @@ func _show_report_card() -> void:
 			label = "Bad Ending — 10년 전의 반복"
 	lines.append({"speaker": "", "text": label})
 
-	DialogueManager.all_dialogues["ch5_report"] = {"lines": lines}
+	DialogueManager.dialogues["ch5_report"] = {"lines": lines}
 	DialogueManager.start("ch5_report")
