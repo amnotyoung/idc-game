@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3]
+[gd_scene load_steps=16 format=3]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/npc/npc_base.gd" id="2"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/world/chapter1_office.gd" id="4"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/player.png" id="5"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/mere.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/sprites/tilesets/office_bg.png" id="7"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(10, 12)
@@ -31,32 +32,11 @@ size = Vector2(10, 160)
 ; ─── 루트 씬 ───
 [node name="Chapter1Office" type="Node2D"]
 
-; ─── 배경: Node2D 기반 드로우 ───
-[node name="Floor" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(0, 0, 320, 0, 320, 180, 0, 180)
-color = Color(0.78, 0.71, 0.55, 1)
-
-[node name="Desk" type="Polygon2D" parent="."]
-position = Vector2(60, 60)
-polygon = PackedVector2Array(0, 0, 70, 0, 70, 20, 0, 20)
-color = Color(0.55, 0.38, 0.22, 1)
-
-; ─── 벽 시각 ───
-[node name="WallTop" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(0, 0, 320, 0, 320, 10, 0, 10)
-color = Color(0.35, 0.28, 0.20, 1)
-
-[node name="WallBottom" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(0, 170, 320, 170, 320, 180, 0, 180)
-color = Color(0.35, 0.28, 0.20, 1)
-
-[node name="WallLeft" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(0, 0, 10, 0, 10, 180, 0, 180)
-color = Color(0.35, 0.28, 0.20, 1)
-
-[node name="WallRight" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(310, 0, 320, 0, 320, 180, 310, 180)
-color = Color(0.35, 0.28, 0.20, 1)
+; ─── 배경 이미지 ───
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+texture = ExtResource("7")
+texture_filter = 1
 
 ; ─── 벽 충돌체 ───
 [node name="Walls" type="Node2D" parent="."]
