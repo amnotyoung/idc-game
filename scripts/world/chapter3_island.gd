@@ -18,8 +18,23 @@ func _ready() -> void:
 			# 정부청사 안 가고 섬부터 온 경우
 			DialogueManager.start("ch3_arrive_early")
 	elif TrustManager.has_flag("ch3_visited"):
-		# 재방문 — 결말에 따라 복원
-		if TrustManager.has_flag("ch3_good_ending"):
+		# 재방문 — 동의서 or 일반 복원
+		if TrustManager.has_flag("ch4_consent_obtained"):
+			# 동의서 이미 완료
+			ratu.dialogue_id = "ch3_consent_done"
+			lani.dialogue_id = "ch3_lani_after"
+			mere.dialogue_id = "ch3_mere_consent"
+		elif TrustManager.has_flag("ch4_sela_contacted") and TrustManager.has_flag("ch3_good_ending"):
+			# Sela 통화 완료 + good ending → 동의서 서명 가능
+			ratu.dialogue_id = "ch3_consent_ratu"
+			lani.dialogue_id = "ch3_lani_after"
+			mere.dialogue_id = "ch3_mere_after_good"
+		elif TrustManager.has_flag("ch4_sela_contacted") and not TrustManager.has_flag("ch3_good_ending"):
+			# Sela 통화 완료 + neutral ending → Ratu가 서명 거부
+			ratu.dialogue_id = "ch3_consent_ratu_neutral"
+			lani.dialogue_id = ""
+			mere.dialogue_id = "ch3_mere_after_neutral"
+		elif TrustManager.has_flag("ch3_good_ending"):
 			ratu.dialogue_id = "ch3_ratu_after"
 			lani.dialogue_id = "ch3_lani_after"
 			mere.dialogue_id = "ch3_mere_after_good"
