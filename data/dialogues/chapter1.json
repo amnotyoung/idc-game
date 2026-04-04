@@ -131,6 +131,12 @@
     ]
   },
 
+  "ch1_wati_waiting": {
+    "lines": [
+      {"speaker": "Wati", "text": "아직 Seru한테 답장 없어요. 기다려봐요."}
+    ]
+  },
+
   "ch1_wati_idle": {
     "lines": [
       {"speaker": "Wati", "text": "정부청사 가보셨어요? Timoci 씨는 3층이에요."}
