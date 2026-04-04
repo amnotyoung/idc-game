@@ -75,3 +75,8 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			ratu.dialogue_id = "ch3_ratu_after_neutral"
 			lani.dialogue_id = ""
 			TrustManager.save_game()
+		"ch3_consent_sign":
+			TrustManager.set_flag("ch4_consent_obtained")
+			ratu.dialogue_id = "ch3_consent_done"
+			mere.dialogue_id = "ch3_mere_consent"
+			TrustManager.save_game()
