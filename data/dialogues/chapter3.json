@@ -92,8 +92,8 @@
 
   "ch3_village_talk": {
     "lines": [
-      {"speaker": "Lani", "text": "저 물어봐도 돼요?"},
-      {"speaker": "Lani", "text": "이 사업 — 우리가 원하는 건지 물어본 적 있어요?"},
+      {"speaker": "Lani", "text": "...수바에서 온 사람이죠?"},
+      {"speaker": "Lani", "text": "하나만 물어볼게요. 이 사업 — 우리한테 물어본 적 있어요? 우리가 원하는 건지."},
       {"speaker": "Lani", "text": "뉴스에는 항상 '주민 수요 확인됨'이라고 나오던데."}
     ],
     "choices": [
