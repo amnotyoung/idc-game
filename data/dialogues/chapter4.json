@@ -193,6 +193,13 @@
     ]
   },
 
+  "ch4_james_endorsed_brief": {
+    "lines": [
+      {"speaker": "James", "text": "좋아요. 연락 기다리고 있을게요."},
+      {"speaker": "James", "text": "이번에 제대로 해보죠."}
+    ]
+  },
+
   "ch4_james_endorsed_neutral": {
     "lines": [
       {"speaker": "James", "text": "그럼 지켜보죠."},
