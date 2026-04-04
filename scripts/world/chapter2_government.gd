@@ -56,14 +56,17 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			TrustManager.set_flag("ch2_timoci_met")
 			TrustManager.set_flag("appointment_set")
 			timoci.dialogue_id = "ch2_timoci_after_good"
+			receptionist.dialogue_id = "ch2_receptionist_after"
 			TrustManager.save_game()
 		"ch2_timoci_pressure":
 			TrustManager.set_flag("ch2_timoci_met")
 			TrustManager.set_flag("ch2_meeting_pressure")
 			timoci.dialogue_id = "ch2_timoci_after_pressure"
+			receptionist.dialogue_id = "ch2_receptionist_after"
 			TrustManager.save_game()
 		"ch2_timoci_frustrated":
 			TrustManager.set_flag("ch2_timoci_met")
 			TrustManager.set_flag("ch2_meeting_frustrated")
 			timoci.dialogue_id = "ch2_timoci_after_frustrated"
+			receptionist.dialogue_id = "ch2_receptionist_after"
 			TrustManager.save_game()
