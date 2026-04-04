@@ -55,7 +55,13 @@ func _on_choices_presented(choices: Array) -> void:
 		btn.add_theme_font_size_override("font_size", 7)
 		btn.custom_minimum_size = Vector2(0, 14)
 		btn.focus_mode = Control.FOCUS_ALL
-		btn.pressed.connect(func(): DialogueManager.choose(i))
+		btn.pressed.connect(func():
+			# 선택 즉시 모든 버튼 비활성화 (엔터키 가로채기 방지)
+			for c in choices_container.get_children():
+				c.focus_mode = Control.FOCUS_NONE
+				c.disabled = true
+			DialogueManager.choose(i)
+		)
 		choices_container.add_child(btn)
 	choices_container.visible = true
 	# 직전 라인이 있으면 뒤로가기 버튼 표시 (선택지 화면에서도 사용 가능)
