@@ -1,0 +1,94 @@
+extends Node
+
+@onready var bg: Sprite2D = get_parent().get_node("Background")
+
+const OFFICE_BG = preload("res://assets/sprites/tilesets/office_bg.png")
+const ISLAND_BG = preload("res://assets/sprites/tilesets/naitamba_bg.png")
+
+var _ending_type: String = ""
+var _dialogue_queue: Array = []
+
+func _ready() -> void:
+	await get_tree().process_frame
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+
+	_ending_type = TrustManager.check_ending()
+	TrustManager.set_flag("ch5_started")
+
+	# 회의 시작
+	DialogueManager.start("ch5_meeting_start")
+
+func _on_dialogue_ended(dialogue_id: String) -> void:
+	match dialogue_id:
+		"ch5_meeting_start":
+			DialogueManager.start("ch5_mere_report")
+		"ch5_mere_report":
+			_start_timoci()
+		"ch5_timoci_response_good", "ch5_timoci_response_neutral", "ch5_timoci_response_bad":
+			_start_james()
+		"ch5_james_response_good", "ch5_james_response_neutral", "ch5_james_response_bad":
+			_start_sela()
+		"ch5_sela_response", "ch5_sela_response_no_sign":
+			DialogueManager.start("ch5_final_choice")
+		"ch5_resolve":
+			_show_ending()
+		"ch5_ending_true", "ch5_ending_normal", "ch5_ending_bad":
+			await get_tree().create_timer(1.5).timeout
+			DialogueManager.start("ch5_credits")
+		"ch5_credits":
+			TrustManager.set_flag("game_complete")
+			TrustManager.save_game()
+			await get_tree().create_timer(2.0).timeout
+			SceneManager.go_to("res://scenes/ui/title_screen.tscn")
+
+func _start_timoci() -> void:
+	var trust = TrustManager.get_trust("timoci")
+	if trust >= TrustManager.TRUE_ENDING_THRESHOLD:
+		DialogueManager.start("ch5_timoci_response_good")
+	elif trust >= TrustManager.NORMAL_ENDING_THRESHOLD:
+		DialogueManager.start("ch5_timoci_response_neutral")
+	else:
+		DialogueManager.start("ch5_timoci_response_bad")
+
+func _start_james() -> void:
+	var trust = TrustManager.get_trust("james")
+	if trust >= TrustManager.TRUE_ENDING_THRESHOLD:
+		DialogueManager.start("ch5_james_response_good")
+	elif trust >= TrustManager.NORMAL_ENDING_THRESHOLD:
+		DialogueManager.start("ch5_james_response_neutral")
+	else:
+		DialogueManager.start("ch5_james_response_bad")
+
+func _start_sela() -> void:
+	if TrustManager.has_flag("ch3_good_ending"):
+		DialogueManager.start("ch5_sela_response")
+	else:
+		DialogueManager.start("ch5_sela_response_no_sign")
+
+func _show_ending() -> void:
+	# 배경 전환 (페이드)
+	var tween = get_tree().create_tween()
+	tween.tween_property(bg, "modulate:a", 0.0, 0.8)
+	await tween.finished
+
+	match _ending_type:
+		"true":
+			bg.texture = ISLAND_BG
+		"normal":
+			bg.texture = ISLAND_BG
+		"bad":
+			bg.texture = OFFICE_BG
+
+	tween = get_tree().create_tween()
+	tween.tween_property(bg, "modulate:a", 1.0, 0.8)
+	await tween.finished
+
+	await get_tree().create_timer(0.5).timeout
+
+	match _ending_type:
+		"true":
+			DialogueManager.start("ch5_ending_true")
+		"normal":
+			DialogueManager.start("ch5_ending_normal")
+		"bad":
+			DialogueManager.start("ch5_ending_bad")
