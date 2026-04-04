@@ -202,6 +202,24 @@ text = "[사업파일]"
 theme_override_font_sizes/font_size = 5
 horizontal_alignment = 1
 
+; ─── 전화기 (Sela 연락 — ch4_tltb_contact 플래그 이후 활성화) ───
+[node name="Phone" type="StaticBody2D" parent="."]
+position = Vector2(255, 82)
+script = ExtResource("9")
+dialogue_id = ""
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Phone"]
+shape = SubResource("phone_col")
+
+[node name="Label" type="Label" parent="Phone"]
+offset_left = -12.0
+offset_top = -14.0
+offset_right = 12.0
+offset_bottom = -5.0
+text = "[전화기]"
+theme_override_font_sizes/font_size = 5
+horizontal_alignment = 1
+
 ; ─── 오프닝 자동 시작 트리거 ───
 [node name="OpeningTrigger" type="Node" parent="."]
 script = ExtResource("4")
