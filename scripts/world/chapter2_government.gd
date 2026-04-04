@@ -3,23 +3,59 @@ extends Node
 @onready var player: CharacterBody2D = get_parent().get_node("Player")
 @onready var timoci: CharacterBody2D = get_parent().get_node("Timoci")
 @onready var receptionist: CharacterBody2D = get_parent().get_node("Receptionist")
+@onready var sela: CharacterBody2D = get_parent().get_node("Sela")
 
 const STREET_SCENE = "res://scenes/world/suva_street.tscn"
 const STREET_SPAWN = Vector2(217, 100)
+
+var _current_floor := 0   # 0=미정, 3=국가계획부, 5=토지청
 
 func _ready() -> void:
 	await get_tree().process_frame
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
+	# ── 첫 방문: 약속 없음 → 쫓겨남 ──
 	if not TrustManager.has_flag("appointment_set"):
 		DialogueManager.start("ch2_no_appointment")
-	elif not TrustManager.has_flag("ch2_arrived"):
+		return
+
+	# ── 첫 방문(약속 있음): 입장 내레이션 → 엘레베이터 ──
+	if not TrustManager.has_flag("ch2_arrived"):
 		DialogueManager.start("ch2_enter_building")
-	elif not TrustManager.has_flag("ch2_timoci_met"):
+		return
+
+	# ── 재방문: 바로 엘레베이터 ──
+	_show_elevator()
+
+func _show_elevator() -> void:
+	# 모든 NPC 숨기고 엘레베이터 선택
+	_hide_all_npcs()
+	DialogueManager.start("ch2_elevator")
+
+func _hide_all_npcs() -> void:
+	timoci.visible = false
+	receptionist.visible = false
+	sela.visible = false
+
+func _show_floor3() -> void:
+	_current_floor = 3
+	_hide_all_npcs()
+	timoci.visible = true
+	receptionist.visible = true
+	_setup_floor3_state()
+
+func _show_floor5() -> void:
+	_current_floor = 5
+	_hide_all_npcs()
+	sela.visible = true
+	_setup_floor5_state()
+
+func _setup_floor3_state() -> void:
+	if not TrustManager.has_flag("ch2_timoci_met"):
 		timoci.dialogue_id = ""          # 접수처 통과 전 직접 접근 차단
-		DialogueManager.start("ch2_second_visit_arrive")
+		receptionist.dialogue_id = "ch2_receptionist_2nd"
 	else:
-		# 면담 완료 후 재방문 — 결과에 따라 대사 분기
+		# 면담 완료 후 재방문
 		if TrustManager.has_flag("ch2_meeting_frustrated"):
 			timoci.dialogue_id = "ch2_timoci_after_frustrated"
 		elif TrustManager.has_flag("ch2_meeting_pressure"):
@@ -27,6 +63,22 @@ func _ready() -> void:
 		else:
 			timoci.dialogue_id = "ch2_timoci_after_good"
 		receptionist.dialogue_id = "ch2_receptionist_after"
+
+func _setup_floor5_state() -> void:
+	if TrustManager.has_flag("ch4_consent_submitted"):
+		sela.dialogue_id = "ch2_sela_all_done"
+	elif TrustManager.has_flag("ch4_consent_obtained"):
+		# Ratu 서명 받아옴 → 제출 가능
+		sela.dialogue_id = "ch2_sela_consent_submit"
+	elif TrustManager.has_flag("ch4_sela_contacted"):
+		# 이미 한번 만남 → 대기 대사
+		sela.dialogue_id = "ch2_sela_after"
+	elif TrustManager.has_flag("ch4_tltb_contact"):
+		# James 소개 있음 → 첫 대면
+		sela.dialogue_id = "ch2_sela_first"
+	else:
+		# 소개 없음
+		sela.dialogue_id = "ch2_sela_no_referral"
 
 func _exit_to_street(delay: float = 1.5) -> void:
 	await get_tree().create_timer(delay).timeout
@@ -38,6 +90,16 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			_exit_to_street()
 		"ch2_enter_building":
 			TrustManager.set_flag("ch2_arrived")
+			_show_elevator()
+		# ── 엘레베이터 ──
+		"ch2_elevator_floor3":
+			_show_floor3()
+			if not TrustManager.has_flag("ch2_timoci_met") and not TrustManager.has_flag("ch2_second_visit"):
+				TrustManager.set_flag("ch2_second_visit")
+				receptionist.dialogue_id = "ch2_receptionist_2nd"
+		"ch2_elevator_floor5":
+			_show_floor5()
+		# ── 3층: 국가계획부 ──
 		"ch2_receptionist":
 			await get_tree().create_timer(1.2).timeout
 			DialogueManager.start("ch2_waiting_note")
@@ -48,12 +110,7 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 		"ch2_reschedule_ok", "ch2_reschedule_push":
 			TrustManager.set_flag("ch2_first_visit_done")
 			_exit_to_street()
-		"ch2_second_visit_arrive":
-			TrustManager.set_flag("ch2_second_visit")
-			receptionist.dialogue_id = "ch2_receptionist_2nd"
-			# Timoci는 아직 접근 불가 — 플레이어가 접수처에 먼저 가야 함
 		"ch2_receptionist_2nd":
-			# 접수처 통과 — 이제 Timoci에게 직접 다가갈 수 있음
 			timoci.dialogue_id = "ch2_timoci_first"
 		"ch2_timoci_progress", "ch2_timoci_collaborate":
 			TrustManager.set_flag("ch2_timoci_met")
@@ -72,4 +129,15 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			TrustManager.set_flag("ch2_meeting_frustrated")
 			timoci.dialogue_id = "ch2_timoci_after_frustrated"
 			receptionist.dialogue_id = "ch2_receptionist_after"
+			TrustManager.save_game()
+		# ── 5층: 토지청 Sela ──
+		"ch2_sela_first":
+			TrustManager.set_flag("ch4_sela_contacted")
+			sela.dialogue_id = "ch2_sela_after"
+			TrustManager.save_game()
+		"ch2_sela_no_referral":
+			pass  # 소개 없이 왔으면 아무 일도 안 일어남
+		"ch2_sela_consent_submit":
+			TrustManager.set_flag("ch4_consent_submitted")
+			sela.dialogue_id = "ch2_sela_all_done"
 			TrustManager.save_game()
