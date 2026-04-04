@@ -1,0 +1,216 @@
+{
+  "ch4_no_connection": {
+    "lines": [
+      {"speaker": "접수처", "text": "안녕하세요. 어떻게 오셨어요?"},
+      {"speaker": "접수처", "text": "James 씨요? 죄송한데 사전 약속이 없으시면 바로 만나기가..."},
+      {"speaker": "접수처", "text": "담당 부서나 정부청사를 통해 먼저 연결이 돼야 할 것 같아요."}
+    ]
+  },
+
+  "ch4_receptionist_intro": {
+    "lines": [
+      {"speaker": "접수처", "text": "KODA에서 오셨어요? 기다리고 있었어요."},
+      {"speaker": "접수처", "text": "James 씨 자리에 계세요. 들어가세요."}
+    ]
+  },
+
+  "ch4_james_first": {
+    "lines": [
+      {"speaker": "James", "text": "앉으세요. KODA에서 나이탬바 건으로 오셨다고요."},
+      {"speaker": "James", "text": "그 섬 — 저도 파일 알고 있어요. 10년 전에 저희 전임자가 지원했던 사업이에요."},
+      {"speaker": "James", "text": "잘 안됐죠."}
+    ],
+    "choices": [
+      {
+        "text": "\"어떻게 안됐는지 여쭤봐도 될까요?\"",
+        "effects": {"james": 10},
+        "next": "ch4_james_history"
+      },
+      {
+        "text": "\"이번엔 다르게 하려고 해요.\"",
+        "effects": {"james": 5},
+        "next": "ch4_james_skeptical"
+      },
+      {
+        "text": "\"기술 지원이 필요해서 왔어요.\"",
+        "effects": {"james": -5},
+        "next": "ch4_james_direct"
+      }
+    ]
+  },
+
+  "ch4_james_history": {
+    "lines": [
+      {"speaker": "James", "text": "시스템 설치 후 운영 주체가 없었어요."},
+      {"speaker": "James", "text": "펌프가 2년도 안 돼서 멈췄어요. 고칠 사람도 없고, 부품 예산도 없고."},
+      {"speaker": "James", "text": "저희 보고서엔 '성공적으로 완료' 라고 돼 있어요. 지금도."},
+      {"speaker": "", "text": "James가 잠깐 창밖을 봤다."},
+      {"speaker": "James", "text": "그 사람들은 지금도 빗물 받아서 쓰고 있을 거예요."}
+    ],
+    "choices": [
+      {
+        "text": "\"그래서 이번엔 주민이 직접 운영할 수 있는 구조로 설계하려고 해요.\"",
+        "effects": {"james": 15},
+        "next": "ch4_james_tltb"
+      },
+      {
+        "text": "\"반성하셨다면 이번엔 다르게 도와주실 수 있지 않을까요?\"",
+        "effects": {"james": 0},
+        "next": "ch4_james_tltb"
+      }
+    ]
+  },
+
+  "ch4_james_skeptical": {
+    "lines": [
+      {"speaker": "James", "text": "다들 그 말 해요."},
+      {"speaker": "James", "text": "10년 전 팀도 그렇게 말했을 거예요."},
+      {"speaker": "James", "text": "구체적으로 뭐가 다른지 말해줄 수 있어요?"}
+    ],
+    "choices": [
+      {
+        "text": "\"이번엔 주민이 직접 운영할 수 있는 구조를 만들 거예요.\"",
+        "effects": {"james": 10},
+        "next": "ch4_james_tltb"
+      },
+      {
+        "text": "\"아직 계획 중이에요. 그래서 여기 온 거고요.\"",
+        "effects": {"james": -5},
+        "next": "ch4_james_tltb"
+      }
+    ]
+  },
+
+  "ch4_james_direct": {
+    "lines": [
+      {"speaker": "James", "text": "기술 지원."},
+      {"speaker": "James", "text": "저희가 지원 기관이기는 한데 — 그렇게 바로 들어오시는 분은 처음이네요."},
+      {"speaker": "James", "text": "일단 얘기는 들어볼게요."}
+    ],
+    "choices": [
+      {
+        "text": "\"죄송해요. 먼저 상황 설명을 드렸어야 했는데.\"",
+        "effects": {"james": 5},
+        "next": "ch4_james_tltb"
+      },
+      {
+        "text": "\"TLTB 쪽 진행이 막혀있어서요.\"",
+        "effects": {"james": 0},
+        "next": "ch4_james_tltb"
+      }
+    ]
+  },
+
+  "ch4_james_tltb": {
+    "lines": [
+      {"speaker": "James", "text": "TLTB 문제가 걸려있다고요?"},
+      {"speaker": "James", "text": "Sela Tuilagi — TLTB 토지동의 담당이에요. 제가 아는 사람이에요."},
+      {"speaker": "James", "text": "마을 측 서류가 준비되면 제가 연결해줄 수 있어요."}
+    ],
+    "choices": [
+      {
+        "text": "\"감사해요. 그게 정말 필요했어요.\"",
+        "effects": {"james": 10},
+        "next": "ch4_james_local_check"
+      },
+      {
+        "text": "\"저희가 직접 연락하면 안 되나요?\"",
+        "effects": {"james": -8},
+        "next": "ch4_james_tltb_direct"
+      }
+    ]
+  },
+
+  "ch4_james_tltb_direct": {
+    "lines": [
+      {"speaker": "James", "text": "...할 수는 있죠."},
+      {"speaker": "James", "text": "근데 Sela는 맥락 없이 들어오는 외부 기관 연락 좋아하지 않아요."},
+      {"speaker": "James", "text": "저를 통하는 게 훨씬 빠를 거예요."},
+      {"speaker": "", "text": "맞는 말이었다."}
+    ],
+    "choices": [
+      {
+        "text": "\"그렇겠네요. 부탁드려도 될까요?\"",
+        "effects": {"james": 5},
+        "next": "ch4_james_local_check"
+      }
+    ]
+  },
+
+  "ch4_james_local_check": {
+    "lines": [
+      {"speaker": "James", "text": "한 가지만 더 물어볼게요."},
+      {"speaker": "James", "text": "마을 어른들 — Ratu쪽은 어떻게 됐어요?"},
+      {"speaker": "James", "text": "그분들이 안 받아들이면 저희가 들어가도 소용없어요."}
+    ],
+    "choices": [
+      {
+        "text": "\"Ratu 조세파 만났어요. 주민이 직접 운영하는 구조 얘기했더니 문이 열렸어요.\"",
+        "effects": {"james": 20},
+        "condition": "ch3_good_ending",
+        "next": "ch4_james_endorsed"
+      },
+      {
+        "text": "\"아직 만나는 중이에요. 신뢰를 쌓고 있어요.\"",
+        "effects": {"james": 8},
+        "next": "ch4_james_endorsed_neutral"
+      },
+      {
+        "text": "\"마을 측은 나중에 설득할 수 있어요.\"",
+        "effects": {"james": -15},
+        "next": "ch4_james_rejected"
+      }
+    ]
+  },
+
+  "ch4_james_endorsed": {
+    "lines": [
+      {"speaker": "James", "text": "...그거 쉬운 말 아닌데."},
+      {"speaker": "James", "text": "좋아요. 같이 해봅시다."},
+      {"speaker": "James", "text": "기술 자문 지원서 보낼게요. Sela한테도 연락해둘게요."},
+      {"speaker": "", "text": "처음으로 외부 파트너가 생겼다."}
+    ]
+  },
+
+  "ch4_james_endorsed_neutral": {
+    "lines": [
+      {"speaker": "James", "text": "그럼 지켜보죠."},
+      {"speaker": "James", "text": "TLTB 연락처는 드릴게요. Sela 이름으로 연락하세요."},
+      {"speaker": "James", "text": "마을 쪽이 정리되면 저도 더 움직일 수 있어요."}
+    ]
+  },
+
+  "ch4_james_rejected": {
+    "lines": [
+      {"speaker": "James", "text": "...그 말은 못 들은 걸로 할게요."},
+      {"speaker": "James", "text": "마을 동의 없이 저희가 들어가면 — 10년 전 그대로예요."},
+      {"speaker": "James", "text": "마을 쪽 정리 되면 다시 오세요."}
+    ]
+  },
+
+  "ch4_james_after_endorsed": {
+    "lines": [
+      {"speaker": "James", "text": "Sela한테 연락해봤어요?"},
+      {"speaker": "James", "text": "잘 될 거예요. 그 분 일 잘 해요."}
+    ]
+  },
+
+  "ch4_james_after_neutral": {
+    "lines": [
+      {"speaker": "James", "text": "마을 쪽 어떻게 됐어요?"},
+      {"speaker": "James", "text": "준비되면 연락주세요."}
+    ]
+  },
+
+  "ch4_james_after_rejected": {
+    "lines": [
+      {"speaker": "James", "text": "마을 어른들 먼저 만나고 오세요."}
+    ]
+  },
+
+  "ch4_receptionist_after": {
+    "lines": [
+      {"speaker": "접수처", "text": "James 씨 만나셨어요? 수고하셨습니다."}
+    ]
+  }
+}
