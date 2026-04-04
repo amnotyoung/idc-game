@@ -30,7 +30,8 @@ SHIRT_F2   = (255, 130, 40, 255)   # 꽃무늬 주황
 SULU       = (52, 45, 88, 255)     # 짙은 남색 — sulu (체크 느낌)
 SULU_LINE  = (72, 62, 112, 255)    # sulu 격자선
 HAIR       = (22, 14, 10, 255)
-SHOE       = (38, 30, 22, 255)
+SANDAL     = (148, 105, 62, 255)   # 가죽 샌들 (밝은 갈색)
+SANDAL_D   = (118, 82, 45, 255)   # 샌들 끈
 
 for i, facing in enumerate(["down","left","right","up"]):
     ox = i * 16
