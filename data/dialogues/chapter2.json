@@ -196,6 +196,14 @@
     ]
   },
 
+  "ch1_wati_island_first": {
+    "lines": [
+      {"speaker": "Wati", "text": "섬에 먼저 가셨어요?"},
+      {"speaker": "Wati", "text": "정부 승인도 아직인데... 어떻게 됐어요?"},
+      {"speaker": "Wati", "text": "...일단 Timoci 씨 만나는 게 급해요. 정부청사 먼저 가보세요."}
+    ]
+  },
+
   "ch3_wati_island_idle": {
     "lines": [
       {"speaker": "Wati", "text": "섬에 다녀오셨어요?"}
