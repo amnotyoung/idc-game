@@ -168,6 +168,14 @@
     ]
   },
 
+  "ch1_mere_farewell": {
+    "lines": [
+      { "speaker": "Mere", "text": "Timoci 씨 만났군요. TLTB 쪽이 핵심인 거 맞아요." },
+      { "speaker": "Mere", "text": "저는 이번 주 나이탬바 쪽 현장 조사 나가볼게요. Ratu Josefa 배경 좀 더 파봐야 할 것 같아서요." },
+      { "speaker": "Mere", "text": "결과 나오면 연락할게요." }
+    ]
+  },
+
   "ch1_mere_cold_b": {
     "lines": [
       { "speaker": "Mere", "text": "공식 연락이요." },
