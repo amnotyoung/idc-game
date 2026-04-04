@@ -45,9 +45,13 @@ for i, facing in enumerate(["down","left","right","up"]):
     for sx in [ox+6, ox+9]:
         d.line([(sx, 10), (sx, 14)], fill=SULU_LINE)
     d.line([(ox+4, 12), (ox+12, 12)], fill=SULU_LINE)
-    # 신발
-    d.rectangle([ox+4,13,ox+7,15], fill=SHOE)
-    d.rectangle([ox+9,13,ox+12,15], fill=SHOE)
+    # 가죽 샌들 (발가락 보임)
+    d.rectangle([ox+4,14,ox+7,15], fill=SANDAL)    # 좌 밑창
+    d.rectangle([ox+9,14,ox+12,15], fill=SANDAL)   # 우 밑창
+    d.point((ox+5, 13), fill=SKIN)                  # 좌 발가락
+    d.point((ox+10, 13), fill=SKIN)                 # 우 발가락
+    d.point((ox+6, 14), fill=SANDAL_D)              # 좌 끈
+    d.point((ox+10, 14), fill=SANDAL_D)             # 우 끈
 
     # 몸통 — 불라셔츠
     d.rectangle([ox+5, 6, ox+11, 10], fill=SHIRT_BASE)
