@@ -141,6 +141,31 @@ text = "Lani"
 theme_override_font_sizes/font_size = 6
 horizontal_alignment = 1
 
+; ─── NPC: Mere (현장 조사 중) ───
+[node name="Mere" type="CharacterBody2D" parent="."]
+position = Vector2(235, 95)
+script = ExtResource("2")
+npc_id = "mere"
+dialogue_id = "ch3_mere_first"
+
+[node name="Sprite" type="Sprite2D" parent="Mere"]
+texture = ExtResource("mere_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mere"]
+shape = SubResource("mere_col")
+
+[node name="NameTag" type="Label" parent="Mere"]
+offset_left = -15.0
+offset_top = -16.0
+offset_right = 15.0
+offset_bottom = -6.0
+text = "Mere"
+theme_override_font_sizes/font_size = 6
+horizontal_alignment = 1
+
 ; ─── 플레이어 ───
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(160, 130)
