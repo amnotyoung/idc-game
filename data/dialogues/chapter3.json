@@ -14,7 +14,7 @@
     ],
     "choices": [
       {
-        "text": "\"세부세부 가져왔습니다.\" (카바를 건넸다)",
+        "text": "\"양고나 가져왔습니다.\" (보따리를 내밀었다)",
         "effects": {"ratu_josefa": 20},
         "next": "ch3_sevusevu_good"
       },
@@ -44,7 +44,7 @@
     "lines": [
       {"speaker": "Ratu Josefa", "text": "...알고 왔군요."},
       {"speaker": "Ratu Josefa", "text": "들어오시오. 함께 앉읍시다."},
-      {"speaker": "", "text": "의식이 시작됐다. 카바 그릇이 돌아갔다."},
+      {"speaker": "", "text": "세부세부가 시작됐다. 양고나 그릇이 천천히 돌아갔다."},
       {"speaker": "Ratu Josefa", "text": "기억하는 것들이 있소. 10년 전 약속. 아무것도 남지 않았지."},
       {"speaker": "Ratu Josefa", "text": "당신은 몇 번째요?"}
     ],
@@ -66,12 +66,11 @@
     "lines": [
       {"speaker": "Ratu Josefa", "text": "...그렇군요."},
       {"speaker": "", "text": "짧은 침묵이 흘렀다."},
-      {"speaker": "Ratu Josefa", "text": "앉으시오. 얘기는 들어봐야지."},
-      {"speaker": "Ratu Josefa", "text": "10년 전에도 사람들이 왔었소. 빈손으로."}
+      {"speaker": "Ratu Josefa", "text": "앉으시오. 얘기는 들어봐야지."}
     ],
     "choices": [
       {
-        "text": "\"죄송합니다. 몰랐습니다.\"",
+        "text": "\"고맙습니다. 잘 부탁드리겠습니다.\"",
         "effects": {"ratu_josefa": 5},
         "next": "ch3_village_talk"
       },
@@ -87,7 +86,7 @@
     "lines": [
       {"speaker": "Lani", "text": "저 물어봐도 돼요?"},
       {"speaker": "Lani", "text": "이 사업 — 우리가 원하는 건지 물어본 적 있어요?"},
-      {"speaker": "Lani", "text": "서류엔 항상 '주민 수요 확인됨'이라고 나오던데."}
+      {"speaker": "Lani", "text": "뉴스에는 항상 '주민 수요 확인됨'이라고 나오던데."}
     ],
     "choices": [
       {
@@ -153,7 +152,7 @@
 
   "ch3_ratu_after": {
     "lines": [
-      {"speaker": "Ratu Josefa", "text": "...다음에 올 때도 카바 가져오시오."}
+      {"speaker": "Ratu Josefa", "text": "...다음에 올 때도 양고나 가져오시오."}
     ]
   },
 

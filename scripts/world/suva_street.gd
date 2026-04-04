@@ -11,13 +11,13 @@ const DOORS = [
 		"spawn": Vector2(160, 150)
 	},
 	{
-		"cx": 184.0, "gap": 12.0,        # 정부청사 구멍 x=172~196
+		"cx": 217.0, "gap": 12.0,        # 정부청사 구멍 x=205~229 (식민지 건물 문)
 		"enter_y": 76.0,
 		"scene": "res://scenes/world/government_building.tscn",
 		"spawn": Vector2(160, 130)
 	},
 	{
-		"cx": 271.0, "gap": 12.0,        # 국제기구 구멍 x=259~283
+		"cx": 290.0, "gap": 12.0,        # 국제기구 구멍 x=278~302 (우단 건물)
 		"enter_y": 76.0,
 		"scene": "res://scenes/world/intl_org_office.tscn",
 		"spawn": Vector2(160, 130)
@@ -26,9 +26,9 @@ const DOORS = [
 
 var _entering := false
 
-# 항구 — 하단 우측 출구
+# 항구 — 하단 중앙 출구
 const HARBOR = {
-	"cx": 280.0, "gap": 14.0,
+	"cx": 160.0, "gap": 14.0,
 	"exit_y": 158.0,
 	"scene": "res://scenes/world/naitamba_island.tscn",
 	"spawn": Vector2(160, 130)

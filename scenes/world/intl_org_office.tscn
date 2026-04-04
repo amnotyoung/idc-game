@@ -52,6 +52,6 @@ target_position = Vector2(0, 14)
 enabled = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(2, 2)
+zoom = Vector2(1, 1)
 
 [node name="DialogueBox" parent="." instance=ExtResource("2")]

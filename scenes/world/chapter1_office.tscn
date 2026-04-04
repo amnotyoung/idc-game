@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://chapter1office"]
+[gd_scene load_steps=20 format=3 uid="uid://chapter1office"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/npc/npc_base.gd" id="2"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_wati.png" id="wati_tex"]
 [ext_resource type="Texture2D" path="res://assets/sprites/tilesets/office_bg.png" id="7"]
 [ext_resource type="AudioStream" path="res://assets/music/bgm_office.wav" id="8"]
+[ext_resource type="Script" path="res://scripts/world/interactable.gd" id="9"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(10, 12)
@@ -36,6 +37,10 @@ size = Vector2(10, 160)
 ; Wati 충돌체
 [sub_resource type="RectangleShape2D" id="wati_col"]
 size = Vector2(10, 12)
+
+; 서류 충돌체
+[sub_resource type="RectangleShape2D" id="doc_col"]
+size = Vector2(14, 8)
 
 ; 플레이어 스프라이트 (Polygon2D — 파란 사각형)
 [sub_resource type="Gradient" id="7"]
@@ -99,7 +104,7 @@ target_position = Vector2(0, 14)
 enabled = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(2, 2)
+zoom = Vector2(1, 1)
 
 ; ─── NPC: Mere ───
 [node name="Mere" type="CharacterBody2D" parent="."]
@@ -174,6 +179,24 @@ text = "▲ 나가기"
 theme_override_font_sizes/font_size = 6
 horizontal_alignment = 1
 modulate = Color(1, 1, 0.4, 0.0)
+
+; ─── 책상 서류 (나이탬바 사업 파일) ───
+[node name="ProjectFile" type="StaticBody2D" parent="."]
+position = Vector2(220, 90)
+script = ExtResource("9")
+dialogue_id = "ch1_project_file"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectFile"]
+shape = SubResource("doc_col")
+
+[node name="Label" type="Label" parent="ProjectFile"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 14.0
+offset_bottom = -6.0
+text = "[사업파일]"
+theme_override_font_sizes/font_size = 5
+horizontal_alignment = 1
 
 ; ─── 오프닝 자동 시작 트리거 ───
 [node name="OpeningTrigger" type="Node" parent="."]

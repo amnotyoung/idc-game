@@ -1,4 +1,16 @@
 {
+  "ch1_project_file": {
+    "lines": [
+      { "speaker": "서류", "text": "[ 나이탬바 섬 수자원 개발 사업 ]" },
+      { "speaker": "서류", "text": "수원국: 피지 공화국 / 시행기관: KODA" },
+      { "speaker": "서류", "text": "사업기간: 2022–2026 (4년) / 예산: USD 5,200,000" },
+      { "speaker": "서류", "text": "목표: 나이탬바 섬 340명 주민 대상 안전한 식수 공급 시스템 구축" },
+      { "speaker": "서류", "text": "현황: 국가계획부 승인 대기 중 (3개월째 보류)" },
+      { "speaker": "서류", "text": "비고란에 메모가 적혀있다." },
+      { "speaker": "메모", "text": "\"10년 전에도 같은 섬에 같은 사업이 있었음. 당시 담당자 연락두절 후 사업 중단. 주민들 기억하고 있음에 유의.\"" }
+    ]
+  },
+
   "ch1_arrival": {
     "lines": [
       { "speaker": "",      "text": "수바, 피지. 2024년 3월." },
@@ -13,8 +25,8 @@
     "lines": [
       { "speaker": "???",  "text": "실례합니다." },
       { "speaker": "???",  "text": "KODA 담당자 찾아왔는데요." },
-      { "speaker": "Mere", "text": "...또 새 사람이에요?" },
-      { "speaker": "Mere", "text": "몇 번째야, 진짜." }
+      { "speaker": "Mere", "text": "...담당자분이 바뀌셨군요." },
+      { "speaker": "Mere", "text": "6개월째 연락이 뜸했어요." }
     ],
     "choices": [
       {
@@ -121,7 +133,7 @@
 
   "ch1_wati_idle": {
     "lines": [
-      {"speaker": "Wati", "text": "아직 Seru한테 답장 없어요. 기다려봐요."}
+      {"speaker": "Wati", "text": "정부청사 가보셨어요? Timoci 씨는 3층이에요."}
     ]
   },
 
@@ -129,8 +141,9 @@
     "lines": [
       {"speaker": "Wati", "text": "Seru한테 연락 왔어요. 약속 잡혔어요."},
       {"speaker": "Wati", "text": "정부청사 3층, 국가계획부예요."},
-      {"speaker": "Wati", "text": "Timoci 씨 요즘 좀 예민하다고 하더라고요. 예산 감사 때문에."},
-      {"speaker": "Wati", "text": "첫 미팅이니까 서류 위주로 얘기하는 게 나을 것 같아요."}
+      {"speaker": "Wati", "text": "Timoci 씨는 국가계획부 ODA 담당 과장이에요. 사업 심사 실무를 맡고 있어요."},
+      {"speaker": "Wati", "text": "최종 승인은 장관 결재라서 본인이 결정권자는 아니에요. 근데 실무에서 막으면 위로 안 올라가요."},
+      {"speaker": "Wati", "text": "요즘 부처 내 예산 감사 때문에 좀 예민하다고 하더라고요. 첫 미팅이니까 압박보다는 상황 파악 위주로 가는 게 나을 것 같아요."}
     ]
   },
 

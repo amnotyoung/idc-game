@@ -20,11 +20,11 @@ const BRIEFING_ENDS = [
 
 func _ready() -> void:
 	await get_tree().process_frame
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
 	if TrustManager.has_flag("ch1_intro_done"):
 		_setup_free_roam()
 	else:
-		DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 		DialogueManager.start("ch1_arrival")
 
 func _process(_delta: float) -> void:
@@ -38,7 +38,7 @@ func _process(_delta: float) -> void:
 		SceneManager.go_to_with_spawn(STREET_SCENE, Vector2(29, 115))
 
 func _setup_free_roam() -> void:
-	mere.position = Vector2(210, 85)
+	mere.position = Vector2(170, 60)
 	mere.face("down")
 	mere.dialogue_id = "ch1_mere_revisit"
 	if not TrustManager.has_flag("wati_introduced"):

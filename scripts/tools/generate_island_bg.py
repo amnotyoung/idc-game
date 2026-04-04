@@ -162,6 +162,86 @@ for y in range(124, 140, 5):
     for x in range(10, W - 10, 18):
         draw.line([(x, y), (x + 10, y)], fill=SAND_LINE)
 
+# ── 선착장 (Jetty) — 중앙 x=148~172, 해안(y=137)~바다(y=168) ──
+JETTY_PLANK  = (145, 105,  60)   # 나무 판자
+JETTY_SHADOW = (105,  72,  38)   # 판자 음영
+JETTY_POST   = ( 90,  58,  28)   # 파일링(기둥)
+JETTY_EDGE   = (115,  80,  42)   # 측면 마감
+
+JX1, JX2 = 148, 172   # 선착장 좌우 (24px 폭)
+JY1, JY2 = 137, 168   # 선착장 상하
+
+# 판자 표면 (2px 간격 가로선)
+for y in range(JY1, JY2):
+    draw.line([(JX1, y), (JX2, y)], fill=JETTY_PLANK)
+# 판자 이음새 (어두운 가로선, 3px 간격)
+for y in range(JY1, JY2, 3):
+    draw.line([(JX1 + 1, y), (JX2 - 1, y)], fill=JETTY_SHADOW)
+# 측면 마감 (세로 엣지)
+draw.line([(JX1, JY1), (JX1, JY2)], fill=JETTY_EDGE, width=2)
+draw.line([(JX2, JY1), (JX2, JY2)], fill=JETTY_EDGE, width=2)
+# 수중 파일링 기둥 (4개 — 바다 부분만)
+for px in [JX1 + 3, JX1 + 9, JX2 - 9, JX2 - 3]:
+    draw.rectangle([px - 1, JY2, px + 1, JY2 + 9], fill=JETTY_POST)
+# 난간 (상단 좌우 기둥 + 가로대)
+for px in [JX1 + 1, JX2 - 1]:
+    draw.rectangle([px - 1, JY1, px + 1, JY1 + 18], fill=JETTY_EDGE)
+draw.line([(JX1 + 1, JY1 + 9), (JX2 - 1, JY1 + 9)], fill=JETTY_EDGE, width=1)
+draw.line([(JX1 + 1, JY1 + 18), (JX2 - 1, JY1 + 18)], fill=JETTY_EDGE, width=1)
+
+# ── 모터보트 (선착장 우측, x=175~215, y=149~162) ─────────
+HULL_DARK  = ( 28,  82, 148)   # 파란 유리섬유 선체
+HULL_LIGHT = ( 52, 112, 175)   # 선체 상단 하이라이트
+HULL_BELLY = ( 22,  65, 120)   # 선체 하단 그림자
+INTERIOR   = (218, 212, 200)   # 선내 (베이지 흰)
+MOTOR_BODY = ( 48,  50,  55)   # 선외기 본체
+MOTOR_ARM  = ( 38,  40,  44)   # 선외기 팔
+WINDSHIELD = (175, 212, 238)   # 앞유리
+ROPE_COL   = (178, 152,  88)   # 계류줄
+
+BX1, BX2 = 176, 214   # 보트 좌우
+BY1, BY2 = 150, 162   # 보트 상하
+
+# 선체 하단 (뾰족한 배 형태)
+hull_pts = [
+    (BX1 + 4, BY2), (BX1,     BY1 + 6),
+    (BX1,     BY1 + 3),
+    (BX1 + 6, BY1),
+    (BX2 - 2, BY1),
+    (BX2,     BY1 + 4),
+    (BX2,     BY2 - 1),
+]
+draw.polygon(hull_pts, fill=HULL_DARK)
+# 선체 상단 하이라이트 (1px 선)
+draw.line([(BX1 + 6, BY1), (BX2 - 2, BY1)], fill=HULL_LIGHT, width=2)
+# 선체 좌측 경사 하이라이트
+draw.line([(BX1, BY1 + 3), (BX1 + 6, BY1)], fill=HULL_LIGHT, width=1)
+# 선내 (상단에서 약간 아래로 오목한 영역)
+draw.rectangle([BX1 + 5, BY1 + 2, BX2 - 4, BY1 + 7], fill=INTERIOR)
+# 앞유리 (조종석 바람막이)
+draw.polygon([
+    (BX1 + 8, BY1 + 2), (BX1 + 12, BY1 - 2),
+    (BX1 + 20, BY1 - 2), (BX1 + 22, BY1 + 2)
+], fill=WINDSHIELD)
+draw.line([(BX1 + 8, BY1 + 2), (BX1 + 12, BY1 - 2)], fill=(120, 160, 195), width=1)
+draw.line([(BX1 + 12, BY1 - 2), (BX1 + 20, BY1 - 2)], fill=(120, 160, 195), width=1)
+# 선외기 (오른쪽 끝)
+draw.rectangle([BX2 - 1, BY1 + 2, BX2 + 4, BY1 + 9], fill=MOTOR_BODY)
+draw.rectangle([BX2 + 2, BY1 + 9, BX2 + 4, BY2 - 1], fill=MOTOR_ARM)
+draw.rectangle([BX2,     BY2 - 2, BX2 + 5, BY2],     fill=MOTOR_BODY)  # 프로펠러
+
+# 계류줄 (보트 앞 끝 → 선착장)
+draw.line([(BX1, BY1 + 5), (JX2, JY1 + 22)], fill=ROPE_COL, width=1)
+
+# 보트 물 반사 그림자
+for i in range(4):
+    alpha_col = (
+        int(HULL_DARK[0] * 0.5), int(HULL_DARK[1] * 0.5),
+        int(HULL_DARK[2] * 0.55)
+    )
+    draw.line([(BX1 + 6 + i, BY2 + 1 + i), (BX2 - i, BY2 + 1 + i)],
+              fill=alpha_col)
+
 # ── 저장 ───────────────────────────────────────────────
 out_path = os.path.join(OUT, "naitamba_bg.png")
 img.save(out_path)

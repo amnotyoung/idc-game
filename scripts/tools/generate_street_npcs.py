@@ -23,11 +23,14 @@ def save(img, name):
 #    특징: 보통 체형, 짧은 머리, 무릎 길이 sulu
 # ══════════════════════════════════════
 img, d = new_sheet()
-SKIN  = (165, 118, 75, 255)
-SHIRT = (58, 148, 192, 255)
-SULU  = (82, 65, 108, 255)   # 짙은 보라 — sulu
-HAIR  = (22, 14, 10, 255)
-SHOE  = (38, 30, 22, 255)
+SKIN       = (165, 118, 75, 255)
+SHIRT_BASE = (228, 72, 38, 255)    # 불라셔츠 바탕 (밝은 빨강/오렌지)
+SHIRT_F1   = (255, 215, 52, 255)   # 꽃무늬 황금색
+SHIRT_F2   = (255, 130, 40, 255)   # 꽃무늬 주황
+SULU       = (52, 45, 88, 255)     # 짙은 남색 — sulu (체크 느낌)
+SULU_LINE  = (72, 62, 112, 255)    # sulu 격자선
+HAIR       = (22, 14, 10, 255)
+SHOE       = (38, 30, 22, 255)
 
 for i, facing in enumerate(["down","left","right","up"]):
     ox = i * 16
@@ -35,14 +38,25 @@ for i, facing in enumerate(["down","left","right","up"]):
     # 그림자
     d.ellipse([ox+4,14,ox+12,16], fill=(0,0,0,55))
 
-    # sulu (치마 — 넓게)
+    # sulu (치마 — 넓게, 격자 패턴)
     d.rectangle([ox+4, 10, ox+12, 14], fill=SULU)
+    # sulu 격자선
+    for sx in [ox+6, ox+9]:
+        d.line([(sx, 10), (sx, 14)], fill=SULU_LINE)
+    d.line([(ox+4, 12), (ox+12, 12)], fill=SULU_LINE)
     # 신발
     d.rectangle([ox+4,13,ox+7,15], fill=SHOE)
     d.rectangle([ox+9,13,ox+12,15], fill=SHOE)
 
-    # 몸통
-    d.rectangle([ox+5, 6, ox+11, 10], fill=SHIRT)
+    # 몸통 — 불라셔츠
+    d.rectangle([ox+5, 6, ox+11, 10], fill=SHIRT_BASE)
+    # 꽃무늬 (2~3픽셀 점으로 표현)
+    d.point((ox+6, 7), fill=SHIRT_F1)
+    d.point((ox+9, 7), fill=SHIRT_F2)
+    d.point((ox+7, 9), fill=SHIRT_F1)
+    d.point((ox+10, 9), fill=SHIRT_F2)
+    # 셔츠 단추선
+    d.line([(ox+8, 6), (ox+8, 10)], fill=(195, 52, 22, 255))
 
     # 팔
     if facing == "left":

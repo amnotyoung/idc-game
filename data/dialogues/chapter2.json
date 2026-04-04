@@ -1,4 +1,12 @@
 {
+  "ch2_no_appointment": {
+    "lines": [
+      {"speaker": "접수처", "text": "안녕하세요. 어떻게 오셨어요?"},
+      {"speaker": "접수처", "text": "Timoci 씨요? 예약 없이는 면담이 어렵습니다."},
+      {"speaker": "접수처", "text": "담당자를 통해 사전 예약을 해주세요."}
+    ]
+  },
+
   "ch2_enter_building": {
     "lines": [
       {"speaker": "", "text": "— 며칠 후 —"},
@@ -83,10 +91,10 @@
   },
   "ch2_timoci_ask_reason": {
     "lines": [
-      {"speaker": "Timoci", "text": "...예산 항목 검토가 필요해요."},
-      {"speaker": "Timoci", "text": "수자원부랑 지방부 관할이 겹쳐요. 정리가 안 됐어요."},
-      {"speaker": "Timoci", "text": "우리 부서만 결정할 수 있는 게 아니에요."},
-      {"speaker": "", "text": "핑계처럼 들리지만 — 실제 문제일 수도 있다."}
+      {"speaker": "Timoci", "text": "...장관 결재가 아직 안 났어요."},
+      {"speaker": "Timoci", "text": "나이탬바 섬 토지가 iTaukei 공유지라서요. TLTB 동의 절차가 선행되어야 한다는 의견이 있어요."},
+      {"speaker": "Timoci", "text": "저희 부서에서 올렸는데 위에서 그 부분을 지적하고 있어요."},
+      {"speaker": "", "text": "핑계처럼 들리지만 — 실제 절차 문제일 수 있다."}
     ],
     "choices": [
       {
@@ -103,22 +111,23 @@
   },
   "ch2_timoci_pressure": {
     "lines": [
-      {"speaker": "Timoci", "text": "...6개월이요."},
-      {"speaker": "Timoci", "text": "저희도 바쁩니다. 서류가 없어서 못 하는 게 아니에요."},
-      {"speaker": "Timoci", "text": "오늘 시간 다 됐어요. 다음에 오세요."},
+      {"speaker": "Timoci", "text": "저희도 최대한 빠르게 처리하려고 해요."},
+      {"speaker": "Timoci", "text": "다만 내부 검토 절차가 있고, 저 혼자 결정할 수 있는 게 아니에요."},
+      {"speaker": "Timoci", "text": "오늘은 여기까지 하죠."},
       {"speaker": "", "text": "Timoci가 자리에서 일어났다."}
     ]
   },
   "ch2_timoci_document": {
     "lines": [
       {"speaker": "Timoci", "text": "...봅시다."},
-      {"speaker": "Timoci", "text": "예산 항목이 여기 — 수자원부 코드로 되어있네요."},
-      {"speaker": "Timoci", "text": "우리 부서 코드로 바꿔야 해요. 이게 안 되어있으면 결재가 안 올라가요."},
-      {"speaker": "", "text": "구체적인 문제가 나왔다."}
+      {"speaker": "Timoci", "text": "나이탬바 섬. 토지 현황이 여기 빠져있네요."},
+      {"speaker": "Timoci", "text": "섬 토지가 iTaukei 공유지예요. 장관 결재 전에 TLTB 검토가 있어야 한다는 게 위쪽 의견이에요."},
+      {"speaker": "Timoci", "text": "저희가 올릴 수는 있는데, 그 부분 없이는 반려될 가능성이 높아요."},
+      {"speaker": "", "text": "구체적인 병목이 확인됐다."}
     ],
     "choices": [
       {
-        "text": "\"수정하면 바로 진행될까요?\"",
+        "text": "\"TLTB 쪽이랑 협의가 진행 중인지 확인해보겠습니다.\"",
         "effects": {"timoci": 12},
         "next": "ch2_timoci_progress"
       }
@@ -126,22 +135,22 @@
   },
   "ch2_timoci_collaborate": {
     "lines": [
-      {"speaker": "Timoci", "text": "지방부 조율은 제가 해볼게요."},
-      {"speaker": "Timoci", "text": "서류 예산 코드만 수정해 오세요. 그게 먼저예요."},
-      {"speaker": "", "text": "Timoci가 직접 움직이겠다고 했다."}
+      {"speaker": "Timoci", "text": "TLTB 쪽 협의가 되면 저희도 움직일 수 있어요."},
+      {"speaker": "Timoci", "text": "그게 정리되면 장관 결재도 빨리 날 거예요."},
+      {"speaker": "", "text": "Timoci가 솔직하게 말해줬다."}
     ]
   },
   "ch2_timoci_frustrated": {
     "lines": [
-      {"speaker": "Timoci", "text": "저도 규정대로 하는 거예요."},
+      {"speaker": "Timoci", "text": "저희도 규정 안에서 할 수 있는 걸 하고 있어요."},
       {"speaker": "Timoci", "text": "오늘은 여기까지 하죠."},
       {"speaker": "", "text": "미팅이 끝났다."}
     ]
   },
   "ch2_timoci_progress": {
     "lines": [
-      {"speaker": "Timoci", "text": "수정된 서류 가져오면 일주일 안에 처리할게요."},
-      {"speaker": "Timoci", "text": "Wati 씨가 절차 알 거예요. 같이 오면 빠를 거예요."},
+      {"speaker": "Timoci", "text": "TLTB 쪽이랑 협의 되면 저희가 다시 검토해볼게요."},
+      {"speaker": "Timoci", "text": "Wati 씨가 그쪽 창구를 알 거예요."},
       {"speaker": "", "text": "처음으로 구체적인 진전이 생겼다."}
     ]
   },
@@ -175,8 +184,9 @@
       {"speaker": "Wati", "text": "서류 수정은 제가 도와드릴게요."},
       {"speaker": "Wati", "text": "근데... 섬에도 가보셔야 해요."},
       {"speaker": "Wati", "text": "정부 승인만 받아도, 주민들이 안 받아들이면 소용없어요."},
-      {"speaker": "Wati", "text": "가시기 전에 — 세부세부 아세요? 카바 가져가야 해요."},
-      {"speaker": "Wati", "text": "빈손으로 마을 방문하면 실례예요. 수바 시장에서 구할 수 있어요."}
+      {"speaker": "Wati", "text": "가시기 전에 — 세부세부 아세요? 마을 어른 처음 만날 때 양고나 드리는 의식이에요."},
+      {"speaker": "Wati", "text": "양고나 없이 가면 실례예요. 챙겨서 가세요."},
+      {"speaker": "나", "text": "알겠어요. 챙겨갈게요."}
     ]
   },
 

@@ -22,24 +22,24 @@ size = Vector2(10, 12)
 size = Vector2(10, 12)
 
 ; 상단 벽 — 건물 입구 3곳에 구멍
-; KODA(x=17~41), 정부청사(x=172~196), 국제기구(x=259~283)
-; 남은 구간: x=20~17(없음) / x=41~172 / x=196~259 / x=283~300
+; KODA(x=17~41), 정부청사(x=205~229), 국제기구(x=278~302)
+; 남은 구간: x=41~205 / x=229~278 / x=302~320
 [sub_resource type="RectangleShape2D" id="wt1"]
-size = Vector2(131, 10)   ; x=41~172 → 중심 x=106.5
+size = Vector2(164, 10)   ; x=41~205 → 중심 x=123
 
 [sub_resource type="RectangleShape2D" id="wt2"]
-size = Vector2(63, 10)    ; x=196~259 → 중심 x=227.5
+size = Vector2(49, 10)    ; x=229~278 → 중심 x=253.5
 
 [sub_resource type="RectangleShape2D" id="wt3"]
-size = Vector2(17, 10)    ; x=283~300 → 중심 x=291.5
+size = Vector2(18, 10)    ; x=302~320 → 중심 x=311
 
-; 하단 벽 — 좌측 (x=0~266, 갭 전)
+; 하단 벽 — 좌측 (x=0~146, 항구 갭 전)
 [sub_resource type="RectangleShape2D" id="2"]
-size = Vector2(132, 10)
+size = Vector2(146, 10)
 
-; 하단 벽 — 우측 (x=294~320, 갭 후)
+; 하단 벽 — 우측 (x=174~320, 항구 갭 후)
 [sub_resource type="RectangleShape2D" id="3"]
-size = Vector2(26, 10)
+size = Vector2(146, 10)
 
 [sub_resource type="RectangleShape2D" id="4"]
 size = Vector2(10, 70)
@@ -76,33 +76,33 @@ volume_db = -6.0
 ; ─── 이동 경계 ───
 [node name="Walls" type="Node2D" parent="."]
 
-; 상단 벽 구간 1: x=41~172
+; 상단 벽 구간 1: x=41~205
 [node name="WallTop1" type="StaticBody2D" parent="Walls"]
-position = Vector2(107, 72)
+position = Vector2(123, 72)
 [node name="Col" type="CollisionShape2D" parent="Walls/WallTop1"]
 shape = SubResource("wt1")
 
-; 상단 벽 구간 2: x=196~259
+; 상단 벽 구간 2: x=229~278
 [node name="WallTop2" type="StaticBody2D" parent="Walls"]
-position = Vector2(228, 72)
+position = Vector2(254, 72)
 [node name="Col" type="CollisionShape2D" parent="Walls/WallTop2"]
 shape = SubResource("wt2")
 
-; 상단 벽 구간 3: x=283~300
+; 상단 벽 구간 3: x=302~320
 [node name="WallTop3" type="StaticBody2D" parent="Walls"]
-position = Vector2(292, 72)
+position = Vector2(311, 72)
 [node name="Col" type="CollisionShape2D" parent="Walls/WallTop3"]
 shape = SubResource("wt3")
 
-; 하단 벽 좌측 (x=0~266, 중심 x=66)
+; 하단 벽 좌측 (x=0~146, 중심 x=73)
 [node name="WallBottomLeft" type="StaticBody2D" parent="Walls"]
-position = Vector2(66, 175)
+position = Vector2(73, 175)
 [node name="Col" type="CollisionShape2D" parent="Walls/WallBottomLeft"]
 shape = SubResource("2")
 
-; 하단 벽 우측 (x=294~320, 중심 x=307)
+; 하단 벽 우측 (x=174~320, 중심 x=247)
 [node name="WallBottomRight" type="StaticBody2D" parent="Walls"]
-position = Vector2(307, 175)
+position = Vector2(247, 175)
 [node name="Col" type="CollisionShape2D" parent="Walls/WallBottomRight"]
 shape = SubResource("3")
 
@@ -138,7 +138,7 @@ horizontal_alignment = 1
 modulate = Color(1, 1, 0.5, 0.85)
 
 [node name="DoorGovernment" type="Area2D" parent="Doors"]
-position = Vector2(184, 84)
+position = Vector2(217, 84)
 groups = ["door"]
 metadata/target_scene = "res://scenes/world/government_building.tscn"
 metadata/spawn_x = 160.0
@@ -156,7 +156,7 @@ horizontal_alignment = 1
 modulate = Color(1, 1, 0.5, 0.85)
 
 [node name="DoorIntl" type="Area2D" parent="Doors"]
-position = Vector2(271, 84)
+position = Vector2(290, 84)
 groups = ["door"]
 metadata/target_scene = "res://scenes/world/intl_org_office.tscn"
 metadata/spawn_x = 160.0
@@ -297,7 +297,7 @@ target_position = Vector2(0, 14)
 enabled = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(2, 2)
+zoom = Vector2(1, 1)
 
 ; ─── 항구 힌트 ───
 [node name="HarborHint" type="Label" parent="."]
