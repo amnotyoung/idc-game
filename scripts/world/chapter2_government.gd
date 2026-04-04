@@ -32,22 +32,30 @@ func _show_elevator() -> void:
 	_hide_all_npcs()
 	DialogueManager.start("ch2_elevator")
 
+func _set_npc_active(npc: CharacterBody2D, active: bool) -> void:
+	npc.visible = active
+	npc.set_deferred("process_mode", Node.PROCESS_MODE_INHERIT if active else Node.PROCESS_MODE_DISABLED)
+	# 충돌 판정도 토글
+	var col = npc.get_node("CollisionShape2D")
+	if col:
+		col.set_deferred("disabled", not active)
+
 func _hide_all_npcs() -> void:
-	timoci.visible = false
-	receptionist.visible = false
-	sela.visible = false
+	_set_npc_active(timoci, false)
+	_set_npc_active(receptionist, false)
+	_set_npc_active(sela, false)
 
 func _show_floor3() -> void:
 	_current_floor = 3
 	_hide_all_npcs()
-	timoci.visible = true
-	receptionist.visible = true
+	_set_npc_active(timoci, true)
+	_set_npc_active(receptionist, true)
 	_setup_floor3_state()
 
 func _show_floor5() -> void:
 	_current_floor = 5
 	_hide_all_npcs()
-	sela.visible = true
+	_set_npc_active(sela, true)
 	_setup_floor5_state()
 
 func _setup_floor3_state() -> void:
