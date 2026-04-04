@@ -321,12 +321,6 @@
     ]
   },
 
-  "ch2_sela_consent_submit_timoci_bonus": {
-    "_note": "이 대화는 사용 안 함. 대신 ch2_sela_consent_submit handler에서 timoci trust +15 직접 부여"
-  },
-    ]
-  },
-
   "ch2_sela_all_done": {
     "lines": [
       {"speaker": "Sela", "text": "서류 접수 완료했어요. 검토 진행 중이에요."}
