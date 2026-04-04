@@ -103,6 +103,11 @@
         "next": "ch3_lani_honest"
       },
       {
+        "text": "\"보고서 기반이긴 한데, 다시 듣고 싶어요.\"",
+        "effects": {"lani": 5, "ratu_josefa": 5},
+        "next": "ch3_lani_cautious"
+      },
+      {
         "text": "\"주민 설문조사 결과가 있어요.\"",
         "effects": {"lani": -10, "ratu_josefa": -5},
         "next": "ch3_lani_deflect"
