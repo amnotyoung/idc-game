@@ -88,6 +88,7 @@ func _start_mere_dialogue() -> void:
 
 func _unlock_exit() -> void:
 	TrustManager.set_flag("ch1_intro_done")
+	TrustManager.save_game()
 	_exit_unlocked = true
 	# Mere 대사 교체 — 이미 얘기 끝난 상태
 	mere.dialogue_id = "ch1_mere_after_talk"
