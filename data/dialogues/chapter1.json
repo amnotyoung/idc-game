@@ -30,7 +30,7 @@
     ],
     "choices": [
       {
-        "text": "\"죄송합니다. 저도 방금 왔어요.\"",
+        "text": "\"죄송합니다. 저도 며칠 전에 왔어요.\"",
         "effects": { "mere": 10 },
         "next": "ch1_mere_honest"
       },
