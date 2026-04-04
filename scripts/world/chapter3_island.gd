@@ -87,4 +87,19 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			TrustManager.set_flag("ch4_consent_obtained")
 			ratu.dialogue_id = "ch3_consent_done"
 			mere.dialogue_id = "ch3_mere_consent"
+			_update_village_npcs()
 			TrustManager.save_game()
+
+func _update_village_npcs() -> void:
+	if not village_npcs:
+		return
+	var elder = village_npcs.get_node_or_null("Elder")
+	var fisher = village_npcs.get_node_or_null("Fisher")
+	var woman = village_npcs.get_node_or_null("Woman")
+	if TrustManager.has_flag("ch4_consent_obtained"):
+		if elder: elder.dialogue_id = "island_elder_after"
+		if fisher: fisher.dialogue_id = "island_fisher_after"
+		if woman: woman.dialogue_id = "island_woman_after"
+	elif TrustManager.has_flag("ch3_good_ending"):
+		if elder: elder.dialogue_id = "island_elder_after"
+		if fisher: fisher.dialogue_id = "island_fisher_after"
