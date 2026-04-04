@@ -139,5 +139,6 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			pass  # 소개 없이 왔으면 아무 일도 안 일어남
 		"ch2_sela_consent_submit":
 			TrustManager.set_flag("ch4_consent_submitted")
+			TrustManager.modify("timoci", 15)   # Sela→Timoci 연결로 신뢰 보너스
 			sela.dialogue_id = "ch2_sela_all_done"
 			TrustManager.save_game()
