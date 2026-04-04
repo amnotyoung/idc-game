@@ -1,0 +1,24 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; but the file format is plain TOML.
+
+[application]
+
+config/name="Aid World"
+config/description="A game about international development cooperation set in Fiji."
+run/main_scene=""
+config/features=PackedStringArray("4.3", "GL Compatibility")
+config/icon="res://assets/sprites/ui/icon.svg"
+
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/size/window_width_override=960
+window/size/window_height_override=540
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

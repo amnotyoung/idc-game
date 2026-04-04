@@ -1,0 +1,12 @@
+# Godot-specific ignores
+.godot/
+*.uid
+
+# macOS
+.DS_Store
+
+# Export presets (contains sensitive paths)
+export_presets.cfg
+
+# Exported binaries
+builds/
