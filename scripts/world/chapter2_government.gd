@@ -22,12 +22,12 @@ func _ready() -> void:
 		DialogueManager.start("ch2_no_appointment")
 		return
 
-	# ── 첫 방문(약속 있음): 입장 내레이션 → 엘레베이터 ──
+	# ── 첫 방문(약속 있음): 입장 내레이션 → 바로 3층 ──
 	if not TrustManager.has_flag("ch2_arrived"):
 		DialogueManager.start("ch2_enter_building")
 		return
 
-	# ── 재방문: 바로 엘레베이터 ──
+	# ── 재방문: 엘리베이터 선택 ──
 	_show_elevator()
 
 func _show_elevator() -> void:
