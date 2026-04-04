@@ -161,6 +161,12 @@
     ]
   },
 
+  "ch2_receptionist_after": {
+    "lines": [
+      {"speaker": "접수처", "text": "다 끝나셨어요? 수고하셨습니다."}
+    ]
+  },
+
   "ch2_timoci_after_good": {
     "lines": [
       {"speaker": "Timoci", "text": "서류 수정하면 연락주세요. 기다리고 있을게요."}
