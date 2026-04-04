@@ -130,6 +130,18 @@
       { "speaker": "Mere", "text": "10년 전 비슷한 사업이 흐지부지됐어요. 사람들이 기억해요." },
       { "speaker": "",     "text": "Mere는 뭔가 더 하려다 멈췄다." },
       { "speaker": "Mere", "text": "일단 Timoci부터 만나봐야 할 것 같아요." }
+    ],
+    "choices": [
+      {
+        "text": "\"NGO 쪽 네트워크로 도울 수 있는 게 있으면 말해주세요.\"",
+        "effects": { "mere": 15 },
+        "next": "ch1_mere_strategy"
+      },
+      {
+        "text": "\"알겠어요. Timoci부터 만나볼게요.\"",
+        "effects": { "mere": 5 },
+        "next": "ch1_mere_strategy"
+      }
     ]
   },
 
