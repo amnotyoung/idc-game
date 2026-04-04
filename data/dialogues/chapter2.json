@@ -211,6 +211,14 @@
     ]
   },
 
+  "ch2_timoci_after_consent": {
+    "lines": [
+      {"speaker": "Timoci", "text": "토지청에서 동의서 접수됐다고 연락 왔어요."},
+      {"speaker": "Timoci", "text": "Ratu Josefa 서명이라니... 이전 사업 때는 안 됐었는데."},
+      {"speaker": "Timoci", "text": "장관 결재 올릴 수 있을 것 같아요. 이 정도면 충분합니다."}
+    ]
+  },
+
   "ch2_receptionist_after": {
     "lines": [
       {"speaker": "접수처", "text": "다 끝나셨어요? 수고하셨습니다."}
