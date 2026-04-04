@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Aid World"
 config/description="A game about international development cooperation set in Fiji."
-run/main_scene="res://scenes/world/chapter1_office.tscn"
+run/main_scene="res://scenes/ui/title_screen.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://assets/sprites/ui/icon.svg"
 
