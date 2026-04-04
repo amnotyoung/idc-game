@@ -256,7 +256,7 @@
 
   "ch2_elevator": {
     "lines": [
-      {"speaker": "", "text": "엘레베이터 앞이다. 몇 층으로 갈까?"}
+      {"speaker": "", "text": "엘리베이터 앞이다. 몇 층으로 갈까?"}
     ],
     "choices": [
       {
