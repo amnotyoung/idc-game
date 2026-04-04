@@ -204,7 +204,7 @@ texture_filter = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StreetNPCs/BulaWoman1"]
 shape = SubResource("npc_col")
 
-; NPC 3 — 노점상 (Damodar City 앞)
+; NPC 3 — 노점상 (Pacific City 앞)
 [node name="Vendor" type="CharacterBody2D" parent="StreetNPCs"]
 position = Vector2(145, 82)
 script = ExtResource("7")
@@ -248,7 +248,7 @@ texture_filter = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StreetNPCs/BulaWoman2"]
 shape = SubResource("npc_col")
 
-; NPC 6 — Indo-Fijian 여성 (사리, 핑크) — Damodar City 쪽
+; NPC 6 — Indo-Fijian 여성 (사리, 핑크) — Pacific City 쪽
 [node name="HindiWoman" type="CharacterBody2D" parent="StreetNPCs"]
 position = Vector2(135, 88)
 script = ExtResource("7")
