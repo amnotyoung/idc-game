@@ -22,7 +22,10 @@ func _ready() -> void:
 	else:
 		# 재방문 — James 결과에 따라 대사 분기
 		receptionist.dialogue_id = "ch4_receptionist_after"
-		if TrustManager.has_flag("ch4_james_endorsed"):
+		if TrustManager.has_flag("ch4_consent_obtained"):
+			# 동의서 획득 후
+			james.dialogue_id = "ch4_james_after_consent"
+		elif TrustManager.has_flag("ch4_james_endorsed"):
 			james.dialogue_id = "ch4_james_after_endorsed"
 		elif TrustManager.has_flag("ch4_tltb_contact"):
 			james.dialogue_id = "ch4_james_after_neutral"
