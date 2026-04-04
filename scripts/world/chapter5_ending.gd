@@ -1,12 +1,12 @@
 extends Node
 
 @onready var bg: Sprite2D = get_parent().get_node("Background")
+@onready var bgm: AudioStreamPlayer = get_parent().get_node("BGM")
 
 const OFFICE_BG = preload("res://assets/sprites/tilesets/office_bg.png")
 const ISLAND_BG = preload("res://assets/sprites/tilesets/naitamba_bg.png")
 
 var _ending_type: String = ""
-var _dialogue_queue: Array = []
 
 func _ready() -> void:
 	await get_tree().process_frame
