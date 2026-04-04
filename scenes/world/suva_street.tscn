@@ -263,9 +263,9 @@ texture_filter = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StreetNPCs/HindiWoman"]
 shape = SubResource("npc_col")
 
-; NPC 7 — Indo-Fijian 남성 (흰 셔츠, 콧수염) — 우측 상가 쪽
+; NPC 7 — Indo-Fijian 남성 (흰 셔츠, 콧수염) — 도로 아래쪽
 [node name="HindiMan" type="CharacterBody2D" parent="StreetNPCs"]
-position = Vector2(265, 90)
+position = Vector2(60, 135)
 script = ExtResource("7")
 dialogue_id = "hindi_man_1"
 walk_range = 25.0
