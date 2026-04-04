@@ -39,12 +39,15 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			TrustManager.set_flag("ch3_visited")
 			ratu.dialogue_id = ""
 			lani.dialogue_id = ""
+			TrustManager.save_game()
 		"ch3_ratu_close_good":
 			TrustManager.set_flag("ch3_visited")
 			TrustManager.set_flag("ch3_good_ending")
 			ratu.dialogue_id = "ch3_ratu_after"
 			lani.dialogue_id = "ch3_lani_after"
+			TrustManager.save_game()
 		"ch3_ratu_close_neutral":
 			TrustManager.set_flag("ch3_visited")
 			ratu.dialogue_id = "ch3_ratu_after_neutral"
 			lani.dialogue_id = ""
+			TrustManager.save_game()
