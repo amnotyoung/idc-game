@@ -501,5 +501,133 @@ d.rectangle([166, 102, 173, 108], fill=(32, 32, 32, 255))
 d.rectangle([192, 102, 199, 108], fill=(32, 32, 32, 255))
 d.rectangle([172, 91, 193, 96], fill=(*WIN_GLASS, 180))
 
+# ════════════════════════════════
+# 18. 항구 / 선착장 (하단, y=158~180)
+#     수바 항 — 콘크리트 부두 + 목재 선착장 + 인터아일랜드 페리
+# ════════════════════════════════
+HARBOR_SEA    = (48,  82, 115)   # 수바 만 (어두운 청록)
+HARBOR_DEEP   = (35,  62,  92)   # 깊은 바다
+HARBOR_REFL   = (68, 108, 148)   # 수면 반사
+QUAY_CONC     = (152, 145, 132)  # 부두 콘크리트
+QUAY_EDGE     = (122, 115, 105)  # 콘크리트 엣지
+QUAY_SHADOW   = (102,  95,  85)  # 수중 부두벽
+JETTY_WOOD    = (128,  96,  60)  # 목재 널빤지
+JETTY_DARK    = (105,  78,  46)  # 어두운 판자
+BOLLARD_BODY  = (66,  66,  74)   # 볼라드 기둥
+BOLLARD_CAP   = (88,  88,  98)   # 볼라드 상단
+ROPE_COL      = (168, 148, 108)  # 계류 로프
+FERRY_HULL    = (230, 228, 215)  # 페리 선체 (크림)
+FERRY_REDLINE = (192,  45,  36)  # 워터라인 (빨강)
+FERRY_CABIN   = ( 50,  78, 122)  # 선실 (파랑)
+FERRY_WIN_C   = (130, 172, 208)  # 선실 창문
+FERRY_DECK    = (200, 195, 180)  # 갑판
+FERRY_FUNNEL  = ( 38,  38,  46)  # 굴뚝
+FERRY_SMOKE   = (165, 162, 158)  # 연기
+
+# ── 바다 (전체 하단) ───────────────────────────────────────
+for y in range(163, 180):
+    t = (y - 163) / 17
+    r = int(HARBOR_SEA[0] + (HARBOR_DEEP[0] - HARBOR_SEA[0]) * t)
+    g = int(HARBOR_SEA[1] + (HARBOR_DEEP[1] - HARBOR_SEA[1]) * t)
+    b = int(HARBOR_SEA[2] + (HARBOR_DEEP[2] - HARBOR_SEA[2]) * t)
+    d.line([0, y, W-1, y], fill=(r, g, b, 255))
+
+# 수면 반사 (선착장 좌/우)
+for wy in [165, 168, 172, 176]:
+    for wx in range(5, 130, 22):
+        d.line([wx, wy, wx + 9, wy], fill=(*HARBOR_REFL, 180), width=1)
+    for wx in range(312, 195, -22):
+        d.line([wx - 8, wy, wx, wy], fill=(*HARBOR_REFL, 160), width=1)
+
+# ── 부두 콘크리트 벽 (좌: x=0~133, 우: x=187~320) ─────────
+# 좌측 부두
+d.rectangle([0, 158, 133, 163], fill=(*QUAY_CONC, 255))
+d.rectangle([0, 163, 133, 167], fill=(*QUAY_SHADOW, 255))
+d.line([0, 163, 133, 163], fill=(*QUAY_EDGE, 255), width=1)
+# 우측 부두
+d.rectangle([187, 158, W, 163], fill=(*QUAY_CONC, 255))
+d.rectangle([187, 163, W, 167], fill=(*QUAY_SHADOW, 255))
+d.line([187, 163, W, 163], fill=(*QUAY_EDGE, 255), width=1)
+
+# ── 목재 선착장 (x=133~187, y=158~178) ──────────────────────
+# 측면 마구리
+d.rectangle([133, 158, 135, 178], fill=(*JETTY_DARK, 255))
+d.rectangle([185, 158, 187, 178], fill=(*JETTY_DARK, 255))
+# 하단 수중 지지대
+d.rectangle([133, 178, 187, 180], fill=(*JETTY_DARK, 255))
+# 판자 (가로 결)
+for py in range(158, 178):
+    plank = JETTY_WOOD if (py % 4) < 2 else JETTY_DARK
+    d.rectangle([135, py, 185, py + 1], fill=(*plank, 255))
+# 판자 틈 선
+for py in range(162, 178, 4):
+    d.line([135, py, 185, py], fill=(*JETTY_DARK, 200), width=1)
+
+# ── 볼라드 (철제 계류 말뚝 × 3) ──────────────────────────────
+for bx in [141, 160, 179]:
+    d.rectangle([bx - 1, 162, bx + 1, 172], fill=(*BOLLARD_BODY, 255))
+    d.ellipse([bx - 3, 160, bx + 3, 165], fill=(*BOLLARD_CAP, 255))
+
+# ── 페리 — 인터아일랜드 여객선 ──────────────────────────────
+# 수바 항에서 외곽 섬으로 다니는 크루즈 페리 (크림 선체, 파란 선실)
+FX1, FX2   = 192, 308          # 선체 좌/우
+FY_WL      = 174               # 흘수선 y
+FY_DECK    = 158               # 갑판 y
+
+# 선체 본체 (크림)
+d.polygon([
+    FX1,     FY_WL,            # 선미 하단
+    FX1,     FY_DECK + 5,      # 선미 측면
+    FX1 + 4, FY_DECK + 1,      # 선미 상단
+    FX2 - 8, FY_DECK + 1,      # 선수 근처
+    FX2,     FY_DECK + 7,      # 선수 뾰족
+    FX2,     FY_WL,            # 선수 하단
+], fill=(*FERRY_HULL, 255))
+
+# 워터라인 (빨간 띠)
+d.rectangle([FX1, FY_WL - 2, FX2, FY_WL], fill=(*FERRY_REDLINE, 255))
+
+# 갑판 선 (어두운 그림자)
+d.line([FX1 + 4, FY_DECK + 2, FX2 - 6, FY_DECK + 2],
+       fill=(*FERRY_DECK, 255), width=2)
+
+# 선실 블록 (갑판 위)
+CAB_Y1 = FY_DECK - 12
+CAB_Y2 = FY_DECK + 1
+d.rectangle([FX1 + 6, CAB_Y1, FX2 - 12, CAB_Y2], fill=(*FERRY_CABIN, 255))
+
+# 선실 창문 행
+for cwx in range(FX1 + 10, FX2 - 14, 10):
+    d.rectangle([cwx, CAB_Y1 + 3, cwx + 6, CAB_Y1 + 8],
+                fill=(*FERRY_WIN_C, 255))
+
+# 조타실 (선수 쪽 상부)
+d.rectangle([FX2 - 24, CAB_Y1 - 6, FX2 - 10, CAB_Y1],
+            fill=(38, 62, 102, 255))
+d.rectangle([FX2 - 22, CAB_Y1 - 5, FX2 - 12, CAB_Y1 - 1],
+            fill=(*FERRY_WIN_C, 200))
+
+# 굴뚝 (2개) + 연기
+for fx in [FX1 + 22, FX1 + 34]:
+    d.rectangle([fx, CAB_Y1 - 10, fx + 5, CAB_Y1], fill=(*FERRY_FUNNEL, 255))
+    d.ellipse([fx - 1, CAB_Y1 - 13, fx + 6, CAB_Y1 - 9],
+              fill=(*FERRY_SMOKE, 160))
+    d.ellipse([fx,     CAB_Y1 - 16, fx + 5, CAB_Y1 - 12],
+              fill=(*FERRY_SMOKE, 100))
+
+# 갑판 난간 (흰 점선)
+for nx in range(FX1 + 5, FX2 - 6, 4):
+    d.point([nx, FY_DECK + 1], fill=(222, 220, 210, 255))
+
+# ── 계류 로프 (볼라드 → 선체) ────────────────────────────────
+d.line([181, 165, FX1,     163], fill=(*ROPE_COL, 255), width=1)
+d.line([181, 169, FX1,     170], fill=(*ROPE_COL, 255), width=1)
+
+# ── 갱웨이 (선착장 ↔ 선체 연결) ─────────────────────────────
+for gi in range(8):
+    gx = 186 + gi
+    gy = 160 + gi
+    d.rectangle([gx, gy, gx + 1, gy + 1], fill=(*QUAY_CONC, 255))
+
 img.save(os.path.join(OUT, "suva_street_bg.png"))
 print("저장됨: suva_street_bg.png")
