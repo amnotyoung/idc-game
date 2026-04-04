@@ -213,10 +213,17 @@
     ]
   },
 
-  "ch3_lani_after_end": {
+  "ch3_lani_after_join": {
     "lines": [
       {"speaker": "Lani", "text": "...저도요?"},
       {"speaker": "Lani", "text": "진짜 그러면... 네. 해볼게요."}
+    ]
+  },
+
+  "ch3_lani_after_pass": {
+    "lines": [
+      {"speaker": "Lani", "text": "...네."},
+      {"speaker": "Lani", "text": "잘 됐으면 좋겠어요. 이번엔."}
     ]
   },
 
