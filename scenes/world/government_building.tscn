@@ -132,6 +132,32 @@ text = "접수처"
 theme_override_font_sizes/font_size = 6
 horizontal_alignment = 1
 
+; ─── NPC: Sela (토지청 5층 — 기본 숨김) ───
+[node name="Sela" type="CharacterBody2D" parent="."]
+visible = false
+position = Vector2(160, 55)
+script = ExtResource("2")
+npc_id = "sela"
+dialogue_id = ""
+
+[node name="Sprite" type="Sprite2D" parent="Sela"]
+texture = ExtResource("sela_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sela"]
+shape = SubResource("1")
+
+[node name="NameTag" type="Label" parent="Sela"]
+offset_left = -15.0
+offset_top = -16.0
+offset_right = 15.0
+offset_bottom = -6.0
+text = "Sela"
+theme_override_font_sizes/font_size = 6
+horizontal_alignment = 1
+
 ; ─── 플레이어 ───
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(160, 130)
