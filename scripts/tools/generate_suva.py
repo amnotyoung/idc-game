@@ -561,57 +561,6 @@ for bx in [141, 160, 179]:
     d.rectangle([bx - 1, 162, bx + 1, 172], fill=(*BOLLARD_BODY, 255))
     d.ellipse([bx - 3, 160, bx + 3, 165], fill=(*BOLLARD_CAP, 255))
 
-# ── 페리 — 인터아일랜드 여객선 ──────────────────────────────
-# 수바 항에서 외곽 섬으로 다니는 크루즈 페리 (크림 선체, 파란 선실)
-FX1, FX2   = 192, 308          # 선체 좌/우
-FY_WL      = 174               # 흘수선 y
-FY_DECK    = 158               # 갑판 y
-
-# 선체 본체 (크림)
-d.polygon([
-    FX1,     FY_WL,            # 선미 하단
-    FX1,     FY_DECK + 5,      # 선미 측면
-    FX1 + 4, FY_DECK + 1,      # 선미 상단
-    FX2 - 8, FY_DECK + 1,      # 선수 근처
-    FX2,     FY_DECK + 7,      # 선수 뾰족
-    FX2,     FY_WL,            # 선수 하단
-], fill=(*FERRY_HULL, 255))
-
-# 워터라인 (빨간 띠)
-d.rectangle([FX1, FY_WL - 2, FX2, FY_WL], fill=(*FERRY_REDLINE, 255))
-
-# 갑판 선 (어두운 그림자)
-d.line([FX1 + 4, FY_DECK + 2, FX2 - 6, FY_DECK + 2],
-       fill=(*FERRY_DECK, 255), width=2)
-
-# 선실 블록 (갑판 위)
-CAB_Y1 = FY_DECK - 12
-CAB_Y2 = FY_DECK + 1
-d.rectangle([FX1 + 6, CAB_Y1, FX2 - 12, CAB_Y2], fill=(*FERRY_CABIN, 255))
-
-# 선실 창문 행
-for cwx in range(FX1 + 10, FX2 - 14, 10):
-    d.rectangle([cwx, CAB_Y1 + 3, cwx + 6, CAB_Y1 + 8],
-                fill=(*FERRY_WIN_C, 255))
-
-# 조타실 (선수 쪽 상부)
-d.rectangle([FX2 - 24, CAB_Y1 - 6, FX2 - 10, CAB_Y1],
-            fill=(38, 62, 102, 255))
-d.rectangle([FX2 - 22, CAB_Y1 - 5, FX2 - 12, CAB_Y1 - 1],
-            fill=(*FERRY_WIN_C, 200))
-
-# 굴뚝 (2개) + 연기
-for fx in [FX1 + 22, FX1 + 34]:
-    d.rectangle([fx, CAB_Y1 - 10, fx + 5, CAB_Y1], fill=(*FERRY_FUNNEL, 255))
-    d.ellipse([fx - 1, CAB_Y1 - 13, fx + 6, CAB_Y1 - 9],
-              fill=(*FERRY_SMOKE, 160))
-    d.ellipse([fx,     CAB_Y1 - 16, fx + 5, CAB_Y1 - 12],
-              fill=(*FERRY_SMOKE, 100))
-
-# 갑판 난간 (흰 점선)
-for nx in range(FX1 + 5, FX2 - 6, 4):
-    d.point([nx, FY_DECK + 1], fill=(222, 220, 210, 255))
-
 # ── 모터보트 (나이탬바와 동일한 배 — 선착장 우측) ───────────
 # 나이탬바 island와 같은 파란 유리섬유 소형 모터보트
 HULL_DARK  = ( 28,  82, 148, 255)   # 파란 유리섬유 선체
