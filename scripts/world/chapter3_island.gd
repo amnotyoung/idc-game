@@ -10,7 +10,11 @@ func _ready() -> void:
 	if not TrustManager.has_flag("ch3_arrived"):
 		# 첫 방문 — 세부세부 전까지 Lani와 대화 불가
 		lani.dialogue_id = ""
-		DialogueManager.start("ch3_arrive")
+		if TrustManager.has_flag("ch2_timoci_met"):
+			DialogueManager.start("ch3_arrive")
+		else:
+			# 정부청사 안 가고 섬부터 온 경우
+			DialogueManager.start("ch3_arrive_early")
 	elif TrustManager.has_flag("ch3_visited"):
 		# 재방문 — 결말에 따라 복원
 		if TrustManager.has_flag("ch3_good_ending"):
