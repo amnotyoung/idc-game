@@ -24,6 +24,7 @@ config/icon="res://assets/sprites/ui/icon.svg"
 
 DialogueManager="*res://scripts/systems/dialogue_manager.gd"
 TrustManager="*res://scripts/systems/trust_manager.gd"
+SceneManager="*res://scenes/systems/scene_manager.tscn"
 
 [display]
 

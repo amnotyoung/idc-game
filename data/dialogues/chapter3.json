@@ -1,0 +1,172 @@
+{
+  "ch3_arrive": {
+    "lines": [
+      {"speaker": "", "text": "— 나이탬바 섬 —"},
+      {"speaker": "", "text": "수바에서 배로 2시간. 인구 340명."},
+      {"speaker": "", "text": "10년 전 수자원 사업이 중단된 곳이다."}
+    ]
+  },
+
+  "ch3_ratu_greet_prepared": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "어서오시오."},
+      {"speaker": "Ratu Josefa", "text": "KODA에서 오셨다고 했지요."}
+    ],
+    "choices": [
+      {
+        "text": "\"세부세부 가져왔습니다.\" (카바를 건넸다)",
+        "effects": {"ratu_josefa": 20},
+        "next": "ch3_sevusevu_good"
+      },
+      {
+        "text": "\"안녕하세요. 처음 뵙겠습니다.\"",
+        "effects": {"ratu_josefa": 0},
+        "next": "ch3_sevusevu_miss"
+      }
+    ]
+  },
+
+  "ch3_ratu_greet_basic": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "어서오시오."},
+      {"speaker": "Ratu Josefa", "text": "KODA에서 오셨다고 했지요."}
+    ],
+    "choices": [
+      {
+        "text": "\"안녕하세요. 처음 뵙겠습니다.\"",
+        "effects": {"ratu_josefa": 0},
+        "next": "ch3_sevusevu_miss"
+      }
+    ]
+  },
+
+  "ch3_sevusevu_good": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "...알고 왔군요."},
+      {"speaker": "Ratu Josefa", "text": "들어오시오. 함께 앉읍시다."},
+      {"speaker": "", "text": "의식이 시작됐다. 카바 그릇이 돌아갔다."},
+      {"speaker": "Ratu Josefa", "text": "기억하는 것들이 있소. 10년 전 약속. 아무것도 남지 않았지."},
+      {"speaker": "Ratu Josefa", "text": "당신은 몇 번째요?"}
+    ],
+    "choices": [
+      {
+        "text": "\"세 번째입니다. 사과드립니다.\"",
+        "effects": {"ratu_josefa": 15},
+        "next": "ch3_village_talk"
+      },
+      {
+        "text": "\"이번엔 다를 겁니다.\"",
+        "effects": {"ratu_josefa": 5},
+        "next": "ch3_village_talk"
+      }
+    ]
+  },
+
+  "ch3_sevusevu_miss": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "...그렇군요."},
+      {"speaker": "", "text": "짧은 침묵이 흘렀다."},
+      {"speaker": "Ratu Josefa", "text": "앉으시오. 얘기는 들어봐야지."},
+      {"speaker": "Ratu Josefa", "text": "10년 전에도 사람들이 왔었소. 빈손으로."}
+    ],
+    "choices": [
+      {
+        "text": "\"죄송합니다. 몰랐습니다.\"",
+        "effects": {"ratu_josefa": 5},
+        "next": "ch3_village_talk"
+      },
+      {
+        "text": "\"바로 본론으로 가겠습니다.\"",
+        "effects": {"ratu_josefa": -10},
+        "next": "ch3_village_talk"
+      }
+    ]
+  },
+
+  "ch3_village_talk": {
+    "lines": [
+      {"speaker": "Lani", "text": "저 물어봐도 돼요?"},
+      {"speaker": "Lani", "text": "이 사업 — 우리가 원하는 건지 물어본 적 있어요?"},
+      {"speaker": "Lani", "text": "서류엔 항상 '주민 수요 확인됨'이라고 나오던데."}
+    ],
+    "choices": [
+      {
+        "text": "\"...파일에서 봤을 뿐이에요. 직접 들으러 왔어요.\"",
+        "effects": {"lani": 15, "ratu_josefa": 10},
+        "next": "ch3_lani_honest"
+      },
+      {
+        "text": "\"주민 설문조사 결과가 있어요.\"",
+        "effects": {"lani": -10, "ratu_josefa": -5},
+        "next": "ch3_lani_deflect"
+      }
+    ]
+  },
+
+  "ch3_lani_honest": {
+    "lines": [
+      {"speaker": "Lani", "text": "...그렇게 말하는 사람은 처음이네요."},
+      {"speaker": "", "text": "Lani가 잠깐 Ratu를 봤다."},
+      {"speaker": "Ratu Josefa", "text": "우리가 원하는 건 물탱크가 아니오."},
+      {"speaker": "Ratu Josefa", "text": "10년 전에도 물탱크 짓는다고 했소. 지금도 물 문제는 똑같아."},
+      {"speaker": "Ratu Josefa", "text": "우리가 원하는 건 — 다음에도 누군가 책임지는 사람이 있다는 거요."},
+      {"speaker": "", "text": "대답하기 어려운 말이었다."}
+    ],
+    "choices": [
+      {
+        "text": "\"제가 떠나도 Wati 씨가 여기 계속 있을 거예요.\"",
+        "effects": {"ratu_josefa": 20, "lani": 10},
+        "next": "ch3_ratu_close_good"
+      },
+      {
+        "text": "\"최선을 다하겠습니다.\"",
+        "effects": {"ratu_josefa": 5, "lani": 0},
+        "next": "ch3_ratu_close_neutral"
+      }
+    ]
+  },
+
+  "ch3_lani_deflect": {
+    "lines": [
+      {"speaker": "Lani", "text": "설문조사요."},
+      {"speaker": "Lani", "text": "수바 사람이 와서 체크박스 채워놓고 간 거 말하는 거예요?"},
+      {"speaker": "Ratu Josefa", "text": "...오늘은 여기까지 합시다."}
+    ]
+  },
+
+  "ch3_ratu_close_good": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "...Wati."},
+      {"speaker": "Ratu Josefa", "text": "그 사람 알아요. 오래전부터."},
+      {"speaker": "Ratu Josefa", "text": "좋소. 한번 더 지켜보겠소."},
+      {"speaker": "", "text": "처음으로 문이 열린 것 같았다."}
+    ]
+  },
+
+  "ch3_ratu_close_neutral": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "최선."},
+      {"speaker": "Ratu Josefa", "text": "전임자도 그 말 했소."},
+      {"speaker": "", "text": "Ratu가 자리에서 일어났다."}
+    ]
+  },
+
+  "ch3_ratu_after": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "...다음에 올 때도 카바 가져오시오."}
+    ]
+  },
+
+  "ch3_lani_after": {
+    "lines": [
+      {"speaker": "Lani", "text": "Wati 씨 얘기는 사실이에요?"},
+      {"speaker": "Lani", "text": "그 사람이 계속 있어준다면... 한번 봐야죠."}
+    ]
+  },
+
+  "ch3_ratu_after_neutral": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "기다리겠소."}
+    ]
+  }
+}

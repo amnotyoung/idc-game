@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3]
+[gd_scene load_steps=19 format=3 uid="uid://chapter1office"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/npc/npc_base.gd" id="2"]
@@ -6,7 +6,9 @@
 [ext_resource type="Script" path="res://scripts/world/chapter1_office.gd" id="4"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/player.png" id="5"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/mere.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_wati.png" id="wati_tex"]
 [ext_resource type="Texture2D" path="res://assets/sprites/tilesets/office_bg.png" id="7"]
+[ext_resource type="AudioStream" path="res://assets/music/bgm_office.wav" id="8"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(10, 12)
@@ -14,9 +16,14 @@ size = Vector2(10, 12)
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(10, 12)
 
-[sub_resource type="RectangleShape2D" id="3"]
-size = Vector2(280, 10)
+; 상단 벽 — 문 구멍(x=140~180) 기준으로 좌/우 분리
+[sub_resource type="RectangleShape2D" id="3L"]
+size = Vector2(140, 10)
 
+[sub_resource type="RectangleShape2D" id="3R"]
+size = Vector2(140, 10)
+
+; 하단 벽 — 통짜
 [sub_resource type="RectangleShape2D" id="4"]
 size = Vector2(280, 10)
 
@@ -25,6 +32,10 @@ size = Vector2(10, 160)
 
 [sub_resource type="RectangleShape2D" id="6"]
 size = Vector2(10, 160)
+
+; Wati 충돌체
+[sub_resource type="RectangleShape2D" id="wati_col"]
+size = Vector2(10, 12)
 
 ; 플레이어 스프라이트 (Polygon2D — 파란 사각형)
 [sub_resource type="Gradient" id="7"]
@@ -41,11 +52,19 @@ texture_filter = 1
 ; ─── 벽 충돌체 ───
 [node name="Walls" type="Node2D" parent="."]
 
-[node name="WallTopCol" type="StaticBody2D" parent="Walls"]
-position = Vector2(160, 5)
-[node name="Col" type="CollisionShape2D" parent="Walls/WallTopCol"]
-shape = SubResource("3")
+; 상단 벽 좌 (x=0~140)
+[node name="WallTopLeft" type="StaticBody2D" parent="Walls"]
+position = Vector2(70, 5)
+[node name="Col" type="CollisionShape2D" parent="Walls/WallTopLeft"]
+shape = SubResource("3L")
 
+; 상단 벽 우 (x=180~320)
+[node name="WallTopRight" type="StaticBody2D" parent="Walls"]
+position = Vector2(250, 5)
+[node name="Col" type="CollisionShape2D" parent="Walls/WallTopRight"]
+shape = SubResource("3R")
+
+; 하단 벽 — 통짜
 [node name="WallBottomCol" type="StaticBody2D" parent="Walls"]
 position = Vector2(160, 175)
 [node name="Col" type="CollisionShape2D" parent="Walls/WallBottomCol"]
@@ -107,8 +126,54 @@ text = "Mere"
 theme_override_font_sizes/font_size = 6
 horizontal_alignment = 1
 
+; ─── NPC: Wati ───
+[node name="Wati" type="CharacterBody2D" parent="."]
+position = Vector2(80, 85)
+script = ExtResource("2")
+npc_id = "wati"
+dialogue_id = "ch1_wati_intro"
+
+[node name="Sprite" type="Sprite2D" parent="Wati"]
+texture = ExtResource("wati_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wati"]
+shape = SubResource("wati_col")
+
+[node name="NameTag" type="Label" parent="Wati"]
+offset_left = -15.0
+offset_top = -16.0
+offset_right = 15.0
+offset_bottom = -6.0
+text = "Wati"
+theme_override_font_sizes/font_size = 6
+horizontal_alignment = 1
+
 ; ─── 대화창 UI ───
 [node name="DialogueBox" parent="." instance=ExtResource("3")]
+
+; ─── BGM ───
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8")
+autoplay = true
+volume_db = -6.0
+
+; ─── 출구 (브리핑 끝난 후 활성화) ───
+; 출구 힌트 라벨 (상단 문 위에 표시)
+[node name="ExitDoor" type="Node2D" parent="."]
+position = Vector2(160, 18)
+
+[node name="ExitHint" type="Label" parent="ExitDoor"]
+offset_left = -22.0
+offset_top = 0.0
+offset_right = 22.0
+offset_bottom = 10.0
+text = "▲ 나가기"
+theme_override_font_sizes/font_size = 6
+horizontal_alignment = 1
+modulate = Color(1, 1, 0.4, 0.0)
 
 ; ─── 오프닝 자동 시작 트리거 ───
 [node name="OpeningTrigger" type="Node" parent="."]

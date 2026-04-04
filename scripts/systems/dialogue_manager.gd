@@ -3,15 +3,19 @@ extends Node
 signal dialogue_started
 signal dialogue_line_changed(line: Dictionary)
 signal dialogue_choices_presented(choices: Array)
-signal dialogue_ended
+signal dialogue_ended(dialogue_id: String)
 
 var dialogues: Dictionary = {}
 var current_dialogue: Dictionary = {}
+var current_dialogue_id: String = ""
 var current_line_index: int = 0
 var is_active: bool = false
 
 const DIALOGUE_FILES = [
-	"res://data/dialogues/chapter1.json"
+	"res://data/dialogues/chapter1.json",
+	"res://data/dialogues/street_npcs.json",
+	"res://data/dialogues/chapter2.json",
+	"res://data/dialogues/chapter3.json"
 ]
 
 func _ready() -> void:
@@ -35,6 +39,7 @@ func start(dialogue_id: String) -> void:
 		push_error("Dialogue not found: " + dialogue_id)
 		return
 	current_dialogue = dialogues[dialogue_id]
+	current_dialogue_id = dialogue_id
 	current_line_index = 0
 	is_active = true
 	emit_signal("dialogue_started")
@@ -75,6 +80,8 @@ func choose(choice_index: int) -> void:
 
 func end() -> void:
 	is_active = false
+	var ended_id := current_dialogue_id
 	current_dialogue = {}
+	current_dialogue_id = ""
 	current_line_index = 0
-	emit_signal("dialogue_ended")
+	emit_signal("dialogue_ended", ended_id)

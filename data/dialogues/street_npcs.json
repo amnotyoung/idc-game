@@ -1,0 +1,65 @@
+{
+  "bula_man_1": {
+    "lines": [
+      { "speaker": "남성", "text": "Bula, bro! 어디 가요?" },
+      { "speaker": "남성", "text": "수바 처음이에요? 여기 좋은 곳 많아요." },
+      { "speaker": "남성", "text": "Jack's 가봤어요? 거기 물건 좋아요, 진짜." }
+    ]
+  },
+
+  "bula_woman_1": {
+    "lines": [
+      { "speaker": "여성", "text": "Bula vinaka!" },
+      { "speaker": "여성", "text": "오늘 날씨 좋네요. 비 안 와서 다행이에요." },
+      { "speaker": "여성", "text": "나이탬바 섬에서 왔어요? 저도 거기 친척 있어요." }
+    ]
+  },
+
+  "bula_woman_2": {
+    "lines": [
+      { "speaker": "여성", "text": "Bula! 어디서 왔어요?" },
+      { "speaker": "여성", "text": "피지 처음이에요? 여기 사람들 다 착해요." },
+      { "speaker": "여성", "text": "Vinaka vakalevu — 정말 감사해요, 라는 뜻이에요. 외워두면 좋아요 ㅎ" }
+    ]
+  },
+
+  "street_vendor_1": {
+    "lines": [
+      { "speaker": "상인", "text": "Bula bro! 망고 사요? 오늘 싱싱해요." },
+      { "speaker": "상인", "text": "정부에서 일해요? 여기 다들 힘들어요, 알죠?" },
+      { "speaker": "상인", "text": "나이탬바 섬 사업 말이에요 — 빨리 됐으면 좋겠어요. 친구 거기 살아요." }
+    ]
+  },
+
+  "police_1": {
+    "lines": [
+      { "speaker": "경찰관", "text": "Bula! 피지 방문을 환영합니다." },
+      { "speaker": "경찰관", "text": "도움 필요하면 말해요." },
+      { "speaker": "경찰관", "text": "요즘 정부청사 쪽에 시위대가 좀 있어요. 조심해요." }
+    ]
+  },
+
+  "hindi_woman_1": {
+    "lines": [
+      { "speaker": "여성", "text": "Namaste." },
+      { "speaker": "여성", "text": "어디서 오셨어요?" },
+      { "speaker": "여성", "text": "우리 가게 건너편이에요. 나중에 들러요, 차 한 잔 드릴게요." }
+    ]
+  },
+
+  "hindi_man_1": {
+    "lines": [
+      { "speaker": "남성", "text": "Good morning." },
+      { "speaker": "남성", "text": "KODA에서 일해요? 나이탬바 섬 사업이죠?" },
+      { "speaker": "남성", "text": "우리 피지 사람들은 그 섬 이야기 잘 알아요." },
+      { "speaker": "남성", "text": "정부랑 이야기할 거면... Timoci 조심해요. 그 사람 까다로워요." }
+    ]
+  },
+
+  "bula_generic": {
+    "lines": [
+      { "speaker": "주민", "text": "Bula!" },
+      { "speaker": "주민", "text": "좋은 하루 보내요, bro." }
+    ]
+  }
+}

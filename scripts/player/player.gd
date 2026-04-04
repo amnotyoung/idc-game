@@ -15,6 +15,9 @@ const DIR_FRAME = {
 
 var _facing: Vector2 = Vector2.DOWN
 
+func _ready() -> void:
+	add_to_group("player")
+
 func _physics_process(_delta: float) -> void:
 	if DialogueManager.is_active:
 		velocity = Vector2.ZERO

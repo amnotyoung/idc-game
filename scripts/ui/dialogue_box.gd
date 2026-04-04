@@ -42,11 +42,16 @@ func _on_choices_presented(choices: Array) -> void:
 		btn.text = choices[i].get("text", "")
 		btn.add_theme_font_size_override("font_size", 7)
 		btn.custom_minimum_size = Vector2(0, 14)
+		btn.focus_mode = Control.FOCUS_ALL   # 키보드 포커스 허용
 		btn.pressed.connect(func(): DialogueManager.choose(i))
 		choices_container.add_child(btn)
 	choices_container.visible = true
+	# 첫 번째 버튼에 포커스 — 방향키/엔터로 선택 가능
+	await get_tree().process_frame
+	if choices_container.get_child_count() > 0:
+		choices_container.get_child(0).grab_focus()
 
-func _on_dialogue_ended() -> void:
+func _on_dialogue_ended(_dialogue_id: String) -> void:
 	panel.visible = false
 	_clear_choices()
 

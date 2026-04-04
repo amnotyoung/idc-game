@@ -2,6 +2,15 @@ extends Node
 
 signal trust_changed(npc_id: String, new_value: int)
 
+## 챕터/이벤트 진행 플래그
+var _flags: Dictionary = {}
+
+func set_flag(key: String) -> void:
+	_flags[key] = true
+
+func has_flag(key: String) -> bool:
+	return _flags.get(key, false)
+
 const TRUE_ENDING_THRESHOLD = 70
 const NORMAL_ENDING_THRESHOLD = 50
 
@@ -11,6 +20,7 @@ var _trust: Dictionary = {
 	"mere":       0,
 	"james":      0,
 	"lani":       0,
+	"wati":       0,
 }
 
 func modify(npc_id: String, amount: int) -> void:
