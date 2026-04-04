@@ -171,6 +171,25 @@
       {"speaker": "James", "text": "좋아요. 같이 해봅시다."},
       {"speaker": "James", "text": "기술 자문 지원서 보낼게요. 정부청사 5층 토지청 Sela한테 제가 얘기해둘게요. 직접 만나보세요."},
       {"speaker": "", "text": "처음으로 외부 파트너가 생겼다."}
+    ],
+    "choices": [
+      {
+        "text": "\"마을 기술자 교육 프로그램도 같이 설계할 수 있을까요?\"",
+        "effects": {"james": 15},
+        "next": "ch4_james_endorsed_detail"
+      },
+      {
+        "text": "\"감사합니다. 빨리 움직이겠습니다.\"",
+        "effects": {"james": 5},
+        "next": "ch4_james_endorsed_detail"
+      }
+    ]
+  },
+
+  "ch4_james_endorsed_detail": {
+    "lines": [
+      {"speaker": "James", "text": "기술자 교육이요? APAT에 커리큘럼 있어요. 태평양 도서국 맞춤형."},
+      {"speaker": "James", "text": "이번에 제대로 해보죠."}
     ]
   },
 
