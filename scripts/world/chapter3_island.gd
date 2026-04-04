@@ -29,7 +29,7 @@ func _ready() -> void:
 
 func _on_dialogue_ended(dialogue_id: String) -> void:
 	match dialogue_id:
-		"ch3_arrive":
+		"ch3_arrive", "ch3_arrive_early":
 			TrustManager.set_flag("ch3_arrived")
 			await get_tree().create_timer(0.5).timeout
 			if TrustManager.has_flag("sevusevu_prepared"):
