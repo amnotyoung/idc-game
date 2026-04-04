@@ -120,10 +120,7 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 	elif dialogue_id == "ch3_wati_island_prep":
 		TrustManager.set_flag("wati_yangona_hint")
 		wati.dialogue_id = "ch3_wati_island_idle"
-	elif dialogue_id == "ch4_sela_call":
-		TrustManager.set_flag("ch4_sela_contacted")
-		phone.dialogue_id = ""
-		TrustManager.save_game()
+	# ch4_sela_call 제거됨 — Sela는 정부청사에서 대면
 
 func _mere_walks_in() -> void:
 	var target = Vector2(player.position.x + 22, player.position.y - 18)
