@@ -23,10 +23,13 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 		"ch5_meeting_start":
 			DialogueManager.start("ch5_mere_report")
 		"ch5_mere_report":
+			await get_tree().create_timer(0.6).timeout
 			_start_timoci()
 		"ch5_timoci_response_good", "ch5_timoci_response_neutral", "ch5_timoci_response_bad":
+			await get_tree().create_timer(0.6).timeout
 			_start_james()
 		"ch5_james_response_good", "ch5_james_response_neutral", "ch5_james_response_bad":
+			await get_tree().create_timer(0.6).timeout
 			_start_sela()
 		"ch5_sela_response", "ch5_sela_response_no_sign":
 			DialogueManager.start("ch5_final_choice")
