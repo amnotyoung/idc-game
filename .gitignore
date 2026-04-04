@@ -10,3 +10,6 @@ export_presets.cfg
 
 # Exported binaries
 builds/
+
+# External asset sources (원본은 출처에서 재다운로드)
+kenney_tiny-dungeon/
