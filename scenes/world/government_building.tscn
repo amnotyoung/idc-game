@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" path="res://assets/music/bgm_government.wav" id="9"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_bula_woman.png" id="10"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/sela.png" id="sela_tex"]
+[ext_resource type="Texture2D" path="res://assets/sprites/tilesets/landoffice_bg.png" id="landoffice_bg"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(10, 12)
