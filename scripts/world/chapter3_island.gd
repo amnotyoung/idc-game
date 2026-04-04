@@ -58,9 +58,8 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 				ratu.dialogue_id = "ch3_ratu_greet_prepared"
 			else:
 				ratu.dialogue_id = "ch3_ratu_greet_basic"
-		"ch3_sevusevu_good", "ch3_sevusevu_miss":
-			# 이제 Lani와 대화 가능
-			lani.dialogue_id = "ch3_village_talk"
+		# ch3_sevusevu → village_talk → lani_honest/deflect 로 choose() next 체인으로 자동 진행
+		# 별도 핸들러 불필요 (terminal에서 잡힘)
 		"ch3_lani_deflect":
 			TrustManager.set_flag("ch3_visited")
 			ratu.dialogue_id = ""
