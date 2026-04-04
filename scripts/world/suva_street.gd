@@ -98,4 +98,4 @@ func _process(_delta: float) -> void:
 	if not _entering and not DialogueManager.is_active:
 		if py >= HARBOR["exit_y"] and abs(px - HARBOR["cx"]) <= HARBOR["gap"]:
 			_entering = true
-			SceneManager.go_to_with_spawn(HARBOR["scene"], HARBOR["spawn"])
+			SceneManager.go_to_with_sea_cut(HARBOR["scene"], HARBOR["spawn"], "수바에서 배로 2시간 — 나이탬바 섬")
