@@ -2,6 +2,9 @@ extends Node2D
 
 @onready var player: CharacterBody2D = $Player
 @onready var vendor: CharacterBody2D = $StreetNPCs/Vendor
+@onready var hindi_man: CharacterBody2D = $StreetNPCs/HindiMan
+@onready var police: CharacterBody2D = $StreetNPCs/Police
+@onready var bula_woman2: CharacterBody2D = $StreetNPCs/BulaWoman2
 
 # 문 구멍 중심 x, 진입 감지 y, 목적지
 const DOORS = [
@@ -31,6 +34,16 @@ func _ready() -> void:
 	await get_tree().process_frame
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	_update_vendor()
+	_update_street_npcs()
+
+func _update_street_npcs() -> void:
+	# 챕터 진행에 따라 거리 NPC 대사 진화
+	if TrustManager.has_flag("ch4_james_met"):
+		bula_woman2.dialogue_id = "bula_woman_after_ch4"
+	if TrustManager.has_flag("ch3_visited"):
+		police.dialogue_id = "police_after_island"
+	if TrustManager.has_flag("ch2_timoci_met"):
+		hindi_man.dialogue_id = "hindi_man_after_timoci"
 
 func _update_vendor() -> void:
 	if TrustManager.has_flag("sevusevu_prepared"):
