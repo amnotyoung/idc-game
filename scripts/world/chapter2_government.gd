@@ -16,6 +16,7 @@ func _ready() -> void:
 	elif not TrustManager.has_flag("ch2_arrived"):
 		DialogueManager.start("ch2_enter_building")
 	elif not TrustManager.has_flag("ch2_timoci_met"):
+		timoci.dialogue_id = ""          # 접수처 통과 전 직접 접근 차단
 		DialogueManager.start("ch2_second_visit_arrive")
 	else:
 		# 면담 완료 후 재방문 — 결과에 따라 대사 분기
