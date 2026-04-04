@@ -203,12 +203,12 @@
       {
         "text": "\"Josua 삼촌을 운영위원회에 넣겠습니다. Lani 씨도 참여할 수 있어요?\"",
         "effects": {"lani": 20},
-        "next": "ch3_lani_after_end"
+        "next": "ch3_lani_after_join"
       },
       {
         "text": "\"참고하겠습니다.\"",
         "effects": {"lani": 5},
-        "next": "ch3_lani_after_end"
+        "next": "ch3_lani_after_pass"
       }
     ]
   },
