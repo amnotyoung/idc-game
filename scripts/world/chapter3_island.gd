@@ -11,6 +11,7 @@ func _ready() -> void:
 	if not TrustManager.has_flag("ch3_arrived"):
 		# 첫 방문 — 세부세부 전까지 Lani와 대화 불가
 		lani.dialogue_id = ""
+		mere.dialogue_id = "ch3_mere_first"
 		if TrustManager.has_flag("ch2_timoci_met"):
 			DialogueManager.start("ch3_arrive")
 		else:
@@ -21,12 +22,15 @@ func _ready() -> void:
 		if TrustManager.has_flag("ch3_good_ending"):
 			ratu.dialogue_id = "ch3_ratu_after"
 			lani.dialogue_id = "ch3_lani_after"
+			mere.dialogue_id = "ch3_mere_after_good"
 		else:
 			ratu.dialogue_id = "ch3_ratu_after_neutral"
 			lani.dialogue_id = ""
+			mere.dialogue_id = "ch3_mere_after_neutral"
 	else:
 		# ch3_arrived는 됐지만 ch3_visited는 아직 — 중간 재진입
 		lani.dialogue_id = "ch3_village_talk"
+		mere.dialogue_id = "ch3_mere_after_ratu"
 
 func _on_dialogue_ended(dialogue_id: String) -> void:
 	match dialogue_id:
