@@ -93,7 +93,7 @@
       },
       {
         "text": "\"현실적으로 가능한 선에서 최선을 다하겠습니다.\"",
-        "effects": {},
+        "effects": {"mere": 5, "timoci": 5, "james": 5},
         "next": "ch5_resolve"
       }
     ]
