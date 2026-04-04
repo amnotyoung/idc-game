@@ -72,10 +72,15 @@ func _start_sela() -> void:
 		DialogueManager.start("ch5_sela_response_no_sign")
 
 func _show_ending() -> void:
-	# 배경 전환 (페이드)
+	# BGM 페이드아웃 + 배경 페이드아웃 동시
 	var tween = get_tree().create_tween()
-	tween.tween_property(bg, "modulate:a", 0.0, 0.8)
+	tween.set_parallel(true)
+	tween.tween_property(bg, "modulate:a", 0.0, 1.2)
+	tween.tween_property(bgm, "volume_db", -40.0, 1.2)
 	await tween.finished
+
+	# 잠깐의 암전
+	await get_tree().create_timer(1.5).timeout
 
 	match _ending_type:
 		"true":
@@ -85,11 +90,12 @@ func _show_ending() -> void:
 		"bad":
 			bg.texture = OFFICE_BG
 
+	# 배경 천천히 페이드인 (BGM은 꺼진 상태 유지 — 고요한 엔딩)
 	tween = get_tree().create_tween()
-	tween.tween_property(bg, "modulate:a", 1.0, 0.8)
+	tween.tween_property(bg, "modulate:a", 1.0, 1.5)
 	await tween.finished
 
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(1.0).timeout
 
 	match _ending_type:
 		"true":
