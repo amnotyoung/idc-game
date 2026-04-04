@@ -51,6 +51,7 @@ func _hide_all_npcs() -> void:
 func _show_floor3() -> void:
 	_current_floor = 3
 	_hide_all_npcs()
+	bg.texture = FLOOR3_BG
 	_set_npc_active(timoci, true)
 	_set_npc_active(receptionist, true)
 	_setup_floor3_state()
@@ -58,6 +59,7 @@ func _show_floor3() -> void:
 func _show_floor5() -> void:
 	_current_floor = 5
 	_hide_all_npcs()
+	bg.texture = FLOOR5_BG
 	_set_npc_active(sela, true)
 	_setup_floor5_state()
 
