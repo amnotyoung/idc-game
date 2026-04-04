@@ -54,12 +54,12 @@ func _show_current_line() -> void:
 		var choices: Array = current_dialogue.get("choices", [])
 		if choices.size() > 0:
 			# condition 필드 있는 선택지는 해당 플래그 있을 때만 표시
-			var visible: Array = []
+			_visible_choices = []
 			for c in choices:
 				var cond: String = c.get("condition", "")
 				if cond == "" or TrustManager.has_flag(cond):
-					visible.append(c)
-			emit_signal("dialogue_choices_presented", visible)
+					_visible_choices.append(c)
+			emit_signal("dialogue_choices_presented", _visible_choices)
 		else:
 			end()
 		return
