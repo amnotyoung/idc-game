@@ -16,6 +16,17 @@ func _ready() -> void:
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	panel.visible = false
 	back_btn.pressed.connect(_on_back_pressed)
+	# 패널 클릭으로도 대화 진행 가능
+	panel.gui_input.connect(_on_panel_input)
+
+func _on_panel_input(event: InputEvent) -> void:
+	if not DialogueManager.is_active:
+		return
+	if choices_container.visible:
+		return
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		DialogueManager.advance()
+		get_viewport().set_input_as_handled()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not DialogueManager.is_active:
@@ -46,6 +57,8 @@ func _on_line_changed(line: Dictionary) -> void:
 	speaker_label.text = line.get("speaker", "")
 	text_label.text    = line.get("text", "")
 	back_btn.visible   = DialogueManager.can_go_back()
+	# 어떤 UI 요소도 포커스 갖지 않게 — 엔터키가 _unhandled_input에 도달하도록
+	get_viewport().gui_release_focus()
 
 func _on_choices_presented(choices: Array) -> void:
 	_clear_choices()
@@ -55,20 +68,19 @@ func _on_choices_presented(choices: Array) -> void:
 		btn.add_theme_font_size_override("font_size", 7)
 		btn.custom_minimum_size = Vector2(0, 14)
 		btn.focus_mode = Control.FOCUS_ALL
-		btn.pressed.connect(func():
-			# 선택 즉시 모든 버튼 비활성화 (엔터키 가로채기 방지)
-			for c in choices_container.get_children():
-				c.focus_mode = Control.FOCUS_NONE
-				c.disabled = true
-			DialogueManager.choose(i)
-		)
+		btn.pressed.connect(_on_choice_selected.bind(i))
 		choices_container.add_child(btn)
 	choices_container.visible = true
-	# 직전 라인이 있으면 뒤로가기 버튼 표시 (선택지 화면에서도 사용 가능)
 	back_btn.visible = DialogueManager.can_go_back()
 	await get_tree().process_frame
 	if choices_container.get_child_count() > 0:
 		choices_container.get_child(0).grab_focus()
+
+func _on_choice_selected(index: int) -> void:
+	# 선택 즉시 모든 버튼을 scene tree에서 분리 (입력 가로채기 완전 차단)
+	_clear_choices()
+	choices_container.visible = false
+	DialogueManager.choose(index)
 
 func _on_dialogue_ended(_dialogue_id: String) -> void:
 	panel.visible = false
@@ -81,6 +93,5 @@ func _on_back_pressed() -> void:
 
 func _clear_choices() -> void:
 	for child in choices_container.get_children():
-		child.release_focus()
-		child.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		choices_container.remove_child(child)
 		child.queue_free()
