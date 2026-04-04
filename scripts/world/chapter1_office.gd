@@ -127,7 +127,7 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 		TrustManager.set_flag("appointment_set")
 		wati.dialogue_id = "ch1_wati_idle"
 	elif dialogue_id == "ch3_wati_island_prep":
-		TrustManager.set_flag("sevusevu_prepared")
+		TrustManager.set_flag("wati_yangona_hint")
 		wati.dialogue_id = "ch3_wati_island_idle"
 	elif dialogue_id == "ch4_sela_call":
 		TrustManager.set_flag("ch4_sela_contacted")
