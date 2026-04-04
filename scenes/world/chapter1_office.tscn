@@ -42,6 +42,10 @@ size = Vector2(10, 12)
 [sub_resource type="RectangleShape2D" id="doc_col"]
 size = Vector2(14, 8)
 
+; 전화기 충돌체
+[sub_resource type="RectangleShape2D" id="phone_col"]
+size = Vector2(10, 8)
+
 ; 플레이어 스프라이트 (Polygon2D — 파란 사각형)
 [sub_resource type="Gradient" id="7"]
 
