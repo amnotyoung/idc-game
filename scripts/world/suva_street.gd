@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var player: CharacterBody2D = $Player
 @onready var vendor: CharacterBody2D = $StreetNPCs/Vendor
+@onready var bula_man: CharacterBody2D = $StreetNPCs/BulaMan
 @onready var hindi_man: CharacterBody2D = $StreetNPCs/HindiMan
 @onready var police: CharacterBody2D = $StreetNPCs/Police
 @onready var bula_woman2: CharacterBody2D = $StreetNPCs/BulaWoman2
