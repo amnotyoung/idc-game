@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var player: CharacterBody2D = $Player
+@onready var vendor: CharacterBody2D = $StreetNPCs/Vendor
 
 # 문 구멍 중심 x, 진입 감지 y, 목적지
 const DOORS = [
