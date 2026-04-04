@@ -143,8 +143,8 @@
 
   "ch3_ratu_close_good": {
     "lines": [
-      {"speaker": "Ratu Josefa", "text": "...Wati."},
-      {"speaker": "Ratu Josefa", "text": "그 사람 알아요. 오래전부터."},
+      {"speaker": "Ratu Josefa", "text": "...우리가 직접."},
+      {"speaker": "Ratu Josefa", "text": "10년 전에는 아무도 그런 말 안 했소."},
       {"speaker": "Ratu Josefa", "text": "좋소. 한번 더 지켜보겠소."},
       {"speaker": "", "text": "처음으로 문이 열린 것 같았다."}
     ]
