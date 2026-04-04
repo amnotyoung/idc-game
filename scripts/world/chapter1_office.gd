@@ -39,8 +39,8 @@ func _process(_delta: float) -> void:
 		SceneManager.go_to_with_spawn(STREET_SCENE, Vector2(29, 115))
 
 func _setup_free_roam() -> void:
-	# ── 엔딩 진입 체크 (동의서 획득 후) ──
-	if TrustManager.has_flag("ch4_consent_obtained") \
+	# ── 엔딩 진입 체크 (Sela에게 동의서 제출 완료) ──
+	if TrustManager.has_flag("ch4_consent_submitted") \
 	   and not TrustManager.has_flag("ch5_started"):
 		await get_tree().create_timer(0.5).timeout
 		SceneManager.go_to("res://scenes/world/ending_scene.tscn")
