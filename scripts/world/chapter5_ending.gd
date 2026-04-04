@@ -95,3 +95,38 @@ func _show_ending() -> void:
 			DialogueManager.start("ch5_ending_normal")
 		"bad":
 			DialogueManager.start("ch5_ending_bad")
+
+func _trust_bar(value: int) -> String:
+	var filled = int(value / 10)
+	var empty = 10 - filled
+	return "█".repeat(filled) + "░".repeat(empty) + " %d" % value
+
+func _show_report_card() -> void:
+	# 런타임에 대화 데이터 주입
+	var names = {
+		"mere": "Mere",
+		"timoci": "Timoci",
+		"ratu_josefa": "Ratu Josefa",
+		"lani": "Lani",
+		"james": "James"
+	}
+	var lines: Array = [
+		{"speaker": "", "text": "— 관계 성적표 —"}
+	]
+	for npc_id in TrustManager.ENDING_NPCS:
+		var trust = TrustManager.get_trust(npc_id)
+		var bar = _trust_bar(trust)
+		lines.append({"speaker": names[npc_id], "text": bar})
+
+	var label = ""
+	match _ending_type:
+		"true":
+			label = "True Ending — 마을이 주인이 되다"
+		"normal":
+			label = "Normal Ending — 아직 갈 길이 남다"
+		"bad":
+			label = "Bad Ending — 10년 전의 반복"
+	lines.append({"speaker": "", "text": label})
+
+	DialogueManager.all_dialogues["ch5_report"] = {"lines": lines}
+	DialogueManager.start("ch5_report")
