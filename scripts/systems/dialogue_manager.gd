@@ -10,6 +10,7 @@ var current_dialogue: Dictionary = {}
 var current_dialogue_id: String = ""
 var current_line_index: int = 0
 var is_active: bool = false
+var _visible_choices: Array = []
 
 const DIALOGUE_FILES = [
 	"res://data/dialogues/chapter1.json",
