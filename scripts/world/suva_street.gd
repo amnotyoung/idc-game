@@ -27,6 +27,26 @@ const DOORS = [
 
 var _entering := false
 
+func _ready() -> void:
+	await get_tree().process_frame
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	_update_vendor()
+
+func _update_vendor() -> void:
+	if TrustManager.has_flag("sevusevu_prepared"):
+		vendor.dialogue_id = "street_vendor_after"
+	elif TrustManager.has_flag("appointment_set"):
+		# Timoci 약속 잡힌 후 — 양고나 구매 가능
+		vendor.dialogue_id = "street_vendor_yangona"
+	else:
+		vendor.dialogue_id = "street_vendor_1"
+
+func _on_dialogue_ended(dialogue_id: String) -> void:
+	if dialogue_id == "street_vendor_yangona_buy":
+		TrustManager.set_flag("sevusevu_prepared")
+		vendor.dialogue_id = "street_vendor_after"
+		TrustManager.save_game()
+
 # 항구 — 하단 중앙 출구
 const HARBOR = {
 	"cx": 160.0, "gap": 14.0,
