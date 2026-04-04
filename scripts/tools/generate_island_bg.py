@@ -67,6 +67,42 @@ hill_front = [
 ]
 draw.polygon(hill_front, fill=HILL_LIGHT)
 
+# 빽빽한 나무 캐노피 (타원형 군집으로 밀도 높게)
+import random
+random.seed(7)
+CANOPY_DARK = (28, 75, 28)
+CANOPY_MID  = (42, 108, 42)
+CANOPY_LT   = (62, 140, 52)
+CANOPY_BRIGHT = (78, 162, 65)
+
+# 뒷줄 나무 (y=65~85, 작게)
+for _ in range(30):
+    x = random.randint(0, W)
+    y = random.randint(65, 82)
+    s = random.randint(6, 12)
+    draw.ellipse([x-s, y-s//2, x+s, y+s//2], fill=CANOPY_DARK)
+
+# 중간줄 나무 (y=80~100)
+for _ in range(25):
+    x = random.randint(0, W)
+    y = random.randint(80, 98)
+    s = random.randint(7, 14)
+    draw.ellipse([x-s, y-s//2, x+s, y+s//2], fill=CANOPY_MID)
+
+# 앞줄 나무 (y=95~115, 크게)
+for _ in range(20):
+    x = random.randint(0, W)
+    y = random.randint(98, 112)
+    s = random.randint(8, 15)
+    draw.ellipse([x-s, y-s//2, x+s, y+s//2], fill=CANOPY_LT)
+
+# 하이라이트 (햇빛 받는 면)
+for _ in range(40):
+    x = random.randint(0, W)
+    y = random.randint(68, 110)
+    s = random.randint(3, 6)
+    draw.ellipse([x, y, x+s, y+s], fill=CANOPY_BRIGHT)
+
 # ── 모래사장 (y=120~140) ────────────────────────────────
 SAND_TOP = (225, 200, 140)
 SAND_BOT = (210, 185, 120)
