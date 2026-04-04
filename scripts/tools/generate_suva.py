@@ -428,8 +428,8 @@ def palm(px, ground_y, height=30):
 
 # 야자수: Albert Park 주변 + 도로변
 palm(52,  80, 28)   # KODA-Albert 경계
-palm(118, 80, 26)   # Albert-Damodar 경계
-palm(168, 80, 24)   # Damodar-Parliament 경계
+palm(118, 80, 26)   # Albert-Pacific 경계
+palm(168, 80, 24)   # Pacific-Parliament 경계
 palm(258, 80, 30)   # Parliament-IntlOrg 경계
 
 # ════════════════════════════════
