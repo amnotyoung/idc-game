@@ -73,26 +73,32 @@
     ],
     "choices": [
       {
+        "text": "\"감사 기간에 시간 내주셔서 감사해요. 상황 파악부터 하고 싶어요.\"",
+        "effects": {"timoci": 15},
+        "condition": "wati_introduced",
+        "next": "ch2_timoci_ask_reason"
+      },
+      {
         "text": "\"승인이 왜 이렇게 오래 걸리는지 알고 싶어요.\"",
         "effects": {"timoci": 5},
         "next": "ch2_timoci_ask_reason"
       },
       {
-        "text": "\"빨리 승인해주셔야 합니다. 6개월이 지났어요.\"",
-        "effects": {"timoci": -15},
-        "next": "ch2_timoci_pressure"
-      },
-      {
         "text": "\"사업 개요서 가져왔어요. 같이 보시겠어요?\"",
         "effects": {"timoci": 8},
         "next": "ch2_timoci_document"
+      },
+      {
+        "text": "\"빨리 승인해주셔야 합니다. 6개월이 지났어요.\"",
+        "effects": {"timoci": -15},
+        "next": "ch2_timoci_pressure"
       }
     ]
   },
   "ch2_timoci_ask_reason": {
     "lines": [
       {"speaker": "Timoci", "text": "...장관 결재가 아직 안 났어요."},
-      {"speaker": "Timoci", "text": "나이탬바 섬 토지가 iTaukei 공유지라서요. TLTB 동의 절차가 선행되어야 한다는 의견이 있어요."},
+      {"speaker": "Timoci", "text": "나이탬바 섬 토지가 iTaukei 공유지라서요. 토지청 동의 절차가 선행되어야 한다는 의견이 있어요."},
       {"speaker": "Timoci", "text": "저희 부서에서 올렸는데 위에서 그 부분을 지적하고 있어요."},
       {"speaker": "", "text": "핑계처럼 들리지만 — 실제 절차 문제일 수 있다."}
     ],
@@ -121,13 +127,13 @@
     "lines": [
       {"speaker": "Timoci", "text": "...봅시다."},
       {"speaker": "Timoci", "text": "나이탬바 섬. 토지 현황이 여기 빠져있네요."},
-      {"speaker": "Timoci", "text": "섬 토지가 iTaukei 공유지예요. 장관 결재 전에 TLTB 검토가 있어야 한다는 게 위쪽 의견이에요."},
+      {"speaker": "Timoci", "text": "섬 토지가 iTaukei 공유지예요. 장관 결재 전에 토지청 검토가 있어야 한다는 게 위쪽 의견이에요."},
       {"speaker": "Timoci", "text": "저희가 올릴 수는 있는데, 그 부분 없이는 반려될 가능성이 높아요."},
       {"speaker": "", "text": "구체적인 병목이 확인됐다."}
     ],
     "choices": [
       {
-        "text": "\"TLTB 쪽이랑 협의가 진행 중인지 확인해보겠습니다.\"",
+        "text": "\"토지청 쪽이랑 협의가 진행 중인지 확인해보겠습니다.\"",
         "effects": {"timoci": 12},
         "next": "ch2_timoci_progress"
       }
@@ -135,7 +141,7 @@
   },
   "ch2_timoci_collaborate": {
     "lines": [
-      {"speaker": "Timoci", "text": "TLTB 쪽 협의가 되면 저희도 움직일 수 있어요."},
+      {"speaker": "Timoci", "text": "토지청 쪽 협의가 되면 저희도 움직일 수 있어요."},
       {"speaker": "Timoci", "text": "그게 정리되면 장관 결재도 빨리 날 거예요."},
       {"speaker": "", "text": "Timoci가 솔직하게 말해줬다."}
     ]
@@ -149,7 +155,7 @@
   },
   "ch2_timoci_progress": {
     "lines": [
-      {"speaker": "Timoci", "text": "TLTB 쪽이랑 협의 되면 저희가 다시 검토해볼게요."},
+      {"speaker": "Timoci", "text": "토지청 쪽이랑 협의 되면 저희가 다시 검토해볼게요."},
       {"speaker": "Timoci", "text": "Wati 씨가 그쪽 창구를 알 거예요."},
       {"speaker": "", "text": "처음으로 구체적인 진전이 생겼다."}
     ]
