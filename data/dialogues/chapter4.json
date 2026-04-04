@@ -181,7 +181,7 @@
       {
         "text": "\"감사합니다. 빨리 움직이겠습니다.\"",
         "effects": {"james": 5},
-        "next": "ch4_james_endorsed_detail"
+        "next": "ch4_james_endorsed_brief"
       }
     ]
   },
