@@ -1,9 +1,19 @@
 {
   "bula_man_1": {
     "lines": [
-      { "speaker": "남성", "text": "Bula, bro! 어디 가요?" },
-      { "speaker": "남성", "text": "수바 처음이에요? 여기 좋은 곳 많아요." },
-      { "speaker": "남성", "text": "Jack's 가봤어요? 거기 물건 좋아요, 진짜." }
+      { "speaker": "남성", "text": "Bula, bro! 럭비 해봤어요?" },
+      { "speaker": "남성", "text": "여기 Albert Park예요. 피지에서 제일 유명한 운동장이에요." },
+      { "speaker": "남성", "text": "수바 처음이에요? Victoria Parade 따라가면 Parliament도 보이고 Grand Pacific Hotel도 있어요." },
+      { "speaker": "남성", "text": "피지 사람들 럭비 좋아해요, 진짜. 같이 한 판 하실래요? ㅎ" }
+    ]
+  },
+
+  "bula_man_rugby": {
+    "lines": [
+      { "speaker": "남성", "text": "아, KODA 사람이구나! 나이탬바 사업 하시는 거죠?" },
+      { "speaker": "남성", "text": "럭비도 그렇지만 — 팀워크가 다예요, bro." },
+      { "speaker": "남성", "text": "섬 사람들이랑 잘 하려면, 혼자 돌진하면 안 돼요. 패스해야 해요." },
+      { "speaker": "남성", "text": "럭비에서 배운 거예요, 진짜. ㅎ" }
     ]
   },
 
