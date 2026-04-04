@@ -3,6 +3,7 @@ extends Node
 @onready var mere: CharacterBody2D   = get_parent().get_node("Mere")
 @onready var wati: CharacterBody2D   = get_parent().get_node("Wati")
 @onready var player: CharacterBody2D = get_parent().get_node("Player")
+@onready var phone                   = get_parent().get_node("Phone")
 
 const EXIT_Y     = 12.0    # 상단 문 통과 — y가 이 값 이하일 때
 const EXIT_X_MIN = 135.0
@@ -38,9 +39,41 @@ func _process(_delta: float) -> void:
 		SceneManager.go_to_with_spawn(STREET_SCENE, Vector2(29, 115))
 
 func _setup_free_roam() -> void:
-	mere.position = Vector2(170, 60)
-	mere.face("down")
-	mere.dialogue_id = "ch1_mere_revisit"
+	# ── 전화기 상태 ──
+	if TrustManager.has_flag("ch4_tltb_contact") and not TrustManager.has_flag("ch4_sela_contacted"):
+		phone.dialogue_id = "ch4_sela_call"
+	else:
+		phone.dialogue_id = ""
+
+	# ── Mere 상태 ──
+	if TrustManager.has_flag("ch1_mere_left"):
+		# 이미 퇴장 — 화면에서 완전히 제거
+		mere.visible = false
+	elif TrustManager.has_flag("ch2_timoci_met"):
+		# 정부청사 면담 완료 후 첫 복귀 — 작별 대사 자동 시작
+		mere.dialogue_id = ""
+		if not TrustManager.has_flag("ch1_mere_farewell_seen"):
+			TrustManager.set_flag("ch1_mere_farewell_seen")
+			mere.position = Vector2(170, 60)
+			mere.face("down")
+			_exit_unlocked = true   # Mere 이야기 중에도 나갈 수 있게
+			_setup_wati()
+			await get_tree().create_timer(0.8).timeout
+			DialogueManager.start("ch1_mere_farewell")
+			return
+		else:
+			# farewell은 봤지만 아직 free-walking 상태(버그 방어)
+			mere.visible = false
+	else:
+		# 아직 Timoci 못 만남 — 사무실에 있음
+		mere.position = Vector2(170, 60)
+		mere.face("down")
+		mere.dialogue_id = "ch1_mere_revisit"
+
+	_setup_wati()
+	_exit_unlocked = true
+
+func _setup_wati() -> void:
 	if not TrustManager.has_flag("wati_introduced"):
 		wati.dialogue_id = "ch1_wati_intro"
 	elif not TrustManager.has_flag("appointment_set"):
@@ -54,7 +87,6 @@ func _setup_free_roam() -> void:
 		wati.dialogue_id = "ch3_wati_island_idle"
 	else:
 		wati.dialogue_id = "ch1_wati_idle"
-	_exit_unlocked = true
 
 func _on_dialogue_ended(dialogue_id: String) -> void:
 	if dialogue_id == "ch1_arrival":
@@ -62,11 +94,19 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 	elif dialogue_id in BRIEFING_ENDS:
 		_unlock_exit()
 		if dialogue_id == "ch1_mere_cold_b":
-			# Mere가 나가버린 상황 — 씬에서 퇴장
+			# Mere가 화난 상태로 퇴장 — 씬에서 즉시 제거
 			mere.dialogue_id = ""
+			TrustManager.set_flag("ch1_mere_left")
 			var tween = get_tree().create_tween()
 			tween.tween_property(mere, "modulate:a", 0.0, 0.6)
 			tween.tween_callback(mere.queue_free)
+	elif dialogue_id == "ch1_mere_farewell":
+		# 현장 나가는 Mere — 자연스럽게 퇴장
+		TrustManager.set_flag("ch1_mere_left")
+		var tween = get_tree().create_tween()
+		tween.tween_property(mere, "modulate:a", 0.0, 0.8)
+		tween.tween_callback(mere.queue_free)
+		TrustManager.save_game()
 	elif dialogue_id == "ch1_wati_intro":
 		TrustManager.set_flag("wati_introduced")
 		wati.dialogue_id = "ch1_wati_waiting"
@@ -76,8 +116,10 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 	elif dialogue_id == "ch3_wati_island_prep":
 		TrustManager.set_flag("sevusevu_prepared")
 		wati.dialogue_id = "ch3_wati_island_idle"
-	elif dialogue_id == "ch1_mere_revisit":
-		pass  # Mere는 자기 갈 길 가는 것
+	elif dialogue_id == "ch4_sela_call":
+		TrustManager.set_flag("ch4_sela_contacted")
+		phone.dialogue_id = ""
+		TrustManager.save_game()
 
 func _mere_walks_in() -> void:
 	var target = Vector2(player.position.x + 22, player.position.y - 18)
