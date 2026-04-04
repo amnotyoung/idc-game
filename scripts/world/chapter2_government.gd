@@ -25,6 +25,7 @@ func _ready() -> void:
 			timoci.dialogue_id = "ch2_timoci_after_pressure"
 		else:
 			timoci.dialogue_id = "ch2_timoci_after_good"
+		receptionist.dialogue_id = "ch2_receptionist_after"
 
 func _exit_to_street(delay: float = 1.5) -> void:
 	await get_tree().create_timer(delay).timeout
