@@ -36,6 +36,7 @@ func _ready() -> void:
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	_update_vendor()
 	_update_street_npcs()
+	_check_final_meeting()
 
 func _check_final_meeting() -> void:
 	# 동의서 제출 완료 → KODA 사무소 힌트 강조
