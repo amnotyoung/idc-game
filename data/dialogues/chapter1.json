@@ -171,10 +171,10 @@
 
   "ch1_wati_intro": {
     "lines": [
-      {"speaker": "Wati", "text": "...왔군요. 저는 Wati예요. 여기서 5년째 일하고 있어요."},
-      {"speaker": "Wati", "text": "Mere 씨한테 얘기 들었죠? 정부청사 Timoci 씨 건이요."},
-      {"speaker": "Wati", "text": "제가 Seru한테 연락해볼게요. Timoci 씨 담당 직원이에요."},
-      {"speaker": "Wati", "text": "약속 잡히면 알려줄게요."}
+      {"speaker": "Wati", "text": "아, 면담 잡으려고요? 국가계획부 Timoci 씨 건이죠."},
+      {"speaker": "Wati", "text": "여기 피지 정부 쪽은 제가 5년째 창구 맡고 있어요. 어디든 제가 잡아드릴게요."},
+      {"speaker": "Wati", "text": "Timoci 씨 담당 직원 Seru한테 연락해볼게요."},
+      {"speaker": "Wati", "text": "약속 잡히면 알려드릴게요."}
     ]
   },
 
