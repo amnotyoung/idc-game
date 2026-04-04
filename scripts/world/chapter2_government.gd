@@ -51,8 +51,10 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 		"ch2_second_visit_arrive":
 			TrustManager.set_flag("ch2_second_visit")
 			receptionist.dialogue_id = "ch2_receptionist_2nd"
-			await get_tree().create_timer(0.8).timeout
-			DialogueManager.start("ch2_timoci_first")
+			# Timoci는 아직 접근 불가 — 플레이어가 접수처에 먼저 가야 함
+		"ch2_receptionist_2nd":
+			# 접수처 통과 — 이제 Timoci에게 직접 다가갈 수 있음
+			timoci.dialogue_id = "ch2_timoci_first"
 		"ch2_timoci_progress", "ch2_timoci_collaborate":
 			TrustManager.set_flag("ch2_timoci_met")
 			TrustManager.set_flag("appointment_set")
