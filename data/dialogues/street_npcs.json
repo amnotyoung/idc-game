@@ -35,7 +35,7 @@
 
   "street_vendor_1": {
     "lines": [
-      { "speaker": "상인", "text": "Bula bro! Damodar City에 오신 걸 환영해요." },
+      { "speaker": "상인", "text": "Bula bro! Pacific City에 오신 걸 환영해요." },
       { "speaker": "상인", "text": "망고 사요? 양고나도 있어요. 뭐든 물어봐요." },
       { "speaker": "상인", "text": "나이탬바 섬 사업 말이에요 — 빨리 됐으면 좋겠어요. 친구 거기 살아요." }
     ]
@@ -43,7 +43,7 @@
 
   "street_vendor_yangona": {
     "lines": [
-      { "speaker": "상인", "text": "Bula bro! Damodar City에서 뭐 찾으세요?" }
+      { "speaker": "상인", "text": "Bula bro! Pacific City에서 뭐 찾으세요?" }
     ],
     "choices": [
       {
@@ -77,7 +77,7 @@
 
   "street_vendor_after": {
     "lines": [
-      { "speaker": "상인", "text": "양고나 잘 전해줘요! Damodar City 언제든 또 와요, bro." }
+      { "speaker": "상인", "text": "양고나 잘 전해줘요! Pacific City 언제든 또 와요, bro." }
     ]
   },
 
