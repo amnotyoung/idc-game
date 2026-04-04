@@ -2,6 +2,9 @@ extends Node
 
 signal trust_changed(npc_id: String, new_value: int)
 
+func _ready() -> void:
+	load_game()
+
 ## 챕터/이벤트 진행 플래그
 var _flags: Dictionary = {}
 
