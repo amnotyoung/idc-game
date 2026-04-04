@@ -619,15 +619,52 @@ for fx in [FX1 + 22, FX1 + 34]:
 for nx in range(FX1 + 5, FX2 - 6, 4):
     d.point([nx, FY_DECK + 1], fill=(222, 220, 210, 255))
 
-# ── 계류 로프 (볼라드 → 선체) ────────────────────────────────
-d.line([181, 165, FX1,     163], fill=(*ROPE_COL, 255), width=1)
-d.line([181, 169, FX1,     170], fill=(*ROPE_COL, 255), width=1)
+# ── 모터보트 (나이탬바와 동일한 배 — 선착장 우측) ───────────
+# 나이탬바 island와 같은 파란 유리섬유 소형 모터보트
+HULL_DARK  = ( 28,  82, 148, 255)   # 파란 유리섬유 선체
+HULL_LIGHT = ( 52, 112, 175, 255)   # 선체 상단 하이라이트
+INTERIOR   = (218, 212, 200, 255)   # 선내 (베이지 흰)
+MOTOR_BODY = ( 48,  50,  55, 255)   # 선외기 본체
+MOTOR_ARM  = ( 38,  40,  44, 255)   # 선외기 팔
+WINDSHIELD = (175, 212, 238, 255)   # 앞유리
 
-# ── 갱웨이 (선착장 ↔ 선체 연결) ─────────────────────────────
-for gi in range(8):
-    gx = 186 + gi
-    gy = 160 + gi
-    d.rectangle([gx, gy, gx + 1, gy + 1], fill=(*QUAY_CONC, 255))
+BX1, BX2 = 191, 229   # 보트 좌우 (38px — 나이탬바와 동일 폭)
+BY1, BY2 = 163, 175   # 보트 상하 (수바 수면 y=163 기준)
+
+# 선체 본체 (뾰족한 배 형태)
+hull_pts = [
+    (BX1 + 4, BY2), (BX1,     BY1 + 6),
+    (BX1,     BY1 + 3),
+    (BX1 + 6, BY1),
+    (BX2 - 2, BY1),
+    (BX2,     BY1 + 4),
+    (BX2,     BY2 - 1),
+]
+d.polygon(hull_pts, fill=HULL_DARK)
+# 선체 상단 하이라이트
+d.line([(BX1 + 6, BY1), (BX2 - 2, BY1)], fill=HULL_LIGHT, width=2)
+d.line([(BX1, BY1 + 3), (BX1 + 6, BY1)], fill=HULL_LIGHT, width=1)
+# 선내
+d.rectangle([BX1 + 5, BY1 + 2, BX2 - 4, BY1 + 7], fill=INTERIOR)
+# 앞유리 (조종석 바람막이)
+d.polygon([
+    (BX1 + 8,  BY1 + 2), (BX1 + 12, BY1 - 2),
+    (BX1 + 20, BY1 - 2), (BX1 + 22, BY1 + 2)
+], fill=WINDSHIELD)
+d.line([(BX1 + 8,  BY1 + 2), (BX1 + 12, BY1 - 2)], fill=(120, 160, 195, 255), width=1)
+d.line([(BX1 + 12, BY1 - 2), (BX1 + 20, BY1 - 2)], fill=(120, 160, 195, 255), width=1)
+# 선외기 (오른쪽 끝)
+d.rectangle([BX2 - 1, BY1 + 2, BX2 + 4, BY1 + 9], fill=MOTOR_BODY)
+d.rectangle([BX2 + 2, BY1 + 9, BX2 + 4, BY2 - 1], fill=MOTOR_ARM)
+d.rectangle([BX2,     BY2 - 2, BX2 + 5, BY2],     fill=MOTOR_BODY)
+
+# 계류 로프 (보트 앞 → 선착장 볼라드)
+d.line([(BX1, BY1 + 5), (181, 169)], fill=(*ROPE_COL, 255), width=1)
+
+# 보트 물 반사
+for i in range(4):
+    rc = (int(28 * 0.5), int(82 * 0.5), int(148 * 0.55), 180 - i * 40)
+    d.line([(BX1 + 6 + i, BY2 + 1 + i), (BX2 - i, BY2 + 1 + i)], fill=rc)
 
 img.save(os.path.join(OUT, "suva_street_bg.png"))
 print("저장됨: suva_street_bg.png")
