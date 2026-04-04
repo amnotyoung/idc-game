@@ -37,6 +37,16 @@ func _ready() -> void:
 	_update_vendor()
 	_update_street_npcs()
 
+func _check_final_meeting() -> void:
+	# 동의서 제출 완료 → KODA 사무소 힌트 강조
+	if TrustManager.has_flag("ch4_consent_submitted") and not TrustManager.has_flag("ch5_started"):
+		var koda_hint: Label = get_node("Doors/DoorKODA/Hint")
+		koda_hint.text = "▲ KODA 사무소 [회의]"
+		# 깜빡임 효과
+		var tween = get_tree().create_tween().set_loops()
+		tween.tween_property(koda_hint, "modulate:a", 0.3, 0.6)
+		tween.tween_property(koda_hint, "modulate:a", 1.0, 0.6)
+
 func _update_street_npcs() -> void:
 	# 챕터 진행에 따라 거리 NPC 대사 진화
 	# Albert Park 럭비맨 — KODA 알게 된 후 대사 변경
