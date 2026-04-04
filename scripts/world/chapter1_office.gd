@@ -65,7 +65,7 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			tween.tween_callback(mere.queue_free)
 	elif dialogue_id == "ch1_wati_intro":
 		TrustManager.set_flag("wati_introduced")
-		wati.dialogue_id = "ch1_wati_idle"
+		wati.dialogue_id = "ch1_wati_waiting"
 	elif dialogue_id == "ch1_wati_appointment_ready":
 		TrustManager.set_flag("appointment_set")
 		wati.dialogue_id = "ch1_wati_idle"
