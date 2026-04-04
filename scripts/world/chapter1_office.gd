@@ -39,6 +39,13 @@ func _process(_delta: float) -> void:
 		SceneManager.go_to_with_spawn(STREET_SCENE, Vector2(29, 115))
 
 func _setup_free_roam() -> void:
+	# ── 엔딩 진입 체크 ──
+	if TrustManager.has_flag("ch4_sela_contacted") and TrustManager.has_flag("ch3_visited") \
+	   and not TrustManager.has_flag("ch5_started"):
+		await get_tree().create_timer(0.5).timeout
+		SceneManager.go_to("res://scenes/world/ending_scene.tscn")
+		return
+
 	# ── 전화기 상태 ──
 	var phone_label: Label = phone.get_node("Label")
 	if TrustManager.has_flag("ch4_tltb_contact") and not TrustManager.has_flag("ch4_sela_contacted"):
