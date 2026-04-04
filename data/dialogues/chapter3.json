@@ -2,8 +2,16 @@
   "ch3_arrive": {
     "lines": [
       {"speaker": "", "text": "— 나이탬바 섬 —"},
-      {"speaker": "", "text": "수바에서 배로 2시간. 인구 340명."},
+      {"speaker": "", "text": "수바에서 배로 2시간. 군도의 본섬."},
       {"speaker": "", "text": "10년 전 수자원 사업이 중단된 곳이다."}
+    ]
+  },
+
+  "ch3_arrive_early": {
+    "lines": [
+      {"speaker": "", "text": "— 나이탬바 섬 —"},
+      {"speaker": "", "text": "수바에서 배로 2시간. 군도의 본섬."},
+      {"speaker": "", "text": "정부 승인도 안 난 상태에서 왔다. 준비가 부족하다."}
     ]
   },
 
