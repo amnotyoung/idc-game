@@ -39,6 +39,9 @@ func _ready() -> void:
 
 func _update_street_npcs() -> void:
 	# 챕터 진행에 따라 거리 NPC 대사 진화
+	# Albert Park 럭비맨 — KODA 알게 된 후 대사 변경
+	if TrustManager.has_flag("ch1_intro_done"):
+		bula_man.dialogue_id = "bula_man_rugby"
 	if TrustManager.has_flag("ch4_james_met"):
 		bula_woman2.dialogue_id = "bula_woman_after_ch4"
 	if TrustManager.has_flag("ch3_visited"):
