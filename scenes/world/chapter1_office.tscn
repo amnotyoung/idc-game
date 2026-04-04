@@ -104,7 +104,7 @@ zoom = Vector2(2, 2)
 
 ; ─── NPC: Mere ───
 [node name="Mere" type="CharacterBody2D" parent="."]
-position = Vector2(200, 80)
+position = Vector2(160, 18)
 script = ExtResource("2")
 npc_id = "mere"
 dialogue_id = "ch1_mere_entrance"
