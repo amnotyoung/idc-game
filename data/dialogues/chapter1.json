@@ -153,6 +153,18 @@
       { "speaker": "Mere", "text": "10년 전에도 비슷한 약속이 있었거든요. 아무것도 안 남았어요." },
       { "speaker": "",     "text": "Mere는 파일을 테이블 위에 밀었다." },
       { "speaker": "Mere", "text": "두 문제 다 풀어야 해요. 둘 중 하나만 해결해선 의미 없어요." }
+    ],
+    "choices": [
+      {
+        "text": "\"맞아요. 현장 경험 있는 분이 필요해요. 같이 해주실 수 있어요?\"",
+        "effects": { "mere": 10 },
+        "next": "ch1_mere_strategy"
+      },
+      {
+        "text": "\"알겠습니다. 정리되면 연락드릴게요.\"",
+        "effects": { "mere": 0 },
+        "next": "ch1_mere_strategy"
+      }
     ]
   },
 
