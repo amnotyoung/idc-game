@@ -33,6 +33,10 @@ func _physics_process(_delta: float) -> void:
 	velocity = direction * SPEED
 	move_and_slide()
 
+func face(dir_name: String) -> void:
+	var col: int = DIR_FRAME.get(dir_name, 0)
+	sprite.region_rect = Rect2(col * 16, 0, 16, 16)
+
 func _update_sprite() -> void:
 	var dir_name := "down"
 	if _facing.y < -0.5:    dir_name = "up"

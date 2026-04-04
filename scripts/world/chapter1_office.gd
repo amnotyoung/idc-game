@@ -18,4 +18,6 @@ func _on_opening_ended() -> void:
 	tween.tween_callback(_start_mere_dialogue)
 
 func _start_mere_dialogue() -> void:
+	# 플레이어가 Mere 쪽(위)을 바라봄
+	player.face("up")
 	DialogueManager.start("ch1_mere_entrance")
