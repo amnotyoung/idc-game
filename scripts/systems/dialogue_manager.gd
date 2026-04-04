@@ -71,6 +71,17 @@ func advance() -> void:
 	current_line_index += 1
 	_show_current_line()
 
+## 현재 대화 내에서 한 줄 뒤로 이동 가능한지 여부
+func can_go_back() -> bool:
+	return is_active and current_line_index > 0
+
+## 한 줄 뒤로 이동 (선택지 표시 중에도 직전 줄로 돌아갈 수 있음)
+func go_back() -> void:
+	if not can_go_back():
+		return
+	current_line_index -= 1
+	_show_current_line()
+
 func choose(choice_index: int) -> void:
 	# visible_choices 기준으로 인덱싱 (condition 필터 적용된 배열)
 	if choice_index >= _visible_choices.size():
