@@ -10,42 +10,30 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource("1")
 
-; 배경
-[node name="BG" type="ColorRect" parent="."]
+; 배경 (타이틀 이미지)
+[node name="BG" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.08, 0.14, 0.22, 1.0)
+texture = ExtResource("title_bg")
+expand_mode = 1
+stretch_mode = 5
 
-; 타이틀
-[node name="Title" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -80.0
-offset_top = 30.0
-offset_right = 80.0
-offset_bottom = 60.0
-text = "Aid World"
-theme_override_font_sizes/font_size = 24
-horizontal_alignment = 1
-
-; 부제
+; 부제 (타이틀은 배경 이미지에 포함)
 [node name="Subtitle" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -100.0
-offset_top = 60.0
+offset_top = 36.0
 offset_right = 100.0
-offset_bottom = 76.0
-text = "나이탬바 섬 수자원 개발 사업"
-theme_override_font_sizes/font_size = 8
+offset_bottom = 46.0
+text = "나이탬바 섬 이야기"
+theme_override_font_sizes/font_size = 7
 horizontal_alignment = 1
-modulate = Color(0.7, 0.8, 0.9, 0.8)
+modulate = Color(0.95, 0.92, 0.85, 0.9)
 
 ; 버튼 컨테이너
 [node name="VBox" type="VBoxContainer" parent="."]
