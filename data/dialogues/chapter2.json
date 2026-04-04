@@ -215,5 +215,83 @@
     "lines": [
       {"speaker": "Wati", "text": "섬에 다녀오셨어요?"}
     ]
+  },
+
+  "ch2_elevator": {
+    "lines": [
+      {"speaker": "", "text": "엘레베이터 앞이다. 몇 층으로 갈까?"}
+    ],
+    "choices": [
+      {
+        "text": "3층 — 국가계획부 (Timoci)",
+        "effects": {},
+        "next": "ch2_elevator_floor3"
+      },
+      {
+        "text": "5층 — 토지청 (토지 동의 담당)",
+        "effects": {},
+        "next": "ch2_elevator_floor5"
+      }
+    ]
+  },
+
+  "ch2_elevator_floor3": {
+    "lines": [
+      {"speaker": "", "text": "3층, 국가계획부."}
+    ]
+  },
+
+  "ch2_elevator_floor5": {
+    "lines": [
+      {"speaker": "", "text": "5층, 토지청."}
+    ]
+  },
+
+  "ch2_sela_no_referral": {
+    "lines": [
+      {"speaker": "Sela", "text": "안녕하세요. 토지 동의 담당 Sela입니다."},
+      {"speaker": "Sela", "text": "나이탬바 건이요? 아, 그건 제 관할인데..."},
+      {"speaker": "Sela", "text": "지금은 담당 부서 연결이 안 된 상태라 제가 바로 처리하기 어려워요."},
+      {"speaker": "Sela", "text": "APAT 쪽이나 국가계획부에서 공식 요청이 와야 절차가 시작돼요."}
+    ]
+  },
+
+  "ch2_sela_first": {
+    "lines": [
+      {"speaker": "Sela", "text": "안녕하세요. James한테 연락 받았어요. 나이탬바 섬 건이죠?"},
+      {"speaker": "Sela", "text": "절차는 복잡하지 않아요."},
+      {"speaker": "Sela", "text": "Ratu Josefa 서명이 들어간 마을 동의서면 돼요."},
+      {"speaker": "Sela", "text": "양식은 여기 있어요. 작성해서 제출하시면 바로 검토 들어갑니다."},
+      {"speaker": "", "text": "Sela가 양식을 건넸다. Ratu Josefa의 서명이 필요하다."}
+    ]
+  },
+
+  "ch2_sela_after": {
+    "lines": [
+      {"speaker": "Sela", "text": "동의서 양식은 드렸죠? Ratu Josefa 서명 받아오시면 바로 처리해드릴게요."}
+    ]
+  },
+
+  "ch2_sela_consent_submit": {
+    "lines": [
+      {"speaker": "나", "text": "Ratu Josefa 서명 받아왔습니다."},
+      {"speaker": "Sela", "text": "...어, 진짜 받아오셨네요."},
+      {"speaker": "Sela", "text": "Ratu Josefa가 서명하는 건 처음이에요. 이전 사업 때는 거부하셨거든요."},
+      {"speaker": "Sela", "text": "마을 운영위원회 조항이 들어가 있네요. 이건 좋은 선례가 될 거예요."},
+      {"speaker": "Sela", "text": "접수 완료요. 검토는 빠르면 다음 주 안에 됩니다."},
+      {"speaker": "", "text": "토지 동의 절차가 공식적으로 시작됐다."}
+    ]
+  },
+
+  "ch2_sela_all_done": {
+    "lines": [
+      {"speaker": "Sela", "text": "서류 접수 완료했어요. 검토 진행 중이에요."}
+    ]
+  },
+
+  "ch2_receptionist_after": {
+    "lines": [
+      {"speaker": "접수처", "text": "또 오셨어요? Timoci 씨는 3층에 계세요."}
+    ]
   }
 }
