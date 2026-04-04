@@ -36,6 +36,31 @@ func get_trust(npc_id: String) -> int:
 func get_all() -> Dictionary:
 	return _trust.duplicate()
 
+const SAVE_PATH = "user://save.json"
+
+func save_game() -> void:
+	var data = {"flags": _flags, "trust": _trust}
+	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	if file:
+		file.store_string(JSON.stringify(data))
+
+func load_game() -> void:
+	if not FileAccess.file_exists(SAVE_PATH):
+		return
+	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
+	if not file:
+		return
+	var json = JSON.new()
+	if json.parse(file.get_as_text()) == OK:
+		var data = json.get_data()
+		_flags = data.get("flags", {})
+		for k in data.get("trust", {}):
+			if _trust.has(k):
+				_trust[k] = int(data["trust"][k])
+
+func has_save() -> bool:
+	return FileAccess.file_exists(SAVE_PATH)
+
 func check_ending() -> String:
 	var above_threshold = 0
 	for npc_id in _trust:
