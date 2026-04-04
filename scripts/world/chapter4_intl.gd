@@ -39,8 +39,9 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			_exit_to_street()
 		"ch4_receptionist_intro":
 			TrustManager.set_flag("ch4_visited")
-			await get_tree().create_timer(0.8).timeout
-			DialogueManager.start("ch4_james_first")
+			# James에게 직접 다가가서 말 걸기
+			james.dialogue_id = "ch4_james_first"
+			receptionist.dialogue_id = "ch4_receptionist_after"
 		"ch4_james_endorsed":
 			TrustManager.set_flag("ch4_james_met")
 			TrustManager.set_flag("ch4_tltb_contact")
