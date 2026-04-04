@@ -239,5 +239,61 @@
       {"speaker": "Mere", "text": "시간이 좀 걸릴 것 같네요."},
       {"speaker": "Mere", "text": "주민들이랑 신뢰 쌓는 데 서두르지 마요."}
     ]
+  },
+
+  "ch3_consent_ratu": {
+    "lines": [
+      {"speaker": "나", "text": "Ratu Josefa, 토지청에서 마을 동의서가 필요하다고 합니다."},
+      {"speaker": "나", "text": "Ratu의 서명이 있으면 사업 승인 절차가 진행됩니다."},
+      {"speaker": "Ratu Josefa", "text": "...동의서."},
+      {"speaker": "Ratu Josefa", "text": "10년 전에도 비슷한 서류에 서명한 적 있소."},
+      {"speaker": "Ratu Josefa", "text": "그때 서명한 뒤에 뭐가 바뀌었소? 아무것도."}
+    ],
+    "choices": [
+      {
+        "text": "\"이번엔 마을이 직접 관리하는 구조입니다. 서류에도 명시돼 있어요.\"",
+        "effects": {"ratu_josefa": 10},
+        "next": "ch3_consent_sign"
+      },
+      {
+        "text": "\"Ratu의 판단을 존중합니다. 필요하시면 시간을 드릴게요.\"",
+        "effects": {"ratu_josefa": 5},
+        "next": "ch3_consent_sign"
+      }
+    ]
+  },
+
+  "ch3_consent_sign": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "...좋소."},
+      {"speaker": "", "text": "Ratu Josefa가 서류를 천천히 읽었다."},
+      {"speaker": "Ratu Josefa", "text": "마을 운영위원회 조항이 있군. 이건 처음이오."},
+      {"speaker": "", "text": "Ratu가 펜을 들어 서명했다."},
+      {"speaker": "Ratu Josefa", "text": "이 서명은 마을 사람들한테 한 약속이오. 당신한테 한 게 아니야."},
+      {"speaker": "Ratu Josefa", "text": "잊지 마시오."}
+    ]
+  },
+
+  "ch3_consent_ratu_neutral": {
+    "lines": [
+      {"speaker": "나", "text": "Ratu Josefa, 토지청에서 동의서를 요청했습니다."},
+      {"speaker": "Ratu Josefa", "text": "...당신이 뭘 약속할 수 있는지 아직 모르겠소."},
+      {"speaker": "Ratu Josefa", "text": "서명은 아직 못 하겠소."},
+      {"speaker": "", "text": "동의서를 받지 못했다."}
+    ]
+  },
+
+  "ch3_consent_done": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "서명은 했소. 약속 지키시오."}
+    ]
+  },
+
+  "ch3_mere_consent": {
+    "lines": [
+      {"speaker": "Mere", "text": "서명 받았어요?"},
+      {"speaker": "Mere", "text": "이거 큰 거예요. Ratu Josefa가 서명하는 건 쉬운 일이 아니에요."},
+      {"speaker": "Mere", "text": "이제 수바로 돌아가서 마무리하면 돼요."}
+    ]
   }
 }
