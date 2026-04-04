@@ -2,6 +2,7 @@ extends Node
 
 @onready var ratu: CharacterBody2D = get_parent().get_node("RatuJosefa")
 @onready var lani: CharacterBody2D = get_parent().get_node("Lani")
+@onready var mere: CharacterBody2D = get_parent().get_node("Mere")
 
 func _ready() -> void:
 	await get_tree().process_frame
