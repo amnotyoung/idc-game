@@ -340,6 +340,17 @@
     ]
   },
 
+  "ch3_consent_sign_quiet": {
+    "lines": [
+      {"speaker": "", "text": "잠깐의 침묵이 흘렀다."},
+      {"speaker": "Ratu Josefa", "text": "...기다리라는 말은 안 하겠소."},
+      {"speaker": "", "text": "Ratu가 서류를 읽기 시작했다."},
+      {"speaker": "", "text": "Ratu가 펜을 들어 서명했다."},
+      {"speaker": "Ratu Josefa", "text": "이 서명은 마을 사람들한테 한 약속이오. 당신한테 한 게 아니야."},
+      {"speaker": "Ratu Josefa", "text": "잊지 마시오."}
+    ]
+  },
+
   "ch3_consent_ratu_neutral": {
     "lines": [
       {"speaker": "나", "text": "Ratu Josefa, 토지청에서 동의서를 요청했습니다."},
