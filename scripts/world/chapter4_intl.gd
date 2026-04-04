@@ -42,7 +42,7 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			# James에게 직접 다가가서 말 걸기
 			james.dialogue_id = "ch4_james_first"
 			receptionist.dialogue_id = "ch4_receptionist_after"
-		"ch4_james_endorsed":
+		"ch4_james_endorsed", "ch4_james_endorsed_detail", "ch4_james_endorsed_brief":
 			TrustManager.set_flag("ch4_james_met")
 			TrustManager.set_flag("ch4_tltb_contact")
 			TrustManager.set_flag("ch4_james_endorsed")
