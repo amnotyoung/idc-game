@@ -73,12 +73,15 @@ func clear_save() -> void:
 		"james": 0, "lani": 0, "wati": 0,
 	}
 
+## 엔딩 판정 대상 — Wati는 조력자이므로 제외
+const ENDING_NPCS = ["mere", "timoci", "ratu_josefa", "lani", "james"]
+
 func check_ending() -> String:
 	var above_threshold = 0
-	for npc_id in _trust:
+	for npc_id in ENDING_NPCS:
 		if _trust[npc_id] >= TRUE_ENDING_THRESHOLD:
 			above_threshold += 1
-	if above_threshold == _trust.size():
+	if above_threshold == ENDING_NPCS.size():
 		return "true"
 	elif above_threshold >= 3:
 		return "normal"
