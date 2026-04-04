@@ -2,15 +2,17 @@
   "ch4_no_connection": {
     "lines": [
       {"speaker": "접수처", "text": "안녕하세요. 어떻게 오셨어요?"},
-      {"speaker": "접수처", "text": "James 씨요? 죄송한데 사전 약속이 없으시면 바로 만나기가..."},
-      {"speaker": "접수처", "text": "담당 부서나 정부청사를 통해 먼저 연결이 돼야 할 것 같아요."}
+      {"speaker": "접수처", "text": "James 씨 면담요? 저희는 담당 부서 연결이나 현장 소개 없이는 바로 잡기가 어려워요."},
+      {"speaker": "접수처", "text": "정부청사 국가계획부 담당자분이나, 나이탬바 마을 측 소개로 오시면 도와드릴 수 있어요."}
     ]
   },
 
   "ch4_receptionist_intro": {
     "lines": [
-      {"speaker": "접수처", "text": "KODA에서 오셨어요? 기다리고 있었어요."},
-      {"speaker": "접수처", "text": "James 씨 자리에 계세요. 들어가세요."}
+      {"speaker": "접수처", "text": "안녕하세요. 어떻게 오셨어요?"},
+      {"speaker": "나", "text": "KODA에서 왔어요. James 씨 뵈러 왔는데요."},
+      {"speaker": "접수처", "text": "잠깐만요, 확인해볼게요."},
+      {"speaker": "접수처", "text": "...들어오세요. James 씨가 잠깐 기다리라고 해요."}
     ]
   },
 
@@ -94,7 +96,7 @@
         "next": "ch4_james_tltb"
       },
       {
-        "text": "\"TLTB 쪽 진행이 막혀있어서요.\"",
+        "text": "\"토지청 쪽 진행이 막혀있어서요.\"",
         "effects": {"james": 0},
         "next": "ch4_james_tltb"
       }
@@ -103,8 +105,8 @@
 
   "ch4_james_tltb": {
     "lines": [
-      {"speaker": "James", "text": "TLTB 문제가 걸려있다고요?"},
-      {"speaker": "James", "text": "Sela Tuilagi — TLTB 토지동의 담당이에요. 제가 아는 사람이에요."},
+      {"speaker": "James", "text": "토지청 문제가 걸려있다고요?"},
+      {"speaker": "James", "text": "Sela Tuilagi — 토지청 토지동의 담당이에요. 제가 아는 사람이에요."},
       {"speaker": "James", "text": "마을 측 서류가 준비되면 제가 연결해줄 수 있어요."}
     ],
     "choices": [
@@ -175,7 +177,7 @@
   "ch4_james_endorsed_neutral": {
     "lines": [
       {"speaker": "James", "text": "그럼 지켜보죠."},
-      {"speaker": "James", "text": "TLTB 연락처는 드릴게요. Sela 이름으로 연락하세요."},
+      {"speaker": "James", "text": "토지청 연락처는 드릴게요. Sela 이름으로 연락하세요."},
       {"speaker": "James", "text": "마을 쪽이 정리되면 저도 더 움직일 수 있어요."}
     ]
   },
@@ -217,7 +219,7 @@
   "ch4_sela_call": {
     "lines": [
       {"speaker": "", "text": "수화기를 들었다. James가 알려준 번호로 전화했다."},
-      {"speaker": "Sela (전화)", "text": "여보세요, TLTB 토지동의 담당 Sela입니다."},
+      {"speaker": "Sela (전화)", "text": "여보세요, 토지청 토지동의 담당 Sela입니다."},
       {"speaker": "Sela (전화)", "text": "James한테 연락 받았어요. 나이탬바 섬 건이죠?"},
       {"speaker": "Sela (전화)", "text": "절차는 복잡하지 않아요. Ratu Josefa 서명이 들어간 마을 동의서면 돼요."},
       {"speaker": "Sela (전화)", "text": "저희 양식 이메일로 보내드릴게요. 작성해서 제출하시면 바로 검토 들어갑니다."},
