@@ -144,6 +144,24 @@
       {"speaker": "Timoci", "text": "토지청 쪽 협의가 되면 저희도 움직일 수 있어요."},
       {"speaker": "Timoci", "text": "그게 정리되면 장관 결재도 빨리 날 거예요."},
       {"speaker": "", "text": "Timoci가 솔직하게 말해줬다."}
+    ],
+    "choices": [
+      {
+        "text": "\"진행 상황 공유하면서 같이 풀어가겠습니다. 감사해요.\"",
+        "effects": {"timoci": 15},
+        "next": "ch2_timoci_collaborate_end"
+      },
+      {
+        "text": "\"알겠어요. 결과 나오면 다시 오겠습니다.\"",
+        "effects": {"timoci": 5},
+        "next": "ch2_timoci_collaborate_end"
+      }
+    ]
+  },
+
+  "ch2_timoci_collaborate_end": {
+    "lines": [
+      {"speaker": "Timoci", "text": "토지청 쪽 협의되면 연락주세요. 그쪽 정리되면 바로 움직일게요."}
     ]
   },
   "ch2_timoci_frustrated": {
