@@ -73,12 +73,14 @@ func _start_sela() -> void:
 		DialogueManager.start("ch5_sela_response_no_sign")
 
 func _show_ending() -> void:
-	# BGM 페이드아웃 + 배경 페이드아웃 동시
+	# BGM + 배경 + 캐릭터 모두 페이드아웃
 	var tween = get_tree().create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(bg, "modulate:a", 0.0, 1.2)
+	tween.tween_property(attendees, "modulate:a", 0.0, 1.0)
 	tween.tween_property(bgm, "volume_db", -40.0, 1.2)
 	await tween.finished
+	attendees.visible = false
 
 	# 잠깐의 암전
 	await get_tree().create_timer(1.5).timeout
