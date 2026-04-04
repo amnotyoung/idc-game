@@ -215,6 +215,24 @@
       {"speaker": "Mere", "text": "그리고 — 10년 전 사업 때 시공사가 마을 상의 없이 위치 정했대요."},
       {"speaker": "Mere", "text": "물탱크가 밭 한가운데 세워져서 농사를 못 짓게 된 집도 있었고요."},
       {"speaker": "Mere", "text": "그 얘기 나오면 '우리가 결정권 있다'는 걸 보여주는 게 중요해요."}
+    ],
+    "choices": [
+      {
+        "text": "\"좋은 정보예요. Mere 씨 현장 조사 결과 나중에 공유해줄 수 있어요?\"",
+        "effects": { "mere": 15 },
+        "next": "ch3_mere_first_end"
+      },
+      {
+        "text": "\"알겠어요.\"",
+        "effects": { "mere": 5 },
+        "next": "ch3_mere_first_end"
+      }
+    ]
+  },
+
+  "ch3_mere_first_end": {
+    "lines": [
+      {"speaker": "Mere", "text": "그럼 Ratu Josefa한테 먼저 가봐요. 전 여기서 조사 계속할게요."}
     ]
   },
 
