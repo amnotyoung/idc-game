@@ -17,7 +17,8 @@ const DIALOGUE_FILES = [
 	"res://data/dialogues/street_npcs.json",
 	"res://data/dialogues/chapter2.json",
 	"res://data/dialogues/chapter3.json",
-	"res://data/dialogues/chapter4.json"
+	"res://data/dialogues/chapter4.json",
+	"res://data/dialogues/chapter5.json"
 ]
 
 func _ready() -> void:
