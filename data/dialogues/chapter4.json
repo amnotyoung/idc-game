@@ -145,7 +145,7 @@
     ],
     "choices": [
       {
-        "text": "\"Ratu 조세파 만났어요. 주민이 직접 운영하는 구조 얘기했더니 문이 열렸어요.\"",
+        "text": "\"Ratu Josefa 만났어요. 주민이 직접 운영하는 구조 얘기했더니 문이 열렸어요.\"",
         "effects": {"james": 20},
         "condition": "ch3_good_ending",
         "next": "ch4_james_endorsed"
