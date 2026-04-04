@@ -72,10 +72,10 @@ func advance() -> void:
 	_show_current_line()
 
 func choose(choice_index: int) -> void:
-	var choices: Array = current_dialogue.get("choices", [])
-	if choice_index >= choices.size():
+	# visible_choices 기준으로 인덱싱 (condition 필터 적용된 배열)
+	if choice_index >= _visible_choices.size():
 		return
-	var choice = choices[choice_index]
+	var choice = _visible_choices[choice_index]
 	# 신뢰도 효과 적용
 	var effects: Dictionary = choice.get("effects", {})
 	for npc_id in effects:
