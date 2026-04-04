@@ -88,7 +88,7 @@
     "choices": [
       {
         "text": "\"마을이 직접 운영하는 모델로 가겠습니다. 모두의 협력이 필요합니다.\"",
-        "effects": {},
+        "effects": {"mere": 15, "timoci": 15, "james": 10, "lani": 10},
         "next": "ch5_resolve"
       },
       {
