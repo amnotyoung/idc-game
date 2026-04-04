@@ -176,12 +176,12 @@ modulate = Color(1, 1, 0.5, 0.85)
 ; ─── 거리 NPC들 ───
 [node name="StreetNPCs" type="Node2D" parent="."]
 
-; NPC 1 — 남성 (인도 앞 배회)
+; NPC 1 — 남성 (Albert Park 앞에서 럭비)
 [node name="BulaMan" type="CharacterBody2D" parent="StreetNPCs"]
-position = Vector2(90, 90)
+position = Vector2(85, 82)
 script = ExtResource("7")
 dialogue_id = "bula_man_1"
-walk_range = 28.0
+walk_range = 18.0
 [node name="Sprite" type="Sprite2D" parent="StreetNPCs/BulaMan"]
 texture = ExtResource("8")
 region_enabled = true
