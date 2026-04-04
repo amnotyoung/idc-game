@@ -125,7 +125,7 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			_exit_to_street()
 		"ch2_receptionist_2nd":
 			timoci.dialogue_id = "ch2_timoci_first"
-		"ch2_timoci_progress", "ch2_timoci_collaborate":
+		"ch2_timoci_progress_proactive", "ch2_timoci_progress_polite", "ch2_timoci_collaborate_end":
 			TrustManager.set_flag("ch2_timoci_met")
 			TrustManager.set_flag("appointment_set")
 			timoci.dialogue_id = "ch2_timoci_after_good"
