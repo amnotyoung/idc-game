@@ -240,7 +240,7 @@ for sx in [86, 90, 94]:
 d.rectangle([120, 35, 170, 72], fill=(*DAM_WALL, 255))
 # 지붕
 d.rectangle([119, 33, 171, 36], fill=(185, 185, 190, 255))
-# 빨간 상단 간판띠 "DAMODAR CITY"
+# 빨간 상단 간판띠 "PACIFIC CITY"
 d.rectangle([120, 36, 170, 44], fill=(*DAM_RED, 255))
 # 간판 텍스트 (흰 블록)
 for sx in range(124, 166, 5):
