@@ -209,6 +209,10 @@ position = Vector2(255, 82)
 script = ExtResource("9")
 dialogue_id = ""
 
+[node name="Sprite" type="Sprite2D" parent="Phone"]
+texture = ExtResource("phone_tex")
+texture_filter = 1
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Phone"]
 shape = SubResource("phone_col")
 
