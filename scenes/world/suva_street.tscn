@@ -301,7 +301,7 @@ zoom = Vector2(1, 1)
 
 ; ─── 항구 힌트 ───
 [node name="HarborHint" type="Label" parent="."]
-position = Vector2(260, 160)
+position = Vector2(136, 160)
 text = "▼ 항구 (나이탬바 섬)"
 theme_override_font_sizes/font_size = 6
 modulate = Color(1, 1, 0.5, 0.85)
