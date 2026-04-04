@@ -75,4 +75,6 @@ func _on_back_pressed() -> void:
 
 func _clear_choices() -> void:
 	for child in choices_container.get_children():
+		child.release_focus()
+		child.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		child.queue_free()
