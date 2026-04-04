@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://chapter1office"]
+[gd_scene load_steps=22 format=3 uid="uid://chapter1office"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/npc/npc_base.gd" id="2"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/tilesets/office_bg.png" id="7"]
 [ext_resource type="AudioStream" path="res://assets/music/bgm_office.wav" id="8"]
 [ext_resource type="Script" path="res://scripts/world/interactable.gd" id="9"]
+[ext_resource type="Texture2D" path="res://assets/sprites/objects/phone_icon.png" id="phone_tex"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(10, 12)
