@@ -31,6 +31,46 @@
     ]
   },
 
+  "street_vendor_yangona": {
+    "lines": [
+      { "speaker": "상인", "text": "Bula bro! 오늘은 뭐 필요해요?" }
+    ],
+    "choices": [
+      {
+        "text": "\"양고나 있어요? 마을 방문에 필요해서요.\"",
+        "effects": {},
+        "next": "street_vendor_yangona_buy"
+      },
+      {
+        "text": "\"그냥 둘러보는 거예요.\"",
+        "effects": {},
+        "next": "street_vendor_yangona_pass"
+      }
+    ]
+  },
+
+  "street_vendor_yangona_buy": {
+    "lines": [
+      { "speaker": "상인", "text": "양고나! 세부세부 하러 가는 거예요?" },
+      { "speaker": "상인", "text": "좋은 거 줄게요. 마른 뿌리로 골라줄까요? 마을 어른들이 좋아해요." },
+      { "speaker": "나", "text": "네, 부탁해요." },
+      { "speaker": "상인", "text": "여기요. Vinaka!" },
+      { "speaker": "", "text": "양고나를 챙겼다."}
+    ]
+  },
+
+  "street_vendor_yangona_pass": {
+    "lines": [
+      { "speaker": "상인", "text": "알겠어요. 나중에 또 와요!" }
+    ]
+  },
+
+  "street_vendor_after": {
+    "lines": [
+      { "speaker": "상인", "text": "양고나 잘 전해줘요! 좋은 일 하는 거예요, bro." }
+    ]
+  },
+
   "police_1": {
     "lines": [
       { "speaker": "경찰관", "text": "Bula! 피지 방문을 환영합니다." },
