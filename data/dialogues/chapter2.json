@@ -176,6 +176,25 @@
       {"speaker": "Timoci", "text": "토지청 쪽이랑 협의 되면 저희가 다시 검토해볼게요."},
       {"speaker": "Timoci", "text": "Wati 씨가 그쪽 창구를 알 거예요."},
       {"speaker": "", "text": "처음으로 구체적인 진전이 생겼다."}
+    ],
+    "choices": [
+      {
+        "text": "\"서류 보완 필요한 부분 있으면 미리 알려주세요.\"",
+        "effects": {"timoci": 15},
+        "next": "ch2_timoci_progress_end"
+      },
+      {
+        "text": "\"알겠습니다. 감사합니다.\"",
+        "effects": {"timoci": 5},
+        "next": "ch2_timoci_progress_end"
+      }
+    ]
+  },
+
+  "ch2_timoci_progress_end": {
+    "lines": [
+      {"speaker": "Timoci", "text": "서류 보완은... 네, 정리해서 보내드릴게요."},
+      {"speaker": "", "text": "Timoci가 살짝 웃었다. 처음 보는 표정이었다."}
     ]
   },
 
