@@ -13,10 +13,8 @@ var _exiting     := false
 var _exit_unlocked := false
 
 const BRIEFING_ENDS = [
-	"ch1_mere_warm_a",
-	"ch1_mere_warm_b",
-	"ch1_mere_cold_a",
-	"ch1_mere_cold_b",
+	"ch1_mere_strategy",   # warm_a/warm_b/cold_a → 최종 도달점
+	"ch1_mere_cold_b",     # cold_b는 choices 없이 바로 끝남 (Mere 퇴장)
 ]
 
 func _ready() -> void:
