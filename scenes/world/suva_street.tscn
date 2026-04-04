@@ -190,9 +190,9 @@ texture_filter = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StreetNPCs/BulaMan"]
 shape = SubResource("npc_col")
 
-; NPC 2 — 여성 A (성당 앞 쪽)
+; NPC 2 — 여성 A (도로 아래쪽)
 [node name="BulaWoman1" type="CharacterBody2D" parent="StreetNPCs"]
-position = Vector2(155, 95)
+position = Vector2(155, 130)
 script = ExtResource("7")
 dialogue_id = "bula_woman_1"
 walk_range = 22.0
