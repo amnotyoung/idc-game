@@ -3,9 +3,11 @@ extends Node
 @onready var ratu: CharacterBody2D = get_parent().get_node("RatuJosefa")
 @onready var lani: CharacterBody2D = get_parent().get_node("Lani")
 @onready var mere: CharacterBody2D = get_parent().get_node("Mere")
+@onready var village_npcs: Node2D = get_parent().get_node("VillageNPCs")
 
 func _ready() -> void:
 	await get_tree().process_frame
+	_update_village_npcs()
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
 	if not TrustManager.has_flag("ch3_arrived"):
