@@ -1,6 +1,6 @@
 """
 Aid World — 수바 거리 배경 v3 (랜드마크 반영)
-실제 수바 랜드마크: Albert Park, Parliament (시계탑), Grand Pacific Hotel, Damodar City
+실제 수바 랜드마크: Albert Park, Parliament (시계탑), Grand Pacific Hotel, Pacific City
 320x180 픽셀아트
 """
 from PIL import Image, ImageDraw
@@ -63,7 +63,7 @@ GPH_WALL = (245, 242, 238)
 GPH_TRIM = (195, 188, 178)
 GPH_COL  = (235, 232, 225)
 
-# Damodar City
+# Pacific City
 DAM_WALL  = (225, 225, 228)
 DAM_RED   = (195, 45, 45)
 DAM_SIGN  = (240, 210, 55)
@@ -233,7 +233,7 @@ for sx in [86, 90, 94]:
     d.rectangle([sx, 69, sx+2, 71], fill=(235, 232, 225, 255))
 
 # ════════════════════════════════
-# 6. Damodar City (x=120~170)
+# 6. Pacific City (x=120~170)
 #    현대식 쇼핑몰/시네마 — 밝은 간판
 # ════════════════════════════════
 # 건물 본체
