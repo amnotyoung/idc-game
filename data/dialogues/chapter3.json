@@ -307,13 +307,13 @@
     ],
     "choices": [
       {
-        "text": "\"이번엔 마을이 직접 관리하는 구조입니다. 서류에도 명시돼 있어요.\"",
-        "effects": {"ratu_josefa": 10},
+        "text": "\"이번엔 마을이 직접 관리합니다. Lani와 Josua가 운영위원회에 참여해요.\"",
+        "effects": {"ratu_josefa": 10, "lani": 15},
         "next": "ch3_consent_sign"
       },
       {
         "text": "\"Ratu의 판단을 존중합니다. 필요하시면 시간을 드릴게요.\"",
-        "effects": {"ratu_josefa": 5},
+        "effects": {"ratu_josefa": 5, "lani": 5},
         "next": "ch3_consent_sign"
       }
     ]
