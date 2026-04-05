@@ -105,6 +105,10 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			# Mere와 먼저 대화할 수 있도록 자유 이동 — Ratu는 직접 다가가야 대화
 			if TrustManager.has_flag("sevusevu_prepared"):
 				ratu.dialogue_id = "ch3_ratu_greet_prepared"
+			elif TrustManager.has_flag("bought_powder"):
+				ratu.dialogue_id = "ch3_ratu_greet_powder"
+			elif TrustManager.has_flag("bought_mango"):
+				ratu.dialogue_id = "ch3_ratu_greet_mango"
 			else:
 				ratu.dialogue_id = "ch3_ratu_greet_basic"
 		"ch3_sevusevu_end":
