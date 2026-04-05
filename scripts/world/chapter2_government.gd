@@ -92,6 +92,12 @@ func _setup_floor5_state() -> void:
 	elif TrustManager.has_flag("ch4_consent_obtained"):
 		# Ratu 서명 받아옴 → 제출 가능
 		sela.dialogue_id = "ch2_sela_consent_submit"
+	elif TrustManager.has_flag("ch3_good_ending") and TrustManager.has_flag("ch4_tltb_contact"):
+		# Ratu 동의 완료 + James 소개 있음 → Sela 첫 만남이어도 바로 서명 제출
+		# (Ratu 동의 = 서명 통합: 별도 재방문 불필요)
+		TrustManager.set_flag("ch4_sela_contacted")
+		TrustManager.set_flag("ch4_consent_obtained")
+		sela.dialogue_id = "ch2_sela_consent_submit"
 	elif TrustManager.has_flag("ch4_sela_contacted"):
 		# 이미 한번 만남 → 대기 대사
 		sela.dialogue_id = "ch2_sela_after"
