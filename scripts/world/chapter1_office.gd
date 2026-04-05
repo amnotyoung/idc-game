@@ -3,7 +3,6 @@ extends Node
 @onready var mere: CharacterBody2D   = get_parent().get_node("Mere")
 @onready var wati: CharacterBody2D   = get_parent().get_node("Wati")
 @onready var player: CharacterBody2D = get_parent().get_node("Player")
-@onready var phone                   = get_parent().get_node("Phone")
 @onready var computer                = get_parent().get_node("Computer")
 
 const STAKEHOLDER_NAMES = {
