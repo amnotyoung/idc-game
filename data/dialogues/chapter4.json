@@ -160,7 +160,7 @@
       },
       {
         "text": "\"마을 측은 나중에 설득할 수 있어요.\"",
-        "effects": {"james": -15},
+        "effects": {"james": 0},
         "next": "ch4_james_rejected"
       }
     ]
