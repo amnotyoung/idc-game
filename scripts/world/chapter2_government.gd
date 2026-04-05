@@ -111,25 +111,12 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			TrustManager.set_flag("ch2_arrived")
 			# 첫 방문은 약속대로 바로 3층 → 접수처
 			_show_floor3()
-		# ── 엘레베이터 ──
+		# ── 엘리베이터 ──
 		"ch2_elevator_floor3":
 			_show_floor3()
-			if not TrustManager.has_flag("ch2_timoci_met") and not TrustManager.has_flag("ch2_second_visit"):
-				TrustManager.set_flag("ch2_second_visit")
-				receptionist.dialogue_id = "ch2_receptionist_2nd"
 		"ch2_elevator_floor5":
 			_show_floor5()
-		# ── 3층: 국가계획부 ──
-		"ch2_receptionist":
-			await get_tree().create_timer(1.2).timeout
-			DialogueManager.start("ch2_waiting_note")
-		"ch2_waiting_note":
-			TrustManager.set_flag("ch2_saw_note")
-			await get_tree().create_timer(1.0).timeout
-			DialogueManager.start("ch2_timoci_noshow_1")
-		"ch2_reschedule_ok", "ch2_reschedule_push":
-			TrustManager.set_flag("ch2_first_visit_done")
-			_exit_to_street()
+		# ── 3층: 접수처 통과 후 Timoci 접근 가능 ──
 		"ch2_receptionist_2nd":
 			timoci.dialogue_id = "ch2_timoci_first"
 		"ch2_timoci_progress_proactive", "ch2_timoci_progress_polite", "ch2_timoci_collaborate_end":
