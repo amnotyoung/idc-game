@@ -4,7 +4,7 @@
       {"speaker": "", "text": "— KODA 사무소, 최종 협의 —"},
       {"speaker": "", "text": "좁은 회의실에 의자가 빼곡하다."},
       {"speaker": "", "text": "테이블 한쪽에 커피, Milo, 비스킷이 놓여 있다. 피지에서 회의는 이렇게 시작한다."},
-      {"speaker": "", "text": "Timoci(국가계획부)가 서류 가방을 내려놓고 Milo를 한 잔 따랐다."},
+      {"speaker": "", "text": "Vikash(국가계획부)가 서류 가방을 내려놓고 Milo를 한 잔 따랐다."},
       {"speaker": "", "text": "Sela(토지청)가 옆자리에 앉았다. James(APAT, 호주태평양기술지원기구)가 문을 열고 들어왔다."},
       {"speaker": "", "text": "Ratu Josefa와 Lani가 나이탬바에서 올라왔다. Mere가 자리를 안내했다."},
       {"speaker": "", "text": "이 사업에 관계된 모든 사람이 처음으로 한 방에 모였다."},
@@ -24,25 +24,25 @@
 
   "ch5_timoci_response_good": {
     "lines": [
-      {"speaker": "Timoci", "text": "국가계획부 검토 결과 전달합니다."},
-      {"speaker": "Timoci", "text": "마을 기반 관리 모델을 포함한 사업계획이면 승인 가능합니다."},
-      {"speaker": "Timoci", "text": "지난번 회의에서 논의했던 방향이 반영돼서 다행이에요."}
+      {"speaker": "Vikash", "text": "국가계획부 검토 결과 전달합니다."},
+      {"speaker": "Vikash", "text": "마을 기반 관리 모델을 포함한 사업계획이면 승인 가능합니다."},
+      {"speaker": "Vikash", "text": "지난번 회의에서 논의했던 방향이 반영돼서 다행이에요."}
     ]
   },
 
   "ch5_timoci_response_neutral": {
     "lines": [
-      {"speaker": "Timoci", "text": "서류는 대충 왔는데..."},
-      {"speaker": "Timoci", "text": "마을 관리 계획이 좀 부실해요. 보완 자료 필요합니다."},
-      {"speaker": "Timoci", "text": "이대로는 조건부 승인밖에 못 드려요."}
+      {"speaker": "Vikash", "text": "서류는 대충 왔는데..."},
+      {"speaker": "Vikash", "text": "마을 관리 계획이 좀 부실해요. 보완 자료 필요합니다."},
+      {"speaker": "Vikash", "text": "이대로는 조건부 승인밖에 못 드려요."}
     ]
   },
 
   "ch5_timoci_response_bad": {
     "lines": [
-      {"speaker": "Timoci", "text": "솔직히 말하면 —"},
-      {"speaker": "Timoci", "text": "이 사업계획은 10년 전이랑 뭐가 다른지 모르겠어요."},
-      {"speaker": "Timoci", "text": "기한 내 승인은 어렵습니다."}
+      {"speaker": "Vikash", "text": "솔직히 말하면 —"},
+      {"speaker": "Vikash", "text": "이 사업계획은 10년 전이랑 뭐가 다른지 모르겠어요."},
+      {"speaker": "Vikash", "text": "기한 내 승인은 어렵습니다."}
     ]
   },
 
@@ -129,12 +129,15 @@
     "lines": [
       {"speaker": "", "text": "— 1년 후 —"},
       {"speaker": "", "text": "나이탬바 섬. 공사가 진행 중이다."},
-      {"speaker": "", "text": "저수조 기초가 놓였지만, 배관 작업이 지연되고 있다."},
+      {"speaker": "", "text": "새 저수조 기초가 놓였다. 배관 작업은 아직 남았지만, 공정표대로 움직이고 있다."},
       {"speaker": "", "text": "예산 일부가 삭감됐다. 하지만 멈추지는 않았다."},
-      {"speaker": "Mere", "text": "100%는 아니에요. 하지만 10년 전과는 달라요."},
-      {"speaker": "", "text": "마을 사람들이 공사 현장을 지켜보고 있다."},
-      {"speaker": "", "text": "이번에는 지켜보는 것만이 아니다. 참여하고 있다."},
-      {"speaker": "", "text": "아직 갈 길이 남았다. 하지만 방향은 맞다."}
+      {"speaker": "", "text": "마을 사람들이 공사 현장에 나와 있다. 이번에는 지켜보는 게 아니라 참여하고 있다."},
+      {"speaker": "Mere", "text": "100%는 아니에요. 하지만 10년 전과는 확실히 달라요."},
+      {"speaker": "Mere", "text": "이 정도면 잘한 거예요. 진심으로요."},
+      {"speaker": "Ratu Josefa", "text": "...아직 끝난 건 아니오. 하지만 이번엔 기대해봐도 되겠소."},
+      {"speaker": "Lani", "text": "저수조 완공되면 마을 잔치 열자고 했어요. 초대할게요."},
+      {"speaker": "", "text": "바람이 불었다. 야자수가 흔들렸다."},
+      {"speaker": "", "text": "완벽하지 않다. 하지만 방향은 맞다. 그리고 혼자가 아니다."}
     ]
   },
 
