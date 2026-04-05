@@ -28,7 +28,7 @@
       },
       {
         "text": "\"안녕하세요. 처음 뵙겠습니다.\"",
-        "effects": {"ratu_josefa": 0},
+        "effects": {"ratu_josefa": 10},
         "next": "ch3_sevusevu_miss"
       }
     ]
@@ -119,7 +119,7 @@
     "choices": [
       {
         "text": "\"안녕하세요. 처음 뵙겠습니다.\"",
-        "effects": {"ratu_josefa": 0},
+        "effects": {"ratu_josefa": 10},
         "next": "ch3_sevusevu_miss"
       }
     ]
