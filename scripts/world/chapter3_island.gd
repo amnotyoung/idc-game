@@ -54,8 +54,7 @@ func _ready() -> void:
 			mere.dialogue_id = "ch3_mere_after_neutral"
 	else:
 		# ch3_arrived는 됐지만 ch3_visited는 아직 — 중간 재진입
-		# Ratu와 세부세부 전에는 Lani 대화 불가
-		lani.dialogue_id = ""
+		lani.dialogue_id = "ch3_lani_not_yet"
 		mere.dialogue_id = "ch3_mere_after_ratu"
 		if TrustManager.has_flag("sevusevu_prepared"):
 			ratu.dialogue_id = "ch3_ratu_greet_prepared"
