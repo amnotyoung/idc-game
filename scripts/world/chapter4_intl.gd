@@ -18,6 +18,11 @@ func _ready() -> void:
 		if has_referral or has_community:
 			DialogueManager.start("ch4_receptionist_intro")
 		else:
+			# James 출장 중 — 스프라이트 숨김 (접수처만 보임)
+			james.visible = false
+			var col = james.get_node_or_null("CollisionShape2D")
+			if col:
+				col.set_deferred("disabled", true)
 			DialogueManager.start("ch4_no_connection")
 	else:
 		# 재방문 — James 결과에 따라 대사 분기
