@@ -34,6 +34,77 @@
     ]
   },
 
+  "ch3_ratu_greet_powder": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "어서오시오."},
+      {"speaker": "Ratu Josefa", "text": "KODA에서 오셨다고 했지요."}
+    ],
+    "choices": [
+      {
+        "text": "\"양고나 가루 가져왔습니다.\"",
+        "effects": {"ratu_josefa": 5},
+        "next": "ch3_ratu_powder_react"
+      }
+    ]
+  },
+
+  "ch3_ratu_powder_react": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "...가루요."},
+      {"speaker": "Ratu Josefa", "text": "요즘은 이걸로 하는 사람도 있긴 하지."},
+      {"speaker": "", "text": "Ratu의 표정이 미묘했다. 전통 방식은 아니었다."},
+      {"speaker": "Ratu Josefa", "text": "앉으시오. 얘기는 들어봐야지."}
+    ],
+    "choices": [
+      {
+        "text": "\"고맙습니다. 잘 부탁드리겠습니다.\"",
+        "effects": {"ratu_josefa": 5},
+        "next": "ch3_sevusevu_end"
+      },
+      {
+        "text": "\"바로 본론으로 가겠습니다.\"",
+        "effects": {"ratu_josefa": -10},
+        "next": "ch3_sevusevu_end"
+      }
+    ]
+  },
+
+  "ch3_ratu_greet_mango": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "어서오시오."},
+      {"speaker": "Ratu Josefa", "text": "KODA에서 오셨다고 했지요."}
+    ],
+    "choices": [
+      {
+        "text": "\"망고 가져왔습니다.\" (보따리를 내밀었다)",
+        "effects": {"ratu_josefa": 0},
+        "next": "ch3_ratu_mango_react"
+      }
+    ]
+  },
+
+  "ch3_ratu_mango_react": {
+    "lines": [
+      {"speaker": "", "text": "짧은 침묵이 흘렀다."},
+      {"speaker": "Ratu Josefa", "text": "...감사하오. 하지만 이건 세부세부가 아니오."},
+      {"speaker": "Ratu Josefa", "text": "양고나를 가져오는 게 여기 예의요. 과일은... 간식이지."},
+      {"speaker": "", "text": "Ratu가 망고를 받긴 했지만, 분위기가 어색했다."},
+      {"speaker": "Ratu Josefa", "text": "앉으시오. 어쨌든 왔으니."}
+    ],
+    "choices": [
+      {
+        "text": "\"죄송합니다. 다음엔 제대로 챙겨오겠습니다.\"",
+        "effects": {"ratu_josefa": 3},
+        "next": "ch3_sevusevu_end"
+      },
+      {
+        "text": "\"감사합니다. 바로 이야기해도 될까요?\"",
+        "effects": {"ratu_josefa": -5},
+        "next": "ch3_sevusevu_end"
+      }
+    ]
+  },
+
   "ch3_ratu_greet_basic": {
     "lines": [
       {"speaker": "Ratu Josefa", "text": "어서오시오."},
