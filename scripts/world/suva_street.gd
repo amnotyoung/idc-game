@@ -63,8 +63,8 @@ func _update_street_npcs() -> void:
 func _update_vendor() -> void:
 	if TrustManager.has_flag("sevusevu_prepared"):
 		vendor.dialogue_id = "street_vendor_after"
-	elif TrustManager.has_flag("wati_yangona_hint"):
-		# Wati가 힌트 준 후 — Damodar City에서 양고나 구매 가능
+	elif TrustManager.has_flag("wati_yangona_hint") or TrustManager.has_flag("ch4_james_met"):
+		# Wati 또는 James가 양고나 힌트 준 후 → 구매 가능
 		vendor.dialogue_id = "street_vendor_yangona"
 	else:
 		vendor.dialogue_id = "street_vendor_1"
