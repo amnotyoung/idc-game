@@ -22,6 +22,9 @@ func _ready() -> void:
 func go_to(scene_path: String, spawn_pos: Vector2 = Vector2.ZERO, has_spawn: bool = false) -> void:
 	_spawn_position = spawn_pos
 	_has_spawn = has_spawn
+	# 씬 전환 전 대화 상태 리셋 (대화 중 씬 전환 시 is_active 잔류 방지)
+	if DialogueManager.is_active:
+		DialogueManager.end()
 	_anim.play("fade_out")
 	await _anim.animation_finished
 	get_tree().change_scene_to_file(scene_path)
