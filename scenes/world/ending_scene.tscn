@@ -94,6 +94,60 @@ position = Vector2(160, 105)
 texture = ExtResource("tank_tex")
 texture_filter = 1
 
+; ─── 엔딩 연출 (섬 장면용, 기본 숨김) ───
+[node name="EndingStage" type="Node2D" parent="."]
+visible = false
+
+; 저수조 앞에 모인 캐릭터들
+[node name="RatuStage" type="Sprite2D" parent="EndingStage"]
+position = Vector2(140, 115)
+texture = ExtResource("ratu_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
+[node name="LaniStage" type="Sprite2D" parent="EndingStage"]
+position = Vector2(175, 118)
+texture = ExtResource("lani_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
+[node name="MereStage" type="Sprite2D" parent="EndingStage"]
+position = Vector2(120, 120)
+texture = ExtResource("mere_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
+[node name="JamesStage" type="Sprite2D" parent="EndingStage"]
+position = Vector2(195, 115)
+texture = ExtResource("james_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
+[node name="VikashStage" type="Sprite2D" parent="EndingStage"]
+position = Vector2(205, 120)
+texture = ExtResource("timoci_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
+[node name="SelaStage" type="Sprite2D" parent="EndingStage"]
+position = Vector2(215, 118)
+texture = ExtResource("sela_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
+[node name="PlayerStage" type="Sprite2D" parent="EndingStage"]
+position = Vector2(160, 125)
+texture = ExtResource("player_tex")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+texture_filter = 1
+
 ; ─── 엔딩 컨트롤러 ───
 [node name="EndingController" type="Node" parent="."]
 script = ExtResource("2")
