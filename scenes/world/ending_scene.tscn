@@ -87,6 +87,13 @@ region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 texture_filter = 1
 
+; ─── 저수조 (True ending 시에만 표시) ───
+[node name="WaterTank" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(160, 105)
+texture = ExtResource("tank_tex")
+texture_filter = 1
+
 ; ─── 엔딩 컨트롤러 ───
 [node name="EndingController" type="Node" parent="."]
 script = ExtResource("2")
