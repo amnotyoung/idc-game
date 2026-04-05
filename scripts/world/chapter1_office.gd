@@ -64,10 +64,12 @@ func _setup_free_roam() -> void:
 			TrustManager.set_flag("ch1_mere_farewell_seen")
 			mere.position = Vector2(170, 60)
 			mere.face("down")
-			_exit_unlocked = true   # Mere 이야기 중에도 나갈 수 있게
+			_exit_unlocked = true
 			_setup_wati()
 			await get_tree().create_timer(0.8).timeout
-			DialogueManager.start("ch1_mere_farewell")
+			# 타이머 중 다른 대화가 시작됐으면 farewell 취소
+			if not DialogueManager.is_active:
+				DialogueManager.start("ch1_mere_farewell")
 			return
 		else:
 			# farewell은 봤지만 아직 free-walking 상태(버그 방어)
