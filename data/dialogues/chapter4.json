@@ -46,9 +46,9 @@
     "lines": [
       {"speaker": "James", "text": "시스템 설치 후 운영 주체가 없었어요."},
       {"speaker": "James", "text": "펌프가 2년도 안 돼서 멈췄어요. 고칠 사람도 없고, 부품 예산도 없고."},
-      {"speaker": "James", "text": "저희 보고서엔 '성공적으로 완료'라고 돼 있어요. 지금도."},
+      {"speaker": "James", "text": "설치까지는 잘 됐어요. 문제는 그 이후였죠. 유지보수 체계를 못 만들었어요."},
       {"speaker": "", "text": "James가 잠깐 창밖을 봤다."},
-      {"speaker": "James", "text": "그 사람들은 지금도 빗물 받아서 쓰고 있을 거예요."}
+      {"speaker": "James", "text": "그때 교훈이 있어요. 인프라만 놓고 가면 안 된다는 거."}
     ],
     "choices": [
       {
