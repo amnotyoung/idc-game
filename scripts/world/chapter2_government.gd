@@ -101,6 +101,8 @@ func _setup_floor5_state() -> void:
 
 func _exit_to_street(delay: float = 1.5) -> void:
 	await get_tree().create_timer(delay).timeout
+	if DialogueManager.is_active:
+		DialogueManager.end()
 	SceneManager.go_to_with_spawn(STREET_SCENE, STREET_SPAWN)
 
 func _on_dialogue_ended(dialogue_id: String) -> void:
