@@ -64,9 +64,9 @@ func _ready() -> void:
 
 func _on_line_check(_line: Dictionary) -> void:
 	var did = DialogueManager.current_dialogue_id
-	# Sela 이미 만남 + ratu_close_good 도달 → 서명 포함 버전으로 교체
-	if did == "ch3_ratu_close_good" and TrustManager.has_flag("ch4_sela_contacted"):
-		# 현재 대화를 서명 포함 버전으로 즉시 교체
+	# Sela 이미 만남 + ratu_close_good 도달 → 서명 포함 버전으로 교체 (1회만)
+	if did == "ch3_ratu_close_good" and TrustManager.has_flag("ch4_sela_contacted") and not _ratu_sign_swapped:
+		_ratu_sign_swapped = true
 		DialogueManager.current_dialogue = DialogueManager.dialogues["ch3_ratu_close_good_sign"]
 		DialogueManager.current_dialogue_id = "ch3_ratu_close_good_sign"
 		DialogueManager.current_line_index = 0
