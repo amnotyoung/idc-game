@@ -4,6 +4,12 @@ extends Node
 @onready var wati: CharacterBody2D   = get_parent().get_node("Wati")
 @onready var player: CharacterBody2D = get_parent().get_node("Player")
 @onready var phone                   = get_parent().get_node("Phone")
+@onready var computer                = get_parent().get_node("Computer")
+
+const STAKEHOLDER_NAMES = {
+	"mere": "Mere", "timoci": "Timoci", "ratu_josefa": "Ratu Josefa",
+	"lani": "Lani", "james": "James"
+}
 
 const EXIT_Y     = 12.0    # 상단 문 통과 — y가 이 값 이하일 때
 const EXIT_X_MIN = 135.0
