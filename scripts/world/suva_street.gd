@@ -89,11 +89,21 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 	if dialogue_id in NPC_TRUST_MAP:
 		for npc_id in NPC_TRUST_MAP[dialogue_id]:
 			TrustManager.modify(npc_id, NPC_TRUST_MAP[dialogue_id][npc_id])
-	# 양고나 구매
-	if dialogue_id == "street_vendor_yangona_buy":
-		TrustManager.set_flag("sevusevu_prepared")
-		vendor.dialogue_id = "street_vendor_after"
-		TrustManager.save_game()
+	# 상점 구매
+	match dialogue_id:
+		"street_vendor_buy_root":
+			TrustManager.set_flag("sevusevu_prepared")
+			TrustManager.set_flag("bought_root")
+			vendor.dialogue_id = "street_vendor_after"
+			TrustManager.save_game()
+		"street_vendor_buy_powder":
+			TrustManager.set_flag("bought_powder")
+			vendor.dialogue_id = "street_vendor_after"
+			TrustManager.save_game()
+		"street_vendor_buy_mango":
+			TrustManager.set_flag("bought_mango")
+			vendor.dialogue_id = "street_vendor_after"
+			TrustManager.save_game()
 
 # 항구 — 하단 중앙 출구
 const HARBOR = {
