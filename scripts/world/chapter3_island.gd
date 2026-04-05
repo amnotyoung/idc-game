@@ -59,6 +59,10 @@ func _ready() -> void:
 		mere.dialogue_id = "ch3_mere_after_ratu"
 		if TrustManager.has_flag("sevusevu_prepared"):
 			ratu.dialogue_id = "ch3_ratu_greet_prepared"
+		elif TrustManager.has_flag("bought_powder"):
+			ratu.dialogue_id = "ch3_ratu_greet_powder"
+		elif TrustManager.has_flag("bought_mango"):
+			ratu.dialogue_id = "ch3_ratu_greet_mango"
 		else:
 			ratu.dialogue_id = "ch3_ratu_greet_basic"
 
