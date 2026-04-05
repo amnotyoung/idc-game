@@ -7,7 +7,7 @@ extends Node
 @onready var computer                = get_parent().get_node("Computer")
 
 const STAKEHOLDER_NAMES = {
-	"mere": "Mere", "timoci": "Timoci", "ratu_josefa": "Ratu Josefa",
+	"mere": "Mere", "timoci": "Vikash", "ratu_josefa": "Ratu Josefa",
 	"lani": "Lani", "james": "James"
 }
 
