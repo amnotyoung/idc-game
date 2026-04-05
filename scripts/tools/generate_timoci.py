@@ -1,6 +1,6 @@
 """
-Timoci — 국가계획부 남성 공무원 스프라이트
-남색 정장, 넥타이, 안경, 짧은 머리
+Vikash — 국가계획부 Indo-Fijian 남성 공무원 스프라이트
+남색 정장, 넥타이, 안경, 짧은 검은 머리, 콧수염
 4방향 스프라이트시트 (64x16, 각 16x16)
 """
 from PIL import Image, ImageDraw
@@ -10,7 +10,7 @@ OUT = "/Users/nddn/Documents/Claude/Projects/IDC game/assets/sprites/characters"
 img = Image.new("RGBA", (64, 16), (0,0,0,0))
 d = ImageDraw.Draw(img)
 
-SKIN     = (150, 100, 65, 255)
+SKIN     = (178, 135, 90, 255)     # Indo-Fijian 피부톤
 SUIT     = (38, 38, 72, 255)      # 남색 정장
 SUIT_L   = (52, 52, 88, 255)      # 밝은 부분
 PANTS    = (30, 30, 58, 255)      # 바지
