@@ -125,6 +125,26 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 		TrustManager.set_flag("wati_yangona_hint")
 		wati.dialogue_id = "ch3_wati_island_idle"
 	# ch4_sela_call 제거됨 — Sela는 정부청사에서 대면
+	elif dialogue_id == "ch1_computer_send":
+		_send_progress_email()
+
+func _send_progress_email() -> void:
+	# 랜덤 이해관계자 1명에게 +3 신뢰
+	var eligible: Array = []
+	for npc_id in TrustManager.ENDING_NPCS:
+		if TrustManager.get_trust(npc_id) < 100:
+			eligible.append(npc_id)
+	if eligible.size() == 0:
+		return
+	var picked: String = eligible[randi() % eligible.size()]
+	TrustManager.modify(picked, 3)
+	# 누구에게 보냈는지 피드백 (다음 대화로 알려줌)
+	var name = STAKEHOLDER_NAMES.get(picked, picked)
+	DialogueManager.dialogues["ch1_email_result"] = {
+		"lines": [{"speaker": "", "text": name + "에게서 답장이 왔다. 감사하다고."}]
+	}
+	await get_tree().create_timer(0.3).timeout
+	DialogueManager.start("ch1_email_result")
 
 func _mere_walks_in() -> void:
 	var target = Vector2(player.position.x + 22, player.position.y - 18)
