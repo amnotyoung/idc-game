@@ -128,20 +128,46 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 	elif dialogue_id == "ch1_computer_send":
 		_send_progress_email()
 
+## 만난 적 있는 이해관계자만 메일 대상
+const MET_FLAGS = {
+	"mere":       "ch1_intro_done",     # Mere는 인트로에서 만남
+	"timoci":     "ch2_timoci_met",
+	"ratu_josefa":"ch3_visited",
+	"lani":       "ch3_visited",
+	"james":      "ch4_james_met",
+}
+
 func _send_progress_email() -> void:
-	# 랜덤 이해관계자 1명에게 +3 신뢰
 	var eligible: Array = []
 	for npc_id in TrustManager.ENDING_NPCS:
-		if TrustManager.get_trust(npc_id) < 100:
+		var flag = MET_FLAGS.get(npc_id, "")
+		if flag != "" and TrustManager.has_flag(flag) and TrustManager.get_trust(npc_id) < 100:
 			eligible.append(npc_id)
+
 	if eligible.size() == 0:
+		DialogueManager.dialogues["ch1_email_result"] = {
+			"lines": [{"speaker": "", "text": "아직 보낼 사람이 없다. 먼저 이해관계자들을 만나야 한다."}]
+		}
+		await get_tree().create_timer(0.3).timeout
+		DialogueManager.start("ch1_email_result")
 		return
+
 	var picked: String = eligible[randi() % eligible.size()]
 	TrustManager.modify(picked, 3)
-	# 누구에게 보냈는지 피드백 (다음 대화로 알려줌)
-	var name = STAKEHOLDER_NAMES.get(picked, picked)
+	var npc_name = STAKEHOLDER_NAMES.get(picked, picked)
+
+	# 누구에게 보냈는지 + 맥락 있는 답장
+	var replies = {
+		"mere": "에게서 답장이 왔다. \"현장 조사 결과 정리되면 공유할게요.\"",
+		"timoci": "에게서 답장이 왔다. \"서류 확인했습니다. 감사합니다.\"",
+		"ratu_josefa": "에게서 Lani를 통해 전달이 왔다. \"알겠소.\"",
+		"lani": "에게서 답장이 왔다. \"마을 사람들한테 전할게요.\"",
+		"james": "에게서 답장이 왔다. \"APAT 쪽도 업데이트할게요.\"",
+	}
+	var reply_text = npc_name + replies.get(picked, "에게서 답장이 왔다.")
+
 	DialogueManager.dialogues["ch1_email_result"] = {
-		"lines": [{"speaker": "", "text": name + "에게서 답장이 왔다. 감사하다고."}]
+		"lines": [{"speaker": "", "text": reply_text}]
 	}
 	await get_tree().create_timer(0.3).timeout
 	DialogueManager.start("ch1_email_result")
