@@ -1,6 +1,5 @@
 extends CanvasLayer
 
-# 뷰포트 320x180 기준 — 하단 50px 영역을 대화창으로 사용
 const BOX_HEIGHT = 50
 
 @onready var panel: Panel               = $Panel
@@ -16,32 +15,33 @@ func _ready() -> void:
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	panel.visible = false
 	back_btn.pressed.connect(_on_back_pressed)
-	# 패널 클릭으로도 대화 진행 가능
-	panel.gui_input.connect(_on_panel_input)
 
-func _on_panel_input(event: InputEvent) -> void:
+## _input — GUI보다 먼저 키 입력을 잡음 (엔터키 누락 방지)
+func _input(event: InputEvent) -> void:
 	if not DialogueManager.is_active:
 		return
-	if choices_container.visible:
+	if not panel.visible:
 		return
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		DialogueManager.advance()
-		get_viewport().set_input_as_handled()
 
-func _unhandled_input(event: InputEvent) -> void:
-	if not DialogueManager.is_active:
-		return
 	# Q키 — 뒤로 가기
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_Q:
 			if DialogueManager.can_go_back():
 				DialogueManager.go_back()
-				get_viewport().set_input_as_handled()
+			get_viewport().set_input_as_handled()
 			return
-	# 선택지 표시 중에는 스페이스/엔터 입력 차단
-	if choices_container.visible:
+
+	# 선택지 표시 중에는 엔터/스페이스로 진행 차단 (버튼으로만 선택)
+	if choices_container.visible and choices_container.get_child_count() > 0:
 		return
+
+	# 엔터/스페이스 — 대화 진행
 	if event.is_action_pressed("ui_accept"):
+		DialogueManager.advance()
+		get_viewport().set_input_as_handled()
+
+	# 마우스 클릭 — 대화 진행
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		DialogueManager.advance()
 		get_viewport().set_input_as_handled()
 
@@ -57,8 +57,6 @@ func _on_line_changed(line: Dictionary) -> void:
 	speaker_label.text = line.get("speaker", "")
 	text_label.text    = line.get("text", "")
 	back_btn.visible   = DialogueManager.can_go_back()
-	# 어떤 UI 요소도 포커스 갖지 않게 — 엔터키가 _unhandled_input에 도달하도록
-	get_viewport().gui_release_focus()
 
 func _on_choices_presented(choices: Array) -> void:
 	_clear_choices()
@@ -77,7 +75,6 @@ func _on_choices_presented(choices: Array) -> void:
 		choices_container.get_child(0).grab_focus()
 
 func _on_choice_selected(index: int) -> void:
-	# 선택 즉시 모든 버튼을 scene tree에서 분리 (입력 가로채기 완전 차단)
 	_clear_choices()
 	choices_container.visible = false
 	DialogueManager.choose(index)
