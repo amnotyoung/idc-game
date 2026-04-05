@@ -19,8 +19,8 @@ func _ready() -> void:
 	DialogueManager.dialogue_line_changed.connect(_on_line_check)
 
 	if not TrustManager.has_flag("ch3_arrived"):
-		# 첫 방문 — 세부세부 전까지 Lani와 대화 불가
-		lani.dialogue_id = ""
+		# 첫 방문 — 세부세부 전에는 Ratu 먼저 안내
+		lani.dialogue_id = "ch3_lani_not_yet"
 		mere.dialogue_id = "ch3_mere_first"
 		if TrustManager.has_flag("ch2_timoci_met"):
 			DialogueManager.start("ch3_arrive")
