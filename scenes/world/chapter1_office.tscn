@@ -193,6 +193,10 @@ position = Vector2(220, 90)
 script = ExtResource("9")
 dialogue_id = "ch1_project_file"
 
+[node name="Sprite" type="Sprite2D" parent="ProjectFile"]
+texture = ExtResource("file_tex")
+texture_filter = 1
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectFile"]
 shape = SubResource("doc_col")
 
