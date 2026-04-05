@@ -185,7 +185,7 @@
       },
       {
         "text": "\"알겠습니다. 감사합니다.\"",
-        "effects": {"timoci": 5},
+        "effects": {"timoci": 8},
         "next": "ch2_timoci_progress_polite"
       }
     ]
