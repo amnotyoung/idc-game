@@ -119,6 +119,88 @@ func _show_ending() -> void:
 		"bad":
 			DialogueManager.start("ch5_ending_bad")
 
+## 엔딩 대사 진행 시 시각 연출
+func _on_ending_line(line: Dictionary) -> void:
+	var text: String = line.get("text", "")
+	var did = DialogueManager.current_dialogue_id
+
+	if did == "ch5_ending_true":
+		_true_ending_visuals(text)
+	elif did == "ch5_ending_normal":
+		_normal_ending_visuals(text)
+	elif did == "ch5_ending_bad":
+		_bad_ending_visuals(text)
+
+func _true_ending_visuals(text: String) -> void:
+	if "저수조 앞에 사람들이" in text:
+		# 캐릭터들 등장
+		ending_stage.visible = true
+		ending_stage.modulate.a = 0.0
+		var tween = get_tree().create_tween()
+		tween.tween_property(ending_stage, "modulate:a", 1.0, 1.0)
+	elif "Ratu Josefa가 앞으로" in text:
+		# Ratu를 앞으로 이동
+		var ratu = ending_stage.get_node("RatuStage")
+		var tween = get_tree().create_tween()
+		tween.tween_property(ratu, "position", Vector2(158, 110), 0.8)
+	elif "양고나를 타노아에" in text:
+		# 배경을 세부세부로 전환
+		bg.texture = SEVUSEVU_BG
+	elif "Lani가 저수조 밸브" in text:
+		# 배경을 섬으로 복원, Lani를 저수조 앞으로
+		bg.texture = ISLAND_BG
+		var lani = ending_stage.get_node("LaniStage")
+		var tween = get_tree().create_tween()
+		tween.tween_property(lani, "position", Vector2(162, 108), 0.5)
+	elif "물이 흘러나왔다" in text:
+		# 저수조 밝게 빛남 (물 흐르는 표현)
+		var tween = get_tree().create_tween().set_loops(3)
+		tween.tween_property(water_tank, "modulate", Color(1.3, 1.3, 1.5), 0.3)
+		tween.tween_property(water_tank, "modulate", Color(1, 1, 1), 0.3)
+	elif "메케" in text:
+		# 캐릭터들 좌우 흔들림 (춤 표현)
+		for child in ending_stage.get_children():
+			var tween = get_tree().create_tween().set_loops(4)
+			var orig_x = child.position.x
+			tween.tween_property(child, "position:x", orig_x + 3, 0.2)
+			tween.tween_property(child, "position:x", orig_x - 3, 0.2)
+			tween.tween_property(child, "position:x", orig_x, 0.2)
+	elif "마을 운영위원회 관리" in text:
+		# 모든 것이 고요해짐
+		for child in ending_stage.get_children():
+			var tween = get_tree().create_tween()
+			tween.tween_property(child, "position:x", child.position.x, 0.5)
+
+func _normal_ending_visuals(text: String) -> void:
+	if "공사가 진행 중" in text:
+		# 저수조 반투명 (공사 중)
+		water_tank.visible = true
+		water_tank.modulate = Color(1, 1, 1, 0.5)
+	elif "마을 사람들이 공사 현장" in text:
+		# 캐릭터들 등장
+		ending_stage.visible = true
+		ending_stage.modulate.a = 0.0
+		var tween = get_tree().create_tween()
+		tween.tween_property(ending_stage, "modulate:a", 1.0, 1.0)
+	elif "혼자가 아니다" in text:
+		# 저수조가 서서히 밝아짐 (완공 희망)
+		var tween = get_tree().create_tween()
+		tween.tween_property(water_tank, "modulate:a", 0.8, 1.5)
+
+func _bad_ending_visuals(text: String) -> void:
+	if "서랍을 열었다" in text:
+		# 화면 약간 어두워짐
+		var tween = get_tree().create_tween()
+		tween.tween_property(bg, "modulate", Color(0.7, 0.7, 0.75), 1.0)
+	elif "새 메모를 쓴다" in text:
+		# 화면 더 어두워짐
+		var tween = get_tree().create_tween()
+		tween.tween_property(bg, "modulate", Color(0.5, 0.5, 0.55), 1.5)
+	elif "이 메모가 서랍에" in text:
+		# 거의 암전
+		var tween = get_tree().create_tween()
+		tween.tween_property(bg, "modulate", Color(0.3, 0.3, 0.35), 2.0)
+
 func _trust_bar(value: int) -> String:
 	var filled = int(value / 10)
 	var empty = 10 - filled
