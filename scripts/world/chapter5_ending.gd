@@ -13,10 +13,9 @@ func _ready() -> void:
 	await get_tree().process_frame
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
-	_ending_type = TrustManager.check_ending()
 	TrustManager.set_flag("ch5_started")
 
-	# 회의 시작
+	# 회의 시작 (엔딩 판정은 최종 선택 후로 지연)
 	DialogueManager.start("ch5_meeting_start")
 
 func _on_dialogue_ended(dialogue_id: String) -> void:
