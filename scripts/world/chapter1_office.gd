@@ -168,6 +168,52 @@ func _send_progress_email() -> void:
 	await get_tree().create_timer(0.3).timeout
 	DialogueManager.start("ch1_email_result")
 
+## 신뢰도 구간: 0~25 냉담 / 26~50 사무적 / 51~70 호의적 / 71+ 협력적
+func _get_email_reply(npc_id: String, npc_name: String, trust: int) -> String:
+	# NPC별 × 신뢰 구간별 답장
+	var replies = {
+		"mere": {
+			"cold":  "에게 메일을 보냈다. 읽음 표시만 떴다.",
+			"formal":"에게서 답장이 왔다. \"확인했습니다.\"",
+			"warm":  "에게서 답장이 왔다. \"고마워요. 현장 조사 결과 정리되면 공유할게요.\"",
+			"ally":  "에게서 답장이 왔다. \"좋은 소식이네요! 다음 주에 만나서 같이 정리해요. ☺\"",
+		},
+		"timoci": {
+			"cold":  "에게 메일을 보냈다. 자동 부재중 답장이 돌아왔다.",
+			"formal":"에게서 답장이 왔다. \"수신 확인합니다.\"",
+			"warm":  "에게서 답장이 왔다. \"서류 확인했습니다. 궁금한 점 있으면 연락주세요.\"",
+			"ally":  "에게서 답장이 왔다. \"진전이 있네요. 장관 보고 일정 조율해볼게요.\"",
+		},
+		"ratu_josefa": {
+			"cold":  "에게 Lani를 통해 전달했다. 답이 없었다.",
+			"formal":"에게서 Lani를 통해 전달이 왔다. \"알겠소.\"",
+			"warm":  "에게서 Lani를 통해 전달이 왔다. \"다음에 올 때 양고나 가져오시오.\"",
+			"ally":  "에게서 Lani를 통해 전달이 왔다. \"마을 사람들도 기대하고 있소.\"",
+		},
+		"lani": {
+			"cold":  "에게 메일을 보냈다. 읽지 않은 것 같다.",
+			"formal":"에게서 답장이 왔다. \"네, 알겠어요.\"",
+			"warm":  "에게서 답장이 왔다. \"마을 사람들한테 전할게요. 고마워요.\"",
+			"ally":  "에게서 답장이 왔다. \"Josua 삼촌이랑 교육 일정 논의 중이에요!\"",
+		},
+		"james": {
+			"cold":  "에게 메일을 보냈다. 답장이 없다.",
+			"formal":"에게서 답장이 왔다. \"Noted. Thanks.\"",
+			"warm":  "에게서 답장이 왔다. \"APAT 쪽도 업데이트할게요. 진전 있으면 알려주세요.\"",
+			"ally":  "에게서 답장이 왔다. \"Great progress! 기술자 교육 커리큘럼 초안 보낼게요.\"",
+		},
+	}
+	var tier = "cold"
+	if trust >= 71:
+		tier = "ally"
+	elif trust >= 51:
+		tier = "warm"
+	elif trust >= 26:
+		tier = "formal"
+
+	var npc_replies = replies.get(npc_id, {})
+	return npc_name + npc_replies.get(tier, "에게서 답장이 왔다.")
+
 func _mere_walks_in() -> void:
 	# Mere가 플레이어 바로 옆으로 와서 대화 (카메라에 둘 다 잡히게)
 	var target = Vector2(player.position.x + 18, player.position.y - 8)
