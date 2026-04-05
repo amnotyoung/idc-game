@@ -36,7 +36,7 @@
       },
       {
         "text": "\"승인이 왜 이렇게 오래 걸리는지 알고 싶어요.\"",
-        "effects": {"timoci": 8},
+        "effects": {"timoci": 10},
         "next": "ch2_timoci_ask_reason"
       },
       {
