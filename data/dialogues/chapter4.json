@@ -157,7 +157,6 @@
         "text": "\"아직 만나기 전이에요. 양고나 챙겨서 세부세부부터 하려고요.\"",
         "effects": {"james": 15},
         "next": "ch4_james_yangona_tip"
-        "next": "ch4_james_endorsed_neutral"
       },
       {
         "text": "\"마을 측은 나중에 설득할 수 있어요.\"",
