@@ -20,8 +20,9 @@ func _ready() -> void:
 
 	# ── 첫 방문: 약속 없음 → 쫓겨남 ──
 	if not TrustManager.has_flag("appointment_set"):
-		# NPC 전원 비활성화 — 대화 못 걸게
-		_hide_all_npcs()
+		# Vikash/Sela 비활성화 (접수처만 보임)
+		_set_npc_active(timoci, false)
+		_set_npc_active(sela, false)
 		DialogueManager.start("ch2_no_appointment")
 		return
 
