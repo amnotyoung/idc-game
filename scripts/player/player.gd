@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-const SPEED = 140.0
+const WALK_SPEED = 70.0
+const RUN_SPEED = 130.0
 
 @onready var interact_ray: RayCast2D = $InteractRay
 @onready var sprite: Sprite2D = $Sprite
