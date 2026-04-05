@@ -60,5 +60,7 @@ func _set_sprite(dir_name: String) -> void:
 	sprite.region_rect = Rect2(col * 16, 0, 16, 16)
 
 func interact() -> void:
+	if DialogueManager.is_active:
+		return
 	_set_sprite("down")   # 플레이어 쪽 보기
 	DialogueManager.start(dialogue_id)
