@@ -31,8 +31,15 @@ func _input(event: InputEvent) -> void:
 			get_viewport().set_input_as_handled()
 			return
 
-	# 선택지 표시 중에는 엔터/스페이스로 진행 차단 (버튼으로만 선택)
+	# 선택지 표시 중
 	if choices_container.visible and choices_container.get_child_count() > 0:
+		# 엔터/스페이스 → 포커스된 버튼 직접 클릭
+		if event.is_action_pressed("ui_accept"):
+			var focused = get_viewport().gui_get_focus_owner()
+			if focused is Button and focused.get_parent() == choices_container:
+				focused.emit_signal("pressed")
+				get_viewport().set_input_as_handled()
+		# 방향키 → 포커스 이동 (Godot 기본 동작에 맡김)
 		return
 
 	# 엔터/스페이스 — 대화 진행
