@@ -46,8 +46,8 @@ region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 texture_filter = 1
 
-; Timoci (우측 앞)
-[node name="Timoci" type="Sprite2D" parent="Attendees"]
+; Vikash (우측 앞)
+[node name="Vikash" type="Sprite2D" parent="Attendees"]
 position = Vector2(200, 100)
 texture = ExtResource("timoci_tex")
 region_enabled = true
