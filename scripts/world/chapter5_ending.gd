@@ -34,6 +34,8 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 		"ch5_sela_response", "ch5_sela_response_no_sign":
 			DialogueManager.start("ch5_final_choice")
 		"ch5_resolve":
+			# 최종 선택의 effects가 적용된 후 판정
+			_ending_type = TrustManager.check_ending()
 			_show_ending()
 		"ch5_ending_true", "ch5_ending_normal", "ch5_ending_bad":
 			await get_tree().create_timer(2.5).timeout
