@@ -116,6 +116,7 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			else:
 				ratu.dialogue_id = "ch3_ratu_after"
 		"ch3_ratu_close_neutral":
+			_restore_island_view()
 			TrustManager.set_flag("ch3_visited")
 			ratu.dialogue_id = "ch3_ratu_after_neutral"
 			lani.dialogue_id = ""
