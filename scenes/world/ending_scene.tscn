@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/player.png" id="player_tex"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/ratu_josefa.png" id="ratu_tex"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/lani.png" id="lani_tex"]
+[ext_resource type="Texture2D" path="res://assets/sprites/objects/water_tank.png" id="tank_tex"]
 
 ; ─── 루트 ───
 [node name="EndingScene" type="Node2D"]
