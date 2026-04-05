@@ -3,6 +3,7 @@ extends Node
 @onready var bg: Sprite2D = get_parent().get_node("Background")
 @onready var bgm: AudioStreamPlayer = get_parent().get_node("BGM")
 @onready var attendees: Node2D = get_parent().get_node("Attendees")
+@onready var water_tank: Sprite2D = get_parent().get_node("WaterTank")
 
 const OFFICE_BG = preload("res://assets/sprites/tilesets/office_bg.png")
 const ISLAND_BG = preload("res://assets/sprites/tilesets/naitamba_bg.png")
