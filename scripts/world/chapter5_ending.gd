@@ -4,15 +4,19 @@ extends Node
 @onready var bgm: AudioStreamPlayer = get_parent().get_node("BGM")
 @onready var attendees: Node2D = get_parent().get_node("Attendees")
 @onready var water_tank: Sprite2D = get_parent().get_node("WaterTank")
+@onready var ending_stage: Node2D = get_parent().get_node("EndingStage")
 
 const OFFICE_BG = preload("res://assets/sprites/tilesets/office_bg.png")
 const ISLAND_BG = preload("res://assets/sprites/tilesets/naitamba_bg.png")
+const SEVUSEVU_BG = preload("res://assets/sprites/tilesets/sevusevu_bg.png")
 
 var _ending_type: String = ""
+var _staged_lines: Dictionary = {}  # 대사 텍스트 → 연출 함수
 
 func _ready() -> void:
 	await get_tree().process_frame
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	DialogueManager.dialogue_line_changed.connect(_on_ending_line)
 
 	TrustManager.set_flag("ch5_started")
 
