@@ -38,6 +38,9 @@ func _load_dialogues() -> void:
 		dialogues.merge(json.get_data())
 
 func start(dialogue_id: String) -> void:
+	if is_active:
+		push_warning("Dialogue already active (%s), forcing end before starting %s" % [current_dialogue_id, dialogue_id])
+		end()
 	if not dialogues.has(dialogue_id):
 		push_error("Dialogue not found: " + dialogue_id)
 		return
