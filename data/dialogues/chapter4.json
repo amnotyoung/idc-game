@@ -226,14 +226,60 @@
 
   "ch4_james_after_neutral": {
     "lines": [
-      {"speaker": "James", "text": "마을 쪽 어떻게 됐어요?"},
-      {"speaker": "James", "text": "준비되면 연락주세요."}
+      {"speaker": "James", "text": "마을 쪽 어떻게 됐어요?"}
+    ],
+    "choices": [
+      {
+        "text": "\"Ratu Josefa가 동의했어요. 마을 운영위원회도 구성됐고요.\"",
+        "effects": {"james": 20},
+        "condition": "ch3_good_ending",
+        "next": "ch4_james_good_news"
+      },
+      {
+        "text": "\"아직 진행 중이에요.\"",
+        "effects": {},
+        "next": "ch4_james_still_waiting"
+      }
+    ]
+  },
+
+  "ch4_james_good_news": {
+    "lines": [
+      {"speaker": "James", "text": "...진짜요? Ratu Josefa가?"},
+      {"speaker": "James", "text": "이전 사업 때는 끝까지 거부했거든요. 마을 운영위원회라... 그게 결정적이었나 봐요."},
+      {"speaker": "James", "text": "좋아요. 그러면 APAT 쪽도 본격적으로 움직일 수 있어요."},
+      {"speaker": "James", "text": "기술자 교육 프로그램 준비할게요. 이번에 제대로 해봅시다."}
+    ]
+  },
+
+  "ch4_james_still_waiting": {
+    "lines": [
+      {"speaker": "James", "text": "알겠어요. 준비되면 연락주세요."}
     ]
   },
 
   "ch4_james_after_rejected": {
     "lines": [
-      {"speaker": "James", "text": "마을 어른들 먼저 만나고 오세요."}
+      {"speaker": "James", "text": "마을 어른들 만나보셨어요?"}
+    ],
+    "choices": [
+      {
+        "text": "\"Ratu Josefa가 동의했어요. 마을이 직접 관리하는 구조로요.\"",
+        "effects": {"james": 20},
+        "condition": "ch3_good_ending",
+        "next": "ch4_james_good_news"
+      },
+      {
+        "text": "\"아직이요.\"",
+        "effects": {},
+        "next": "ch4_james_still_rejected"
+      }
+    ]
+  },
+
+  "ch4_james_still_rejected": {
+    "lines": [
+      {"speaker": "James", "text": "마을 쪽이 정리되면 다시 오세요."}
     ]
   },
 
