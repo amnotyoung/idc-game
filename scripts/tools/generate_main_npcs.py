@@ -86,17 +86,19 @@ for i, facing in enumerate(["down","left","right","up"]):
 save(img, "ratu_josefa.png")
 
 # ══════════════════════════════════════
-# LANI — 기술에 관심 있는 마을 청년
-# 짧은 머리, 작업복(카키), 공구 벨트, 역동적
+# LANI — 마을 여성 청년 리더
+# 긴 머리, 카키 작업복, 공구 벨트, 꽃 머리핀
 # ══════════════════════════════════════
 img, d = new_sheet()
 SKIN     = (155, 105, 68, 255)
 WORK_TOP = (105, 128, 95, 255)    # 카키 작업복 상의
 WORK_BOT = (88, 108, 78, 255)     # 카키 바지
-BELT     = (85, 62, 38, 255)      # 공구 벨트 (갈색)
+BELT     = (85, 62, 38, 255)      # 공구 벨트
 TOOL     = (165, 165, 172, 255)   # 은색 공구
 HAIR     = (15, 10, 5, 255)
-BOOT     = (72, 55, 35, 255)      # 작업화
+HAIR_H   = (28, 20, 12, 255)     # 머리 하이라이트
+BOOT     = (72, 55, 35, 255)
+FLOWER   = (218, 75, 85, 255)    # 히비스커스 머리핀
 
 for i, facing in enumerate(["down","left","right","up"]):
     ox = i * 16
@@ -106,7 +108,6 @@ for i, facing in enumerate(["down","left","right","up"]):
     d.rectangle([ox+9, 10, ox+11, 14], fill=WORK_BOT)
     # 공구 벨트
     d.rectangle([ox+4, 9, ox+12, 11], fill=BELT)
-    # 벨트 공구 (왼쪽에 렌치)
     if facing != "up":
         d.rectangle([ox+4, 10, ox+5, 12], fill=TOOL)
     # 작업화
@@ -114,28 +115,38 @@ for i, facing in enumerate(["down","left","right","up"]):
     d.rectangle([ox+9, 13, ox+12, 15], fill=BOOT)
     # 작업복 상의
     d.rectangle([ox+5, 5, ox+11, 9], fill=WORK_TOP)
-    # 주머니
     d.rectangle([ox+6, 7, ox+8, 9], fill=(95, 118, 85, 255))
     # 팔
     d.rectangle([ox+3, 6, ox+5, 9], fill=SKIN)
     d.rectangle([ox+11, 6, ox+13, 9], fill=SKIN)
     # 목
     d.rectangle([ox+7, 3, ox+9, 6], fill=SKIN)
-    # 머리 (짧은 머리)
+    # 머리 (긴 머리 — 여성)
     d.rectangle([ox+5, 0, ox+11, 4], fill=SKIN)
-    d.rectangle([ox+5, 0, ox+11, 2], fill=HAIR)
+    d.rectangle([ox+5, 0, ox+11, 1], fill=HAIR)
     if facing == "down":
+        # 긴 머리 양옆
+        d.rectangle([ox+4, 1, ox+6, 7], fill=HAIR)
+        d.rectangle([ox+10, 1, ox+12, 7], fill=HAIR)
+        d.point((ox+5, 3), fill=HAIR_H)
+        # 히비스커스 머리핀 (오른쪽)
+        d.ellipse([ox+10, 0, ox+13, 3], fill=FLOWER)
+        # 얼굴
         d.point((ox+7, 2), fill=(20, 12, 8, 255))
         d.point((ox+9, 2), fill=(20, 12, 8, 255))
-        d.line([ox+7, 3, ox+9, 3], fill=(145, 88, 60, 255))
+        d.point((ox+8, 3), fill=(145, 88, 60, 255))
     elif facing == "left":
-        d.rectangle([ox+10, 0, ox+11, 3], fill=HAIR)
+        d.rectangle([ox+10, 0, ox+12, 7], fill=HAIR)
         d.point((ox+6, 2), fill=(20, 12, 8, 255))
+        d.ellipse([ox+10, 0, ox+13, 3], fill=FLOWER)
     elif facing == "right":
-        d.rectangle([ox+5, 0, ox+6, 3], fill=HAIR)
+        d.rectangle([ox+4, 0, ox+6, 7], fill=HAIR)
         d.point((ox+10, 2), fill=(20, 12, 8, 255))
+        d.ellipse([ox+3, 0, ox+6, 3], fill=FLOWER)
     elif facing == "up":
-        d.rectangle([ox+5, 0, ox+11, 3], fill=HAIR)
+        d.rectangle([ox+4, 0, ox+12, 7], fill=HAIR)
+        d.point((ox+6, 3), fill=HAIR_H)
+        d.ellipse([ox+10, 0, ox+13, 3], fill=FLOWER)
 
 save(img, "lani.png")
 
