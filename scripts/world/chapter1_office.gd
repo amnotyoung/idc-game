@@ -64,7 +64,11 @@ func _setup_wati() -> void:
 	elif TrustManager.has_flag("ch3_visited") and not TrustManager.has_flag("ch2_timoci_met"):
 		# 정부청사 안 가고 섬부터 갔다 온 경우
 		wati.dialogue_id = "ch1_wati_island_first"
+	elif TrustManager.has_flag("ch3_arrived"):
+		# 이미 섬에 다녀왔으면 섬 안내 건너뜀
+		wati.dialogue_id = "ch3_wati_island_idle"
 	elif TrustManager.has_flag("ch2_timoci_met") and not TrustManager.has_flag("wati_yangona_hint"):
+		# 정부청사 다녀왔고 아직 섬 안 감 → 섬 + 양고나 안내
 		wati.dialogue_id = "ch3_wati_island_prep"
 	elif TrustManager.has_flag("wati_yangona_hint"):
 		wati.dialogue_id = "ch3_wati_island_idle"
