@@ -282,6 +282,21 @@
     ]
   },
 
+  "ch2_sela_consent_direct": {
+    "lines": [
+      {"speaker": "Sela", "text": "안녕하세요. James한테 연락 받았어요. 나이탬바 섬 건이죠?"},
+      {"speaker": "나", "text": "네. Ratu Josefa한테 마을 동의도 이미 받았습니다."},
+      {"speaker": "Sela", "text": "...벌써요? Ratu Josefa가 서명하는 건 처음이에요."},
+      {"speaker": "Sela", "text": "마을 운영위원회 조항이 들어가 있네요. 이건 좋은 선례가 될 거예요."},
+      {"speaker": "Sela", "text": "접수 완료요. 검토는 빠르면 다음 주 안에 됩니다."},
+      {"speaker": "Sela", "text": "3층 Vikash한테도 알려줄게요. 토지 동의 접수됐다고 하면 장관 결재도 빠를 거예요."},
+      {"speaker": "", "text": "토지 동의 절차가 공식적으로 시작됐다."},
+      {"speaker": "Sela", "text": "이 정도면 전체 이해관계자 회의를 열어도 될 것 같아요."},
+      {"speaker": "Sela", "text": "Vikash 씨, James 씨, 마을 쪽까지 — KODA 사무소에서 한자리에 모이는 게 어떨까요?"},
+      {"speaker": "나", "text": "(KODA 사무소로 돌아가서 최종 회의를 준비하자.)"}
+    ]
+  },
+
   "ch2_sela_consent_submit": {
     "lines": [
       {"speaker": "나", "text": "Ratu Josefa 서명 받아왔습니다."},
