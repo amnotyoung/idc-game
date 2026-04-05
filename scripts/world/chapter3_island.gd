@@ -4,6 +4,11 @@ extends Node
 @onready var lani: CharacterBody2D = get_parent().get_node("Lani")
 @onready var mere: CharacterBody2D = get_parent().get_node("Mere")
 @onready var village_npcs: Node2D = get_parent().get_node("VillageNPCs")
+@onready var bg: Sprite2D = get_parent().get_node("Background")
+@onready var player: CharacterBody2D = get_parent().get_node("Player")
+
+const ISLAND_BG = preload("res://assets/sprites/tilesets/naitamba_bg.png")
+const SEVUSEVU_BG = preload("res://assets/sprites/tilesets/sevusevu_bg.png")
 
 func _ready() -> void:
 	await get_tree().process_frame
