@@ -157,16 +157,10 @@ func _send_progress_email() -> void:
 	var picked: String = eligible[randi() % eligible.size()]
 	TrustManager.modify(picked, 3)
 	var npc_name = STAKEHOLDER_NAMES.get(picked, picked)
+	var trust = TrustManager.get_trust(picked)
 
-	# 누구에게 보냈는지 + 맥락 있는 답장
-	var replies = {
-		"mere": "에게서 답장이 왔다. \"현장 조사 결과 정리되면 공유할게요.\"",
-		"timoci": "에게서 답장이 왔다. \"서류 확인했습니다. 감사합니다.\"",
-		"ratu_josefa": "에게서 Lani를 통해 전달이 왔다. \"알겠소.\"",
-		"lani": "에게서 답장이 왔다. \"마을 사람들한테 전할게요.\"",
-		"james": "에게서 답장이 왔다. \"APAT 쪽도 업데이트할게요.\"",
-	}
-	var reply_text = npc_name + replies.get(picked, "에게서 답장이 왔다.")
+	# 신뢰도 구간별 답장 톤
+	var reply_text = _get_email_reply(picked, npc_name, trust)
 
 	DialogueManager.dialogues["ch1_email_result"] = {
 		"lines": [{"speaker": "", "text": reply_text}]
