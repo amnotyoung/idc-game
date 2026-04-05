@@ -69,7 +69,27 @@ func _update_vendor() -> void:
 	else:
 		vendor.dialogue_id = "street_vendor_1"
 
+## NPC 대화 → 관련 이해관계자 소폭 신뢰 상승
+const NPC_TRUST_MAP = {
+	"bula_man_1": {"ratu_josefa": 2},         # 마을 문화 이해
+	"bula_man_rugby": {"ratu_josefa": 2},
+	"hindi_man_1": {"timoci": 2},              # 정부 내부 정보
+	"hindi_man_after_timoci": {"timoci": 2},
+	"hindi_woman_1": {"mere": 2},              # 커뮤니티 네트워크
+	"bula_woman_1": {"lani": 2},               # 섬 주민 연결
+	"bula_woman_2": {"mere": 2},
+	"bula_woman_after_ch4": {"james": 2},
+	"police_1": {"timoci": 1, "james": 1},     # 제도적 맥락
+	"police_after_island": {"ratu_josefa": 2},
+	"street_vendor_1": {"lani": 2},            # 섬 연결
+}
+
 func _on_dialogue_ended(dialogue_id: String) -> void:
+	# NPC 대화 신뢰 보너스
+	if dialogue_id in NPC_TRUST_MAP:
+		for npc_id in NPC_TRUST_MAP[dialogue_id]:
+			TrustManager.modify(npc_id, NPC_TRUST_MAP[dialogue_id][npc_id])
+	# 양고나 구매
 	if dialogue_id == "street_vendor_yangona_buy":
 		TrustManager.set_flag("sevusevu_prepared")
 		vendor.dialogue_id = "street_vendor_after"
