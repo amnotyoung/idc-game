@@ -154,6 +154,12 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			TrustManager.save_game()
 		"ch2_sela_no_referral":
 			pass  # 소개 없이 왔으면 아무 일도 안 일어남
+		"ch2_sela_consent_direct":
+			# Sela 첫 만남 + Ratu 동의 한큐 처리
+			TrustManager.set_flag("ch4_consent_submitted")
+			TrustManager.modify("timoci", 15)
+			sela.dialogue_id = "ch2_sela_all_done"
+			TrustManager.save_game()
 		"ch2_sela_consent_submit":
 			TrustManager.set_flag("ch4_consent_submitted")
 			TrustManager.modify("timoci", 15)   # Sela→Timoci 연결로 신뢰 보너스
