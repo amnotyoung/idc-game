@@ -301,9 +301,5 @@
     ]
   },
 
-  "ch2_receptionist_revisit": {
-    "lines": [
-      {"speaker": "접수처", "text": "또 오셨어요? Timoci 씨는 3층에 계세요."}
-    ]
-  }
+  "_end": true
 }
