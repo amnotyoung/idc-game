@@ -38,7 +38,7 @@
       },
       {
         "text": "\"안녕하세요. 어떻게 오셨나요?\"",
-        "effects": { "mere": -5 },
+        "effects": { "mere": 5 },
         "next": "ch1_mere_formal"
       }
     ]
