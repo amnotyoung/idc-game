@@ -76,6 +76,7 @@ for i, facing in enumerate(["down","left","right","up"]):
         d.rectangle([ox+5, 1, ox+6, 3], fill=HAIR)
 
     # 얼굴
+    MUSTACHE = (25, 18, 10, 255)
     if facing == "down":
         # 안경
         d.rectangle([ox+6, 3, ox+8, 4], fill=GLASSES)
@@ -84,14 +85,16 @@ for i, facing in enumerate(["down","left","right","up"]):
         # 눈 (안경 안)
         d.point((ox+7, 3), fill=(20, 12, 8, 255))
         d.point((ox+9, 3), fill=(20, 12, 8, 255))
-        # 입
-        d.line([ox+7, 4, ox+9, 4], fill=(140, 85, 65, 255))
+        # 콧수염
+        d.line([ox+6, 4, ox+10, 4], fill=MUSTACHE)
     elif facing == "left":
         d.rectangle([ox+5, 3, ox+7, 4], fill=GLASSES)
         d.point((ox+6, 3), fill=(20, 12, 8, 255))
+        d.line([ox+5, 4, ox+7, 4], fill=MUSTACHE)
     elif facing == "right":
         d.rectangle([ox+9, 3, ox+11, 4], fill=GLASSES)
         d.point((ox+10, 3), fill=(20, 12, 8, 255))
+        d.line([ox+9, 4, ox+11, 4], fill=MUSTACHE)
 
 out_path = os.path.join(OUT, "timoci.png")
 img.save(out_path)
