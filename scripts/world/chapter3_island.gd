@@ -76,8 +76,8 @@ func _on_line_check(_line: Dictionary) -> void:
 		DialogueManager.current_line_index = 0
 		DialogueManager._show_current_line()
 		return
-	# 세부세부 시작 → 배경 전환 + NPC/플레이어 숨김
-	if did == "ch3_sevusevu_good" and not _in_sevusevu:
+	# 세부세부 시작 → 배경 전환 + NPC/플레이어 숨김 (뿌리/가루/망고/빈손 모두)
+	if did in ["ch3_sevusevu_good", "ch3_sevusevu_powder", "ch3_ratu_mango_react", "ch3_sevusevu_miss"] and not _in_sevusevu:
 		_in_sevusevu = true
 		bg.texture = SEVUSEVU_BG
 		player.visible = false
