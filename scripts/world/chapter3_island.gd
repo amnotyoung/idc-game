@@ -54,8 +54,13 @@ func _ready() -> void:
 			mere.dialogue_id = "ch3_mere_after_neutral"
 	else:
 		# ch3_arrived는 됐지만 ch3_visited는 아직 — 중간 재진입
-		lani.dialogue_id = "ch3_village_talk"
+		# Ratu와 세부세부 전에는 Lani 대화 불가
+		lani.dialogue_id = ""
 		mere.dialogue_id = "ch3_mere_after_ratu"
+		if TrustManager.has_flag("sevusevu_prepared"):
+			ratu.dialogue_id = "ch3_ratu_greet_prepared"
+		else:
+			ratu.dialogue_id = "ch3_ratu_greet_basic"
 
 func _on_line_check(_line: Dictionary) -> void:
 	var did = DialogueManager.current_dialogue_id
