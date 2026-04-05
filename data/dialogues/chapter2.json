@@ -153,7 +153,7 @@
       },
       {
         "text": "\"알겠어요. 결과 나오면 다시 오겠습니다.\"",
-        "effects": {"timoci": 5},
+        "effects": {"timoci": 8},
         "next": "ch2_timoci_collaborate_end"
       }
     ]
