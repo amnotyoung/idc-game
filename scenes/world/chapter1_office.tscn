@@ -197,11 +197,11 @@ shape = SubResource("doc_col")
 
 [node name="Label" type="Label" parent="ProjectFile"]
 offset_left = -14.0
-offset_top = -14.0
+offset_top = 8.0
 offset_right = 14.0
-offset_bottom = -6.0
+offset_bottom = 17.0
 text = "[사업파일]"
-theme_override_font_sizes/font_size = 5
+theme_override_font_sizes/font_size = 4
 horizontal_alignment = 1
 
 ; ─── 전화기 ───
