@@ -96,12 +96,12 @@
       {
         "text": "\"고맙습니다. 잘 부탁드리겠습니다.\"",
         "effects": {"ratu_josefa": 5},
-        "next": "ch3_village_talk"
+        "next": "ch3_sevusevu_end"
       },
       {
         "text": "\"바로 본론으로 가겠습니다.\"",
         "effects": {"ratu_josefa": -10},
-        "next": "ch3_village_talk"
+        "next": "ch3_sevusevu_end"
       }
     ]
   },
