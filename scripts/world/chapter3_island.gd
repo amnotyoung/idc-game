@@ -97,11 +97,13 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 		# ch3_sevusevu → village_talk → lani_honest/deflect 로 choose() next 체인으로 자동 진행
 		# 별도 핸들러 불필요 (terminal에서 잡힘)
 		"ch3_lani_deflect":
+			_restore_island_view()
 			TrustManager.set_flag("ch3_visited")
 			ratu.dialogue_id = ""
 			lani.dialogue_id = ""
 			TrustManager.save_game()
 		"ch3_ratu_close_good":
+			_restore_island_view()
 			TrustManager.set_flag("ch3_visited")
 			TrustManager.set_flag("ch3_good_ending")
 			lani.dialogue_id = "ch3_lani_after"
