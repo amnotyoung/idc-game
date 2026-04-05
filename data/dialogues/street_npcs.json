@@ -43,29 +43,57 @@
 
   "street_vendor_yangona": {
     "lines": [
-      { "speaker": "상인", "text": "Bula bro! Pacific City에서 뭐 찾으세요?" }
+      { "speaker": "상인", "text": "Bula bro! Pacific City에서 뭐 찾으세요?" },
+      { "speaker": "상인", "text": "마을 방문이요? 그러면 선물 챙겨야죠. 뭘로 드릴까요?" }
     ],
     "choices": [
       {
-        "text": "\"양고나 있어요? 마을 방문에 필요해서요.\"",
+        "text": "양고나 뿌리 (전통 방식, 마을 어른이 좋아함)",
         "effects": {},
-        "next": "street_vendor_yangona_buy"
+        "next": "street_vendor_buy_root"
       },
       {
-        "text": "\"그냥 둘러보는 거예요.\"",
+        "text": "양고나 가루 (간편하게 쓸 수 있음)",
+        "effects": {},
+        "next": "street_vendor_buy_powder"
+      },
+      {
+        "text": "망고 (신선한 과일)",
+        "effects": {},
+        "next": "street_vendor_buy_mango"
+      },
+      {
+        "text": "\"아직 안 살게요.\"",
         "effects": {},
         "next": "street_vendor_yangona_pass"
       }
     ]
   },
 
-  "street_vendor_yangona_buy": {
+  "street_vendor_buy_root": {
     "lines": [
-      { "speaker": "상인", "text": "양고나! 세부세부 하러 가는 거예요?" },
-      { "speaker": "상인", "text": "좋은 거 줄게요. 마른 뿌리로 골라줄까요? 마을 어른들이 좋아해요." },
-      { "speaker": "나", "text": "네, 부탁해요." },
-      { "speaker": "상인", "text": "여기요. Vinaka!" },
-      { "speaker": "", "text": "양고나를 챙겼다."}
+      { "speaker": "상인", "text": "뿌리요! 좋은 선택이에요, bro." },
+      { "speaker": "상인", "text": "마을 어른들은 전통 방식을 좋아해요. 직접 빻아서 세부세부 하는 거죠." },
+      { "speaker": "상인", "text": "제일 좋은 걸로 골라줄게요. 여기요. Vinaka!" },
+      { "speaker": "", "text": "양고나 뿌리를 챙겼다." }
+    ]
+  },
+
+  "street_vendor_buy_powder": {
+    "lines": [
+      { "speaker": "상인", "text": "가루요? 편하긴 한데..." },
+      { "speaker": "상인", "text": "솔직히 말하면, 마을 어른들은 가루보다 뿌리를 더 좋아해요." },
+      { "speaker": "상인", "text": "그래도 없는 것보단 나으니까. 여기요." },
+      { "speaker": "", "text": "양고나 가루를 챙겼다." }
+    ]
+  },
+
+  "street_vendor_buy_mango": {
+    "lines": [
+      { "speaker": "상인", "text": "망고요? 맛은 좋죠. 근데..." },
+      { "speaker": "상인", "text": "세부세부에는 양고나를 가져가는 게 예의예요. 망고는 그냥 간식이에요." },
+      { "speaker": "상인", "text": "뭐, 안 가져가는 것보다는 낫겠지만. 여기요." },
+      { "speaker": "", "text": "망고를 챙겼다." }
     ]
   },
 
@@ -102,7 +130,7 @@
       { "speaker": "남성", "text": "Good morning." },
       { "speaker": "남성", "text": "KODA에서 일해요? 나이탬바 섬 사업이죠?" },
       { "speaker": "남성", "text": "우리 피지 사람들은 그 섬 이야기 잘 알아요." },
-      { "speaker": "남성", "text": "정부랑 이야기할 거면... Timoci 조심해요. 그 사람 까다로워요." }
+      { "speaker": "남성", "text": "정부랑 이야기할 거면... Vikash 조심해요. 그 사람 까다로워요." }
     ]
   },
 
@@ -115,7 +143,7 @@
 
   "hindi_man_after_timoci": {
     "lines": [
-      { "speaker": "남성", "text": "Timoci 만났어요? 어땠어요?" },
+      { "speaker": "남성", "text": "Vikash 만났어요? 어땠어요?" },
       { "speaker": "남성", "text": "그 사람도 다 이유가 있어서 그래요. 예전에 사업 하나 날려먹은 적이 있거든요." },
       { "speaker": "남성", "text": "서류는 깔끔하게 해가세요. 그 사람 그런 거 좋아해요." }
     ]
