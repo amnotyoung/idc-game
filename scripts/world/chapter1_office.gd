@@ -49,9 +49,6 @@ func _setup_free_roam() -> void:
 		SceneManager.go_to("res://scenes/world/ending_scene.tscn")
 		return
 
-	# ── 전화기 (현재 미사용 — Sela는 정부청사에서 대면) ──
-	phone.dialogue_id = ""
-
 	# ── Mere 상태 ──
 	if TrustManager.has_flag("ch1_mere_left"):
 		# 이미 퇴장 — 화면에서 완전히 제거
