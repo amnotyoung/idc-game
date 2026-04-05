@@ -83,28 +83,28 @@ position = Vector2(315, 90)
 [node name="Col" type="CollisionShape2D" parent="Walls/WallRight"]
 shape = SubResource("7")
 
-; ─── NPC: Timoci ───
-[node name="Timoci" type="CharacterBody2D" parent="."]
+; ─── NPC: Vikash ───
+[node name="Vikash" type="CharacterBody2D" parent="."]
 position = Vector2(160, 55)
 script = ExtResource("2")
 npc_id = "timoci"
 dialogue_id = "ch2_timoci_first"
 
-[node name="Sprite" type="Sprite2D" parent="Timoci"]
+[node name="Sprite" type="Sprite2D" parent="Vikash"]
 texture = ExtResource("6")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 texture_filter = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Timoci"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vikash"]
 shape = SubResource("1")
 
-[node name="NameTag" type="Label" parent="Timoci"]
+[node name="NameTag" type="Label" parent="Vikash"]
 offset_left = -15.0
 offset_top = -16.0
 offset_right = 15.0
 offset_bottom = -6.0
-text = "Timoci"
+text = "Vikash"
 theme_override_font_sizes/font_size = 6
 horizontal_alignment = 1
 
@@ -185,6 +185,13 @@ zoom = Vector2(1, 1)
 stream = ExtResource("9")
 autoplay = true
 volume_db = -8.0
+
+; ─── 출구 힌트 ───
+[node name="ExitHint" type="Label" parent="."]
+position = Vector2(36, 165)
+text = "▼ 나가기"
+theme_override_font_sizes/font_size = 6
+modulate = Color(1, 1, 0.5, 0.85)
 
 ; ─── 대화창 UI ───
 [node name="DialogueBox" parent="." instance=ExtResource("3")]
