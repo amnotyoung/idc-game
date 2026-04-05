@@ -198,7 +198,7 @@
 
   "ch1_wati_appointment_ready": {
     "lines": [
-      {"speaker": "Wati", "text": "Seru한테 연락 왔어요. 약속 잡혔어요."},
+      {"speaker": "Wati", "text": "연락 왔어요. 약속 잡혔어요."},
       {"speaker": "Wati", "text": "정부청사 3층, 국가계획부예요."},
       {"speaker": "Wati", "text": "Vikash 씨는 국가계획부 ODA 담당 과장이에요. 사업 심사 실무를 맡고 있어요."},
       {"speaker": "Wati", "text": "최종 승인은 장관 결재라서 본인이 결정권자는 아니에요. 근데 실무에서 막으면 위로 안 올라가요."},
