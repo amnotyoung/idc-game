@@ -2,7 +2,7 @@
   "ch2_no_appointment": {
     "lines": [
       {"speaker": "접수처", "text": "안녕하세요. 어떻게 오셨어요?"},
-      {"speaker": "접수처", "text": "Timoci 씨요? 예약 없이는 면담이 어렵습니다."},
+      {"speaker": "접수처", "text": "Vikash 씨요? 예약 없이는 면담이 어렵습니다."},
       {"speaker": "접수처", "text": "담당자를 통해 사전 예약을 해주세요."}
     ]
   },
@@ -16,16 +16,16 @@
   },
   "ch2_receptionist": {
     "lines": [
-      {"speaker": "접수처", "text": "Timoci 씨 면담 예약하셨어요? 성함이?"},
+      {"speaker": "접수처", "text": "Vikash 씨 면담 예약하셨어요? 성함이?"},
       {"speaker": "접수처", "text": "잠깐만요, 확인해볼게요."},
       {"speaker": "접수처", "text": "...네, 있네요. 앉아서 기다려주세요."}
     ]
   },
   "ch2_timoci_first": {
     "lines": [
-      {"speaker": "Timoci", "text": "앉으세요."},
-      {"speaker": "Timoci", "text": "KODA에서 오셨죠. 나이탬바 섬 건."},
-      {"speaker": "Timoci", "text": "15분밖에 없어요. 바로 말씀해주세요."}
+      {"speaker": "Vikash", "text": "앉으세요."},
+      {"speaker": "Vikash", "text": "KODA에서 오셨죠. 나이탬바 섬 건."},
+      {"speaker": "Vikash", "text": "15분밖에 없어요. 바로 말씀해주세요."}
     ],
     "choices": [
       {
@@ -53,9 +53,9 @@
   },
   "ch2_timoci_ask_reason": {
     "lines": [
-      {"speaker": "Timoci", "text": "...장관 결재가 아직 안 났어요."},
-      {"speaker": "Timoci", "text": "나이탬바 섬 토지가 iTaukei 공유지라서요. 토지청 동의 절차가 선행되어야 한다는 의견이 있어요."},
-      {"speaker": "Timoci", "text": "저희 부서에서 올렸는데 위에서 그 부분을 지적하고 있어요."},
+      {"speaker": "Vikash", "text": "...장관 결재가 아직 안 났어요."},
+      {"speaker": "Vikash", "text": "나이탬바 섬 토지가 iTaukei 공유지라서요. 토지청 동의 절차가 선행되어야 한다는 의견이 있어요."},
+      {"speaker": "Vikash", "text": "저희 부서에서 올렸는데 위에서 그 부분을 지적하고 있어요."},
       {"speaker": "", "text": "핑계처럼 들리지만 — 실제 절차 문제일 수 있다."}
     ],
     "choices": [
@@ -73,18 +73,18 @@
   },
   "ch2_timoci_pressure": {
     "lines": [
-      {"speaker": "Timoci", "text": "저희도 최대한 빠르게 처리하려고 해요."},
-      {"speaker": "Timoci", "text": "다만 내부 검토 절차가 있고, 저 혼자 결정할 수 있는 게 아니에요."},
-      {"speaker": "Timoci", "text": "오늘은 여기까지 하죠."},
-      {"speaker": "", "text": "Timoci가 자리에서 일어났다."}
+      {"speaker": "Vikash", "text": "저희도 최대한 빠르게 처리하려고 해요."},
+      {"speaker": "Vikash", "text": "다만 내부 검토 절차가 있고, 저 혼자 결정할 수 있는 게 아니에요."},
+      {"speaker": "Vikash", "text": "오늘은 여기까지 하죠."},
+      {"speaker": "", "text": "Vikash가 자리에서 일어났다."}
     ]
   },
   "ch2_timoci_document": {
     "lines": [
-      {"speaker": "Timoci", "text": "...봅시다."},
-      {"speaker": "Timoci", "text": "나이탬바 섬. 토지 현황이 여기 빠져 있네요."},
-      {"speaker": "Timoci", "text": "섬 토지가 iTaukei 공유지예요. 장관 결재 전에 토지청 검토가 있어야 한다는 게 위쪽 의견이에요."},
-      {"speaker": "Timoci", "text": "저희가 올릴 수는 있는데, 그 부분 없이는 반려될 가능성이 높아요."},
+      {"speaker": "Vikash", "text": "...봅시다."},
+      {"speaker": "Vikash", "text": "나이탬바 섬. 토지 현황이 여기 빠져 있네요."},
+      {"speaker": "Vikash", "text": "섬 토지가 iTaukei 공유지예요. 장관 결재 전에 토지청 검토가 있어야 한다는 게 위쪽 의견이에요."},
+      {"speaker": "Vikash", "text": "저희가 올릴 수는 있는데, 그 부분 없이는 반려될 가능성이 높아요."},
       {"speaker": "", "text": "구체적인 병목이 확인됐다."}
     ],
     "choices": [
@@ -97,9 +97,9 @@
   },
   "ch2_timoci_collaborate": {
     "lines": [
-      {"speaker": "Timoci", "text": "토지청 쪽 협의가 되면 저희도 움직일 수 있어요."},
-      {"speaker": "Timoci", "text": "그게 정리되면 장관 결재도 빨리 날 거예요."},
-      {"speaker": "", "text": "Timoci가 솔직하게 말해줬다."}
+      {"speaker": "Vikash", "text": "토지청 쪽 협의가 되면 저희도 움직일 수 있어요."},
+      {"speaker": "Vikash", "text": "그게 정리되면 장관 결재도 빨리 날 거예요."},
+      {"speaker": "", "text": "Vikash가 솔직하게 말해줬다."}
     ],
     "choices": [
       {
@@ -117,20 +117,20 @@
 
   "ch2_timoci_collaborate_end": {
     "lines": [
-      {"speaker": "Timoci", "text": "토지청 쪽 협의되면 연락주세요. 그쪽 정리되면 바로 움직일게요."}
+      {"speaker": "Vikash", "text": "토지청 쪽 협의되면 연락주세요. 그쪽 정리되면 바로 움직일게요."}
     ]
   },
   "ch2_timoci_frustrated": {
     "lines": [
-      {"speaker": "Timoci", "text": "저희도 규정 안에서 할 수 있는 걸 하고 있어요."},
-      {"speaker": "Timoci", "text": "오늘은 여기까지 하죠."},
+      {"speaker": "Vikash", "text": "저희도 규정 안에서 할 수 있는 걸 하고 있어요."},
+      {"speaker": "Vikash", "text": "오늘은 여기까지 하죠."},
       {"speaker": "", "text": "미팅이 끝났다."}
     ]
   },
   "ch2_timoci_progress": {
     "lines": [
-      {"speaker": "Timoci", "text": "토지청 쪽이랑 협의되면 저희가 다시 검토해볼게요."},
-      {"speaker": "Timoci", "text": "Wati 씨가 그쪽 창구를 알 거예요."},
+      {"speaker": "Vikash", "text": "토지청 쪽이랑 협의되면 저희가 다시 검토해볼게요."},
+      {"speaker": "Vikash", "text": "Wati 씨가 그쪽 창구를 알 거예요."},
       {"speaker": "", "text": "처음으로 구체적인 진전이 생겼다."}
     ],
     "choices": [
@@ -149,29 +149,29 @@
 
   "ch2_timoci_progress_proactive": {
     "lines": [
-      {"speaker": "Timoci", "text": "서류 보완은... 네, 정리해서 보내드릴게요."},
-      {"speaker": "", "text": "Timoci가 살짝 웃었다. 처음 보는 표정이었다."}
+      {"speaker": "Vikash", "text": "서류 보완은... 네, 정리해서 보내드릴게요."},
+      {"speaker": "", "text": "Vikash가 살짝 웃었다. 처음 보는 표정이었다."}
     ]
   },
 
   "ch2_timoci_progress_polite": {
     "lines": [
-      {"speaker": "Timoci", "text": "...네. 결과 나오면 연락드릴게요."},
-      {"speaker": "", "text": "처음으로 Timoci가 눈을 마주쳤다."}
+      {"speaker": "Vikash", "text": "...네. 결과 나오면 연락드릴게요."},
+      {"speaker": "", "text": "처음으로 Vikash가 눈을 마주쳤다."}
     ]
   },
 
   "ch2_receptionist_2nd": {
     "lines": [
-      {"speaker": "접수처", "text": "오셨어요? Timoci 씨 자리에 계세요."}
+      {"speaker": "접수처", "text": "오셨어요? Vikash 씨 자리에 계세요."}
     ]
   },
 
   "ch2_timoci_after_consent": {
     "lines": [
-      {"speaker": "Timoci", "text": "토지청에서 동의서 접수됐다고 연락 왔어요."},
-      {"speaker": "Timoci", "text": "Ratu Josefa 서명이라니... 이전 사업 때는 안 됐었는데."},
-      {"speaker": "Timoci", "text": "장관 결재 올릴 수 있을 것 같아요. 이 정도면 충분합니다."}
+      {"speaker": "Vikash", "text": "토지청에서 동의서 접수됐다고 연락 왔어요."},
+      {"speaker": "Vikash", "text": "Ratu Josefa 서명이라니... 이전 사업 때는 안 됐었는데."},
+      {"speaker": "Vikash", "text": "장관 결재 올릴 수 있을 것 같아요. 이 정도면 충분합니다."}
     ]
   },
 
@@ -183,19 +183,19 @@
 
   "ch2_timoci_after_good": {
     "lines": [
-      {"speaker": "Timoci", "text": "토지청 쪽 협의되면 연락주세요. 그쪽 정리되면 바로 움직일게요."}
+      {"speaker": "Vikash", "text": "토지청 쪽 협의되면 연락주세요. 그쪽 정리되면 바로 움직일게요."}
     ]
   },
 
   "ch2_timoci_after_frustrated": {
     "lines": [
-      {"speaker": "Timoci", "text": "...오늘은 더 드릴 말씀이 없어요."}
+      {"speaker": "Vikash", "text": "...오늘은 더 드릴 말씀이 없어요."}
     ]
   },
 
   "ch2_timoci_after_pressure": {
     "lines": [
-      {"speaker": "Timoci", "text": "할 말은 다 했어요. 다음엔 약속 잡고 오세요."}
+      {"speaker": "Vikash", "text": "할 말은 다 했어요. 다음엔 약속 잡고 오세요."}
     ]
   },
 
@@ -215,7 +215,7 @@
     "lines": [
       {"speaker": "Wati", "text": "섬에 먼저 가셨어요?"},
       {"speaker": "Wati", "text": "정부 승인도 아직인데... 어떻게 됐어요?"},
-      {"speaker": "Wati", "text": "...일단 Timoci 씨 만나는 게 급해요. 정부청사 먼저 가보세요."}
+      {"speaker": "Wati", "text": "...일단 Vikash 씨 만나는 게 급해요. 정부청사 먼저 가보세요."}
     ]
   },
 
@@ -231,7 +231,7 @@
     ],
     "choices": [
       {
-        "text": "3층 — 국가계획부 (Timoci)",
+        "text": "3층 — 국가계획부 (Vikash)",
         "effects": {},
         "next": "ch2_elevator_floor3"
       },
@@ -258,9 +258,9 @@
   "ch2_sela_no_referral": {
     "lines": [
       {"speaker": "Sela", "text": "안녕하세요. 토지 동의 담당 Sela입니다."},
-      {"speaker": "Sela", "text": "나이탬바 건이요? 아, 그건 제 관할인데..."},
-      {"speaker": "Sela", "text": "지금은 담당 부서 연결이 안 된 상태라 제가 바로 처리하기 어려워요."},
-      {"speaker": "Sela", "text": "국제기구 쪽이나 국가계획부에서 공식 요청이 와야 절차가 시작돼요."}
+      {"speaker": "Sela", "text": "나이탬바 건이요? 네, 제 관할이에요."},
+      {"speaker": "Sela", "text": "다만 토지 동의 절차는 기술자문기구 쪽 공동 모니터링 확인이 있어야 시작할 수 있어요."},
+      {"speaker": "Sela", "text": "APAT 쪽 James 씨가 담당일 거예요. 그분 확인을 먼저 받아오시면 바로 진행해드릴게요."}
     ]
   },
 
@@ -287,10 +287,10 @@
       {"speaker": "Sela", "text": "Ratu Josefa가 서명하는 건 처음이에요. 이전 사업 때는 거부하셨거든요."},
       {"speaker": "Sela", "text": "마을 운영위원회 조항이 들어가 있네요. 이건 좋은 선례가 될 거예요."},
       {"speaker": "Sela", "text": "접수 완료요. 검토는 빠르면 다음 주 안에 됩니다."},
-      {"speaker": "Sela", "text": "3층 Timoci한테도 알려줄게요. 토지 동의 접수됐다고 하면 장관 결재도 빠를 거예요."},
+      {"speaker": "Sela", "text": "3층 Vikash한테도 알려줄게요. 토지 동의 접수됐다고 하면 장관 결재도 빠를 거예요."},
       {"speaker": "", "text": "토지 동의 절차가 공식적으로 시작됐다."},
       {"speaker": "Sela", "text": "이 정도면 전체 이해관계자 회의를 열어도 될 것 같아요."},
-      {"speaker": "Sela", "text": "Timoci 씨, James 씨, 마을 쪽까지 — KODA 사무소에서 한자리에 모이는 게 어떨까요?"},
+      {"speaker": "Sela", "text": "Vikash 씨, James 씨, 마을 쪽까지 — KODA 사무소에서 한자리에 모이는 게 어떨까요?"},
       {"speaker": "나", "text": "(KODA 사무소로 돌아가서 최종 회의를 준비하자.)"}
     ]
   },
