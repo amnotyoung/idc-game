@@ -57,6 +57,18 @@ func _ready() -> void:
 		lani.dialogue_id = "ch3_village_talk"
 		mere.dialogue_id = "ch3_mere_after_ratu"
 
+func _on_line_check(_line: Dictionary) -> void:
+	var did = DialogueManager.current_dialogue_id
+	# 세부세부 시작 → 배경 전환 + NPC/플레이어 숨김
+	if did == "ch3_sevusevu_good" and not _in_sevusevu:
+		_in_sevusevu = true
+		bg.texture = SEVUSEVU_BG
+		player.visible = false
+		ratu.visible = false
+		lani.visible = false
+		mere.visible = false
+		village_npcs.visible = false
+
 ## 섬 NPC 대화 → 관련 이해관계자 소폭 신뢰 상승
 const ISLAND_NPC_TRUST = {
 	"island_elder_1": {"ratu_josefa": 3},       # 마을 역사 이해
