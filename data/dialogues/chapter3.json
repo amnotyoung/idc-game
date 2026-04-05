@@ -106,6 +106,12 @@
     ]
   },
 
+  "ch3_lani_not_yet": {
+    "lines": [
+      {"speaker": "Lani", "text": "...Ratu한테 먼저 인사하세요. 여기선 그게 순서예요."}
+    ]
+  },
+
   "ch3_village_talk": {
     "lines": [
       {"speaker": "Lani", "text": "...수바에서 온 사람이죠?"},
