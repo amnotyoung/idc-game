@@ -42,7 +42,6 @@ func go_to_with_spawn(scene_path: String, spawn_pos: Vector2) -> void:
 
 ## 바다 전환 컷 — 수바↔나이탬바 이동 시 사용
 const SEA_CUT_TEX = preload("res://assets/sprites/tilesets/sea_transition.png")
-@onready var _sea_sprite: Sprite2D = Sprite2D.new()
 
 func go_to_with_sea_cut(scene_path: String, spawn_pos: Vector2, caption: String = "") -> void:
 	_spawn_position = spawn_pos
@@ -52,24 +51,29 @@ func go_to_with_sea_cut(scene_path: String, spawn_pos: Vector2, caption: String 
 	_anim.play("fade_out")
 	await _anim.animation_finished
 
-	# 바다 컷 표시
-	_sea_sprite.texture = SEA_CUT_TEX
-	_sea_sprite.position = Vector2(160, 90)
-	_sea_sprite.z_index = 99
-	get_tree().current_scene.add_child(_sea_sprite)
+	# 바다 컷을 이 CanvasLayer(layer=100) 안에 표시 — 항상 화면 최상위
+	var sea_tex_rect := TextureRect.new()
+	sea_tex_rect.texture = SEA_CUT_TEX
+	sea_tex_rect.anchor_right = 1.0
+	sea_tex_rect.anchor_bottom = 1.0
+	sea_tex_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	add_child(sea_tex_rect)
 
-	# 자막
+	# 자막 (바다 컷 위에)
 	var label: Label = null
 	if caption != "":
 		label = Label.new()
 		label.text = caption
 		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		label.position = Vector2(40, 162)
-		label.size = Vector2(240, 16)
+		label.anchor_left = 0.0
+		label.anchor_right = 1.0
+		label.anchor_top = 1.0
+		label.anchor_bottom = 1.0
+		label.offset_top = -18.0
+		label.offset_bottom = -4.0
 		label.add_theme_font_size_override("font_size", 7)
 		label.modulate = Color(0.95, 0.93, 0.88, 0.9)
-		label.z_index = 100
-		get_tree().current_scene.add_child(label)
+		add_child(label)
 
 	# 페이드 인 (바다 보여줌)
 	_rect.color = Color(0, 0, 0, 0)
@@ -84,7 +88,7 @@ func go_to_with_sea_cut(scene_path: String, spawn_pos: Vector2, caption: String 
 	await _anim.animation_finished
 
 	# 바다 컷 정리
-	_sea_sprite.get_parent().remove_child(_sea_sprite)
+	sea_tex_rect.queue_free()
 	if label:
 		label.queue_free()
 
