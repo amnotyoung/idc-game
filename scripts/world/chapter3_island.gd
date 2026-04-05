@@ -11,6 +11,7 @@ const ISLAND_BG = preload("res://assets/sprites/tilesets/naitamba_bg.png")
 const SEVUSEVU_BG = preload("res://assets/sprites/tilesets/sevusevu_bg.png")
 
 var _in_sevusevu := false
+var _ratu_sign_swapped := false
 
 func _ready() -> void:
 	await get_tree().process_frame
