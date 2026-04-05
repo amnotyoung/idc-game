@@ -21,50 +21,6 @@
       {"speaker": "접수처", "text": "...네, 있네요. 앉아서 기다려주세요."}
     ]
   },
-  "ch2_waiting_note": {
-    "lines": [
-      {"speaker": "", "text": "대기실 테이블 위에 서류가 놓여있다."},
-      {"speaker": "서류", "text": "\"2024 국가 인프라 예산 검토 — 검토 보류 항목 목록\""},
-      {"speaker": "", "text": "나이탬바 섬 수자원 사업이 목록에 있다."}
-    ]
-  },
-  "ch2_timoci_noshow_1": {
-    "lines": [
-      {"speaker": "접수처", "text": "죄송한데요... Timoci 씨가 긴급 회의가 생겼다고."},
-      {"speaker": "접수처", "text": "다음 주 같은 시간으로 다시 잡아드릴까요?"}
-    ],
-    "choices": [
-      {
-        "text": "\"알겠습니다. 다시 잡아주세요.\"",
-        "effects": {"timoci": 0},
-        "next": "ch2_reschedule_ok"
-      },
-      {
-        "text": "\"오늘 꼭 만나야 해요. 잠깐이라도 안 될까요?\"",
-        "effects": {"timoci": -10},
-        "next": "ch2_reschedule_push"
-      }
-    ]
-  },
-  "ch2_reschedule_ok": {
-    "lines": [
-      {"speaker": "", "text": "다음 주 화요일 오후 2시."},
-      {"speaker": "", "text": "사무실로 돌아갔다."}
-    ]
-  },
-  "ch2_reschedule_push": {
-    "lines": [
-      {"speaker": "접수처", "text": "...제가 한번 여쭤볼게요."},
-      {"speaker": "접수처", "text": "죄송해요. Timoci 씨가 지금은 정말 어렵다고 하세요."},
-      {"speaker": "", "text": "어쩔 수 없다."}
-    ]
-  },
-  "ch2_second_visit_arrive": {
-    "lines": [
-      {"speaker": "", "text": "일주일 후. 같은 장소."},
-      {"speaker": "접수처", "text": "오셨어요? Timoci 씨 지금 자리에 계세요. 올라가세요."}
-    ]
-  },
   "ch2_timoci_first": {
     "lines": [
       {"speaker": "Timoci", "text": "앉으세요."},
