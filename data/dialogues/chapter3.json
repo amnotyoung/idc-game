@@ -327,7 +327,7 @@
       },
       {
         "text": "\"Ratu의 판단을 존중합니다. 필요하시면 시간을 드릴게요.\"",
-        "effects": {"ratu_josefa": 5, "lani": 5},
+        "effects": {"ratu_josefa": 8, "lani": 10},
         "next": "ch3_consent_sign_quiet"
       }
     ]
