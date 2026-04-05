@@ -114,14 +114,18 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			TrustManager.set_flag("ch3_visited")
 			TrustManager.set_flag("ch3_good_ending")
 			lani.dialogue_id = "ch3_lani_after"
+			ratu.dialogue_id = "ch3_ratu_after"
 			TrustManager.save_game()
-			# 비선형: Sela를 이미 만났다면 → 바로 동의서 서명
-			if TrustManager.has_flag("ch4_sela_contacted"):
-				await get_tree().create_timer(1.0).timeout
-				ratu.dialogue_id = "ch3_consent_ratu"
-				DialogueManager.start("ch3_consent_ratu")
-			else:
-				ratu.dialogue_id = "ch3_ratu_after"
+		"ch3_ratu_close_good_sign":
+			# Sela 만난 후 섬 방문 → 동의 + 서명 한 번에
+			_restore_island_view()
+			TrustManager.set_flag("ch3_visited")
+			TrustManager.set_flag("ch3_good_ending")
+			TrustManager.set_flag("ch4_consent_obtained")
+			lani.dialogue_id = "ch3_lani_after"
+			ratu.dialogue_id = "ch3_consent_done"
+			mere.dialogue_id = "ch3_mere_consent"
+			TrustManager.save_game()
 		"ch3_ratu_close_neutral":
 			_restore_island_view()
 			TrustManager.set_flag("ch3_visited")
