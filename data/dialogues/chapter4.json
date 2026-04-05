@@ -155,7 +155,7 @@
       },
       {
         "text": "\"아직 만나는 중이에요. 신뢰를 쌓고 있어요.\"",
-        "effects": {"james": 8},
+        "effects": {"james": 15},
         "next": "ch4_james_endorsed_neutral"
       },
       {
