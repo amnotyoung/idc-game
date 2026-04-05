@@ -49,7 +49,23 @@ func _ready() -> void:
 		lani.dialogue_id = "ch3_village_talk"
 		mere.dialogue_id = "ch3_mere_after_ratu"
 
+## 섬 NPC 대화 → 관련 이해관계자 소폭 신뢰 상승
+const ISLAND_NPC_TRUST = {
+	"island_elder_1": {"ratu_josefa": 3},       # 마을 역사 이해
+	"island_elder_after": {"ratu_josefa": 2},
+	"island_child_1": {"lani": 3},              # 다음 세대 연결
+	"island_fisher_1": {"lani": 2, "ratu_josefa": 2},  # 마을 현실
+	"island_fisher_after": {"lani": 2},
+	"island_woman_1": {"mere": 2, "ratu_josefa": 2},   # 현장 맥락
+	"island_woman_after": {"mere": 2},
+	"ch3_mere_first_end": {"mere": 3},          # Mere 협력
+}
+
 func _on_dialogue_ended(dialogue_id: String) -> void:
+	# 섬 NPC 대화 신뢰 보너스
+	if dialogue_id in ISLAND_NPC_TRUST:
+		for npc_id in ISLAND_NPC_TRUST[dialogue_id]:
+			TrustManager.modify(npc_id, ISLAND_NPC_TRUST[dialogue_id][npc_id])
 	match dialogue_id:
 		"ch3_arrive", "ch3_arrive_early":
 			TrustManager.set_flag("ch3_arrived")
