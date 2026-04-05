@@ -1,7 +1,7 @@
 extends Node
 
 @onready var player: CharacterBody2D = get_parent().get_node("Player")
-@onready var timoci: CharacterBody2D = get_parent().get_node("Timoci")
+@onready var timoci: CharacterBody2D = get_parent().get_node("Vikash")
 @onready var receptionist: CharacterBody2D = get_parent().get_node("Receptionist")
 @onready var sela: CharacterBody2D = get_parent().get_node("Sela")
 @onready var bg: Sprite2D = get_parent().get_node("Background")
