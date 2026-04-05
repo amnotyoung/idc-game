@@ -204,9 +204,9 @@ text = "[사업파일]"
 theme_override_font_sizes/font_size = 5
 horizontal_alignment = 1
 
-; ─── 전화기 (Sela 연락 — ch4_tltb_contact 플래그 이후 활성화) ───
+; ─── 전화기 ───
 [node name="Phone" type="StaticBody2D" parent="."]
-position = Vector2(255, 82)
+position = Vector2(270, 75)
 script = ExtResource("9")
 dialogue_id = ""
 
