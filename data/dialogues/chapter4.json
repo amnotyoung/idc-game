@@ -249,16 +249,5 @@
     "lines": [
       {"speaker": "접수처", "text": "James 씨 만나셨어요? 수고하셨습니다."}
     ]
-  },
-
-  "ch4_sela_call": {
-    "lines": [
-      {"speaker": "", "text": "수화기를 들었다. James가 알려준 번호로 전화했다."},
-      {"speaker": "Sela (전화)", "text": "여보세요, 토지청 토지동의 담당 Sela입니다."},
-      {"speaker": "Sela (전화)", "text": "James한테 연락 받았어요. 나이탬바 섬 건이죠?"},
-      {"speaker": "Sela (전화)", "text": "절차는 복잡하지 않아요. Ratu Josefa 서명이 들어간 마을 동의서면 돼요."},
-      {"speaker": "Sela (전화)", "text": "저희 양식 이메일로 보내드릴게요. 작성해서 제출하시면 바로 검토 들어갑니다."},
-      {"speaker": "", "text": "Sela가 절차를 설명해줬다. Ratu Josefa의 서명이 필요하다."}
-    ]
   }
 }
