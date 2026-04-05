@@ -10,10 +10,13 @@ extends Node
 const ISLAND_BG = preload("res://assets/sprites/tilesets/naitamba_bg.png")
 const SEVUSEVU_BG = preload("res://assets/sprites/tilesets/sevusevu_bg.png")
 
+var _in_sevusevu := false
+
 func _ready() -> void:
 	await get_tree().process_frame
 	_update_village_npcs()
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	DialogueManager.dialogue_line_changed.connect(_on_line_check)
 
 	if not TrustManager.has_flag("ch3_arrived"):
 		# 첫 방문 — 세부세부 전까지 Lani와 대화 불가
