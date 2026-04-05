@@ -128,6 +128,16 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			_update_village_npcs()
 			TrustManager.save_game()
 
+func _restore_island_view() -> void:
+	if _in_sevusevu:
+		_in_sevusevu = false
+		bg.texture = ISLAND_BG
+		player.visible = true
+		ratu.visible = true
+		lani.visible = true
+		mere.visible = true
+		village_npcs.visible = true
+
 func _update_village_npcs() -> void:
 	if not village_npcs:
 		return
