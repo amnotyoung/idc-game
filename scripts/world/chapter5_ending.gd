@@ -90,6 +90,8 @@ func _show_ending() -> void:
 	match _ending_type:
 		"true":
 			bg.texture = ISLAND_BG
+			water_tank.visible = true
+			water_tank.modulate.a = 0.0
 		"normal":
 			bg.texture = ISLAND_BG
 		"bad":
@@ -97,7 +99,10 @@ func _show_ending() -> void:
 
 	# 배경 천천히 페이드인 (BGM은 꺼진 상태 유지 — 고요한 엔딩)
 	tween = get_tree().create_tween()
+	tween.set_parallel(true)
 	tween.tween_property(bg, "modulate:a", 1.0, 1.5)
+	if _ending_type == "true":
+		tween.tween_property(water_tank, "modulate:a", 1.0, 2.0)
 	await tween.finished
 
 	await get_tree().create_timer(1.0).timeout
