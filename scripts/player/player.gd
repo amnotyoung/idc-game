@@ -34,7 +34,7 @@ func _physics_process(_delta: float) -> void:
 		interact_ray.target_position = _facing * 14.0
 		_update_sprite()
 
-	var speed = RUN_SPEED if Input.is_key_pressed(KEY_SHIFT) else WALK_SPEED
+	var speed = WALK_SPEED if Input.is_key_pressed(KEY_SHIFT) else RUN_SPEED
 	velocity = direction * speed
 	move_and_slide()
 
