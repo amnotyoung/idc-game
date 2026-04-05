@@ -105,16 +105,9 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 		_mere_walks_in()
 	elif dialogue_id in BRIEFING_ENDS:
 		_unlock_exit()
-		if dialogue_id == "ch1_mere_cold_b":
-			# Mere가 화난 상태로 퇴장 — 씬에서 즉시 제거
-			mere.dialogue_id = ""
-			TrustManager.set_flag("ch1_mere_left")
-			var tween = get_tree().create_tween()
-			tween.tween_property(mere, "modulate:a", 0.0, 0.6)
-			tween.tween_callback(mere.queue_free)
-	elif dialogue_id == "ch1_mere_farewell":
-		# 현장 나가는 Mere — 자연스럽게 퇴장
+		# Mere 퇴장 — 브리핑 후 나이탬바로 떠남 (cold_b는 화나서 퇴장)
 		TrustManager.set_flag("ch1_mere_left")
+		mere.dialogue_id = ""
 		var tween = get_tree().create_tween()
 		tween.tween_property(mere, "modulate:a", 0.0, 0.8)
 		tween.tween_callback(mere.queue_free)
