@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" path="res://assets/music/bgm_office.wav" id="8"]
 [ext_resource type="Script" path="res://scripts/world/interactable.gd" id="9"]
 [ext_resource type="Texture2D" path="res://assets/sprites/objects/phone_icon.png" id="phone_tex"]
+[ext_resource type="Texture2D" path="res://assets/sprites/objects/computer_icon.png" id="computer_tex"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(10, 12)
