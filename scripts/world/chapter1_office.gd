@@ -49,38 +49,9 @@ func _setup_free_roam() -> void:
 		SceneManager.go_to("res://scenes/world/ending_scene.tscn")
 		return
 
-	# ── Mere 상태 ──
+	# ── Mere 상태 — 브리핑 후 나이탬바로 떠났으므로 항상 부재 ──
 	if TrustManager.has_flag("ch1_mere_left"):
-		# 이미 퇴장 — 화면에서 완전히 제거
 		mere.visible = false
-	elif TrustManager.has_flag("ch2_timoci_met"):
-		# 정부청사 면담 완료 후 첫 복귀 — Mere가 다가와서 작별
-		mere.dialogue_id = ""
-		if not TrustManager.has_flag("ch1_mere_farewell_seen"):
-			TrustManager.set_flag("ch1_mere_farewell_seen")
-			mere.position = Vector2(100, 60)
-			mere.face("down")
-			_exit_unlocked = true
-			_setup_wati()
-			# Mere가 플레이어 쪽으로 걸어옴
-			var target = Vector2(player.position.x + 18, player.position.y - 8)
-			var tween = get_tree().create_tween()
-			tween.tween_property(mere, "position", target, 1.2)\
-				 .set_trans(Tween.TRANS_LINEAR)
-			await tween.finished
-			mere.face("left")
-			player.face("right")
-			if not DialogueManager.is_active:
-				DialogueManager.start("ch1_mere_farewell")
-			return
-		else:
-			# farewell은 봤지만 아직 free-walking 상태(버그 방어)
-			mere.visible = false
-	else:
-		# 아직 Timoci 못 만남 — 사무실에 있음
-		mere.position = Vector2(170, 60)
-		mere.face("down")
-		mere.dialogue_id = "ch1_mere_revisit"
 
 	_setup_wati()
 	_exit_unlocked = true
