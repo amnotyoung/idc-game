@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://chapter1office"]
+[gd_scene load_steps=23 format=3 uid="uid://chapter1office"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/npc/npc_base.gd" id="2"]
