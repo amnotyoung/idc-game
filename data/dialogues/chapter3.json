@@ -67,13 +67,22 @@
       {
         "text": "\"세 번째입니다. 사과드립니다.\"",
         "effects": {"ratu_josefa": 15},
-        "next": "ch3_village_talk"
+        "next": "ch3_sevusevu_end"
       },
       {
         "text": "\"이번엔 다를 겁니다.\"",
         "effects": {"ratu_josefa": 5},
-        "next": "ch3_village_talk"
+        "next": "ch3_sevusevu_end"
       }
+    ]
+  },
+
+  "ch3_sevusevu_end": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "...그렇소."},
+      {"speaker": "Ratu Josefa", "text": "우리 얘기가 더 있소만, 마을 사람들한테도 물어보시오."},
+      {"speaker": "Ratu Josefa", "text": "Lani. 저 젊은이가 할 말이 있을 거요."},
+      {"speaker": "", "text": "Ratu가 Lani 쪽을 가리켰다."}
     ]
   },
 
