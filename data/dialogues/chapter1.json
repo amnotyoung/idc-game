@@ -56,12 +56,12 @@
     "choices": [
       {
         "text": "\"대략은요. 같이 정리해볼 수 있을까요?\"",
-        "effects": { "mere": 10 },
+        "effects": { "mere": 12 },
         "next": "ch1_mere_warm_a"
       },
       {
         "text": "\"솔직히 아직 파악 중이에요. 알려주실 수 있어요?\"",
-        "effects": { "mere": 10 },
+        "effects": { "mere": 8 },
         "next": "ch1_mere_warm_b"
       }
     ]
