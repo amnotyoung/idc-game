@@ -175,14 +175,16 @@ func _send_progress_email() -> void:
 	DialogueManager.start("ch1_email_result")
 
 func _mere_walks_in() -> void:
-	var target = Vector2(player.position.x + 22, player.position.y - 18)
+	# Mere가 플레이어 바로 옆으로 와서 대화 (카메라에 둘 다 잡히게)
+	var target = Vector2(player.position.x + 18, player.position.y - 8)
 	var tween = get_tree().create_tween()
 	tween.tween_property(mere, "position", target, 1.8)\
 		 .set_trans(Tween.TRANS_LINEAR)
 	tween.tween_callback(_start_mere_dialogue)
 
 func _start_mere_dialogue() -> void:
-	player.face("up")
+	player.face("right")   # Mere 쪽을 바라봄
+	mere.face("left")      # 플레이어 쪽을 바라봄
 	DialogueManager.start("ch1_mere_entrance")
 
 func _unlock_exit() -> void:
