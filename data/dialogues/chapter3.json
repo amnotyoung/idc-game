@@ -200,6 +200,21 @@
     ]
   },
 
+  "ch3_ratu_close_good_sign": {
+    "lines": [
+      {"speaker": "Ratu Josefa", "text": "...우리가 직접."},
+      {"speaker": "Ratu Josefa", "text": "10년 전에는 아무도 그런 말 안 했소."},
+      {"speaker": "Ratu Josefa", "text": "좋소. 한번 더 지켜보겠소."},
+      {"speaker": "", "text": "처음으로 문이 열린 것 같았다."},
+      {"speaker": "나", "text": "토지청에서 동의서 양식을 받아왔습니다. 여기 서명해주시면 사업이 공식 진행됩니다."},
+      {"speaker": "", "text": "Ratu가 서류를 천천히 읽었다."},
+      {"speaker": "Ratu Josefa", "text": "마을 운영위원회 조항이 있군. 이건 처음이오."},
+      {"speaker": "", "text": "Ratu가 펜을 들어 서명했다."},
+      {"speaker": "Ratu Josefa", "text": "이 서명은 마을 사람들한테 한 약속이오. 당신한테 한 게 아니야."},
+      {"speaker": "Ratu Josefa", "text": "잊지 마시오."}
+    ]
+  },
+
   "ch3_ratu_close_neutral": {
     "lines": [
       {"speaker": "Ratu Josefa", "text": "최선."},
