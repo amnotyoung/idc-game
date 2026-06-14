@@ -210,7 +210,7 @@ func _show_report_card() -> void:
 	# 런타임에 대화 데이터 주입
 	var names = {
 		"mere": "Mere",
-		"timoci": "Timoci",
+		"timoci": "Vikash",
 		"ratu_josefa": "Ratu Josefa",
 		"lani": "Lani",
 		"james": "James"

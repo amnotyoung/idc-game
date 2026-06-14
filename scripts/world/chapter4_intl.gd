@@ -57,7 +57,7 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			james.dialogue_id = "ch4_james_after_endorsed"
 			receptionist.dialogue_id = "ch4_receptionist_after"
 			TrustManager.save_game()
-		"ch4_james_endorsed_neutral", "ch4_james_yangona_tip":
+		"ch4_james_yangona_tip":
 			TrustManager.set_flag("ch4_james_met")
 			TrustManager.set_flag("ch4_tltb_contact")
 			james.dialogue_id = "ch4_james_after_neutral"

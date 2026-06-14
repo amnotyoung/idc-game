@@ -262,6 +262,8 @@
       {"speaker": "Sela", "text": "나이탬바 건이요? 네, 제 관할이에요."},
       {"speaker": "Sela", "text": "토지 동의서에는 마을 대표 서명이 필요해요. Ratu Josefa 서명이면 돼요."},
       {"speaker": "Sela", "text": "참고로, 그 지역에 APAT에서도 수자원 사업을 하고 있어요. James라는 분인데, 그쪽이랑 조율이 되면 절차가 더 수월해져요."},
+      {"speaker": "Sela", "text": "동의서 양식은 미리 드릴게요. Ratu Josefa 서명만 받아오시면 바로 검토 들어갑니다."},
+      {"speaker": "", "text": "Sela가 양식을 건넸다. Ratu Josefa의 서명이 필요하다."},
       {"speaker": "Sela", "text": "마을 쪽이든 APAT 쪽이든, 준비되면 다시 오세요."}
     ]
   },
