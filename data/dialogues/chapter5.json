@@ -85,6 +85,25 @@
     ]
   },
 
+  "ch5_facilitate": {
+    "lines": [
+      {"speaker": "", "text": "보고가 이어지는 사이, 잠깐 정적이 흘렀다."},
+      {"speaker": "", "text": "회의를 어떻게 끌어갈까."}
+    ],
+    "choices": [
+      {
+        "text": "\"결정 전에, 마을 분들 생각부터 듣고 싶습니다.\"",
+        "effects": {"lani": 8, "ratu_josefa": 8},
+        "next": "ch5_final_choice"
+      },
+      {
+        "text": "\"제가 정리한 방향부터 말씀드리겠습니다.\"",
+        "effects": {"mere": 3, "timoci": 3},
+        "next": "ch5_final_choice"
+      }
+    ]
+  },
+
   "ch5_final_choice": {
     "lines": [
       {"speaker": "", "text": "모든 보고가 끝났다."},

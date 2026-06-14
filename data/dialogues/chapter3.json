@@ -131,7 +131,24 @@
       {"speaker": "", "text": "빌로(코코넛 반쪽 잔)가 건네졌다. 박수를 한 번 치고 받았다."},
       {"speaker": "", "text": "한 입에 마셨다. 쓰고 흙 같은 맛. 혀가 살짝 저렸다."},
       {"speaker": "", "text": "박수를 세 번 쳤다. 빌로가 다음 사람에게 돌아갔다."},
-      {"speaker": "", "text": "조용한 시간이 흘렀다. 아무도 서두르지 않았다."},
+      {"speaker": "", "text": "조용한 시간이 흘렀다. 아무도 서두르지 않았다."}
+    ],
+    "choices": [
+      {
+        "text": "(침묵을 지키며 Ratu가 입을 열기를 기다린다)",
+        "effects": {"ratu_josefa": 5},
+        "next": "ch3_sevusevu_reflect"
+      },
+      {
+        "text": "(먼저 사업 이야기를 꺼낸다)",
+        "effects": {"ratu_josefa": 0},
+        "next": "ch3_sevusevu_reflect"
+      }
+    ]
+  },
+
+  "ch3_sevusevu_reflect": {
+    "lines": [
       {"speaker": "Ratu Josefa", "text": "기억하는 것들이 있소. 10년 전 약속. 아무것도 남지 않았지."},
       {"speaker": "Ratu Josefa", "text": "당신은 몇 번째요?"}
     ],
