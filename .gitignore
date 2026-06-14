@@ -5,6 +5,9 @@
 # Claude Code local settings & hooks
 .claude/
 
+# Codex local settings
+.codex/
+
 # macOS
 .DS_Store
 
