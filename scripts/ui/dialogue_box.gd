@@ -49,11 +49,6 @@ func _input(event: InputEvent) -> void:
 		DialogueManager.advance()
 		get_viewport().set_input_as_handled()
 
-	# 마우스 클릭 — 대화 진행
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		DialogueManager.advance()
-		get_viewport().set_input_as_handled()
-
 func _on_dialogue_started() -> void:
 	panel.visible = true
 	choices_container.visible = false
@@ -109,6 +104,19 @@ func _on_mobile_accept_pressed() -> void:
 func _on_mobile_back_pressed() -> void:
 	if DialogueManager.is_active and DialogueManager.can_go_back():
 		DialogueManager.go_back()
+
+## 마우스/터치 클릭으로 대화 진행 — _unhandled_input 이라 '이전' 같은 버튼이
+## 먼저 클릭을 소비하면 여기엔 오지 않음 (버튼 클릭이 advance 로 새는 것 방지)
+func _unhandled_input(event: InputEvent) -> void:
+	if not DialogueManager.is_active or not panel.visible:
+		return
+	# 선택지 표시 중엔 선택지 버튼이 처리 (여기서 진행 안 함)
+	if choices_container.visible and choices_container.get_child_count() > 0:
+		return
+	if (event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT) \
+			or (event is InputEventScreenTouch and event.pressed):
+		DialogueManager.advance()
+		get_viewport().set_input_as_handled()
 
 func _clear_choices() -> void:
 	for child in choices_container.get_children():

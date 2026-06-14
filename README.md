@@ -14,7 +14,6 @@
 | **해상도** | 320×180 픽셀아트 (1280×720 출력) |
 | **플레이 시간** | 약 1~2시간 |
 | **배경** | 피지 수바 + 나이탬바 섬 (Lomaiviti 주 외곽 섬 모티브) |
-| **배포** | [itch.io에서 플레이](https://amnotyoung.itch.io/aid-world) |
 
 ## 주요 특징
 
@@ -46,8 +45,6 @@
 3. Godot에서 `project.godot`를 열고 실행(F5)합니다.
 
 ## itch.io 웹 빌드
-
-현재 웹 배포 주소: [https://amnotyoung.itch.io/aid-world](https://amnotyoung.itch.io/aid-world)
 
 Godot CLI와 `curl`, `unzip`, `zip`이 설치된 환경에서 아래 명령을 실행하면 itch.io HTML 게임 업로드용 ZIP을 생성합니다.
 

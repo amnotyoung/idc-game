@@ -43,8 +43,8 @@ func _check_final_meeting() -> void:
 	if TrustManager.has_flag("ch4_consent_submitted") and not TrustManager.has_flag("ch5_started"):
 		var koda_hint: Label = get_node("Doors/DoorKODA/Hint")
 		koda_hint.text = "▲ KODA 사무소 [회의]"
-		# 깜빡임 효과
-		var tween = get_tree().create_tween().set_loops()
+		# 깜빡임 효과 — node-bound tween (씬 전환으로 koda_hint 파괴 시 자동 정리)
+		var tween = koda_hint.create_tween().set_loops()
 		tween.tween_property(koda_hint, "modulate:a", 0.3, 0.6)
 		tween.tween_property(koda_hint, "modulate:a", 1.0, 0.6)
 

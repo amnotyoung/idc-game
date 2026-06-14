@@ -133,7 +133,7 @@ func _refresh_chip(npc_id: String) -> void:
 	# 상승은 따뜻한 빛, 하락은 붉은 빛으로 짧게 빛났다가 원복
 	if delta != 0:
 		panel.modulate = Color(1.5, 1.5, 1.2) if delta > 0 else Color(1.7, 0.7, 0.7)
-		var tw := get_tree().create_tween()
+		var tw := panel.create_tween()
 		tw.tween_property(panel, "modulate", Color(1, 1, 1), 0.5)
 
 func _tier_label(value: int) -> String:
