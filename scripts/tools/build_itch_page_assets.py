@@ -165,7 +165,7 @@ def make_cover_ko():
     title_font = font(68)
     sub_font = font(28)
     tag_font = font(20)
-    draw.text((38, 40), "에이드 월드", fill=(255, 245, 207, 255), font=title_font, stroke_width=3, stroke_fill=(24, 26, 28, 220))
+    draw.text((38, 40), "Aid World", fill=(255, 245, 207, 255), font=title_font, stroke_width=3, stroke_fill=(24, 26, 28, 220))
     draw.text((44, 126), "나이탬바 섬 이야기", fill=(236, 247, 241, 255), font=sub_font, stroke_width=2, stroke_fill=(20, 24, 28, 210))
     draw.rounded_rectangle((42, 410, 588, 458), radius=14, fill=(17, 31, 34, 210), outline=(247, 213, 129, 170), width=2)
     draw.text((74, 421), "신뢰, 물, 공동체를 둘러싼 협상 게임", fill=(245, 239, 221, 255), font=tag_font)
