@@ -93,12 +93,15 @@ func _show_ending() -> void:
 
 	match _ending_type:
 		"true":
+			_set_status("2025.03", "나이탬바 섬")
 			bg.texture = ISLAND_BG
 			water_tank.visible = true
 			water_tank.modulate.a = 0.0
 		"normal":
+			_set_status("2025.03", "나이탬바 섬")
 			bg.texture = ISLAND_BG
 		"bad":
+			_set_status("2024.09", "KODA 사무소")
 			bg.texture = OFFICE_BG
 
 	# 배경 천천히 페이드인 (BGM은 꺼진 상태 유지 — 고요한 엔딩)
@@ -235,3 +238,12 @@ func _show_report_card() -> void:
 
 	DialogueManager.dialogues["ch5_report"] = {"lines": lines}
 	DialogueManager.start("ch5_report")
+
+func _set_status(time_value: String, location_value: String) -> void:
+	var status_bar = get_parent().get_node_or_null("StatusBar")
+	if not status_bar:
+		return
+	if status_bar.has_method("set_time"):
+		status_bar.set_time(time_value)
+	if status_bar.has_method("set_location"):
+		status_bar.set_location(location_value)
