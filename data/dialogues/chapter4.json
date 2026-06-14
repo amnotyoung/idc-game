@@ -162,6 +162,11 @@
         "text": "\"마을 측은 나중에 설득할 수 있어요.\"",
         "effects": {"james": 0},
         "next": "ch4_james_rejected"
+      },
+      {
+        "text": "\"마을 절차는 오래 걸려요. APAT 단독으로 먼저 진행하면 안 될까요?\"",
+        "effects": {},
+        "next": "ch4_james_solo_tempt"
       }
     ]
   },
@@ -215,6 +220,51 @@
       {"speaker": "James", "text": "...그 말은 못 들은 걸로 할게요."},
       {"speaker": "James", "text": "마을 동의 없이 저희가 들어가면 — 10년 전 그대로예요."},
       {"speaker": "James", "text": "마을 쪽 정리 되면 다시 오세요."}
+    ]
+  },
+
+  "ch4_james_solo_tempt": {
+    "lines": [
+      {"speaker": "James", "text": "...단독으로요."},
+      {"speaker": "James", "text": "솔직히 기술만 보면 가능해요. 펌프랑 배관만 들어가면 6개월은 당겨요."},
+      {"speaker": "James", "text": "APAT 단독 트랙이면 서류도 간단하고, 예산 승인도 빨라요."},
+      {"speaker": "James", "text": "근데 그게 — 딱 10년 전 방식이에요. 짓고, 떠나고."},
+      {"speaker": "James", "text": "결정은 KODA 몫이죠. 어떻게 하실래요?"}
+    ],
+    "choices": [
+      {
+        "text": "\"빠른 게 중요해요. APAT 단독으로 진행하죠.\"",
+        "effects": {"james": 5, "mere": -8, "lani": -8, "ratu_josefa": -8},
+        "next": "ch4_james_solo_path"
+      },
+      {
+        "text": "\"아뇨. 시간이 걸려도 마을부터 제대로 하겠습니다.\"",
+        "effects": {"james": 12},
+        "next": "ch4_james_solo_decline"
+      }
+    ]
+  },
+
+  "ch4_james_solo_path": {
+    "lines": [
+      {"speaker": "James", "text": "...알겠어요. 단독 지원서 올릴게요. 빠르긴 할 거예요."},
+      {"speaker": "James", "text": "근데 기억해요. 마을이 등 돌리면, 다 지어놓고도 못 써요."},
+      {"speaker": "", "text": "빠른 길을 택했다. 대신 마을과의 신뢰에 금이 갔다."},
+      {"speaker": "", "text": "(지금이라도 마을을 직접 찾아가면 되돌릴 수 있다.)"}
+    ]
+  },
+
+  "ch4_james_solo_decline": {
+    "lines": [
+      {"speaker": "James", "text": "...그렇게 말해줄 줄 알았어요. 아니, 그러길 바랐어요."},
+      {"speaker": "James", "text": "그게 맞아요. 같이 제대로 합시다."}
+    ],
+    "choices": [
+      {
+        "text": "\"고마워요. 양고나부터 챙겨서 마을에 인사드릴게요.\"",
+        "effects": {"james": 5},
+        "next": "ch4_james_yangona_tip"
+      }
     ]
   },
 
