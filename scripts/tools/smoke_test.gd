@@ -49,7 +49,7 @@ func _ready() -> void:
 	if e_bad != "bad": ok = false
 
 	# [6] D3 검증 — 빈손 인사 점수가 12인가
-	var basic := DialogueManager.dialogues["ch3_ratu_greet_basic"]
+	var basic: Dictionary = DialogueManager.dialogues["ch3_ratu_greet_basic"]
 	var basic_pt: int = basic["choices"][0]["effects"]["ratu_josefa"]
 	print("[3] 빈손 인사 점수: %d (기대: 12)" % basic_pt)
 	if basic_pt != 12: ok = false
