@@ -60,6 +60,8 @@ builds/aid-world-itch-web.zip
 
 스크립트는 현재 Godot 버전에 맞는 Web no-threads export template을 내려받아 `/tmp`에 캐시하고, `index.html`이 ZIP 최상위에 오도록 패키징합니다. itch.io에서는 `Kind of project`를 `HTML`로 설정하고, 업로드 파일에 `This file will be played in the browser`를 체크하면 됩니다.
 
+모바일 브라우저에서는 터치 가능한 기기에서만 가상 D-pad, 상호작용 버튼, 대화 뒤로가기 버튼이 표시됩니다. 현재 권장 플레이 방향은 가로 모드입니다.
+
 ## 프로젝트 구조
 
 ```

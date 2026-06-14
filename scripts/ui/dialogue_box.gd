@@ -15,6 +15,8 @@ func _ready() -> void:
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	panel.visible = false
 	back_btn.pressed.connect(_on_back_pressed)
+	MobileInput.accept_pressed.connect(_on_mobile_accept_pressed)
+	MobileInput.back_pressed.connect(_on_mobile_back_pressed)
 
 ## _input — GUI보다 먼저 키 입력을 잡음 (엔터키 누락 방지)
 func _input(event: InputEvent) -> void:
@@ -93,6 +95,19 @@ func _on_dialogue_ended(_dialogue_id: String) -> void:
 
 func _on_back_pressed() -> void:
 	if DialogueManager.can_go_back():
+		DialogueManager.go_back()
+
+func _on_mobile_accept_pressed() -> void:
+	if not DialogueManager.is_active:
+		return
+	if not panel.visible:
+		return
+	if choices_container.visible and choices_container.get_child_count() > 0:
+		return
+	DialogueManager.advance()
+
+func _on_mobile_back_pressed() -> void:
+	if DialogueManager.is_active and DialogueManager.can_go_back():
 		DialogueManager.go_back()
 
 func _clear_choices() -> void:
