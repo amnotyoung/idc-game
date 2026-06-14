@@ -2,6 +2,9 @@
 .godot/
 *.uid
 
+# Claude Code local settings & hooks
+.claude/
+
 # macOS
 .DS_Store
 
