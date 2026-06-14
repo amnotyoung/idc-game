@@ -129,6 +129,13 @@ func _refresh_chip(npc_id: String) -> void:
 	style.content_margin_bottom = 0
 	panel.add_theme_stylebox_override("panel", style)
 
+	# 변화 시 잠깐 플래시 — "방금 한 선택이 관계에 영향을 줬다"는 즉각 피드백
+	# 상승은 따뜻한 빛, 하락은 붉은 빛으로 짧게 빛났다가 원복
+	if delta != 0:
+		panel.modulate = Color(1.5, 1.5, 1.2) if delta > 0 else Color(1.7, 0.7, 0.7)
+		var tw := get_tree().create_tween()
+		tw.tween_property(panel, "modulate", Color(1, 1, 1), 0.5)
+
 func _tier_label(value: int) -> String:
 	if value >= 70:
 		return "협력적"
