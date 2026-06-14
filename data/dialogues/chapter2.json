@@ -35,6 +35,12 @@
         "next": "ch2_timoci_ask_reason"
       },
       {
+        "text": "\"신중한 분이라고 들었어요. 부담 안 되게 천천히 여쭤볼게요.\"",
+        "effects": {"timoci": 15},
+        "condition": "clue_vikash_caution",
+        "next": "ch2_timoci_ask_reason"
+      },
+      {
         "text": "\"승인이 왜 이렇게 오래 걸리는지 알고 싶어요.\"",
         "effects": {"timoci": 10},
         "next": "ch2_timoci_ask_reason"

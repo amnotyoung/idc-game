@@ -105,6 +105,9 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 		for npc_id in ISLAND_NPC_TRUST[dialogue_id]:
 			TrustManager.modify(npc_id, ISLAND_NPC_TRUST[dialogue_id][npc_id])
 	match dialogue_id:
+		"island_elder_1", "island_fisher_1", "island_woman_1":
+			# 주민이 직접 관리를 원한다는 현장 정보 → Lani 설득에 공감 선택지 해금
+			TrustManager.set_flag("clue_village_maintenance")
 		"ch3_arrive", "ch3_arrive_early":
 			TrustManager.set_flag("ch3_arrived")
 			# Mere와 먼저 대화할 수 있도록 자유 이동 — Ratu는 직접 다가가야 대화

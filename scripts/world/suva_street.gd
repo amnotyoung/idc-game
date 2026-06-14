@@ -89,8 +89,11 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 	if dialogue_id in NPC_TRUST_MAP:
 		for npc_id in NPC_TRUST_MAP[dialogue_id]:
 			TrustManager.modify(npc_id, NPC_TRUST_MAP[dialogue_id][npc_id])
-	# 상점 구매
+	# 거리 NPC 단서 수집 + 상점 구매
 	match dialogue_id:
+		"hindi_man_1", "hindi_man_after_timoci":
+			# Vikash가 까다롭다는 현장 정보 → 첫 면담에서 배려 선택지 해금
+			TrustManager.set_flag("clue_vikash_caution")
 		"street_vendor_buy_root":
 			TrustManager.set_flag("sevusevu_prepared")
 			TrustManager.set_flag("bought_root")

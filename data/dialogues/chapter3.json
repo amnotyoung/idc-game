@@ -195,6 +195,12 @@
     ],
     "choices": [
       {
+        "text": "\"마을 분들 얘기 들었어요. 직접 관리하게 해달라고 하시더군요.\"",
+        "effects": {"lani": 18, "ratu_josefa": 15},
+        "condition": "clue_village_maintenance",
+        "next": "ch3_lani_honest"
+      },
+      {
         "text": "\"...파일에서 봤을 뿐이에요. 직접 들으러 왔어요.\"",
         "effects": {"lani": 15, "ratu_josefa": 10},
         "next": "ch3_lani_honest"
