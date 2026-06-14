@@ -23,6 +23,16 @@ const STAKEHOLDERS = [
 	{"id": "james", "short": "Jam", "name": "James"},
 ]
 
+## 신뢰가 낮을 때(호의적 미만) tooltip 에 띄우는 부드러운 회복 힌트.
+## 점수를 사람 등급으로 보지 않게, "다음에 해볼 행동"으로 안내한다.
+const RECOVERY_HINTS = {
+	"mere": "현장 조사 결과를 함께 정리하자고 해보세요.",
+	"timoci": "토지청 동의서를 준비해 다시 찾아가 보세요.",
+	"ratu_josefa": "섬 주민들의 이야기를 더 들어보세요.",
+	"lani": "마을이 직접 관리하는 방안을 함께 이야기해보세요.",
+	"james": "공동 기술자 교육 프로그램을 제안해보세요.",
+}
+
 var _chips: Dictionary = {}
 
 func _ready() -> void:
@@ -87,8 +97,20 @@ func _refresh_chip(npc_id: String) -> void:
 	var panel: PanelContainer = entry["panel"]
 	var meta: Dictionary = entry["meta"]
 
+	# 최근 변화량 (이전 표시값 대비) — 만회 루프를 눈에 보이게
+	var prev: int = entry.get("last", value)
+	var delta := value - prev
+	entry["last"] = value
+
 	label.text = "%s %d" % [meta["short"], value]
-	panel.tooltip_text = "%s: %s (%d)" % [meta["name"], tier, value]
+
+	# tooltip: 이름·단계·점수 + 최근 변화 + (낮을 때) 회복 힌트
+	var tip := "%s: %s (%d)" % [meta["name"], tier, value]
+	if delta != 0:
+		tip += "  최근 %+d" % delta
+	if value < 50 and RECOVERY_HINTS.has(npc_id):
+		tip += "\n→ " + RECOVERY_HINTS[npc_id]
+	panel.tooltip_text = tip
 
 	var style := StyleBoxFlat.new()
 	style.bg_color = _tier_color(value)

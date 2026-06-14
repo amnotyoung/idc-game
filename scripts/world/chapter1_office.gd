@@ -173,12 +173,13 @@ func _get_email_reply(npc_id: String, npc_name: String, trust: int) -> String:
 			"ally":  "에게서 답장이 왔다. \"Great progress! 기술자 교육 커리큘럼 초안 보낼게요.\"",
 		},
 	}
+	# 신뢰 구간 경계는 HUD(_tier_label)·엔딩 판정(70)과 통일
 	var tier = "cold"
-	if trust >= 71:
+	if trust >= 70:
 		tier = "ally"
-	elif trust >= 51:
+	elif trust >= 50:
 		tier = "warm"
-	elif trust >= 26:
+	elif trust >= 25:
 		tier = "formal"
 
 	var npc_replies = replies.get(npc_id, {})
