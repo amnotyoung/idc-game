@@ -140,9 +140,46 @@ def make_cover():
     return path
 
 
+def make_cover_ko():
+    bg = img(BG / "naitamba_bg.png")
+    cover = bg.resize((889, 500), Image.Resampling.NEAREST).crop((130, 0, 760, 500))
+    overlay = Image.new("RGBA", cover.size, (0, 0, 0, 0))
+    od = ImageDraw.Draw(overlay, "RGBA")
+    od.rectangle((0, 0, 630, 500), fill=(8, 16, 22, 90))
+    od.rectangle((0, 300, 630, 500), fill=(7, 10, 12, 130))
+    cover.alpha_composite(overlay)
+
+    def paste_sprite(name, x, y, scale=5, frame=0):
+        tex = sprite(name, frame).resize((16 * scale, 16 * scale), Image.Resampling.NEAREST)
+        cover.alpha_composite(tex, (x - tex.width // 2, y - tex.height // 2))
+
+    tank = img(OBJ / "water_tank.png").resize((128, 96), Image.Resampling.NEAREST)
+    cover.alpha_composite(tank, (252, 255))
+    paste_sprite("ratu_josefa.png", 178, 338, 5)
+    paste_sprite("lani.png", 244, 356, 5)
+    paste_sprite("mere.png", 390, 356, 5)
+    paste_sprite("timoci.png", 452, 346, 5)
+    paste_sprite("player.png", 316, 382, 5)
+
+    draw = ImageDraw.Draw(cover, "RGBA")
+    title_font = font(68)
+    sub_font = font(28)
+    tag_font = font(20)
+    draw.text((38, 40), "에이드 월드", fill=(255, 245, 207, 255), font=title_font, stroke_width=3, stroke_fill=(24, 26, 28, 220))
+    draw.text((44, 126), "나이탬바 섬 이야기", fill=(236, 247, 241, 255), font=sub_font, stroke_width=2, stroke_fill=(20, 24, 28, 210))
+    draw.rounded_rectangle((42, 410, 588, 458), radius=14, fill=(17, 31, 34, 210), outline=(247, 213, 129, 170), width=2)
+    draw.text((74, 421), "신뢰, 물, 공동체를 둘러싼 협상 게임", fill=(245, 239, 221, 255), font=tag_font)
+
+    OUT.mkdir(parents=True, exist_ok=True)
+    path = OUT / "cover-ko.png"
+    cover.save(path)
+    return path
+
+
 def main():
     paths = [
         make_cover(),
+        make_cover_ko(),
         render_scene(
             "office_bg.png",
             [
@@ -157,6 +194,21 @@ def main():
             dialogue={"speaker": "Mere", "text": "This project is not paperwork. It's people, and it's vanua."},
             caption="KODA Fiji Office",
             filename="screenshot-01-office.png",
+        ),
+        render_scene(
+            "office_bg.png",
+            [
+                {"file": "npc_wati.png", "pos": (80, 85), "label": "Wati"},
+                {"file": "mere.png", "pos": (160, 62), "label": "Mere"},
+                {"file": "player.png", "pos": (160, 110)},
+            ],
+            objects=[
+                {"file": "file_icon.png", "pos": (220, 90), "scale": 1},
+                {"file": "computer_icon.png", "pos": (240, 90), "scale": 1},
+            ],
+            dialogue={"speaker": "Mere", "text": "이 사업은 서류가 아니라 사람, 그리고 vanua예요."},
+            caption="KODA 피지 사무소",
+            filename="screenshot-01-office-ko.png",
         ),
         render_scene(
             "suva_street_bg.png",
@@ -174,6 +226,21 @@ def main():
             filename="screenshot-02-suva-street.png",
         ),
         render_scene(
+            "suva_street_bg.png",
+            [
+                {"file": "player.png", "pos": (40, 110)},
+                {"file": "npc_bula_man.png", "pos": (85, 82)},
+                {"file": "npc_street_vendor.png", "pos": (145, 82), "label": "상인"},
+                {"file": "npc_hindi_woman.png", "pos": (135, 88)},
+                {"file": "npc_hindi_man.png", "pos": (60, 135)},
+                {"file": "npc_police.png", "pos": (180, 130)},
+                {"file": "npc_bula_woman2.png", "pos": (230, 125)},
+            ],
+            dialogue={"speaker": "상인", "text": "Bula vinaka, bro! 마을에 들어가요? 그 vanua에 맞는 선물 챙겨야죠."},
+            caption="수바 거리",
+            filename="screenshot-02-suva-street-ko.png",
+        ),
+        render_scene(
             "government_bg.png",
             [
                 {"file": "npc_bula_woman.png", "pos": (80, 90), "label": "Reception"},
@@ -183,6 +250,17 @@ def main():
             dialogue={"speaker": "Vikash", "text": "Namaste. The land consent paper trail must be settled before approval."},
             caption="Ministry of National Planning",
             filename="screenshot-03-government.png",
+        ),
+        render_scene(
+            "government_bg.png",
+            [
+                {"file": "npc_bula_woman.png", "pos": (80, 90), "label": "접수처"},
+                {"file": "timoci.png", "pos": (160, 55), "label": "Vikash"},
+                {"file": "player.png", "pos": (160, 130)},
+            ],
+            dialogue={"speaker": "Vikash", "text": "Namaste. 토지 동의 서류 흐름이 정리돼야 승인 절차가 진행됩니다."},
+            caption="국가계획부",
+            filename="screenshot-03-government-ko.png",
         ),
         render_scene(
             "naitamba_bg.png",
@@ -201,6 +279,22 @@ def main():
             filename="screenshot-04-naitamba.png",
         ),
         render_scene(
+            "naitamba_bg.png",
+            [
+                {"file": "npc_island_child.png", "pos": (55, 125)},
+                {"file": "lani.png", "pos": (80, 112), "label": "Lani"},
+                {"file": "npc_island_woman.png", "pos": (120, 108)},
+                {"file": "ratu_josefa.png", "pos": (160, 112), "label": "Ratu Josefa"},
+                {"file": "npc_island_fisher.png", "pos": (180, 130)},
+                {"file": "npc_island_elder.png", "pos": (210, 115)},
+                {"file": "mere.png", "pos": (235, 95), "label": "Mere"},
+                {"file": "player.png", "pos": (160, 130)},
+            ],
+            dialogue={"speaker": "Ratu Josefa", "text": "우리 vanua가 기억하는 것들이 있소. 10년 전 약속. 아무것도 남지 않았지."},
+            caption="나이탬바 섬",
+            filename="screenshot-04-naitamba-ko.png",
+        ),
+        render_scene(
             "sevusevu_bg.png",
             [
                 {"file": "ratu_josefa.png", "pos": (160, 78), "label": "Ratu Josefa"},
@@ -211,6 +305,18 @@ def main():
             dialogue={"speaker": "Ratu Josefa", "text": "Come in. Let us sit together for talanoa."},
             caption="Sevusevu",
             filename="screenshot-05-sevusevu.png",
+        ),
+        render_scene(
+            "sevusevu_bg.png",
+            [
+                {"file": "ratu_josefa.png", "pos": (160, 78), "label": "Ratu Josefa"},
+                {"file": "lani.png", "pos": (118, 122), "label": "Lani"},
+                {"file": "mere.png", "pos": (202, 124), "label": "Mere"},
+                {"file": "player.png", "pos": (160, 132)},
+            ],
+            dialogue={"speaker": "Ratu Josefa", "text": "들어오시오. 함께 앉아 talanoa합시다."},
+            caption="세부세부",
+            filename="screenshot-05-sevusevu-ko.png",
         ),
     ]
     for path in paths:
