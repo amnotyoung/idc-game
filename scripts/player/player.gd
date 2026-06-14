@@ -18,16 +18,19 @@ var _facing: Vector2 = Vector2.DOWN
 
 func _ready() -> void:
 	add_to_group("player")
+	MobileInput.accept_pressed.connect(_on_mobile_accept_pressed)
 
 func _physics_process(_delta: float) -> void:
 	if DialogueManager.is_active:
 		velocity = Vector2.ZERO
 		return
 
-	var direction := Vector2(
+	var keyboard_direction := Vector2(
 		Input.get_axis("ui_left", "ui_right"),
 		Input.get_axis("ui_up", "ui_down")
 	).normalized()
+	var touch_direction := MobileInput.move_vector
+	var direction := touch_direction if touch_direction != Vector2.ZERO else keyboard_direction
 
 	if direction != Vector2.ZERO:
 		_facing = direction
@@ -53,6 +56,10 @@ func _update_sprite() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
+		_try_interact()
+
+func _on_mobile_accept_pressed() -> void:
+	if not DialogueManager.is_active:
 		_try_interact()
 
 func _try_interact() -> void:

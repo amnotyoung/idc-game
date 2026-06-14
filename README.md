@@ -44,6 +44,24 @@
    ```
 3. Godot에서 `project.godot`를 열고 실행(F5)합니다.
 
+## itch.io 웹 빌드
+
+Godot CLI와 `curl`, `unzip`, `zip`이 설치된 환경에서 아래 명령을 실행하면 itch.io HTML 게임 업로드용 ZIP을 생성합니다.
+
+```bash
+scripts/tools/build_itch_web.sh
+```
+
+생성 파일:
+
+```bash
+builds/aid-world-itch-web.zip
+```
+
+스크립트는 현재 Godot 버전에 맞는 Web no-threads export template을 내려받아 `/tmp`에 캐시하고, `index.html`이 ZIP 최상위에 오도록 패키징합니다. itch.io에서는 `Kind of project`를 `HTML`로 설정하고, 업로드 파일에 `This file will be played in the browser`를 체크하면 됩니다.
+
+모바일 브라우저에서는 터치 가능한 기기에서만 가상 D-pad, 상호작용 버튼, 대화 뒤로가기 버튼이 표시됩니다. 현재 권장 플레이 방향은 가로 모드입니다.
+
 ## 프로젝트 구조
 
 ```
@@ -68,4 +86,5 @@ docs/design/  — story, characters, 레퍼런스 자료
 ## 크레딧
 
 - 일부 스프라이트는 [Kenney](https://kenney.nl/) 에셋을 기반으로 제작되었습니다.
+- 웹 빌드의 한글 UI 표시에 [Nanum Gothic](https://fonts.google.com/specimen/Nanum+Gothic)을 사용합니다. 폰트는 SIL Open Font License 1.1로 배포됩니다.
 - 본 게임은 국제개발협력의 가치를 전달하기 위한 교육·창작 목적의 프로젝트입니다.
