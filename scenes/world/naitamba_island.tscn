@@ -1,8 +1,9 @@
-[gd_scene load_steps=26 format=3]
+[gd_scene load_steps=27 format=3]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/npc/npc_base.gd" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/ui/dialogue_box.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/ui/status_bar.tscn" id="status_bar"]
 [ext_resource type="Script" path="res://scripts/world/building_exit.gd" id="4"]
 [ext_resource type="Texture2D" path="res://assets/sprites/tilesets/naitamba_bg.png" id="5"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/ratu_josefa.png" id="6"]
@@ -269,6 +270,9 @@ autoplay = true
 volume_db = -6.0
 
 ; ─── 대화창 UI ───
+[node name="StatusBar" parent="." instance=ExtResource("status_bar")]
+location_label = "나이탬바 섬"
+
 [node name="DialogueBox" parent="." instance=ExtResource("3")]
 
 ; ─── 오프닝 트리거 ───

@@ -35,6 +35,7 @@ func _ready() -> void:
 	_show_elevator()
 
 func _show_elevator() -> void:
+	_set_status_location("정부청사 로비")
 	# 로비 배경 + 모든 NPC 숨기고 엘리베이터 선택
 	bg.texture = LOBBY_BG
 	_hide_all_npcs()
@@ -55,6 +56,7 @@ func _hide_all_npcs() -> void:
 
 func _show_floor3() -> void:
 	_current_floor = 3
+	_set_status_location("정부청사 3층")
 	_hide_all_npcs()
 	bg.texture = FLOOR3_BG
 	_set_npc_active(timoci, true)
@@ -63,10 +65,16 @@ func _show_floor3() -> void:
 
 func _show_floor5() -> void:
 	_current_floor = 5
+	_set_status_location("토지청 5층")
 	_hide_all_npcs()
 	bg.texture = FLOOR5_BG
 	_set_npc_active(sela, true)
 	_setup_floor5_state()
+
+func _set_status_location(value: String) -> void:
+	var status_bar = get_parent().get_node_or_null("StatusBar")
+	if status_bar and status_bar.has_method("set_location"):
+		status_bar.set_location(value)
 
 func _setup_floor3_state() -> void:
 	if not TrustManager.has_flag("ch2_timoci_met"):

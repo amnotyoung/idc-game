@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3]
+[gd_scene load_steps=14 format=3]
 
 [ext_resource type="Texture2D" path="res://assets/sprites/tilesets/office_bg.png" id="1"]
 [ext_resource type="Script" path="res://scripts/world/chapter5_ending.gd" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/ui/dialogue_box.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/ui/status_bar.tscn" id="status_bar"]
 [ext_resource type="AudioStream" path="res://assets/music/bgm_office.wav" id="4"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/mere.png" id="mere_tex"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/timoci.png" id="timoci_tex"]
@@ -153,4 +154,7 @@ texture_filter = 1
 script = ExtResource("2")
 
 ; ─── 대화창 UI ───
+[node name="StatusBar" parent="." instance=ExtResource("status_bar")]
+location_label = "최종 협의"
+
 [node name="DialogueBox" parent="." instance=ExtResource("3")]

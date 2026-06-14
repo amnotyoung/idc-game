@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3]
+[gd_scene load_steps=21 format=3]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1"]
 [ext_resource type="Texture2D" path="res://assets/sprites/tilesets/suva_street_bg.png" id="2"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/player.png" id="3"]
 [ext_resource type="Script" path="res://scripts/world/suva_street.gd" id="4"]
 [ext_resource type="PackedScene" path="res://scenes/ui/dialogue_box.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://scenes/ui/status_bar.tscn" id="status_bar"]
 [ext_resource type="AudioStream" path="res://assets/music/bgm_street.wav" id="6"]
 [ext_resource type="Script" path="res://scripts/npc/street_npc.gd" id="7"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_bula_man.png" id="8"]
@@ -307,4 +308,7 @@ theme_override_font_sizes/font_size = 6
 modulate = Color(1, 1, 0.5, 0.85)
 
 ; ─── 대화창 UI ───
+[node name="StatusBar" parent="." instance=ExtResource("status_bar")]
+location_label = "수바 거리"
+
 [node name="DialogueBox" parent="." instance=ExtResource("5")]

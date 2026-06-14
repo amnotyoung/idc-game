@@ -1,8 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://chapter1office"]
+[gd_scene load_steps=25 format=3 uid="uid://chapter1office"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/npc/npc_base.gd" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/ui/dialogue_box.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/ui/status_bar.tscn" id="status_bar"]
 [ext_resource type="Script" path="res://scripts/world/chapter1_office.gd" id="4"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/player.png" id="5"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/mere.png" id="6"]
@@ -164,6 +165,9 @@ theme_override_font_sizes/font_size = 6
 horizontal_alignment = 1
 
 ; ─── 대화창 UI ───
+[node name="StatusBar" parent="." instance=ExtResource("status_bar")]
+location_label = "KODA 사무소"
+
 [node name="DialogueBox" parent="." instance=ExtResource("3")]
 
 ; ─── BGM ───

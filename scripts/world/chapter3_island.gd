@@ -79,6 +79,7 @@ func _on_line_check(_line: Dictionary) -> void:
 	# 세부세부 시작 → 배경 전환 + NPC/플레이어 숨김 (뿌리/가루/망고/빈손 모두)
 	if did in ["ch3_sevusevu_good", "ch3_sevusevu_powder", "ch3_ratu_mango_react", "ch3_sevusevu_miss"] and not _in_sevusevu:
 		_in_sevusevu = true
+		_set_status_location("세부세부")
 		bg.texture = SEVUSEVU_BG
 		player.visible = false
 		ratu.visible = false
@@ -159,6 +160,7 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 func _restore_island_view() -> void:
 	if _in_sevusevu:
 		_in_sevusevu = false
+		_set_status_location("나이탬바 섬")
 		bg.texture = ISLAND_BG
 		player.visible = true
 		ratu.visible = true
@@ -180,3 +182,8 @@ func _update_village_npcs() -> void:
 		if elder: elder.dialogue_id = "island_elder_after"
 		if fisher: fisher.dialogue_id = "island_fisher_after"
 		if woman: woman.dialogue_id = "island_woman_after"
+
+func _set_status_location(value: String) -> void:
+	var status_bar = get_parent().get_node_or_null("StatusBar")
+	if status_bar and status_bar.has_method("set_location"):
+		status_bar.set_location(value)
