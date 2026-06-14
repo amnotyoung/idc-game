@@ -10,7 +10,7 @@
 |---|---|
 | **장르** | 탑다운 2D 내러티브 어드벤처 |
 | **엔진** | Godot 4.6 (GL Compatibility) |
-| **언어** | 한국어 |
+| **언어** | 한국어 / English |
 | **해상도** | 320×180 픽셀아트 (1280×720 출력) |
 | **플레이 시간** | 약 1~2시간 |
 | **배경** | 피지 수바 + 나이탬바 섬 (Lomaiviti 주 외곽 섬 모티브) |
@@ -44,6 +44,8 @@
    ```
 3. Godot에서 `project.godot`를 열고 실행(F5)합니다.
 
+타이틀 화면 부제 옆 `EN` / `한국어` 텍스트를 눌러 언어를 전환할 수 있습니다. 선택한 언어는 로컬 설정으로 저장됩니다.
+
 ## itch.io 웹 빌드
 
 Godot CLI와 `curl`, `unzip`, `zip`이 설치된 환경에서 아래 명령을 실행하면 itch.io HTML 게임 업로드용 ZIP을 생성합니다.
@@ -66,14 +68,15 @@ builds/aid-world-itch-web.zip
 
 ```
 scripts/
-  systems/   — trust_manager, dialogue_manager, scene_manager
+  systems/   — language_manager, trust_manager, dialogue_manager, scene_manager
   player/    — player.gd (걷기/달리기, Shift 토글)
   npc/       — npc_base, street_npc
   ui/        — dialogue_box, title_screen
   world/     — 챕터별 월드 로직 (office / government / island / intl / ending)
   tools/     — PIL 기반 배경·스프라이트 생성기
 
-data/dialogues/  — chapter1~5.json, street_npcs.json (대화 데이터)
+data/dialogues/  — chapter1~5.json, street_npcs.json (한국어 대화 데이터)
+  en/            — English dialogue data
 
 scenes/
   ui/        — title_screen, dialogue_box

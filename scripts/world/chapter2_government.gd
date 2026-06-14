@@ -17,6 +17,8 @@ var _current_floor := 0   # 0=미정, 3=국가계획부, 5=토지청
 func _ready() -> void:
 	await get_tree().process_frame
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	LanguageManager.language_changed.connect(_on_language_changed)
+	_refresh_labels()
 
 	# ── 첫 방문: 약속 없음 → 쫓겨남 ──
 	if not TrustManager.has_flag("appointment_set"):
@@ -167,3 +169,15 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			TrustManager.modify("timoci", 15)   # Sela→Timoci 연결로 신뢰 보너스
 			sela.dialogue_id = "ch2_sela_all_done"
 			TrustManager.save_game()
+
+func _on_language_changed(_locale: String) -> void:
+	_refresh_labels()
+
+func _refresh_labels() -> void:
+	var root := get_parent()
+	var receptionist_label: Label = root.get_node_or_null("Receptionist/NameTag")
+	if receptionist_label:
+		receptionist_label.text = LanguageManager.text("hint_receptionist")
+	var exit_hint: Label = root.get_node_or_null("ExitHint")
+	if exit_hint:
+		exit_hint.text = LanguageManager.text("hint_exit_down")

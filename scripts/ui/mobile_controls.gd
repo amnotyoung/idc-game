@@ -19,6 +19,8 @@ func _ready() -> void:
 	_connect_direction_button(right_btn, Vector2.RIGHT)
 	action_btn.pressed.connect(MobileInput.press_accept)
 	back_btn.pressed.connect(MobileInput.press_back)
+	LanguageManager.language_changed.connect(_on_language_changed)
+	_refresh_static_texts()
 	_sync_visibility()
 
 func _process(_delta: float) -> void:
@@ -72,3 +74,9 @@ func _is_title_screen() -> bool:
 	if current_scene == null:
 		return false
 	return current_scene.scene_file_path == "res://scenes/ui/title_screen.tscn"
+
+func _on_language_changed(_locale: String) -> void:
+	_refresh_static_texts()
+
+func _refresh_static_texts() -> void:
+	back_btn.text = LanguageManager.text("dialogue_back_mobile")

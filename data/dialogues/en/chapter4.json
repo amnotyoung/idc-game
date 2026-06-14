@@ -1,0 +1,500 @@
+{
+  "ch4_no_connection": {
+    "lines": [
+      {
+        "speaker": "Reception",
+        "text": "Hello. You're from KODA."
+      },
+      {
+        "speaker": "Reception",
+        "text": "James? He is on a field trip this week and isn't in the office."
+      },
+      {
+        "speaker": "Reception",
+        "text": "You should arrange a time in advance... It is easier if Vikash at National Planning or someone from Naitamba village connects you."
+      }
+    ]
+  },
+  "ch4_receptionist_intro": {
+    "lines": [
+      {
+        "speaker": "Reception",
+        "text": "Hello. How can I help you?"
+      },
+      {
+        "speaker": "Me",
+        "text": "I'm from KODA. I'm here to see James."
+      },
+      {
+        "speaker": "Reception",
+        "text": "One moment, I'll check."
+      },
+      {
+        "speaker": "Reception",
+        "text": "Yes, James is at his desk. Please go to the desk inside."
+      }
+    ]
+  },
+  "ch4_james_first": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "Have a seat. You're here from KODA about Naitamba."
+      },
+      {
+        "speaker": "James",
+        "text": "I'm with APAT - the Australia-Pacific Technical Assistance Program - handling water resources."
+      },
+      {
+        "speaker": "James",
+        "text": "That island - I know the file. Our predecessor supported a project there ten years ago."
+      },
+      {
+        "speaker": "James",
+        "text": "It didn't go well."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"May I ask what went wrong?\"",
+        "effects": {
+          "james": 10
+        },
+        "next": "ch4_james_history"
+      },
+      {
+        "text": "\"We're trying to do it differently this time.\"",
+        "effects": {
+          "james": 5
+        },
+        "next": "ch4_james_skeptical"
+      },
+      {
+        "text": "\"We came because we need technical support.\"",
+        "effects": {
+          "james": -5
+        },
+        "next": "ch4_james_direct"
+      }
+    ]
+  },
+  "ch4_james_history": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "After installation, there was no operator."
+      },
+      {
+        "speaker": "James",
+        "text": "The pump stopped in less than two years. No one to fix it, no budget for parts."
+      },
+      {
+        "speaker": "James",
+        "text": "Installation went fine. The problem was afterward. They never built a maintenance system."
+      },
+      {
+        "speaker": "",
+        "text": "James looks out the window for a moment."
+      },
+      {
+        "speaker": "James",
+        "text": "That was the lesson. You can't just leave infrastructure behind and walk away."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"That's why this time, we want a structure residents can operate directly.\"",
+        "effects": {
+          "james": 15
+        },
+        "next": "ch4_james_tltb"
+      },
+      {
+        "text": "\"If you've reflected on that, could you help us do it differently?\"",
+        "effects": {
+          "james": 0
+        },
+        "next": "ch4_james_tltb"
+      }
+    ]
+  },
+  "ch4_james_skeptical": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "Everyone says that."
+      },
+      {
+        "speaker": "James",
+        "text": "The team ten years ago probably said it too."
+      },
+      {
+        "speaker": "James",
+        "text": "Can you tell me what is concretely different?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"This time, we'll create a structure residents can operate directly.\"",
+        "effects": {
+          "james": 10
+        },
+        "next": "ch4_james_tltb"
+      },
+      {
+        "text": "\"We're still planning. That's why I came here.\"",
+        "effects": {
+          "james": -5
+        },
+        "next": "ch4_james_tltb"
+      }
+    ]
+  },
+  "ch4_james_direct": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "Technical support."
+      },
+      {
+        "speaker": "James",
+        "text": "We are a support agency, but you are the first person to walk in that directly."
+      },
+      {
+        "speaker": "James",
+        "text": "I'll hear you out for now."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"I'm sorry. I should have explained the situation first.\"",
+        "effects": {
+          "james": 5
+        },
+        "next": "ch4_james_tltb"
+      },
+      {
+        "text": "\"The Land Office process is stuck.\"",
+        "effects": {
+          "james": 0
+        },
+        "next": "ch4_james_tltb"
+      }
+    ]
+  },
+  "ch4_james_tltb": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "The Land Office is the issue?"
+      },
+      {
+        "speaker": "James",
+        "text": "Sela Tuilagi - she handles land consent there. I know her."
+      },
+      {
+        "speaker": "James",
+        "text": "If the village documents are ready, I can connect you."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"Thank you. That's exactly what we needed.\"",
+        "effects": {
+          "james": 10
+        },
+        "next": "ch4_james_local_check"
+      },
+      {
+        "text": "\"Can't we contact her directly?\"",
+        "effects": {
+          "james": -8
+        },
+        "next": "ch4_james_tltb_direct"
+      }
+    ]
+  },
+  "ch4_james_tltb_direct": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "...You can."
+      },
+      {
+        "speaker": "James",
+        "text": "But Sela does not like outside agencies contacting her without context."
+      },
+      {
+        "speaker": "James",
+        "text": "Going through me will be much faster."
+      },
+      {
+        "speaker": "",
+        "text": "He is right."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"That makes sense. Could I ask you to connect us?\"",
+        "effects": {
+          "james": 5
+        },
+        "next": "ch4_james_local_check"
+      }
+    ]
+  },
+  "ch4_james_local_check": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "One more question."
+      },
+      {
+        "speaker": "James",
+        "text": "The village elders - what happened with Ratu?"
+      },
+      {
+        "speaker": "James",
+        "text": "If they don't accept this, our involvement won't matter."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"I met Ratu Josefa. When we discussed a resident-managed structure, the door opened.\"",
+        "effects": {
+          "james": 20
+        },
+        "condition": "ch3_good_ending",
+        "next": "ch4_james_endorsed"
+      },
+      {
+        "text": "\"I haven't met him yet. I'll bring yaqona and greet the village elder first.\"",
+        "effects": {
+          "james": 15
+        },
+        "next": "ch4_james_yangona_tip"
+      },
+      {
+        "text": "\"We can persuade the village side later.\"",
+        "effects": {
+          "james": 0
+        },
+        "next": "ch4_james_rejected"
+      }
+    ]
+  },
+  "ch4_james_endorsed": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "...That is not an easy thing to say."
+      },
+      {
+        "speaker": "James",
+        "text": "Good. Let's try this together."
+      },
+      {
+        "speaker": "James",
+        "text": "I'll send the technical advisory support letter. I'll speak to Sela at the Land Office on the fifth floor. Meet her directly."
+      },
+      {
+        "speaker": "",
+        "text": "For the first time, you have an external partner."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"Could we also design a village technician training program?\"",
+        "effects": {
+          "james": 15
+        },
+        "next": "ch4_james_endorsed_detail"
+      },
+      {
+        "text": "\"Thank you. I'll move quickly.\"",
+        "effects": {
+          "james": 5
+        },
+        "next": "ch4_james_endorsed_brief"
+      }
+    ]
+  },
+  "ch4_james_endorsed_detail": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "Technician training? APAT has a curriculum tailored for Pacific island countries."
+      },
+      {
+        "speaker": "James",
+        "text": "Let's do this properly this time."
+      }
+    ]
+  },
+  "ch4_james_endorsed_brief": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "Good. I'll wait to hear from you."
+      },
+      {
+        "speaker": "James",
+        "text": "Let's do this properly this time."
+      }
+    ]
+  },
+  "ch4_james_yangona_tip": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "A yaqona gift? Sevusevu - the Fijian traditional greeting ceremony. Good that you know it."
+      },
+      {
+        "speaker": "James",
+        "text": "You can buy yaqona from a street vendor near Pacific City in Suva. Ask for dried root."
+      },
+      {
+        "speaker": "James",
+        "text": "Ratu Josefa is a difficult man. But if you show respect, he will talk."
+      },
+      {
+        "speaker": "James",
+        "text": "Tell me when you have results. Once the village side is settled, I can move too."
+      }
+    ]
+  },
+  "ch4_james_rejected": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "...I'll pretend I didn't hear that."
+      },
+      {
+        "speaker": "James",
+        "text": "If we enter without village consent, it will be exactly like ten years ago."
+      },
+      {
+        "speaker": "James",
+        "text": "Come back when the village side is settled."
+      }
+    ]
+  },
+  "ch4_james_after_endorsed": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "Have you met Sela at the Land Office?"
+      },
+      {
+        "speaker": "James",
+        "text": "It will go well. She is good at her job."
+      }
+    ]
+  },
+  "ch4_james_after_neutral": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "What happened with the village side?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"Ratu Josefa agreed. A village management committee was formed too.\"",
+        "effects": {
+          "james": 20
+        },
+        "condition": "ch3_good_ending",
+        "next": "ch4_james_good_news"
+      },
+      {
+        "text": "\"It's still in progress.\"",
+        "effects": {},
+        "next": "ch4_james_still_waiting"
+      }
+    ]
+  },
+  "ch4_james_good_news": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "...Really? Ratu Josefa?"
+      },
+      {
+        "speaker": "James",
+        "text": "He refused until the end during the previous project. A village management committee... that must have been decisive."
+      },
+      {
+        "speaker": "James",
+        "text": "Good. Then APAT can move seriously too."
+      },
+      {
+        "speaker": "James",
+        "text": "I'll prepare the technician training program. Let's do this properly this time."
+      }
+    ]
+  },
+  "ch4_james_still_waiting": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "Understood. Contact me when you're ready."
+      }
+    ]
+  },
+  "ch4_james_after_rejected": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "Have you met the village elders?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"Ratu Josefa agreed to a structure managed directly by the village.\"",
+        "effects": {
+          "james": 20
+        },
+        "condition": "ch3_good_ending",
+        "next": "ch4_james_good_news"
+      },
+      {
+        "text": "\"Not yet.\"",
+        "effects": {},
+        "next": "ch4_james_still_rejected"
+      }
+    ]
+  },
+  "ch4_james_still_rejected": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "Come back when the village side is settled."
+      }
+    ]
+  },
+  "ch4_james_after_consent": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "Ratu Josefa signed? That's impressive."
+      },
+      {
+        "speaker": "James",
+        "text": "He refused during the previous project. The village management committee clause must have worked."
+      },
+      {
+        "speaker": "James",
+        "text": "I'll start preparing APAT's technician training support right away."
+      }
+    ]
+  },
+  "ch4_receptionist_after": {
+    "lines": [
+      {
+        "speaker": "Reception",
+        "text": "Did you meet James? Thank you for coming."
+      }
+    ]
+  }
+}

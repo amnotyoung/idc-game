@@ -18,6 +18,8 @@ func _ready() -> void:
 	_update_village_npcs()
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	DialogueManager.dialogue_line_changed.connect(_on_line_check)
+	LanguageManager.language_changed.connect(_on_language_changed)
+	_refresh_labels()
 
 	if not TrustManager.has_flag("ch3_arrived"):
 		# 첫 방문 — 세부세부 전에는 Ratu 먼저 안내
@@ -180,3 +182,11 @@ func _update_village_npcs() -> void:
 		if elder: elder.dialogue_id = "island_elder_after"
 		if fisher: fisher.dialogue_id = "island_fisher_after"
 		if woman: woman.dialogue_id = "island_woman_after"
+
+func _on_language_changed(_locale: String) -> void:
+	_refresh_labels()
+
+func _refresh_labels() -> void:
+	var harbor_hint: Label = get_parent().get_node_or_null("HarborHint")
+	if harbor_hint:
+		harbor_hint.text = LanguageManager.text("hint_dock_suva")

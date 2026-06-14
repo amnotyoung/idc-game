@@ -1,14 +1,36 @@
 extends Control
 
+@onready var subtitle: Label = $Subtitle
+@onready var new_game_btn: Button = $VBox/NewGameBtn
+@onready var continue_btn: Button = $VBox/ContinueBtn
+
+var _continue_available := false
+
 func _ready() -> void:
-	if TrustManager.has_save():
-		if TrustManager.has_flag("game_complete"):
-			# 게임 완료 — 이어하기 대신 완료 표시
-			$VBox/ContinueBtn.visible = false
-		else:
-			$VBox/ContinueBtn.visible = true
-	else:
-		$VBox/ContinueBtn.visible = false
+	LanguageManager.language_changed.connect(_refresh_texts)
+	subtitle.mouse_filter = Control.MOUSE_FILTER_STOP
+	subtitle.gui_input.connect(_on_subtitle_gui_input)
+	_continue_available = TrustManager.has_save() and not TrustManager.has_flag("game_complete")
+	if _continue_available:
+		continue_btn.pressed.connect(_on_continue_pressed)
+	continue_btn.visible = _continue_available
+	_refresh_texts(LanguageManager.current_locale)
+
+func _refresh_texts(_locale: String) -> void:
+	var toggle_text := "EN" if LanguageManager.current_locale == "ko" else "한국어"
+	subtitle.text = "%s  %s" % [LanguageManager.text("title_subtitle"), toggle_text]
+	new_game_btn.text = LanguageManager.text("title_new_game")
+	continue_btn.text = LanguageManager.text("title_continue")
+
+func _on_language_toggle_pressed() -> void:
+	var next_locale := "en" if LanguageManager.current_locale == "ko" else "ko"
+	LanguageManager.set_locale(next_locale)
+
+func _on_subtitle_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		_on_language_toggle_pressed()
+	elif event is InputEventScreenTouch and event.pressed:
+		_on_language_toggle_pressed()
 
 func _on_new_game_pressed() -> void:
 	TrustManager.clear_save()

@@ -44,8 +44,8 @@ anchor_right = 0.5
 offset_left = -40.0
 offset_top = 100.0
 offset_right = 40.0
-offset_bottom = 160.0
-theme_override_constants/separation = 8
+offset_bottom = 178.0
+theme_override_constants/separation = 6
 
 [node name="NewGameBtn" type="Button" parent="VBox"]
 text = "새 게임"
@@ -56,4 +56,3 @@ text = "이어하기"
 theme_override_font_sizes/font_size = 10
 
 [connection signal="pressed" from="VBox/NewGameBtn" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="VBox/ContinueBtn" to="." method="_on_continue_pressed"]

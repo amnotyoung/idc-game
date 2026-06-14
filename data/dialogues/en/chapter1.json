@@ -1,0 +1,518 @@
+{
+  "ch1_project_file": {
+    "lines": [
+      {
+        "speaker": "Document",
+        "text": "[ Naitamba Islands Water Supply Development Project ]"
+      },
+      {
+        "speaker": "Document",
+        "text": "Partner country: Republic of Fiji / Implementing agency: KODA"
+      },
+      {
+        "speaker": "Document",
+        "text": "Project period: 2022-2026 (4 years) / Budget: USD 5,200,000"
+      },
+      {
+        "speaker": "Document",
+        "text": "Target area: Five islands in the Naitamba group, Lomaiviti Province / Beneficiaries: about 3,500 people"
+      },
+      {
+        "speaker": "Document",
+        "text": "Objective: Repair aging water infrastructure, replace tanks and pipelines, and strengthen village maintenance capacity"
+      },
+      {
+        "speaker": "Document",
+        "text": "Phase 1 target: Naitamba main island (about 1,200 people), then expand to four nearby islands"
+      },
+      {
+        "speaker": "Document",
+        "text": "Status: Awaiting approval from the Ministry of National Planning (held for three months)"
+      },
+      {
+        "speaker": "Document",
+        "text": "There is a note in the remarks section."
+      },
+      {
+        "speaker": "Memo",
+        "text": "\"A similar project was attempted on the same island 10 years ago. It stopped after the officer in charge disappeared. Remember that residents still remember.\""
+      }
+    ]
+  },
+  "ch1_arrival": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "Suva, Fiji. March 2024."
+      },
+      {
+        "speaker": "",
+        "text": "KODA Fiji Office. Your predecessor returned home three days ago."
+      },
+      {
+        "speaker": "",
+        "text": "A single memo is left on the desk."
+      },
+      {
+        "speaker": "Memo",
+        "text": "\"Naitamba Island project - good luck. Sorry.\""
+      },
+      {
+        "speaker": "",
+        "text": "You open the project file. Last updated: six months ago."
+      }
+    ]
+  },
+  "ch1_mere_entrance": {
+    "lines": [
+      {
+        "speaker": "???",
+        "text": "Excuse me."
+      },
+      {
+        "speaker": "???",
+        "text": "I'm looking for the KODA officer in charge."
+      },
+      {
+        "speaker": "Mere",
+        "text": "...So the officer changed again."
+      },
+      {
+        "speaker": "Mere",
+        "text": "It's been six months with almost no contact."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"I'm sorry. I only arrived a few days ago.\"",
+        "effects": {
+          "mere": 10
+        },
+        "next": "ch1_mere_honest"
+      },
+      {
+        "text": "\"Hello. What brings you here?\"",
+        "effects": {
+          "mere": 5
+        },
+        "next": "ch1_mere_formal"
+      }
+    ]
+  },
+  "ch1_mere_honest": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "...At least you're honest."
+      },
+      {
+        "speaker": "Mere",
+        "text": "Still, I'm glad someone is here."
+      },
+      {
+        "speaker": "Mere",
+        "text": "I'm Mere, from Pacific Roots NGO."
+      },
+      {
+        "speaker": "Mere",
+        "text": "I'm here about the Naitamba Island project."
+      },
+      {
+        "speaker": "Mere",
+        "text": "There has been no progress for six months. The island residents are tired of waiting."
+      },
+      {
+        "speaker": "Mere",
+        "text": "...Do you know what's going on?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"Roughly. Could we sort it out together?\"",
+        "effects": {
+          "mere": 12
+        },
+        "next": "ch1_mere_warm_a"
+      },
+      {
+        "text": "\"Honestly, I'm still figuring it out. Could you brief me?\"",
+        "effects": {
+          "mere": 8
+        },
+        "next": "ch1_mere_warm_b"
+      }
+    ]
+  },
+  "ch1_mere_formal": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "...Right."
+      },
+      {
+        "speaker": "Mere",
+        "text": "I'm Mere Vuniwai from Pacific Roots NGO."
+      },
+      {
+        "speaker": "Mere",
+        "text": "You're in charge of the Naitamba Island project, yes?"
+      },
+      {
+        "speaker": "Mere",
+        "text": "There has been no progress for six months. How much longer are we supposed to wait?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"I'm still assessing the situation. Could we look at it together?\"",
+        "effects": {
+          "mere": 10
+        },
+        "next": "ch1_mere_cold_a"
+      },
+      {
+        "text": "\"I will contact you officially after an internal review.\"",
+        "effects": {
+          "mere": -15
+        },
+        "next": "ch1_mere_cold_b"
+      }
+    ]
+  },
+  "ch1_mere_warm_a": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "Good. Then you probably already know this -"
+      },
+      {
+        "speaker": "Mere",
+        "text": "There are two problems. First, government approval has been stuck at the Ministry of National Planning for three months."
+      },
+      {
+        "speaker": "Mere",
+        "text": "Second... I didn't understand this at first either."
+      },
+      {
+        "speaker": "Mere",
+        "text": "The island residents don't trust the project itself."
+      },
+      {
+        "speaker": "Mere",
+        "text": "Ten years ago, they were promised the same thing. A water tank. Nothing remains."
+      },
+      {
+        "speaker": "Mere",
+        "text": "So even if we get approval, it means nothing without residents' trust."
+      },
+      {
+        "speaker": "",
+        "text": "Mere looks out the window for a moment."
+      },
+      {
+        "speaker": "Mere",
+        "text": "...I think we can work this out together. For now."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"You know the field better than I do. Could we plan the strategy together?\"",
+        "effects": {
+          "mere": 15
+        },
+        "next": "ch1_mere_strategy"
+      },
+      {
+        "text": "\"Understood. I'll start with the government side.\"",
+        "effects": {
+          "mere": 5
+        },
+        "next": "ch1_mere_strategy"
+      }
+    ]
+  },
+  "ch1_mere_strategy": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "Good. Remember one thing."
+      },
+      {
+        "speaker": "Mere",
+        "text": "This project is not paperwork. It's people. It isn't enough to make the numbers add up."
+      },
+      {
+        "speaker": "Mere",
+        "text": "That's exactly why it failed ten years ago. They followed the process and ignored the people."
+      },
+      {
+        "speaker": "Mere",
+        "text": "I'll go to Naitamba first. I need to understand more about Ratu Josefa."
+      },
+      {
+        "speaker": "Mere",
+        "text": "I'll contact you when I have findings. See you on the island."
+      },
+      {
+        "speaker": "Me",
+        "text": "(I should schedule the Ministry of National Planning meeting first. I'll ask Wati to arrange it.)"
+      }
+    ]
+  },
+  "ch1_mere_warm_b": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "There are two issues."
+      },
+      {
+        "speaker": "Mere",
+        "text": "First, government approval. It's been stuck at the Ministry of National Planning for three months."
+      },
+      {
+        "speaker": "Mere",
+        "text": "The officer in charge is named Vikash, and he is hard to reach."
+      },
+      {
+        "speaker": "Mere",
+        "text": "Second, residents' trust."
+      },
+      {
+        "speaker": "Mere",
+        "text": "A similar project fell apart ten years ago. People remember."
+      },
+      {
+        "speaker": "",
+        "text": "Mere starts to say more, then stops."
+      },
+      {
+        "speaker": "Mere",
+        "text": "I think you need to meet Vikash first."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"If the NGO network can help, please tell me.\"",
+        "effects": {
+          "mere": 15
+        },
+        "next": "ch1_mere_strategy"
+      },
+      {
+        "text": "\"Understood. I'll meet Vikash first.\"",
+        "effects": {
+          "mere": 5
+        },
+        "next": "ch1_mere_strategy"
+      }
+    ]
+  },
+  "ch1_mere_cold_a": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "...Fine."
+      },
+      {
+        "speaker": "Mere",
+        "text": "There are two problems. First, government approval has been stuck at the Ministry of National Planning for three months."
+      },
+      {
+        "speaker": "Mere",
+        "text": "Second, the island residents don't trust this project."
+      },
+      {
+        "speaker": "Mere",
+        "text": "There was a similar promise ten years ago. Nothing remains."
+      },
+      {
+        "speaker": "",
+        "text": "Mere pushes the file across the table."
+      },
+      {
+        "speaker": "Mere",
+        "text": "You have to solve both. Solving only one won't matter."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"You're right. We need someone with field experience. Will you work with us?\"",
+        "effects": {
+          "mere": 10
+        },
+        "next": "ch1_mere_strategy"
+      },
+      {
+        "text": "\"Understood. I'll contact you once I have sorted this out.\"",
+        "effects": {
+          "mere": 0
+        },
+        "next": "ch1_mere_strategy"
+      }
+    ]
+  },
+  "ch1_wati_intro": {
+    "lines": [
+      {
+        "speaker": "Wati",
+        "text": "Ah, you're trying to set up a meeting? This is about Vikash at National Planning, right?"
+      },
+      {
+        "speaker": "Wati",
+        "text": "I've handled Fiji government contacts here for five years. I'll help you get appointments."
+      },
+      {
+        "speaker": "Wati",
+        "text": "I'll contact Vikash's office. I'll let you know when it's arranged."
+      },
+      {
+        "speaker": "Wati",
+        "text": "Oh, and one tip -"
+      },
+      {
+        "speaker": "Wati",
+        "text": "In Fiji, everyone is one connection away from everyone else. Talk to people on the street too."
+      },
+      {
+        "speaker": "Wati",
+        "text": "You can learn a lot from locals - the mood around government, village realities, that sort of thing."
+      },
+      {
+        "speaker": "Wati",
+        "text": "You can also send progress emails to stakeholders from that computer. Small communication builds trust."
+      },
+      {
+        "speaker": "Wati",
+        "text": "Move with the arrow keys, talk with Space. Hold Shift if you want to walk slowly."
+      },
+      {
+        "speaker": "Wati",
+        "text": "While the appointment is being arranged, take a look around town. Outside is Victoria Parade."
+      }
+    ]
+  },
+  "ch1_wati_waiting": {
+    "lines": [
+      {
+        "speaker": "Wati",
+        "text": "No reply yet. Go outside and look around. I'll tell you when it's set."
+      }
+    ]
+  },
+  "ch1_wati_idle": {
+    "lines": [
+      {
+        "speaker": "Wati",
+        "text": "Have you been to the government building? Vikash is on the third floor."
+      }
+    ]
+  },
+  "ch1_wati_appointment_ready": {
+    "lines": [
+      {
+        "speaker": "Wati",
+        "text": "They replied. The appointment is set."
+      },
+      {
+        "speaker": "Wati",
+        "text": "Third floor of the government building, Ministry of National Planning."
+      },
+      {
+        "speaker": "Wati",
+        "text": "Vikash is the ODA section manager there. He handles the practical review of projects."
+      },
+      {
+        "speaker": "Wati",
+        "text": "Final approval goes through the minister, so he is not the final decision-maker. But if he blocks it at working level, it won't go up."
+      },
+      {
+        "speaker": "Wati",
+        "text": "The ministry is sensitive because of a budget audit these days. Since it's the first meeting, focus on understanding the situation rather than applying pressure."
+      }
+    ]
+  },
+  "ch1_mere_after_talk": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "...I'll wait to hear from you."
+      }
+    ]
+  },
+  "ch1_mere_cold_b": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "Official contact."
+      },
+      {
+        "speaker": "Mere",
+        "text": "Do you know how many times we've received 'official contact' already? Six."
+      },
+      {
+        "speaker": "Mere",
+        "text": "And nothing changed."
+      },
+      {
+        "speaker": "",
+        "text": "Mere picks up her bag."
+      },
+      {
+        "speaker": "Mere",
+        "text": "There are two problems: government approval and residents' trust. It's in the file."
+      },
+      {
+        "speaker": "Mere",
+        "text": "...Let me know if you solve it alone."
+      },
+      {
+        "speaker": "",
+        "text": "Mere leaves."
+      },
+      {
+        "speaker": "",
+        "text": "You lost trust."
+      }
+    ]
+  },
+  "ch1_computer": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "It is a work computer. The mailbox is open."
+      }
+    ],
+    "choices": [
+      {
+        "text": "Send a progress email to stakeholders",
+        "effects": {},
+        "next": "ch1_computer_send"
+      },
+      {
+        "text": "Close it",
+        "effects": {},
+        "next": "ch1_computer_close"
+      }
+    ]
+  },
+  "ch1_computer_send": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "You summarized the progress so far and sent an email."
+      },
+      {
+        "speaker": "",
+        "text": "Sharing even small progress is the beginning of trust."
+      }
+    ]
+  },
+  "ch1_computer_close": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "You closed the computer."
+      }
+    ]
+  }
+}

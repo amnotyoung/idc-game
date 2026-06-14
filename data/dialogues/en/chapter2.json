@@ -1,0 +1,610 @@
+{
+  "ch2_no_appointment": {
+    "lines": [
+      {
+        "speaker": "Reception",
+        "text": "Hello. How can I help you?"
+      },
+      {
+        "speaker": "Reception",
+        "text": "Mr. Vikash? I'm afraid meetings require an appointment."
+      },
+      {
+        "speaker": "Reception",
+        "text": "Please make an appointment through your contact first."
+      }
+    ]
+  },
+  "ch2_enter_building": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "- A few days later -"
+      },
+      {
+        "speaker": "",
+        "text": "Fiji Government Building. Third floor, Ministry of National Planning."
+      },
+      {
+        "speaker": "",
+        "text": "Five minutes before the appointment."
+      }
+    ]
+  },
+  "ch2_receptionist": {
+    "lines": [
+      {
+        "speaker": "Reception",
+        "text": "Do you have an appointment with Mr. Vikash? Your name?"
+      },
+      {
+        "speaker": "Reception",
+        "text": "One moment, I'll check."
+      },
+      {
+        "speaker": "Reception",
+        "text": "...Yes, I see it. Please take a seat."
+      }
+    ]
+  },
+  "ch2_timoci_first": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "Have a seat."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "You're from KODA. The Naitamba Island matter."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "I only have fifteen minutes. Please get straight to it."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"Thank you for making time during the audit. I want to understand the situation first.\"",
+        "effects": {
+          "timoci": 15
+        },
+        "condition": "wati_introduced",
+        "next": "ch2_timoci_ask_reason"
+      },
+      {
+        "text": "\"I want to know why approval is taking so long.\"",
+        "effects": {
+          "timoci": 10
+        },
+        "next": "ch2_timoci_ask_reason"
+      },
+      {
+        "text": "\"I brought the project brief. Could we review it together?\"",
+        "effects": {
+          "timoci": 8
+        },
+        "next": "ch2_timoci_document"
+      },
+      {
+        "text": "\"You need to approve this quickly. Six months have passed.\"",
+        "effects": {
+          "timoci": -15
+        },
+        "next": "ch2_timoci_pressure"
+      }
+    ]
+  },
+  "ch2_timoci_ask_reason": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "...The minister's approval has not been issued yet."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "Naitamba Island is iTaukei communal land. There is an opinion that land consent must come first."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "Our department submitted it, but that point was raised above us."
+      },
+      {
+        "speaker": "",
+        "text": "It sounds like an excuse, but it may be a real procedural issue."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"Which department needs to be coordinated with?\"",
+        "effects": {
+          "timoci": 10
+        },
+        "next": "ch2_timoci_collaborate"
+      },
+      {
+        "text": "\"Isn't that an internal issue? How long are we supposed to wait?\"",
+        "effects": {
+          "timoci": -8
+        },
+        "next": "ch2_timoci_frustrated"
+      }
+    ]
+  },
+  "ch2_timoci_pressure": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "We're trying to process it as quickly as possible."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "But there are internal review procedures, and I can't decide this alone."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "Let's stop here for today."
+      },
+      {
+        "speaker": "",
+        "text": "Vikash stands up from his seat."
+      }
+    ]
+  },
+  "ch2_timoci_document": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "...Let's see."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "Naitamba Island. The land status is missing here."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "The island is iTaukei communal land. The view from above is that land office review is needed before ministerial approval."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "We can submit it, but without that part, it is very likely to be returned."
+      },
+      {
+        "speaker": "",
+        "text": "A specific bottleneck has been identified."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"I'll check whether coordination with the land office is underway.\"",
+        "effects": {
+          "timoci": 12
+        },
+        "next": "ch2_timoci_progress"
+      }
+    ]
+  },
+  "ch2_timoci_collaborate": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "If the land office side is coordinated, we can move too."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "Once that is settled, ministerial approval should move quickly."
+      },
+      {
+        "speaker": "",
+        "text": "Vikash is speaking frankly."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"I'll share progress and work through this with you. Thank you.\"",
+        "effects": {
+          "timoci": 15
+        },
+        "next": "ch2_timoci_collaborate_end"
+      },
+      {
+        "text": "\"Understood. I'll come back when I have results.\"",
+        "effects": {
+          "timoci": 8
+        },
+        "next": "ch2_timoci_collaborate_end"
+      }
+    ]
+  },
+  "ch2_timoci_collaborate_end": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "Contact me when the land office coordination is done. Once that side is settled, we'll move immediately."
+      }
+    ]
+  },
+  "ch2_timoci_frustrated": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "We're doing what we can within the rules."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "Let's stop here for today."
+      },
+      {
+        "speaker": "",
+        "text": "The meeting is over."
+      }
+    ]
+  },
+  "ch2_timoci_progress": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "Once you coordinate with the land office, we'll review it again."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "Ms. Wati should know the contact there."
+      },
+      {
+        "speaker": "",
+        "text": "For the first time, there is concrete progress."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"Please tell me in advance if the documents need revisions.\"",
+        "effects": {
+          "timoci": 15
+        },
+        "next": "ch2_timoci_progress_proactive"
+      },
+      {
+        "text": "\"Understood. Thank you.\"",
+        "effects": {
+          "timoci": 8
+        },
+        "next": "ch2_timoci_progress_polite"
+      }
+    ]
+  },
+  "ch2_timoci_progress_proactive": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "Document revisions... yes, I'll organize them and send them to you."
+      },
+      {
+        "speaker": "",
+        "text": "Vikash smiles faintly. You have not seen that expression before."
+      }
+    ]
+  },
+  "ch2_timoci_progress_polite": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "...Yes. I'll contact you when there is a result."
+      },
+      {
+        "speaker": "",
+        "text": "For the first time, Vikash meets your eyes."
+      }
+    ]
+  },
+  "ch2_receptionist_2nd": {
+    "lines": [
+      {
+        "speaker": "Reception",
+        "text": "You're here? Mr. Vikash is at his desk."
+      }
+    ]
+  },
+  "ch2_timoci_after_consent": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "The land office contacted us. The consent form has been received."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "Ratu Josefa's signature... that didn't happen in the previous project."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "I think we can submit this for ministerial approval. This is enough."
+      }
+    ]
+  },
+  "ch2_receptionist_after": {
+    "lines": [
+      {
+        "speaker": "Reception",
+        "text": "All finished? Thank you for coming."
+      }
+    ]
+  },
+  "ch2_timoci_after_good": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "Contact me when the land office coordination is done. Once that side is settled, we'll move immediately."
+      }
+    ]
+  },
+  "ch2_timoci_after_frustrated": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "...I have nothing more to say today."
+      }
+    ]
+  },
+  "ch2_timoci_after_pressure": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "I've said everything I need to say. Next time, make an appointment."
+      }
+    ]
+  },
+  "ch3_wati_island_prep": {
+    "lines": [
+      {
+        "speaker": "Wati",
+        "text": "Did you meet Vikash? How did it go?"
+      },
+      {
+        "speaker": "Wati",
+        "text": "Land office consent is needed? I knew that would be the issue."
+      },
+      {
+        "speaker": "Wati",
+        "text": "But... that alone won't be enough. You need to go to the island too."
+      },
+      {
+        "speaker": "Wati",
+        "text": "Even if the government approves it, it means nothing if residents don't accept it."
+      },
+      {
+        "speaker": "Wati",
+        "text": "Before you go - do you know sevusevu? It's the ceremony of presenting yaqona when you first meet village elders."
+      },
+      {
+        "speaker": "Wati",
+        "text": "Going without yaqona is rude. Take some with you."
+      },
+      {
+        "speaker": "Wati",
+        "text": "There is a street vendor near Pacific City. You can buy it there."
+      },
+      {
+        "speaker": "Me",
+        "text": "Understood. I'll bring it."
+      }
+    ]
+  },
+  "ch1_wati_island_first": {
+    "lines": [
+      {
+        "speaker": "Wati",
+        "text": "You went to the island first?"
+      },
+      {
+        "speaker": "Wati",
+        "text": "Government approval isn't even done yet... what happened?"
+      },
+      {
+        "speaker": "Wati",
+        "text": "...For now, meeting Vikash is urgent. Go to the government building first."
+      }
+    ]
+  },
+  "ch3_wati_island_idle": {
+    "lines": [
+      {
+        "speaker": "Wati",
+        "text": "It seems to be moving along. Tell me if you need anything."
+      }
+    ]
+  },
+  "ch2_elevator": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "You are in front of the elevator. Which floor?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "3rd floor - National Planning (Vikash)",
+        "effects": {},
+        "next": "ch2_elevator_floor3"
+      },
+      {
+        "text": "5th floor - Land Office (land consent)",
+        "effects": {},
+        "next": "ch2_elevator_floor5"
+      }
+    ]
+  },
+  "ch2_elevator_floor3": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "Third floor, Ministry of National Planning."
+      }
+    ]
+  },
+  "ch2_elevator_floor5": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "Fifth floor, Land Office."
+      }
+    ]
+  },
+  "ch2_sela_no_referral": {
+    "lines": [
+      {
+        "speaker": "Sela",
+        "text": "Hello. I'm Sela, in charge of land consent."
+      },
+      {
+        "speaker": "Sela",
+        "text": "The Naitamba matter? Yes, that's under my area."
+      },
+      {
+        "speaker": "Sela",
+        "text": "The land consent form needs the village representative's signature. Ratu Josefa's signature will do."
+      },
+      {
+        "speaker": "Sela",
+        "text": "For reference, APAT is also running a water project in that area. James is the person there. If you coordinate with him, the process will be smoother."
+      },
+      {
+        "speaker": "Sela",
+        "text": "I'll give you the form in advance. Bring Ratu Josefa's signature and we can review it right away."
+      },
+      {
+        "speaker": "",
+        "text": "Sela hands you the form. Ratu Josefa's signature is needed."
+      },
+      {
+        "speaker": "Sela",
+        "text": "Whether through the village or APAT, come back when you're ready."
+      }
+    ]
+  },
+  "ch2_sela_first": {
+    "lines": [
+      {
+        "speaker": "Sela",
+        "text": "Hello. James contacted me. This is about Naitamba Island, right?"
+      },
+      {
+        "speaker": "Sela",
+        "text": "The process is not complicated."
+      },
+      {
+        "speaker": "Sela",
+        "text": "We need a village consent form signed by Ratu Josefa."
+      },
+      {
+        "speaker": "Sela",
+        "text": "Here is the form. Fill it out and submit it, and we can review it right away."
+      },
+      {
+        "speaker": "",
+        "text": "Sela hands you the form. Ratu Josefa's signature is needed."
+      }
+    ]
+  },
+  "ch2_sela_after": {
+    "lines": [
+      {
+        "speaker": "Sela",
+        "text": "I gave you the consent form, right? Bring Ratu Josefa's signature and I'll process it."
+      }
+    ]
+  },
+  "ch2_sela_consent_direct": {
+    "lines": [
+      {
+        "speaker": "Sela",
+        "text": "Hello. James contacted me. This is about Naitamba Island, right?"
+      },
+      {
+        "speaker": "Me",
+        "text": "Yes. I already received village consent from Ratu Josefa."
+      },
+      {
+        "speaker": "Sela",
+        "text": "...Already? This is the first time Ratu Josefa has signed."
+      },
+      {
+        "speaker": "Sela",
+        "text": "It includes a village management committee clause. This could set a good precedent."
+      },
+      {
+        "speaker": "Sela",
+        "text": "Submission complete. Review could finish within next week at the earliest."
+      },
+      {
+        "speaker": "Sela",
+        "text": "I'll also tell Vikash on the third floor. If he hears the land consent has been submitted, ministerial approval should move faster."
+      },
+      {
+        "speaker": "",
+        "text": "The land consent process has officially begun."
+      },
+      {
+        "speaker": "Sela",
+        "text": "At this point, we could hold a full stakeholder meeting."
+      },
+      {
+        "speaker": "Sela",
+        "text": "Vikash, James, and the village side - how about bringing everyone together at the KODA office?"
+      },
+      {
+        "speaker": "Me",
+        "text": "(Let's return to the KODA office and prepare the final meeting.)"
+      }
+    ]
+  },
+  "ch2_sela_consent_submit": {
+    "lines": [
+      {
+        "speaker": "Me",
+        "text": "I brought Ratu Josefa's signature."
+      },
+      {
+        "speaker": "Sela",
+        "text": "...Oh, you really got it."
+      },
+      {
+        "speaker": "Sela",
+        "text": "This is the first time Ratu Josefa has signed. He refused during the previous project."
+      },
+      {
+        "speaker": "Sela",
+        "text": "It includes a village management committee clause. This could set a good precedent."
+      },
+      {
+        "speaker": "Sela",
+        "text": "Submission complete. Review could finish within next week at the earliest."
+      },
+      {
+        "speaker": "Sela",
+        "text": "I'll also tell Vikash on the third floor. If he hears the land consent has been submitted, ministerial approval should move faster."
+      },
+      {
+        "speaker": "",
+        "text": "The land consent process has officially begun."
+      },
+      {
+        "speaker": "Sela",
+        "text": "At this point, we could hold a full stakeholder meeting."
+      },
+      {
+        "speaker": "Sela",
+        "text": "Vikash, James, and the village side - how about bringing everyone together at the KODA office?"
+      },
+      {
+        "speaker": "Me",
+        "text": "(Let's return to the KODA office and prepare the final meeting.)"
+      }
+    ]
+  },
+  "ch2_sela_all_done": {
+    "lines": [
+      {
+        "speaker": "Sela",
+        "text": "The documents have been submitted. Review is underway."
+      }
+    ]
+  }
+}

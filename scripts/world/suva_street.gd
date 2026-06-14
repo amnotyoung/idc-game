@@ -34,6 +34,8 @@ var _entering := false
 func _ready() -> void:
 	await get_tree().process_frame
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	LanguageManager.language_changed.connect(_on_language_changed)
+	_refresh_labels()
 	_update_vendor()
 	_update_street_npcs()
 	_check_final_meeting()
@@ -42,7 +44,7 @@ func _check_final_meeting() -> void:
 	# 동의서 제출 완료 → KODA 사무소 힌트 강조
 	if TrustManager.has_flag("ch4_consent_submitted") and not TrustManager.has_flag("ch5_started"):
 		var koda_hint: Label = get_node("Doors/DoorKODA/Hint")
-		koda_hint.text = "▲ KODA 사무소 [회의]"
+		koda_hint.text = LanguageManager.text("hint_koda_meeting")
 		# 깜빡임 효과
 		var tween = get_tree().create_tween().set_loops()
 		tween.tween_property(koda_hint, "modulate:a", 0.3, 0.6)
@@ -128,4 +130,14 @@ func _process(_delta: float) -> void:
 	if not _entering and not DialogueManager.is_active:
 		if py >= HARBOR["exit_y"] and abs(px - HARBOR["cx"]) <= HARBOR["gap"]:
 			_entering = true
-			SceneManager.go_to_with_sea_cut(HARBOR["scene"], HARBOR["spawn"], "수바에서 배로 2시간 — 나이탬바 섬")
+			SceneManager.go_to_with_sea_cut(HARBOR["scene"], HARBOR["spawn"], LanguageManager.text("sea_caption_suva_to_naitamba"))
+
+func _on_language_changed(_locale: String) -> void:
+	_refresh_labels()
+	_check_final_meeting()
+
+func _refresh_labels() -> void:
+	$Doors/DoorKODA/Hint.text = LanguageManager.text("hint_koda_office")
+	$Doors/DoorGovernment/Hint.text = LanguageManager.text("hint_government")
+	$Doors/DoorIntl/Hint.text = LanguageManager.text("hint_intl_org")
+	$HarborHint.text = LanguageManager.text("hint_harbor")

@@ -17,6 +17,8 @@ func _ready() -> void:
 	back_btn.pressed.connect(_on_back_pressed)
 	MobileInput.accept_pressed.connect(_on_mobile_accept_pressed)
 	MobileInput.back_pressed.connect(_on_mobile_back_pressed)
+	LanguageManager.language_changed.connect(_on_language_changed)
+	_refresh_static_texts()
 
 ## _input — GUI보다 먼저 키 입력을 잡음 (엔터키 누락 방지)
 func _input(event: InputEvent) -> void:
@@ -109,6 +111,13 @@ func _on_mobile_accept_pressed() -> void:
 func _on_mobile_back_pressed() -> void:
 	if DialogueManager.is_active and DialogueManager.can_go_back():
 		DialogueManager.go_back()
+
+func _on_language_changed(_locale: String) -> void:
+	_refresh_static_texts()
+
+func _refresh_static_texts() -> void:
+	back_btn.text = LanguageManager.text("dialogue_back_q")
+	back_btn.tooltip_text = LanguageManager.text("dialogue_back_tooltip")
 
 func _clear_choices() -> void:
 	for child in choices_container.get_children():

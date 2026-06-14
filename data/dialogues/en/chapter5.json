@@ -1,0 +1,464 @@
+{
+  "ch5_meeting_start": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "- KODA Office, final consultation -"
+      },
+      {
+        "speaker": "",
+        "text": "A small conference room is packed with chairs."
+      },
+      {
+        "speaker": "",
+        "text": "Coffee, Milo, and biscuits sit on one side of the table. In Fiji, meetings begin this way."
+      },
+      {
+        "speaker": "",
+        "text": "Vikash from National Planning sets down his briefcase and pours a cup of Milo."
+      },
+      {
+        "speaker": "",
+        "text": "Sela from the Land Office takes the seat beside him. James from APAT opens the door and enters."
+      },
+      {
+        "speaker": "",
+        "text": "Ratu Josefa and Lani have come up from Naitamba. Mere guides people to their seats."
+      },
+      {
+        "speaker": "",
+        "text": "For the first time, everyone involved in this project is in one room."
+      },
+      {
+        "speaker": "Mere",
+        "text": "There's coffee. Milo too. Let's talk while we drink."
+      },
+      {
+        "speaker": "",
+        "text": "A brief tea time. The awkward air begins to loosen."
+      }
+    ]
+  },
+  "ch5_mere_report": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "I'll start with the field findings."
+      },
+      {
+        "speaker": "Mere",
+        "text": "The main problems with Naitamba's existing water system are aging pipes and damaged storage tanks."
+      },
+      {
+        "speaker": "Mere",
+        "text": "The water source itself is stable. If we replace infrastructure and build a maintenance system, it can work."
+      },
+      {
+        "speaker": "Mere",
+        "text": "The key is who manages it after installation. If we build and leave like ten years ago, the result will be the same."
+      }
+    ]
+  },
+  "ch5_timoci_response_good": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "I will share National Planning's review result."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "A project plan that includes a village-based management model can be approved."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "I'm glad the direction discussed in our previous meeting was reflected."
+      }
+    ]
+  },
+  "ch5_timoci_response_neutral": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "The documents arrived, more or less..."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "The village management plan is still weak. Supplementary material is needed."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "At this stage, I can only recommend conditional approval."
+      }
+    ]
+  },
+  "ch5_timoci_response_bad": {
+    "lines": [
+      {
+        "speaker": "Vikash",
+        "text": "Honestly -"
+      },
+      {
+        "speaker": "Vikash",
+        "text": "I don't see how this plan is different from ten years ago."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "Approval within the deadline will be difficult."
+      }
+    ]
+  },
+  "ch5_james_response_good": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "APAT has confirmed participation in joint monitoring."
+      },
+      {
+        "speaker": "James",
+        "text": "We can also support the village technician training program."
+      },
+      {
+        "speaker": "James",
+        "text": "This project may really be different."
+      }
+    ]
+  },
+  "ch5_james_response_neutral": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "APAT can provide technical advice."
+      },
+      {
+        "speaker": "James",
+        "text": "But joint implementation needs further discussion."
+      },
+      {
+        "speaker": "James",
+        "text": "There is progress, but it is not complete."
+      }
+    ]
+  },
+  "ch5_james_response_bad": {
+    "lines": [
+      {
+        "speaker": "James",
+        "text": "Honestly, I'm worried the community foundation is weak."
+      },
+      {
+        "speaker": "James",
+        "text": "APAT may need to reconsider participation."
+      },
+      {
+        "speaker": "James",
+        "text": "This is difficult as it stands."
+      }
+    ]
+  },
+  "ch5_sela_response": {
+    "lines": [
+      {
+        "speaker": "Sela",
+        "text": "Land Office speaking."
+      },
+      {
+        "speaker": "Sela",
+        "text": "Ratu Josefa's signature has been confirmed. We can process the land use consent."
+      }
+    ]
+  },
+  "ch5_sela_response_no_sign": {
+    "lines": [
+      {
+        "speaker": "Sela",
+        "text": "Land Office speaking."
+      },
+      {
+        "speaker": "Sela",
+        "text": "We still have not received the village representative's signature."
+      },
+      {
+        "speaker": "Sela",
+        "text": "Without land use consent, the project cannot proceed."
+      }
+    ]
+  },
+  "ch5_final_choice": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "All reports are finished."
+      },
+      {
+        "speaker": "",
+        "text": "Now it is your turn to state your position."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"We will proceed with a model the village operates directly. We need everyone's cooperation.\"",
+        "effects": {
+          "mere": 15,
+          "timoci": 15,
+          "james": 10,
+          "lani": 10
+        },
+        "next": "ch5_resolve"
+      },
+      {
+        "text": "\"We will do our best within what is realistically possible.\"",
+        "effects": {
+          "mere": 5,
+          "timoci": 5,
+          "james": 5
+        },
+        "next": "ch5_resolve"
+      }
+    ]
+  },
+  "ch5_resolve": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "The meeting ends."
+      },
+      {
+        "speaker": "",
+        "text": "Suva's afternoon sunlight enters through the window."
+      }
+    ]
+  },
+  "ch5_ending_true": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "- One year later. Naitamba Island. -"
+      },
+      {
+        "speaker": "",
+        "text": "A new water tank stands in the village center. Pipes stretch through the village.",
+        "cue": "true_crowd"
+      },
+      {
+        "speaker": "",
+        "text": "People gather in front of the tank. It is the completion ceremony."
+      },
+      {
+        "speaker": "",
+        "text": "Vikash takes the completion certificate from his briefcase. James hangs the APAT flag."
+      },
+      {
+        "speaker": "",
+        "text": "Sela stamps the completed land consent document."
+      },
+      {
+        "speaker": "",
+        "text": "Mere takes field photos with her camera."
+      },
+      {
+        "speaker": "",
+        "text": "Ratu Josefa steps forward. The village falls quiet.",
+        "cue": "true_ratu_forward"
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "We waited ten years."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "This time... we are the owners."
+      },
+      {
+        "speaker": "",
+        "text": "Ratu pours yaqona into the tanoa. A blessing sevusevu begins.",
+        "cue": "true_sevusevu"
+      },
+      {
+        "speaker": "",
+        "text": "The yaqona cup goes around. Everyone claps once, drinks in one go, and claps three times."
+      },
+      {
+        "speaker": "",
+        "text": "Lani stands in front of the tank valve.",
+        "cue": "true_lani_valve"
+      },
+      {
+        "speaker": "Lani",
+        "text": "...Can I turn it?"
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Turn it."
+      },
+      {
+        "speaker": "",
+        "text": "Lani opens the valve. Water flows from the pipe.",
+        "cue": "true_water_flow"
+      },
+      {
+        "speaker": "",
+        "text": "Children cheer. Someone begins to clap."
+      },
+      {
+        "speaker": "",
+        "text": "Village youth begin a meke, a traditional dance. Drums echo.",
+        "cue": "true_meke"
+      },
+      {
+        "speaker": "Mere",
+        "text": "...You did well. Truly."
+      },
+      {
+        "speaker": "James",
+        "text": "This time, it worked properly."
+      },
+      {
+        "speaker": "Vikash",
+        "text": "I finally have something good to report to the minister."
+      },
+      {
+        "speaker": "",
+        "text": "Wind blows. Palm trees sway."
+      },
+      {
+        "speaker": "",
+        "text": "A sign beside the water tank reads:"
+      },
+      {
+        "speaker": "",
+        "text": "\"Naitamba Village Water Facility - Managed by the Village Committee\"",
+        "cue": "true_committee_sign"
+      },
+      {
+        "speaker": "",
+        "text": "This time, the village is the owner."
+      }
+    ]
+  },
+  "ch5_ending_normal": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "- One year later. Naitamba Island. -"
+      },
+      {
+        "speaker": "",
+        "text": "Construction is underway. The tank foundation is set, and pipe work is in progress.",
+        "cue": "normal_construction"
+      },
+      {
+        "speaker": "",
+        "text": "Part of the budget was cut. The schedule slipped. But the work did not stop."
+      },
+      {
+        "speaker": "",
+        "text": "Villagers are at the construction site. This time, they are not just watching; they are participating.",
+        "cue": "normal_villagers_site"
+      },
+      {
+        "speaker": "Mere",
+        "text": "It's not 100 percent. But it is definitely different from ten years ago."
+      },
+      {
+        "speaker": "Mere",
+        "text": "This is a good result. I mean that."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...It is not finished yet. But this time, perhaps we can hope."
+      },
+      {
+        "speaker": "Lani",
+        "text": "When it is completed, the village will hold a feast. You have to come."
+      },
+      {
+        "speaker": "",
+        "text": "Wind blows. Palm trees sway."
+      },
+      {
+        "speaker": "",
+        "text": "It is not perfect. But the direction is right."
+      },
+      {
+        "speaker": "",
+        "text": "And you are not alone.",
+        "cue": "normal_not_alone"
+      }
+    ]
+  },
+  "ch5_ending_bad": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "- Six months later. KODA Office. -"
+      },
+      {
+        "speaker": "",
+        "text": "Unread emails pile up on the desk."
+      },
+      {
+        "speaker": "",
+        "text": "The project was not approved. The budget was pushed to the following year."
+      },
+      {
+        "speaker": "",
+        "text": "Stakeholders contact you less and less. Meetings are no longer scheduled."
+      },
+      {
+        "speaker": "",
+        "text": "Naitamba Island's old water pipes remain as they were. When the dry season comes, the same problem will repeat."
+      },
+      {
+        "speaker": "",
+        "text": "You open the desk drawer. Your predecessor's memo is still there.",
+        "cue": "bad_drawer"
+      },
+      {
+        "speaker": "Memo",
+        "text": "\"Naitamba Island project - good luck. Sorry.\""
+      },
+      {
+        "speaker": "",
+        "text": "You pick up a pen. You write a new memo.",
+        "cue": "bad_new_memo"
+      },
+      {
+        "speaker": "Memo",
+        "text": "\"Naitamba Island project - good luck. I'm sorry.\""
+      },
+      {
+        "speaker": "",
+        "text": "You put the memo into the drawer for the next person."
+      },
+      {
+        "speaker": "",
+        "text": "The same ending as ten years ago. Someone else will come again."
+      },
+      {
+        "speaker": "",
+        "text": "That memo will still be in the drawer then.",
+        "cue": "bad_memo_remains"
+      }
+    ]
+  },
+  "ch5_credits": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "- Aid World -"
+      },
+      {
+        "speaker": "",
+        "text": "The field of international development cooperation is not on paper."
+      },
+      {
+        "speaker": "",
+        "text": "Trust is not built with a single handshake."
+      },
+      {
+        "speaker": "",
+        "text": "Thank you for playing to the end."
+      }
+    ]
+  }
+}

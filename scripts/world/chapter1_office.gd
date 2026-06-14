@@ -25,6 +25,8 @@ const BRIEFING_ENDS = [
 func _ready() -> void:
 	await get_tree().process_frame
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	LanguageManager.language_changed.connect(_on_language_changed)
+	_refresh_labels()
 
 	if TrustManager.has_flag("ch1_intro_done"):
 		_setup_free_roam()
@@ -118,7 +120,7 @@ func _send_progress_email() -> void:
 
 	if eligible.size() == 0:
 		DialogueManager.dialogues["ch1_email_result"] = {
-			"lines": [{"speaker": "", "text": "아직 보낼 사람이 없다. 먼저 이해관계자들을 만나야 한다."}]
+			"lines": [{"speaker": "", "text": LanguageManager.text("email_no_recipient")}]
 		}
 		await get_tree().create_timer(0.3).timeout
 		DialogueManager.start("ch1_email_result")
@@ -140,39 +142,6 @@ func _send_progress_email() -> void:
 
 ## 신뢰도 구간: 0~25 냉담 / 26~50 사무적 / 51~70 호의적 / 71+ 협력적
 func _get_email_reply(npc_id: String, npc_name: String, trust: int) -> String:
-	# NPC별 × 신뢰 구간별 답장
-	var replies = {
-		"mere": {
-			"cold":  "에게 메일을 보냈다. 읽음 표시만 떴다.",
-			"formal":"에게서 답장이 왔다. \"확인했습니다.\"",
-			"warm":  "에게서 답장이 왔다. \"고마워요. 현장 조사 결과 정리되면 공유할게요.\"",
-			"ally":  "에게서 답장이 왔다. \"좋은 소식이네요! 다음 주에 만나서 같이 정리해요. ☺\"",
-		},
-		"timoci": {
-			"cold":  "에게 메일을 보냈다. 자동 부재중 답장이 돌아왔다.",
-			"formal":"에게서 답장이 왔다. \"수신 확인합니다.\"",
-			"warm":  "에게서 답장이 왔다. \"서류 확인했습니다. 궁금한 점 있으면 연락주세요.\"",
-			"ally":  "에게서 답장이 왔다. \"진전이 있네요. 장관 보고 일정 조율해볼게요.\"",
-		},
-		"ratu_josefa": {
-			"cold":  "에게 Lani를 통해 전달했다. 답이 없었다.",
-			"formal":"에게서 Lani를 통해 전달이 왔다. \"알겠소.\"",
-			"warm":  "에게서 Lani를 통해 전달이 왔다. \"다음에 올 때 양고나 가져오시오.\"",
-			"ally":  "에게서 Lani를 통해 전달이 왔다. \"마을 사람들도 기대하고 있소.\"",
-		},
-		"lani": {
-			"cold":  "에게 메일을 보냈다. 읽지 않은 것 같다.",
-			"formal":"에게서 답장이 왔다. \"네, 알겠어요.\"",
-			"warm":  "에게서 답장이 왔다. \"마을 사람들한테 전할게요. 고마워요.\"",
-			"ally":  "에게서 답장이 왔다. \"Josua 삼촌이랑 교육 일정 논의 중이에요!\"",
-		},
-		"james": {
-			"cold":  "에게 메일을 보냈다. 답장이 없다.",
-			"formal":"에게서 답장이 왔다. \"Noted. Thanks.\"",
-			"warm":  "에게서 답장이 왔다. \"APAT 쪽도 업데이트할게요. 진전 있으면 알려주세요.\"",
-			"ally":  "에게서 답장이 왔다. \"Great progress! 기술자 교육 커리큘럼 초안 보낼게요.\"",
-		},
-	}
 	var tier = "cold"
 	if trust >= 71:
 		tier = "ally"
@@ -181,8 +150,7 @@ func _get_email_reply(npc_id: String, npc_name: String, trust: int) -> String:
 	elif trust >= 26:
 		tier = "formal"
 
-	var npc_replies = replies.get(npc_id, {})
-	return npc_name + npc_replies.get(tier, "에게서 답장이 왔다.")
+	return npc_name + LanguageManager.email_reply(npc_id, tier)
 
 func _mere_walks_in() -> void:
 	# Mere가 플레이어 바로 옆으로 와서 대화 (카메라에 둘 다 잡히게)
@@ -207,3 +175,18 @@ func _unlock_exit() -> void:
 	var hint: Label = get_parent().get_node("ExitDoor/ExitHint")
 	var tween = get_tree().create_tween()
 	tween.tween_property(hint, "modulate:a", 1.0, 0.8)
+
+func _on_language_changed(_locale: String) -> void:
+	_refresh_labels()
+
+func _refresh_labels() -> void:
+	var root := get_parent()
+	var exit_hint: Label = root.get_node_or_null("ExitDoor/ExitHint")
+	if exit_hint:
+		exit_hint.text = LanguageManager.text("hint_exit_up")
+	var project_file_label: Label = root.get_node_or_null("ProjectFile/Label")
+	if project_file_label:
+		project_file_label.text = LanguageManager.text("hint_project_file")
+	var computer_label: Label = root.get_node_or_null("Computer/Label")
+	if computer_label:
+		computer_label.text = LanguageManager.text("hint_computer")

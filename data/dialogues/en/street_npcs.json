@@ -1,0 +1,436 @@
+{
+  "bula_man_1": {
+    "lines": [
+      {
+        "speaker": "Man",
+        "text": "Bula, bro! Have you played rugby?"
+      },
+      {
+        "speaker": "Man",
+        "text": "This is Albert Park. The most famous sports ground in Fiji."
+      },
+      {
+        "speaker": "Man",
+        "text": "First time in Suva? Follow Victoria Parade and you'll see Parliament and the Grand Pacific Hotel."
+      },
+      {
+        "speaker": "Man",
+        "text": "Fijians love rugby, seriously. Want to play a round? haha"
+      }
+    ]
+  },
+  "bula_man_rugby": {
+    "lines": [
+      {
+        "speaker": "Man",
+        "text": "Ah, you're from KODA! Working on the Naitamba project, right?"
+      },
+      {
+        "speaker": "Man",
+        "text": "Rugby is the same - teamwork is everything, bro."
+      },
+      {
+        "speaker": "Man",
+        "text": "If you want to work well with island people, don't charge ahead alone. You have to pass."
+      },
+      {
+        "speaker": "Man",
+        "text": "I learned that from rugby, really. haha"
+      }
+    ]
+  },
+  "bula_woman_1": {
+    "lines": [
+      {
+        "speaker": "Woman",
+        "text": "Bula vinaka!"
+      },
+      {
+        "speaker": "Woman",
+        "text": "Nice weather today. Good thing it isn't raining."
+      },
+      {
+        "speaker": "Woman",
+        "text": "Are you from Naitamba Island? I have relatives there too."
+      }
+    ]
+  },
+  "bula_woman_2": {
+    "lines": [
+      {
+        "speaker": "Woman",
+        "text": "Bula! Where are you from?"
+      },
+      {
+        "speaker": "Woman",
+        "text": "First time in Fiji? People here are kind."
+      },
+      {
+        "speaker": "Woman",
+        "text": "Vinaka vakalevu means thank you very much. Good phrase to remember. haha"
+      }
+    ]
+  },
+  "street_vendor_1": {
+    "lines": [
+      {
+        "speaker": "Vendor",
+        "text": "Bula bro! Welcome to Pacific City."
+      },
+      {
+        "speaker": "Vendor",
+        "text": "We sell everything here. But if you're going to an island village, come back."
+      },
+      {
+        "speaker": "Vendor",
+        "text": "When you first meet a village elder, it's proper to bring yaqona. Sevusevu - heard of it?"
+      },
+      {
+        "speaker": "Vendor",
+        "text": "That Naitamba Island project - I hope it happens soon. My friend lives there."
+      }
+    ]
+  },
+  "street_vendor_yangona": {
+    "lines": [
+      {
+        "speaker": "Vendor",
+        "text": "Bula bro! What are you looking for in Pacific City?"
+      },
+      {
+        "speaker": "Vendor",
+        "text": "Visiting a village? Then you need a gift. What will it be?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "Yaqona root (traditional; elders prefer it)",
+        "effects": {},
+        "next": "street_vendor_buy_root"
+      },
+      {
+        "text": "Yaqona powder (easy to use)",
+        "effects": {},
+        "next": "street_vendor_buy_powder"
+      },
+      {
+        "text": "Mango (fresh fruit)",
+        "effects": {},
+        "next": "street_vendor_buy_mango"
+      },
+      {
+        "text": "\"I won't buy yet.\"",
+        "effects": {},
+        "next": "street_vendor_yangona_pass"
+      }
+    ]
+  },
+  "street_vendor_buy_root": {
+    "lines": [
+      {
+        "speaker": "Vendor",
+        "text": "Root! Good choice, bro."
+      },
+      {
+        "speaker": "Vendor",
+        "text": "Village elders prefer the traditional way. You pound it yourself for sevusevu."
+      },
+      {
+        "speaker": "Vendor",
+        "text": "I'll pick a good one for you. Here. Vinaka!"
+      },
+      {
+        "speaker": "",
+        "text": "You packed the yaqona root."
+      }
+    ]
+  },
+  "street_vendor_buy_powder": {
+    "lines": [
+      {
+        "speaker": "Vendor",
+        "text": "Powder? It is convenient, but..."
+      },
+      {
+        "speaker": "Vendor",
+        "text": "Honestly, village elders prefer root over powder."
+      },
+      {
+        "speaker": "Vendor",
+        "text": "Still, better than nothing. Here you go."
+      },
+      {
+        "speaker": "",
+        "text": "You packed the yaqona powder."
+      }
+    ]
+  },
+  "street_vendor_buy_mango": {
+    "lines": [
+      {
+        "speaker": "Vendor",
+        "text": "Mango? Tastes good. But..."
+      },
+      {
+        "speaker": "Vendor",
+        "text": "For sevusevu, yaqona is the proper gift. Mango is just a snack."
+      },
+      {
+        "speaker": "Vendor",
+        "text": "Well, better than showing up empty-handed. Here you go."
+      },
+      {
+        "speaker": "",
+        "text": "You packed the mango."
+      }
+    ]
+  },
+  "street_vendor_yangona_pass": {
+    "lines": [
+      {
+        "speaker": "Vendor",
+        "text": "No worries. Come back later!"
+      }
+    ]
+  },
+  "street_vendor_after": {
+    "lines": [
+      {
+        "speaker": "Vendor",
+        "text": "Give them the yaqona well! Come back to Pacific City anytime, bro."
+      }
+    ]
+  },
+  "police_1": {
+    "lines": [
+      {
+        "speaker": "Police Officer",
+        "text": "Bula! Welcome to Fiji."
+      },
+      {
+        "speaker": "Police Officer",
+        "text": "Tell me if you need help."
+      },
+      {
+        "speaker": "Police Officer",
+        "text": "There are some protesters near the government building these days. Be careful."
+      }
+    ]
+  },
+  "hindi_woman_1": {
+    "lines": [
+      {
+        "speaker": "Woman",
+        "text": "Namaste."
+      },
+      {
+        "speaker": "Woman",
+        "text": "Where are you from?"
+      },
+      {
+        "speaker": "Woman",
+        "text": "Our shop is across the street. Stop by later and I'll make you tea."
+      }
+    ]
+  },
+  "hindi_man_1": {
+    "lines": [
+      {
+        "speaker": "Man",
+        "text": "Good morning."
+      },
+      {
+        "speaker": "Man",
+        "text": "You work for KODA? The Naitamba Island project, right?"
+      },
+      {
+        "speaker": "Man",
+        "text": "We Fijians know that island's story well."
+      },
+      {
+        "speaker": "Man",
+        "text": "If you're talking to government... be careful with Vikash. He's difficult."
+      }
+    ]
+  },
+  "bula_generic": {
+    "lines": [
+      {
+        "speaker": "Resident",
+        "text": "Bula!"
+      },
+      {
+        "speaker": "Resident",
+        "text": "Have a good day, bro."
+      }
+    ]
+  },
+  "hindi_man_after_timoci": {
+    "lines": [
+      {
+        "speaker": "Man",
+        "text": "Did you meet Vikash? How was he?"
+      },
+      {
+        "speaker": "Man",
+        "text": "He has his reasons too. A project went badly on his watch before."
+      },
+      {
+        "speaker": "Man",
+        "text": "Bring clean documents. He likes that."
+      }
+    ]
+  },
+  "police_after_island": {
+    "lines": [
+      {
+        "speaker": "Police Officer",
+        "text": "Back from Naitamba?"
+      },
+      {
+        "speaker": "Police Officer",
+        "text": "Good people there. But be careful - if you break a promise, there won't be a second chance."
+      }
+    ]
+  },
+  "bula_woman_after_ch4": {
+    "lines": [
+      {
+        "speaker": "Woman",
+        "text": "Bula! You look busy these days."
+      },
+      {
+        "speaker": "Woman",
+        "text": "I heard you met people from the international organization too. Suva is small; news travels fast. haha"
+      },
+      {
+        "speaker": "Woman",
+        "text": "I hope it works out. Naitamba people have waited a long time."
+      }
+    ]
+  },
+  "island_elder_1": {
+    "lines": [
+      {
+        "speaker": "Elder",
+        "text": "Bula. You came from Suva?"
+      },
+      {
+        "speaker": "Elder",
+        "text": "Here they come again. People came before too, ten years ago."
+      },
+      {
+        "speaker": "Elder",
+        "text": "They built a water tank, but no one maintained it, so we can't use it now."
+      },
+      {
+        "speaker": "Elder",
+        "text": "Water does come out. But in the dry season the pressure gets weak and it is difficult."
+      },
+      {
+        "speaker": "Elder",
+        "text": "We asked for repairs, but no one came from Suva. Ten years now."
+      }
+    ]
+  },
+  "island_elder_after": {
+    "lines": [
+      {
+        "speaker": "Elder",
+        "text": "I heard Ratu signed? That's a first."
+      },
+      {
+        "speaker": "Elder",
+        "text": "Maybe this time is different..."
+      }
+    ]
+  },
+  "island_child_1": {
+    "lines": [
+      {
+        "speaker": "Child",
+        "text": "Bula! Where are you from?"
+      },
+      {
+        "speaker": "Child",
+        "text": "Suva? They say schools there are big. Our school is good too. Our teacher is fun."
+      },
+      {
+        "speaker": "Child",
+        "text": "But sometimes the tap water doesn't come out. Then my mother worries."
+      },
+      {
+        "speaker": "Child",
+        "text": "Do you like rugby? Someday I want to go to Suva and play at Albert Park!"
+      }
+    ]
+  },
+  "island_fisher_1": {
+    "lines": [
+      {
+        "speaker": "Young Man",
+        "text": "Bula. I work as a fisher."
+      },
+      {
+        "speaker": "Young Man",
+        "text": "Ten years ago, I was excited when they said they would build a new tank."
+      },
+      {
+        "speaker": "Young Man",
+        "text": "They built it, but there was no maintenance contract, so when pipes burst, we couldn't repair them."
+      },
+      {
+        "speaker": "Young Man",
+        "text": "We asked Suva to send a technician, but they said there was no budget. That was ten years ago."
+      },
+      {
+        "speaker": "Young Man",
+        "text": "If this happens the same way again, better to let the village manage it ourselves."
+      }
+    ]
+  },
+  "island_fisher_after": {
+    "lines": [
+      {
+        "speaker": "Young Man",
+        "text": "The village will manage it directly? Brother Josua knows some technical work."
+      },
+      {
+        "speaker": "Young Man",
+        "text": "If that happens, I'll help too. I can connect pipes at least."
+      }
+    ]
+  },
+  "island_woman_1": {
+    "lines": [
+      {
+        "speaker": "Woman",
+        "text": "Bula! I'm coming back from the market."
+      },
+      {
+        "speaker": "Woman",
+        "text": "Life on this island is not bad. We have the sea and good people."
+      },
+      {
+        "speaker": "Woman",
+        "text": "But the water system is old. When pressure drops in the dry season, it is inconvenient."
+      },
+      {
+        "speaker": "Woman",
+        "text": "In Suva you don't worry about that, right? Here, infrastructure maintenance is slow."
+      }
+    ]
+  },
+  "island_woman_after": {
+    "lines": [
+      {
+        "speaker": "Woman",
+        "text": "If a real water tank comes... I won't have to worry about laundry."
+      },
+      {
+        "speaker": "Woman",
+        "text": "It sounds like a dream. But people say this time is different."
+      }
+    ]
+  }
+}

@@ -6,6 +6,9 @@ extends Node
 func _ready() -> void:
 	print("\n===== HEADLESS SMOKE TEST =====")
 	var ok := true
+	LanguageManager.current_locale = LanguageManager.DEFAULT_LOCALE
+	TranslationServer.set_locale(LanguageManager.DEFAULT_LOCALE)
+	DialogueManager._load_dialogues()
 
 	# [1] 대화 데이터가 실제 엔진에서 파싱/로드되는가
 	var n := DialogueManager.dialogues.size()
@@ -53,6 +56,34 @@ func _ready() -> void:
 	var basic_pt: int = basic["choices"][0]["effects"]["ratu_josefa"]
 	print("[3] 빈손 인사 점수: %d (기대: 12)" % basic_pt)
 	if basic_pt != 12: ok = false
+
+	# [7] 영어 대화 데이터도 같은 구조로 로드되는가
+	LanguageManager.current_locale = "en"
+	TranslationServer.set_locale("en")
+	DialogueManager._load_dialogues()
+	var en_n := DialogueManager.dialogues.size()
+	print("[4] English dialogue load: %d nodes" % en_n)
+	if en_n != n:
+		print("    X English dialogue node count mismatch"); ok = false
+	var en_intro := ""
+	for l in DialogueManager.dialogues["ch1_arrival"].get("lines", []):
+		en_intro += l.get("text", "")
+	if "Suva, Fiji" not in en_intro:
+		print("    X English ch1_arrival text not loaded"); ok = false
+
+	# [8] 타이틀 화면 언어 선택 UI가 초기화되는가
+	LanguageManager.current_locale = LanguageManager.DEFAULT_LOCALE
+	TranslationServer.set_locale(LanguageManager.DEFAULT_LOCALE)
+	var title_packed: PackedScene = load("res://scenes/ui/title_screen.tscn")
+	var title_scene: Control = title_packed.instantiate()
+	await get_tree().process_frame
+	get_tree().root.add_child(title_scene)
+	await get_tree().process_frame
+	var subtitle_label: Label = title_scene.get_node("Subtitle")
+	print("[5] Title language toggle: %s" % subtitle_label.text)
+	if "EN" not in subtitle_label.text:
+		print("    X title language toggle not initialized"); ok = false
+	title_scene.queue_free()
 
 	print("===== %s =====\n" % ("ALL PASS" if ok else "FAIL"))
 	get_tree().quit(0 if ok else 1)

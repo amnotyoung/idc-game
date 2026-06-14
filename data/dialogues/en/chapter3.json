@@ -1,0 +1,958 @@
+{
+  "ch3_arrive": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "- Naitamba Island -"
+      },
+      {
+        "speaker": "",
+        "text": "Two hours by boat from Suva. The main island of the group."
+      },
+      {
+        "speaker": "",
+        "text": "This is where the water project stopped ten years ago."
+      }
+    ]
+  },
+  "ch3_arrive_early": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "- Naitamba Island -"
+      },
+      {
+        "speaker": "",
+        "text": "Two hours by boat from Suva. The main island of the group."
+      },
+      {
+        "speaker": "",
+        "text": "You came before government approval. You are underprepared."
+      }
+    ]
+  },
+  "ch3_ratu_greet_prepared": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Welcome."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "They said you came from KODA."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"I brought yaqona.\" (You present the bundle)",
+        "effects": {
+          "ratu_josefa": 20
+        },
+        "next": "ch3_sevusevu_good"
+      }
+    ]
+  },
+  "ch3_ratu_greet_powder": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Welcome."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "They said you came from KODA."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"I brought yaqona.\" (You present the powder)",
+        "effects": {
+          "ratu_josefa": 20
+        },
+        "next": "ch3_sevusevu_powder"
+      }
+    ]
+  },
+  "ch3_sevusevu_powder": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...Powder. Some people use this nowadays."
+      },
+      {
+        "speaker": "",
+        "text": "It was not the traditional form, but Ratu accepts it."
+      },
+      {
+        "speaker": "",
+        "text": "The powder is mixed with water in the tanoa. The sevusevu begins."
+      },
+      {
+        "speaker": "",
+        "text": "The bilo goes around. One clap before receiving, drink, then three claps."
+      },
+      {
+        "speaker": "",
+        "text": "A quiet time passes."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "There are things I remember. The promise ten years ago. Nothing remained."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Which number are you?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"The third. I'm sorry.\"",
+        "effects": {
+          "ratu_josefa": 15
+        },
+        "next": "ch3_sevusevu_end"
+      },
+      {
+        "text": "\"This time will be different.\"",
+        "effects": {
+          "ratu_josefa": 5
+        },
+        "next": "ch3_sevusevu_end"
+      }
+    ]
+  },
+  "ch3_ratu_greet_mango": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Welcome."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "They said you came from KODA."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"I brought a gift.\" (You present the mango)",
+        "effects": {
+          "ratu_josefa": 15
+        },
+        "next": "ch3_ratu_mango_react"
+      }
+    ]
+  },
+  "ch3_ratu_mango_react": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...Mango."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Usually, yaqona is what you bring here."
+      },
+      {
+        "speaker": "",
+        "text": "An awkward silence passes."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "But you did not come empty-handed from far away. I appreciate the gesture."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Sit. I should at least hear you out."
+      },
+      {
+        "speaker": "",
+        "text": "There was no yaqona, but Ratu opens a space for conversation."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "There are things I remember. The promise ten years ago. Nothing remained."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Which number are you?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"The third. I'm sorry.\"",
+        "effects": {
+          "ratu_josefa": 15
+        },
+        "next": "ch3_sevusevu_end"
+      },
+      {
+        "text": "\"This time will be different.\"",
+        "effects": {
+          "ratu_josefa": 5
+        },
+        "next": "ch3_sevusevu_end"
+      }
+    ]
+  },
+  "ch3_ratu_greet_basic": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Welcome."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "They said you came from KODA."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"Hello. It's an honor to meet you.\"",
+        "effects": {
+          "ratu_josefa": 12
+        },
+        "next": "ch3_sevusevu_miss"
+      }
+    ]
+  },
+  "ch3_sevusevu_good": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...You came knowing the custom."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Come in. Let us sit together."
+      },
+      {
+        "speaker": "",
+        "text": "Everyone sits in a circle inside the bure. A tanoa, a wooden bowl, rests in the center."
+      },
+      {
+        "speaker": "",
+        "text": "You hand over the yaqona root. A young man kneels and presents it to Ratu."
+      },
+      {
+        "speaker": "",
+        "text": "Ratu nods. The young man begins to pound the yaqona."
+      },
+      {
+        "speaker": "",
+        "text": "The powdered yaqona is strained through cloth and mixed with water in the tanoa. A grey-brown liquid fills it."
+      },
+      {
+        "speaker": "",
+        "text": "A bilo, a half-coconut cup, is offered. You clap once before receiving it."
+      },
+      {
+        "speaker": "",
+        "text": "You drink it in one go. Bitter, earthy. Your tongue tingles slightly."
+      },
+      {
+        "speaker": "",
+        "text": "You clap three times. The bilo moves to the next person."
+      },
+      {
+        "speaker": "",
+        "text": "Quiet time passes. No one is in a hurry."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "There are things I remember. The promise ten years ago. Nothing remained."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Which number are you?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"The third. I'm sorry.\"",
+        "effects": {
+          "ratu_josefa": 15
+        },
+        "next": "ch3_sevusevu_end"
+      },
+      {
+        "text": "\"This time will be different.\"",
+        "effects": {
+          "ratu_josefa": 5
+        },
+        "next": "ch3_sevusevu_end"
+      }
+    ]
+  },
+  "ch3_sevusevu_end": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...I see."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "We have more to say, but ask the village people too."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Lani. That young person will have something to tell you."
+      },
+      {
+        "speaker": "",
+        "text": "Ratu points toward Lani."
+      }
+    ]
+  },
+  "ch3_sevusevu_miss": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...I see."
+      },
+      {
+        "speaker": "",
+        "text": "A short silence passes."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Sit. You came a long way, so I should hear you out."
+      },
+      {
+        "speaker": "",
+        "text": "There was no yaqona, but a place for conversation opens."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "There are things I remember. The promise ten years ago. Nothing remained."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Which number are you?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"The third. I'm sorry.\"",
+        "effects": {
+          "ratu_josefa": 15
+        },
+        "next": "ch3_sevusevu_end"
+      },
+      {
+        "text": "\"This time will be different.\"",
+        "effects": {
+          "ratu_josefa": 5
+        },
+        "next": "ch3_sevusevu_end"
+      }
+    ]
+  },
+  "ch3_lani_not_yet": {
+    "lines": [
+      {
+        "speaker": "Lani",
+        "text": "...Greet Ratu first. Here, that's the order."
+      }
+    ]
+  },
+  "ch3_village_talk": {
+    "lines": [
+      {
+        "speaker": "Lani",
+        "text": "...You're the person from Suva, right?"
+      },
+      {
+        "speaker": "Lani",
+        "text": "Let me ask one thing. This project - did anyone ask us? Whether this is what we want?"
+      },
+      {
+        "speaker": "Lani",
+        "text": "The news always says 'community demand confirmed.'"
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"I only saw it in the file. I came to hear it directly.\"",
+        "effects": {
+          "lani": 15,
+          "ratu_josefa": 10
+        },
+        "next": "ch3_lani_honest"
+      },
+      {
+        "text": "\"It is report-based, but I want to hear it again.\"",
+        "effects": {
+          "lani": 10,
+          "ratu_josefa": 8
+        },
+        "next": "ch3_lani_cautious"
+      },
+      {
+        "text": "\"We have resident survey results.\"",
+        "effects": {
+          "lani": 0,
+          "ratu_josefa": 0
+        },
+        "next": "ch3_lani_deflect"
+      }
+    ]
+  },
+  "ch3_lani_honest": {
+    "lines": [
+      {
+        "speaker": "Lani",
+        "text": "...You're the first person to say it like that."
+      },
+      {
+        "speaker": "",
+        "text": "Lani glances at Ratu."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "What we want is not simply a new tank."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Ten years ago they said they would build a tank too. When it broke, no one could fix it. The pipes are still old, and every dry season the same problem returns."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "What we want is this: someone who remains responsible afterward."
+      },
+      {
+        "speaker": "",
+        "text": "It is hard to answer."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"This time, we'll build a structure the village can manage directly.\"",
+        "effects": {
+          "ratu_josefa": 20,
+          "lani": 10
+        },
+        "next": "ch3_ratu_close_good"
+      },
+      {
+        "text": "\"I'll do my best.\"",
+        "effects": {
+          "ratu_josefa": 5,
+          "lani": 0
+        },
+        "next": "ch3_ratu_close_neutral"
+      }
+    ]
+  },
+  "ch3_lani_cautious": {
+    "lines": [
+      {
+        "speaker": "Lani",
+        "text": "So you knew it was report-based."
+      },
+      {
+        "speaker": "Lani",
+        "text": "In the dry season, half the village loses water pressure because the pipes are old."
+      },
+      {
+        "speaker": "Lani",
+        "text": "Yes, we need a tank. But that is not the whole problem."
+      },
+      {
+        "speaker": "",
+        "text": "Ratu nods."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "A tank was installed ten years ago. The pipes burst after two years. We requested repairs, but no one came from Suva."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "You build and leave. We are the ones who remain."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"We'll build a structure the village can manage directly.\"",
+        "effects": {
+          "ratu_josefa": 15,
+          "lani": 8
+        },
+        "next": "ch3_ratu_close_good"
+      },
+      {
+        "text": "\"I'll do my best.\"",
+        "effects": {
+          "ratu_josefa": 5,
+          "lani": 0
+        },
+        "next": "ch3_ratu_close_neutral"
+      }
+    ]
+  },
+  "ch3_lani_deflect": {
+    "lines": [
+      {
+        "speaker": "Lani",
+        "text": "A survey."
+      },
+      {
+        "speaker": "Lani",
+        "text": "You mean the boxes someone from Suva came and checked?"
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...Let's stop here today."
+      }
+    ]
+  },
+  "ch3_ratu_close_good": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...Ourselves."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "No one said that ten years ago."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Good. I will watch once more."
+      },
+      {
+        "speaker": "",
+        "text": "For the first time, it feels like a door has opened."
+      }
+    ]
+  },
+  "ch3_ratu_close_good_sign": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...Ourselves."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "No one said that ten years ago."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Good. I will watch once more."
+      },
+      {
+        "speaker": "",
+        "text": "For the first time, it feels like a door has opened."
+      },
+      {
+        "speaker": "Me",
+        "text": "The Land Office gave me the consent form. If you sign here, the project can officially proceed."
+      },
+      {
+        "speaker": "",
+        "text": "Ratu reads the document slowly."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "There is a village management committee clause. This is new."
+      },
+      {
+        "speaker": "",
+        "text": "Ratu picks up the pen and signs."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "This signature is a promise to the village people. Not to you."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Do not forget that."
+      }
+    ]
+  },
+  "ch3_ratu_close_neutral": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Your best."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Your predecessor said the same thing."
+      },
+      {
+        "speaker": "",
+        "text": "Ratu stands up."
+      }
+    ]
+  },
+  "ch3_ratu_after": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...Bring yaqona next time too."
+      }
+    ]
+  },
+  "ch3_lani_after": {
+    "lines": [
+      {
+        "speaker": "Lani",
+        "text": "Earlier, you said the village would manage it directly."
+      },
+      {
+        "speaker": "Lani",
+        "text": "There is one technician in our village. Uncle Josua. He knows pipes."
+      },
+      {
+        "speaker": "Lani",
+        "text": "Ten years ago, he asked headquarters for repair approval and was told it was 'not allowed by procedure.' That's why the tank rusted."
+      },
+      {
+        "speaker": "Lani",
+        "text": "If village people can repair it directly... maybe it really will be different."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"I'll put Uncle Josua on the management committee. Could you join too, Lani?\"",
+        "effects": {
+          "lani": 20
+        },
+        "next": "ch3_lani_after_join"
+      },
+      {
+        "text": "\"I'll keep that in mind.\"",
+        "effects": {
+          "lani": 5
+        },
+        "next": "ch3_lani_after_pass"
+      }
+    ]
+  },
+  "ch3_lani_after_join": {
+    "lines": [
+      {
+        "speaker": "Lani",
+        "text": "...Me too?"
+      },
+      {
+        "speaker": "Lani",
+        "text": "If that's real... yes. I'll try."
+      }
+    ]
+  },
+  "ch3_lani_after_pass": {
+    "lines": [
+      {
+        "speaker": "Lani",
+        "text": "...Okay."
+      },
+      {
+        "speaker": "Lani",
+        "text": "I hope it works out. This time."
+      }
+    ]
+  },
+  "ch3_ratu_after_neutral": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "I will wait."
+      }
+    ]
+  },
+  "ch3_mere_first": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "Ah, you're here. I was about to contact you."
+      },
+      {
+        "speaker": "Mere",
+        "text": "I came ahead as we discussed and investigated. I've spent a few days listening to villagers."
+      },
+      {
+        "speaker": "Mere",
+        "text": "Bottom line: during the project ten years ago, the contractor chose the location without consulting the village."
+      },
+      {
+        "speaker": "Mere",
+        "text": "The tank was built in the middle of someone's field, and one family couldn't farm there anymore."
+      },
+      {
+        "speaker": "Mere",
+        "text": "People were angry not just because the tank broke, but because no one asked their opinion."
+      },
+      {
+        "speaker": "Mere",
+        "text": "When you greet Ratu Josefa, it is important to show that the village has decision-making power."
+      },
+      {
+        "speaker": "Mere",
+        "text": "And - did you bring yaqona? You need it for the sevusevu ceremony."
+      },
+      {
+        "speaker": "Mere",
+        "text": "If you didn't, it is inconvenient, but you should return to Suva and buy some. Going without yaqona changes the first impression."
+      },
+      {
+        "speaker": "Mere",
+        "text": "Make sure you speak to Lani too. Lani leads the village youth group."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"This is useful. Could you share your field findings later?\"",
+        "effects": {
+          "mere": 15
+        },
+        "next": "ch3_mere_first_end"
+      },
+      {
+        "text": "\"Understood.\"",
+        "effects": {
+          "mere": 5
+        },
+        "next": "ch3_mere_first_end"
+      }
+    ]
+  },
+  "ch3_mere_first_end": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "Then greet Ratu Josefa first, and make sure you speak with Lani. I'll keep investigating here."
+      }
+    ]
+  },
+  "ch3_mere_after_ratu": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "Listen carefully to people here. These stories aren't in the documents."
+      },
+      {
+        "speaker": "Mere",
+        "text": "The fastest way is to hear directly what went wrong ten years ago."
+      },
+      {
+        "speaker": "Mere",
+        "text": "Did you see Lani earlier? Lani leads the village youth group."
+      },
+      {
+        "speaker": "Mere",
+        "text": "Lani has influence among the residents. Winning Lani over is key."
+      }
+    ]
+  },
+  "ch3_mere_after_good": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "That went well. Ratu Josefa does not open the door to many people."
+      },
+      {
+        "speaker": "Mere",
+        "text": "I'll share my findings: there is a young technician in the village named Josua."
+      },
+      {
+        "speaker": "Mere",
+        "text": "If he is included in the management committee, the maintenance problem can be solved."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"Thanks to you, I can see the picture. Thank you, truly.\"",
+        "effects": {
+          "mere": 15
+        },
+        "next": "ch3_mere_after_good_end"
+      },
+      {
+        "text": "\"Understood. I'll keep that in mind.\"",
+        "effects": {
+          "mere": 5
+        },
+        "next": "ch3_mere_after_good_end"
+      }
+    ]
+  },
+  "ch3_mere_after_good_end": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "Go to the Land Office and meet Sela. I'll keep investigating here."
+      }
+    ]
+  },
+  "ch3_mere_after_neutral": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "This may take time."
+      },
+      {
+        "speaker": "Mere",
+        "text": "Don't rush building trust with residents."
+      }
+    ]
+  },
+  "ch3_consent_ratu": {
+    "lines": [
+      {
+        "speaker": "Me",
+        "text": "Ratu Josefa, the Land Office says a village consent form is required."
+      },
+      {
+        "speaker": "Me",
+        "text": "With your signature, the project approval process can move forward."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...Consent form."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "I signed something similar ten years ago."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "After that signature, what changed? Nothing."
+      }
+    ],
+    "choices": [
+      {
+        "text": "\"This time, the village manages it directly. Village youth will join the committee.\"",
+        "effects": {
+          "ratu_josefa": 10,
+          "lani": 15
+        },
+        "next": "ch3_consent_sign"
+      },
+      {
+        "text": "\"I respect your judgment. If you need time, I'll give it.\"",
+        "effects": {
+          "ratu_josefa": 8,
+          "lani": 10
+        },
+        "next": "ch3_consent_sign_quiet"
+      }
+    ]
+  },
+  "ch3_consent_sign": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...Good."
+      },
+      {
+        "speaker": "",
+        "text": "Ratu Josefa reads the document slowly."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "There is a village management committee clause. This is new."
+      },
+      {
+        "speaker": "Lani",
+        "text": "Ratu, they said I'm joining the committee too."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...Is that so?"
+      },
+      {
+        "speaker": "",
+        "text": "Ratu looks at Lani and smiles briefly."
+      },
+      {
+        "speaker": "",
+        "text": "Ratu picks up the pen and signs."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "This signature is a promise to the village people. Not to you."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Do not forget that."
+      }
+    ]
+  },
+  "ch3_consent_sign_quiet": {
+    "lines": [
+      {
+        "speaker": "",
+        "text": "A brief silence passes."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...I will not tell you to wait."
+      },
+      {
+        "speaker": "",
+        "text": "Ratu begins to read the document."
+      },
+      {
+        "speaker": "",
+        "text": "Ratu picks up the pen and signs."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "This signature is a promise to the village people. Not to you."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "Do not forget that."
+      }
+    ]
+  },
+  "ch3_consent_ratu_neutral": {
+    "lines": [
+      {
+        "speaker": "Me",
+        "text": "Ratu Josefa, the Land Office requested the consent form."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "...I still do not know what you can promise."
+      },
+      {
+        "speaker": "Ratu Josefa",
+        "text": "I cannot sign yet."
+      },
+      {
+        "speaker": "",
+        "text": "You did not receive the consent form."
+      }
+    ]
+  },
+  "ch3_consent_done": {
+    "lines": [
+      {
+        "speaker": "Ratu Josefa",
+        "text": "I signed. Keep your promise."
+      }
+    ]
+  },
+  "ch3_mere_consent": {
+    "lines": [
+      {
+        "speaker": "Mere",
+        "text": "You got the signature?"
+      },
+      {
+        "speaker": "Mere",
+        "text": "That's huge. Ratu Josefa signing is not easy."
+      },
+      {
+        "speaker": "Mere",
+        "text": "Now return to the government building in Suva and submit this consent form to Sela on the fifth floor."
+      },
+      {
+        "speaker": "Mere",
+        "text": "Then the project officially begins."
+      }
+    ]
+  }
+}

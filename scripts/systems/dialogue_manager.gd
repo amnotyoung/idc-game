@@ -13,19 +13,25 @@ var is_active: bool = false
 var _visible_choices: Array = []
 
 const DIALOGUE_FILES = [
-	"res://data/dialogues/chapter1.json",
-	"res://data/dialogues/street_npcs.json",
-	"res://data/dialogues/chapter2.json",
-	"res://data/dialogues/chapter3.json",
-	"res://data/dialogues/chapter4.json",
-	"res://data/dialogues/chapter5.json"
+	"chapter1.json",
+	"street_npcs.json",
+	"chapter2.json",
+	"chapter3.json",
+	"chapter4.json",
+	"chapter5.json"
 ]
 
 func _ready() -> void:
+	LanguageManager.language_changed.connect(_on_language_changed)
 	_load_dialogues()
 
 func _load_dialogues() -> void:
-	for path in DIALOGUE_FILES:
+	dialogues.clear()
+	var base_dir := _dialogue_base_dir()
+	for filename in DIALOGUE_FILES:
+		var path := base_dir.path_join(filename)
+		if not FileAccess.file_exists(path):
+			path = "res://data/dialogues".path_join(filename)
 		var file = FileAccess.open(path, FileAccess.READ)
 		if not file:
 			push_error("Dialogue file not found: " + path)
@@ -36,6 +42,16 @@ func _load_dialogues() -> void:
 			push_error("Failed to parse dialogue: " + path)
 			continue
 		dialogues.merge(json.get_data())
+
+func _dialogue_base_dir() -> String:
+	if LanguageManager.current_locale == LanguageManager.DEFAULT_LOCALE:
+		return "res://data/dialogues"
+	return "res://data/dialogues".path_join(LanguageManager.current_locale)
+
+func _on_language_changed(_locale: String) -> void:
+	if is_active:
+		end()
+	_load_dialogues()
 
 func start(dialogue_id: String) -> void:
 	if is_active:

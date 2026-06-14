@@ -10,6 +10,8 @@ const STREET_SPAWN = Vector2(290, 100)
 func _ready() -> void:
 	await get_tree().process_frame
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	LanguageManager.language_changed.connect(_on_language_changed)
+	_refresh_labels()
 
 	if not TrustManager.has_flag("ch4_visited"):
 		# 정부청사 연결 OR 섬 주민 신뢰(good ending) 중 하나면 입장 가능
@@ -73,3 +75,15 @@ func _on_dialogue_ended(dialogue_id: String) -> void:
 			james.dialogue_id = "ch4_james_after_rejected"
 			receptionist.dialogue_id = "ch4_receptionist_after"
 			TrustManager.save_game()
+
+func _on_language_changed(_locale: String) -> void:
+	_refresh_labels()
+
+func _refresh_labels() -> void:
+	var root := get_parent()
+	var receptionist_label: Label = root.get_node_or_null("Receptionist/NameTag")
+	if receptionist_label:
+		receptionist_label.text = LanguageManager.text("hint_receptionist")
+	var exit_hint: Label = root.get_node_or_null("ExitHint")
+	if exit_hint:
+		exit_hint.text = LanguageManager.text("hint_exit_down")
