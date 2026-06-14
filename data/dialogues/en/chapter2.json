@@ -51,11 +51,11 @@
     "lines": [
       {
         "speaker": "Vikash",
-        "text": "Have a seat."
+        "text": "Namaste. Have a seat."
       },
       {
         "speaker": "Vikash",
-        "text": "You're from KODA. The Naitamba Island matter."
+        "text": "You're from KODA. The Naitamba Island matter, yes?"
       },
       {
         "speaker": "Vikash",
@@ -106,7 +106,7 @@
       },
       {
         "speaker": "Vikash",
-        "text": "Our department submitted it, but that point was raised above us."
+        "text": "Our department submitted it. That point was raised above us."
       },
       {
         "speaker": "",
@@ -134,7 +134,7 @@
     "lines": [
       {
         "speaker": "Vikash",
-        "text": "We're trying to process it as quickly as possible."
+        "text": "We're trying to process it quickly."
       },
       {
         "speaker": "Vikash",
@@ -154,7 +154,7 @@
     "lines": [
       {
         "speaker": "Vikash",
-        "text": "...Let's see."
+        "text": "...All right, let's see."
       },
       {
         "speaker": "Vikash",
@@ -219,7 +219,7 @@
     "lines": [
       {
         "speaker": "Vikash",
-        "text": "Contact me when the land office coordination is done. Once that side is settled, we'll move immediately."
+        "text": "Contact me when the land office coordination is done. Once that paper trail is settled, we'll move immediately."
       }
     ]
   },
@@ -275,7 +275,7 @@
     "lines": [
       {
         "speaker": "Vikash",
-        "text": "Document revisions... yes, I'll organize them and send them to you."
+        "text": "Document revisions matter. Yes, I'll organize them and send them to you."
       },
       {
         "speaker": "",
@@ -315,7 +315,7 @@
       },
       {
         "speaker": "Vikash",
-        "text": "I think we can submit this for ministerial approval. This is enough."
+        "text": "I think we can send this upward for ministerial approval. This is enough."
       }
     ]
   },
@@ -331,7 +331,7 @@
     "lines": [
       {
         "speaker": "Vikash",
-        "text": "Contact me when the land office coordination is done. Once that side is settled, we'll move immediately."
+        "text": "Contact me when the land office coordination is done. Once that paper trail is settled, we'll move immediately."
       }
     ]
   },
@@ -359,7 +359,7 @@
       },
       {
         "speaker": "Wati",
-        "text": "Land office consent is needed? I knew that would be the issue."
+        "text": "Land office consent is needed? Io, I knew that would be the issue."
       },
       {
         "speaker": "Wati",
@@ -367,11 +367,11 @@
       },
       {
         "speaker": "Wati",
-        "text": "Even if the government approves it, it means nothing if residents don't accept it."
+        "text": "Even if the government approves it, it means nothing if the vanua does not accept it."
       },
       {
         "speaker": "Wati",
-        "text": "Before you go - do you know sevusevu? It's the ceremony of presenting yaqona when you first meet village elders."
+        "text": "Kerekere, before you go - do you know sevusevu? It's the ceremony of presenting yaqona when you first meet village elders."
       },
       {
         "speaker": "Wati",
@@ -399,7 +399,7 @@
       },
       {
         "speaker": "Wati",
-        "text": "...For now, meeting Vikash is urgent. Go to the government building first."
+        "text": "Sega na leqa. For now, meeting Vikash is urgent. Go to the government building first."
       }
     ]
   },
@@ -407,7 +407,7 @@
     "lines": [
       {
         "speaker": "Wati",
-        "text": "It seems to be moving along. Tell me if you need anything."
+        "text": "Sega na leqa, it seems to be moving along. Tell me if you need anything."
       }
     ]
   },

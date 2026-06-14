@@ -31,7 +31,7 @@
       },
       {
         "speaker": "Mere",
-        "text": "There's coffee. Milo too. Let's talk while we drink."
+        "text": "Bula, there's coffee. Milo too. Let's talk while we drink."
       },
       {
         "speaker": "",
@@ -43,7 +43,7 @@
     "lines": [
       {
         "speaker": "Mere",
-        "text": "I'll start with the field findings."
+        "text": "I'll start with the field talanoa and findings."
       },
       {
         "speaker": "Mere",
@@ -55,7 +55,7 @@
       },
       {
         "speaker": "Mere",
-        "text": "The key is who manages it after installation. If we build and leave like ten years ago, the result will be the same."
+        "text": "The key is who manages it after installation. If the vanua is not the owner, the result will be the same as ten years ago."
       }
     ]
   },
@@ -63,7 +63,7 @@
     "lines": [
       {
         "speaker": "Vikash",
-        "text": "I will share National Planning's review result."
+        "text": "Namaste. I will share National Planning's review result."
       },
       {
         "speaker": "Vikash",
@@ -79,7 +79,7 @@
     "lines": [
       {
         "speaker": "Vikash",
-        "text": "The documents arrived, more or less..."
+        "text": "The documents have arrived, but..."
       },
       {
         "speaker": "Vikash",
@@ -95,7 +95,7 @@
     "lines": [
       {
         "speaker": "Vikash",
-        "text": "Honestly -"
+        "text": "To be frank -"
       },
       {
         "speaker": "Vikash",
@@ -196,7 +196,7 @@
     ],
     "choices": [
       {
-        "text": "\"We will proceed with a model the village operates directly. We need everyone's cooperation.\"",
+        "text": "\"We will proceed with a model the vanua operates directly. We need everyone's cooperation.\"",
         "effects": {
           "mere": 15,
           "timoci": 15,
@@ -266,7 +266,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "This time... we are the owners."
+        "text": "This time... our vanua is the owner."
       },
       {
         "speaker": "",
@@ -284,11 +284,11 @@
       },
       {
         "speaker": "Lani",
-        "text": "...Can I turn it?"
+        "text": "...Ratu, can I turn it?"
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "Turn it."
+        "text": "Io, turn it."
       },
       {
         "speaker": "",
@@ -306,7 +306,7 @@
       },
       {
         "speaker": "Mere",
-        "text": "...You did well. Truly."
+        "text": "...Vinaka. You did well. Truly."
       },
       {
         "speaker": "James",
@@ -314,7 +314,7 @@
       },
       {
         "speaker": "Vikash",
-        "text": "I finally have something good to report to the minister."
+        "text": "I have a good report for the minister."
       },
       {
         "speaker": "",
@@ -331,7 +331,7 @@
       },
       {
         "speaker": "",
-        "text": "This time, the village is the owner."
+        "text": "This time, the vanua is the owner."
       }
     ]
   },
@@ -365,11 +365,11 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "...It is not finished yet. But this time, perhaps we can hope."
+        "text": "...It is not finished yet. But this time, perhaps our vanua can hope."
       },
       {
         "speaker": "Lani",
-        "text": "When it is completed, the village will hold a feast. You have to come."
+        "text": "When it is completed, our vanua will hold a feast. You have to come."
       },
       {
         "speaker": "",

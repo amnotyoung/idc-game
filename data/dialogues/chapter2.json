@@ -23,8 +23,8 @@
   },
   "ch2_timoci_first": {
     "lines": [
-      {"speaker": "Vikash", "text": "앉으세요."},
-      {"speaker": "Vikash", "text": "KODA에서 오셨죠. 나이탬바 섬 건."},
+      {"speaker": "Vikash", "text": "Namaste. 앉으세요."},
+      {"speaker": "Vikash", "text": "KODA에서 오셨죠. 나이탬바 섬 건, 맞습니까."},
       {"speaker": "Vikash", "text": "15분밖에 없어요. 바로 말씀해주세요."}
     ],
     "choices": [
@@ -55,7 +55,7 @@
     "lines": [
       {"speaker": "Vikash", "text": "...장관 결재가 아직 안 났어요."},
       {"speaker": "Vikash", "text": "나이탬바 섬 토지가 iTaukei 공유지라서요. 토지청 동의 절차가 선행되어야 한다는 의견이 있어요."},
-      {"speaker": "Vikash", "text": "저희 부서에서 올렸는데 위에서 그 부분을 지적하고 있어요."},
+      {"speaker": "Vikash", "text": "저희 부서에서는 올렸습니다. 위에서 그 부분을 지적하고 있어요."},
       {"speaker": "", "text": "핑계처럼 들리지만 — 실제 절차 문제일 수 있다."}
     ],
     "choices": [
@@ -73,7 +73,7 @@
   },
   "ch2_timoci_pressure": {
     "lines": [
-      {"speaker": "Vikash", "text": "저희도 최대한 빠르게 처리하려고 해요."},
+      {"speaker": "Vikash", "text": "저희도 빠르게 처리하려고 합니다."},
       {"speaker": "Vikash", "text": "다만 내부 검토 절차가 있고, 저 혼자 결정할 수 있는 게 아니에요."},
       {"speaker": "Vikash", "text": "오늘은 여기까지 하죠."},
       {"speaker": "", "text": "Vikash가 자리에서 일어났다."}
@@ -81,10 +81,10 @@
   },
   "ch2_timoci_document": {
     "lines": [
-      {"speaker": "Vikash", "text": "...봅시다."},
+      {"speaker": "Vikash", "text": "...좋습니다, 봅시다."},
       {"speaker": "Vikash", "text": "나이탬바 섬. 토지 현황이 여기 빠져 있네요."},
       {"speaker": "Vikash", "text": "섬 토지가 iTaukei 공유지예요. 장관 결재 전에 토지청 검토가 있어야 한다는 게 위쪽 의견이에요."},
-      {"speaker": "Vikash", "text": "저희가 올릴 수는 있는데, 그 부분 없이는 반려될 가능성이 높아요."},
+      {"speaker": "Vikash", "text": "올릴 수는 있지만, 그 부분 없이는 반려될 가능성이 높아요."},
       {"speaker": "", "text": "구체적인 병목이 확인됐다."}
     ],
     "choices": [
@@ -97,8 +97,8 @@
   },
   "ch2_timoci_collaborate": {
     "lines": [
-      {"speaker": "Vikash", "text": "토지청 쪽 협의가 되면 저희도 움직일 수 있어요."},
-      {"speaker": "Vikash", "text": "그게 정리되면 장관 결재도 빨리 날 거예요."},
+      {"speaker": "Vikash", "text": "토지청 쪽 협의가 되면 저희도 움직일 수 있습니다."},
+      {"speaker": "Vikash", "text": "그게 정리되면 장관 결재도 빨리 날 겁니다."},
       {"speaker": "", "text": "Vikash가 솔직하게 말해줬다."}
     ],
     "choices": [
@@ -117,7 +117,7 @@
 
   "ch2_timoci_collaborate_end": {
     "lines": [
-      {"speaker": "Vikash", "text": "토지청 쪽 협의되면 연락주세요. 그쪽 정리되면 바로 움직일게요."}
+      {"speaker": "Vikash", "text": "토지청 쪽 협의되면 연락주세요. 그쪽 paper trail이 정리되면 바로 움직이겠습니다."}
     ]
   },
   "ch2_timoci_frustrated": {
@@ -149,7 +149,7 @@
 
   "ch2_timoci_progress_proactive": {
     "lines": [
-      {"speaker": "Vikash", "text": "서류 보완은... 네, 정리해서 보내드릴게요."},
+      {"speaker": "Vikash", "text": "서류 보완은 중요합니다. 네, 정리해서 보내드릴게요."},
       {"speaker": "", "text": "Vikash가 살짝 웃었다. 처음 보는 표정이었다."}
     ]
   },
@@ -171,7 +171,7 @@
     "lines": [
       {"speaker": "Vikash", "text": "토지청에서 동의서 접수됐다고 연락 왔어요."},
       {"speaker": "Vikash", "text": "Ratu Josefa 서명이라니... 이전 사업 때는 안 됐었는데."},
-      {"speaker": "Vikash", "text": "장관 결재 올릴 수 있을 것 같아요. 이 정도면 충분합니다."}
+      {"speaker": "Vikash", "text": "이 정도면 위로 올릴 수 있습니다. 장관 결재도 가능할 것 같아요."}
     ]
   },
 
@@ -183,7 +183,7 @@
 
   "ch2_timoci_after_good": {
     "lines": [
-      {"speaker": "Vikash", "text": "토지청 쪽 협의되면 연락주세요. 그쪽 정리되면 바로 움직일게요."}
+      {"speaker": "Vikash", "text": "토지청 쪽 협의되면 연락주세요. 그쪽 paper trail이 정리되면 바로 움직이겠습니다."}
     ]
   },
 
@@ -202,11 +202,11 @@
   "ch3_wati_island_prep": {
     "lines": [
       {"speaker": "Wati", "text": "Vikash 씨 만나셨어요? 어떻게 됐어요?"},
-      {"speaker": "Wati", "text": "토지청 동의가 필요하다고요? 역시 그 부분이 걸렸군요."},
+      {"speaker": "Wati", "text": "토지청 동의가 필요하다고요? Io, 역시 그 부분이 걸렸군요."},
       {"speaker": "Wati", "text": "근데... 그것만으로는 안 돼요. 섬에도 가보셔야 해요."},
-      {"speaker": "Wati", "text": "정부 승인만 받아도, 주민들이 안 받아들이면 소용없어요."},
-      {"speaker": "Wati", "text": "가시기 전에 — 세부세부 아세요? 마을 어른을 처음 만날 때 양고나 드리는 의식이에요."},
-      {"speaker": "Wati", "text": "양고나 없이 가면 실례예요. 챙겨서 가세요."},
+      {"speaker": "Wati", "text": "정부 승인만 받아도, vanua가 안 받아들이면 소용없어요."},
+      {"speaker": "Wati", "text": "Kerekere, 가시기 전에 — sevusevu 아세요? 마을 어른을 처음 만날 때 yaqona 드리는 의식이에요."},
+      {"speaker": "Wati", "text": "yaqona 없이 가면 실례예요. 챙겨서 가세요."},
       {"speaker": "Wati", "text": "Pacific City 쪽에 노점상 있거든요. 거기서 사면 돼요."},
       {"speaker": "나", "text": "알겠어요. 챙겨갈게요."}
     ]
@@ -216,13 +216,13 @@
     "lines": [
       {"speaker": "Wati", "text": "섬에 먼저 가셨어요?"},
       {"speaker": "Wati", "text": "정부 승인도 아직인데... 어떻게 됐어요?"},
-      {"speaker": "Wati", "text": "...일단 Vikash 씨 만나는 게 급해요. 정부청사 먼저 가보세요."}
+      {"speaker": "Wati", "text": "Sega na leqa. 일단 Vikash 씨 만나는 게 급해요. 정부청사 먼저 가보세요."}
     ]
   },
 
   "ch3_wati_island_idle": {
     "lines": [
-      {"speaker": "Wati", "text": "잘 진행되고 있는 것 같네요. 필요한 거 있으면 말해요."}
+      {"speaker": "Wati", "text": "Sega na leqa, 잘 진행되고 있는 것 같네요. 필요한 거 있으면 말해요."}
     ]
   },
 

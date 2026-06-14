@@ -1,18 +1,18 @@
 {
   "bula_man_1": {
     "lines": [
-      { "speaker": "남성", "text": "Bula, bro! 럭비 해봤어요?" },
-      { "speaker": "남성", "text": "여기 Albert Park예요. 피지에서 제일 유명한 운동장이에요." },
+      { "speaker": "남성", "text": "Bula vinaka, bro! 럭비 해봤어요?" },
+      { "speaker": "남성", "text": "여기 Albert Park예요. 수바에서 럭비 얘기로 talanoa 길어지는 곳이죠." },
       { "speaker": "남성", "text": "수바 처음이에요? Victoria Parade 따라가면 Parliament도 보이고 Grand Pacific Hotel도 있어요." },
-      { "speaker": "남성", "text": "피지 사람들 럭비 좋아해요, 진짜. 같이 한 판 하실래요? ㅎ" }
+      { "speaker": "남성", "text": "우리 iTaukei 사람들 럭비 좋아해요, 진짜. 같이 한 판 하실래요? ㅎ" }
     ]
   },
 
   "bula_man_rugby": {
     "lines": [
-      { "speaker": "남성", "text": "아, KODA 사람이구나! 나이탬바 사업 하시는 거죠?" },
+      { "speaker": "남성", "text": "Io, KODA 사람이구나! 나이탬바 사업 하시는 거죠?" },
       { "speaker": "남성", "text": "럭비도 그렇지만 — 팀워크가 다예요, bro." },
-      { "speaker": "남성", "text": "섬 사람들이랑 잘 하려면, 혼자 돌진하면 안 돼요. 패스해야 해요." },
+      { "speaker": "남성", "text": "섬 사람들이랑 잘 하려면 talanoa 먼저 해야 해요. 혼자 돌진하면 안 돼요." },
       { "speaker": "남성", "text": "럭비에서 배운 거예요, 진짜. ㅎ" }
     ]
   },
@@ -20,7 +20,7 @@
   "bula_woman_1": {
     "lines": [
       { "speaker": "여성", "text": "Bula vinaka!" },
-      { "speaker": "여성", "text": "오늘 날씨 좋네요. 비 안 와서 다행이에요." },
+      { "speaker": "여성", "text": "오늘 날씨 좋네요. Io, 비 안 와서 다행이에요." },
       { "speaker": "여성", "text": "나이탬바 섬에서 왔어요? 저도 거기 친척 있어요." }
     ]
   },
@@ -29,15 +29,15 @@
     "lines": [
       { "speaker": "여성", "text": "Bula! 어디서 왔어요?" },
       { "speaker": "여성", "text": "피지 처음이에요? 여기 사람들 다 착해요." },
-      { "speaker": "여성", "text": "Vinaka vakalevu — 정말 감사해요, 라는 뜻이에요. 외워두면 좋아요 ㅎ" }
+      { "speaker": "여성", "text": "Vinaka vakalevu — 정말 감사해요, 라는 뜻이에요. kerekere, 외워두면 좋아요 ㅎ" }
     ]
   },
 
   "street_vendor_1": {
     "lines": [
-      { "speaker": "상인", "text": "Bula bro! Pacific City에 오신 걸 환영해요." },
+      { "speaker": "상인", "text": "Bula vinaka, bro! Pacific City에 오신 걸 환영해요." },
       { "speaker": "상인", "text": "여기선 뭐든 팔아요. 근데 섬 마을 가실 거면 다시 와요." },
-      { "speaker": "상인", "text": "마을 어른 처음 뵐 땐 양고나 챙겨가는 게 예의거든요. 세부세부라고, 들어봤어요?" },
+      { "speaker": "상인", "text": "마을 어른 처음 뵐 땐 yaqona 챙겨가는 게 예의거든요. sevusevu라고, 들어봤어요?" },
       { "speaker": "상인", "text": "나이탬바 섬 사업 말이에요 — 빨리 됐으면 좋겠어요. 친구 거기 살아요." }
     ]
   },
@@ -45,7 +45,7 @@
   "street_vendor_yangona": {
     "lines": [
       { "speaker": "상인", "text": "Bula bro! Pacific City에서 뭐 찾으세요?" },
-      { "speaker": "상인", "text": "마을 방문이요? 그러면 선물 챙겨야죠. 뭘로 드릴까요?" }
+      { "speaker": "상인", "text": "마을에 들어가요? 그 vanua에 맞는 선물 챙겨야죠. 뭘로 드릴까요?" }
     ],
     "choices": [
       {
@@ -73,8 +73,8 @@
 
   "street_vendor_buy_root": {
     "lines": [
-      { "speaker": "상인", "text": "뿌리요! 좋은 선택이에요, bro." },
-      { "speaker": "상인", "text": "마을 어른들은 전통 방식을 좋아해요. 직접 빻아서 세부세부 하는 거죠." },
+      { "speaker": "상인", "text": "뿌리요! Vinaka, 좋은 선택이에요, bro." },
+      { "speaker": "상인", "text": "마을 어른들은 전통 방식을 좋아해요. 직접 빻아서 sevusevu 하는 거죠." },
       { "speaker": "상인", "text": "제일 좋은 걸로 골라줄게요. 여기요. Vinaka!" },
       { "speaker": "", "text": "양고나 뿌리를 챙겼다." }
     ]
@@ -83,8 +83,8 @@
   "street_vendor_buy_powder": {
     "lines": [
       { "speaker": "상인", "text": "가루요? 편하긴 한데..." },
-      { "speaker": "상인", "text": "솔직히 말하면, 마을 어른들은 가루보다 뿌리를 더 좋아해요." },
-      { "speaker": "상인", "text": "그래도 없는 것보단 나으니까. 여기요." },
+      { "speaker": "상인", "text": "솔직히 말하면, 마을 어른들은 가루보다 뿌리 yaqona를 더 좋아해요." },
+      { "speaker": "상인", "text": "그래도 없는 것보단 나으니까. 여기요, sega na leqa." },
       { "speaker": "", "text": "양고나 가루를 챙겼다." }
     ]
   },
@@ -92,7 +92,7 @@
   "street_vendor_buy_mango": {
     "lines": [
       { "speaker": "상인", "text": "망고요? 맛은 좋죠. 근데..." },
-      { "speaker": "상인", "text": "세부세부에는 양고나를 가져가는 게 예의예요. 망고는 그냥 간식이에요." },
+      { "speaker": "상인", "text": "sevusevu에는 yaqona를 가져가는 게 예의예요. 망고는 그냥 간식이에요." },
       { "speaker": "상인", "text": "뭐, 안 가져가는 것보다는 낫겠지만. 여기요." },
       { "speaker": "", "text": "망고를 챙겼다." }
     ]
@@ -106,13 +106,13 @@
 
   "street_vendor_after": {
     "lines": [
-      { "speaker": "상인", "text": "양고나 잘 전해줘요! Pacific City 언제든 또 와요, bro." }
+      { "speaker": "상인", "text": "yaqona 잘 전해줘요! Pacific City 언제든 또 와요, bro. Vinaka!" }
     ]
   },
 
   "police_1": {
     "lines": [
-      { "speaker": "경찰관", "text": "Bula! 피지 방문을 환영합니다." },
+      { "speaker": "경찰관", "text": "Bula vinaka! 피지 방문을 환영합니다." },
       { "speaker": "경찰관", "text": "도움 필요하면 말해요." },
       { "speaker": "경찰관", "text": "요즘 정부청사 쪽에 시위대가 좀 있어요. 조심해요." }
     ]
@@ -120,18 +120,18 @@
 
   "hindi_woman_1": {
     "lines": [
-      { "speaker": "여성", "text": "Namaste." },
+      { "speaker": "여성", "text": "Namaste, ji." },
       { "speaker": "여성", "text": "어디서 오셨어요?" },
-      { "speaker": "여성", "text": "우리 가게 건너편이에요. 나중에 들러요, 차 한 잔 드릴게요." }
+      { "speaker": "여성", "text": "우리 작은 가게 건너편이에요. 나중에 들러요, 따뜻한 차 한 잔 드릴게요." }
     ]
   },
 
   "hindi_man_1": {
     "lines": [
-      { "speaker": "남성", "text": "Good morning." },
+      { "speaker": "남성", "text": "Namaste. Good morning." },
       { "speaker": "남성", "text": "KODA에서 일해요? 나이탬바 섬 사업이죠?" },
-      { "speaker": "남성", "text": "우리 피지 사람들은 그 섬 이야기 잘 알아요." },
-      { "speaker": "남성", "text": "정부랑 이야기할 거면... Vikash 조심해요. 그 사람 까다로워요." }
+      { "speaker": "남성", "text": "우리 Indo-Fijian 커뮤니티에서도 그 섬 이야기 많이 들어요." },
+      { "speaker": "남성", "text": "정부랑 이야기할 거면... Vikash ji 조심해요. 그 사람 서류에 아주 엄격해요." }
     ]
   },
 
@@ -144,9 +144,9 @@
 
   "hindi_man_after_timoci": {
     "lines": [
-      { "speaker": "남성", "text": "Vikash 만났어요? 어땠어요?" },
+      { "speaker": "남성", "text": "Vikash ji 만났어요? 어땠어요?" },
       { "speaker": "남성", "text": "그 사람도 다 이유가 있어서 그래요. 예전에 사업 하나 날려먹은 적이 있거든요." },
-      { "speaker": "남성", "text": "서류는 깔끔하게 해가세요. 그 사람 그런 거 좋아해요." }
+      { "speaker": "남성", "text": "서류는 깔끔하게 해가세요. paper trail 분명한 걸 좋아해요." }
     ]
   },
 
@@ -161,7 +161,7 @@
     "lines": [
       { "speaker": "여성", "text": "Bula! 요즘 바빠 보이네요." },
       { "speaker": "여성", "text": "국제기구 사람들이랑도 만났다면서요? 수바가 좁아요, 소문이 빨라요 ㅎ" },
-      { "speaker": "여성", "text": "잘 되면 좋겠어요. 나이탬바 사람들 오래 기다렸잖아요." }
+      { "speaker": "여성", "text": "잘 되면 좋겠어요. 나이탬바 vanua가 오래 기다렸잖아요." }
     ]
   },
 
@@ -171,7 +171,7 @@
       { "speaker": "할머니", "text": "또 왔구나. 전에도 사람들이 왔었지. 10년 전에." },
       { "speaker": "할머니", "text": "그때 저수조 지어놨는데 관리가 안 돼서 지금은 못 써." },
       { "speaker": "할머니", "text": "물은 나오긴 해. 근데 건기에 수압이 약해져서 불편하지." },
-      { "speaker": "할머니", "text": "고쳐달라고 했는데 수바에서 아무도 안 왔어. 10년째." }
+      { "speaker": "할머니", "text": "고쳐달라고 했는데 수바에서 아무도 안 왔어. 우리 vanua가 10년째 기억하고 있어." }
     ]
   },
 
@@ -197,7 +197,7 @@
       { "speaker": "청년", "text": "10년 전에 저수조 새로 짓는다고 해서 기대했었어요." },
       { "speaker": "청년", "text": "만들어놓고 유지보수 계약이 안 돼서 배관 터졌을 때 수리를 못 했어요." },
       { "speaker": "청년", "text": "수바에서 기술자 보내달라고 했는데 예산이 없대요. 그게 10년 전이에요." },
-      { "speaker": "청년", "text": "이번에도 같은 식이면 — 차라리 마을에서 직접 관리할 수 있게 해주는 게 나아요." }
+      { "speaker": "청년", "text": "이번에도 같은 식이면 — 차라리 우리 vanua에서 직접 관리할 수 있게 해주는 게 나아요." }
     ]
   },
 
@@ -211,7 +211,7 @@
   "island_woman_1": {
     "lines": [
       { "speaker": "여성", "text": "Bula! 시장 다녀오는 길이에요." },
-      { "speaker": "여성", "text": "이 섬 살기 나쁘지 않아요. 바다도 있고 사람들도 좋고." },
+      { "speaker": "여성", "text": "이 섬 살기 나쁘지 않아요. 바다도 있고, vanua 사람들도 서로 챙기고." },
       { "speaker": "여성", "text": "근데 수도 시설이 오래돼서요. 건기에 수압이 떨어지면 불편하긴 해요." },
       { "speaker": "여성", "text": "수바에서는 그런 걱정 없죠? 여긴 인프라 유지보수가 좀 느려요." }
     ]

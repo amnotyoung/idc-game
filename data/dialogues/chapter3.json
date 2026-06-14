@@ -17,8 +17,8 @@
 
   "ch3_ratu_greet_prepared": {
     "lines": [
-      {"speaker": "Ratu Josefa", "text": "어서오시오."},
-      {"speaker": "Ratu Josefa", "text": "KODA에서 오셨다고 했지요."}
+      {"speaker": "Ratu Josefa", "text": "Bula vinaka. 어서오시오."},
+      {"speaker": "Ratu Josefa", "text": "KODA에서 오셨다고 들었소."}
     ],
     "choices": [
       {
@@ -31,8 +31,8 @@
 
   "ch3_ratu_greet_powder": {
     "lines": [
-      {"speaker": "Ratu Josefa", "text": "어서오시오."},
-      {"speaker": "Ratu Josefa", "text": "KODA에서 오셨다고 했지요."}
+      {"speaker": "Ratu Josefa", "text": "Bula vinaka. 어서오시오."},
+      {"speaker": "Ratu Josefa", "text": "KODA에서 오셨다고 들었소."}
     ],
     "choices": [
       {
@@ -45,12 +45,12 @@
 
   "ch3_sevusevu_powder": {
     "lines": [
-      {"speaker": "Ratu Josefa", "text": "...가루요. 요즘은 이걸로 하는 사람도 있지."},
+      {"speaker": "Ratu Josefa", "text": "...가루요. Io, 요즘은 이걸로 하는 사람도 있지."},
       {"speaker": "", "text": "전통 방식과는 달랐지만, Ratu는 받아들였다."},
       {"speaker": "", "text": "가루를 타노아에 물과 섞었다. 세부세부가 시작됐다."},
       {"speaker": "", "text": "빌로가 돌았다. 박수를 한 번 치고 받고, 마시고, 세 번 쳤다."},
       {"speaker": "", "text": "조용한 시간이 흘렀다."},
-      {"speaker": "Ratu Josefa", "text": "기억하는 것들이 있소. 10년 전 약속. 아무것도 남지 않았지."},
+      {"speaker": "Ratu Josefa", "text": "우리 vanua가 기억하는 것들이 있소. 10년 전 약속. 아무것도 남지 않았지."},
       {"speaker": "Ratu Josefa", "text": "당신은 몇 번째요?"}
     ],
     "choices": [
@@ -69,8 +69,8 @@
 
   "ch3_ratu_greet_mango": {
     "lines": [
-      {"speaker": "Ratu Josefa", "text": "어서오시오."},
-      {"speaker": "Ratu Josefa", "text": "KODA에서 오셨다고 했지요."}
+      {"speaker": "Ratu Josefa", "text": "Bula vinaka. 어서오시오."},
+      {"speaker": "Ratu Josefa", "text": "KODA에서 오셨다고 들었소."}
     ],
     "choices": [
       {
@@ -84,12 +84,12 @@
   "ch3_ratu_mango_react": {
     "lines": [
       {"speaker": "Ratu Josefa", "text": "...망고요."},
-      {"speaker": "Ratu Josefa", "text": "보통은 양고나를 가져오는 게 여기 예의인데."},
+      {"speaker": "Ratu Josefa", "text": "보통은 이 vanua에 처음 올 때 양고나를 가져오는 게 예의인데."},
       {"speaker": "", "text": "잠깐 어색한 침묵이 흘렀다."},
       {"speaker": "Ratu Josefa", "text": "하지만 멀리서 빈손으로 온 건 아니니. 그 성의는 고맙소."},
-      {"speaker": "Ratu Josefa", "text": "앉으시오. 얘기는 들어봐야지."},
+      {"speaker": "Ratu Josefa", "text": "앉으시오. 그래도 얘기는 들어봐야지."},
       {"speaker": "", "text": "양고나는 없었지만, Ratu는 대화의 자리를 열어주었다."},
-      {"speaker": "Ratu Josefa", "text": "기억하는 것들이 있소. 10년 전 약속. 아무것도 남지 않았지."},
+      {"speaker": "Ratu Josefa", "text": "우리 vanua가 기억하는 것들이 있소. 10년 전 약속. 아무것도 남지 않았지."},
       {"speaker": "Ratu Josefa", "text": "당신은 몇 번째요?"}
     ],
     "choices": [
@@ -108,8 +108,8 @@
 
   "ch3_ratu_greet_basic": {
     "lines": [
-      {"speaker": "Ratu Josefa", "text": "어서오시오."},
-      {"speaker": "Ratu Josefa", "text": "KODA에서 오셨다고 했지요."}
+      {"speaker": "Ratu Josefa", "text": "Bula vinaka. 어서오시오."},
+      {"speaker": "Ratu Josefa", "text": "KODA에서 오셨다고 들었소."}
     ],
     "choices": [
       {
@@ -122,8 +122,8 @@
 
   "ch3_sevusevu_good": {
     "lines": [
-      {"speaker": "Ratu Josefa", "text": "...알고 왔군요."},
-      {"speaker": "Ratu Josefa", "text": "들어오시오. 함께 앉읍시다."},
+      {"speaker": "Ratu Josefa", "text": "...알고 왔군요. Vinaka."},
+      {"speaker": "Ratu Josefa", "text": "들어오시오. 함께 앉아 talanoa합시다."},
       {"speaker": "", "text": "부레 안에 둥글게 둘러앉았다. 가운데 타노아(나무 그릇)가 놓여 있다."},
       {"speaker": "", "text": "양고나 뿌리를 건넸다. 마을 청년이 무릎을 꿇고 Ratu에게 전달했다."},
       {"speaker": "", "text": "Ratu가 고개를 끄덕였다. 청년이 양고나를 빻기 시작했다."},
@@ -132,7 +132,7 @@
       {"speaker": "", "text": "한 입에 마셨다. 쓰고 흙 같은 맛. 혀가 살짝 저렸다."},
       {"speaker": "", "text": "박수를 세 번 쳤다. 빌로가 다음 사람에게 돌아갔다."},
       {"speaker": "", "text": "조용한 시간이 흘렀다. 아무도 서두르지 않았다."},
-      {"speaker": "Ratu Josefa", "text": "기억하는 것들이 있소. 10년 전 약속. 아무것도 남지 않았지."},
+      {"speaker": "Ratu Josefa", "text": "우리 vanua가 기억하는 것들이 있소. 10년 전 약속. 아무것도 남지 않았지."},
       {"speaker": "Ratu Josefa", "text": "당신은 몇 번째요?"}
     ],
     "choices": [
@@ -152,7 +152,7 @@
   "ch3_sevusevu_end": {
     "lines": [
       {"speaker": "Ratu Josefa", "text": "...그렇소."},
-      {"speaker": "Ratu Josefa", "text": "우리 얘기가 더 있소만, 마을 사람들한테도 물어보시오."},
+      {"speaker": "Ratu Josefa", "text": "우리 얘기가 더 있소만, 마을 사람들과도 talanoa해보시오."},
       {"speaker": "Ratu Josefa", "text": "Lani. 저 젊은이가 할 말이 있을 거요."},
       {"speaker": "", "text": "Ratu가 Lani 쪽을 가리켰다."}
     ]
@@ -164,7 +164,7 @@
       {"speaker": "", "text": "짧은 침묵이 흘렀다."},
       {"speaker": "Ratu Josefa", "text": "앉으시오. 먼 길 왔으니 얘기는 들어봐야지."},
       {"speaker": "", "text": "양고나는 없었지만, 대화의 자리는 열렸다."},
-      {"speaker": "Ratu Josefa", "text": "기억하는 것들이 있소. 10년 전 약속. 아무것도 남지 않았지."},
+      {"speaker": "Ratu Josefa", "text": "우리 vanua가 기억하는 것들이 있소. 10년 전 약속. 아무것도 남지 않았지."},
       {"speaker": "Ratu Josefa", "text": "당신은 몇 번째요?"}
     ],
     "choices": [
@@ -183,14 +183,14 @@
 
   "ch3_lani_not_yet": {
     "lines": [
-      {"speaker": "Lani", "text": "...Ratu한테 먼저 인사하세요. 여기선 그게 순서예요."}
+      {"speaker": "Lani", "text": "...Ratu한테 먼저 인사하세요. 이 vanua에선 그게 순서예요."}
     ]
   },
 
   "ch3_village_talk": {
     "lines": [
       {"speaker": "Lani", "text": "...수바에서 온 사람이죠?"},
-      {"speaker": "Lani", "text": "하나만 물어볼게요. 이 사업 — 우리한테 물어본 적 있어요? 우리가 원하는 건지."},
+      {"speaker": "Lani", "text": "하나만 물어볼게요. 이 사업 — 우리한테 물어본 적 있어요? 이 vanua가 원하는 건지."},
       {"speaker": "Lani", "text": "뉴스에는 항상 '주민 수요 확인됨'이라고 나오던데."}
     ],
     "choices": [
@@ -216,9 +216,9 @@
     "lines": [
       {"speaker": "Lani", "text": "...그렇게 말하는 사람은 처음이네요."},
       {"speaker": "", "text": "Lani가 잠깐 Ratu를 봤다."},
-      {"speaker": "Ratu Josefa", "text": "우리가 원하는 건 새 저수조가 아니오."},
+      {"speaker": "Ratu Josefa", "text": "우리 vanua가 원하는 건 새 저수조만이 아니오."},
       {"speaker": "Ratu Josefa", "text": "10년 전에도 저수조 짓는다고 했소. 고장 나면 고칠 사람이 없었어. 지금도 수도관이 낡아서 건기마다 같은 문제요."},
-      {"speaker": "Ratu Josefa", "text": "우리가 원하는 건 — 다음에도 누군가 책임지는 사람이 있다는 거요."},
+      {"speaker": "Ratu Josefa", "text": "우리 vanua가 원하는 건 — 다음에도 누군가 책임지는 사람이 있다는 거요."},
       {"speaker": "", "text": "대답하기 어려운 말이었다."}
     ],
     "choices": [
@@ -242,7 +242,7 @@
       {"speaker": "Lani", "text": "물탱크가 필요한 건 맞아요. 근데 문제는 그게 아니에요."},
       {"speaker": "", "text": "Ratu가 고개를 끄덕였다."},
       {"speaker": "Ratu Josefa", "text": "10년 전 저수조 설치했소. 2년 만에 배관이 터졌어. 수리 요청했는데 수바에서 아무도 안 왔소."},
-      {"speaker": "Ratu Josefa", "text": "당신들은 짓고 떠나지. 남는 건 우리뿐이야."}
+      {"speaker": "Ratu Josefa", "text": "당신들은 짓고 떠나지. 남는 건 우리 vanua뿐이야."}
     ],
     "choices": [
       {
@@ -262,13 +262,13 @@
     "lines": [
       {"speaker": "Lani", "text": "설문조사요."},
       {"speaker": "Lani", "text": "수바 사람이 와서 체크박스 채워놓고 간 거 말하는 거예요?"},
-      {"speaker": "Ratu Josefa", "text": "...오늘은 여기까지 합시다."}
+      {"speaker": "Ratu Josefa", "text": "...오늘 talanoa는 여기까지 합시다."}
     ]
   },
 
   "ch3_ratu_close_good": {
     "lines": [
-      {"speaker": "Ratu Josefa", "text": "...우리가 직접."},
+      {"speaker": "Ratu Josefa", "text": "Io... 우리가 직접."},
       {"speaker": "Ratu Josefa", "text": "10년 전에는 아무도 그런 말 안 했소."},
       {"speaker": "Ratu Josefa", "text": "좋소. 한번 더 지켜보겠소."},
       {"speaker": "", "text": "처음으로 문이 열린 것 같았다."}
@@ -277,7 +277,7 @@
 
   "ch3_ratu_close_good_sign": {
     "lines": [
-      {"speaker": "Ratu Josefa", "text": "...우리가 직접."},
+      {"speaker": "Ratu Josefa", "text": "Io... 우리가 직접."},
       {"speaker": "Ratu Josefa", "text": "10년 전에는 아무도 그런 말 안 했소."},
       {"speaker": "Ratu Josefa", "text": "좋소. 한번 더 지켜보겠소."},
       {"speaker": "", "text": "처음으로 문이 열린 것 같았다."},
@@ -285,7 +285,7 @@
       {"speaker": "", "text": "Ratu가 서류를 천천히 읽었다."},
       {"speaker": "Ratu Josefa", "text": "마을 운영위원회 조항이 있군. 이건 처음이오."},
       {"speaker": "", "text": "Ratu가 펜을 들어 서명했다."},
-      {"speaker": "Ratu Josefa", "text": "이 서명은 마을 사람들한테 한 약속이오. 당신한테 한 게 아니야."},
+      {"speaker": "Ratu Josefa", "text": "이 서명은 우리 vanua 사람들한테 한 약속이오. 당신한테 한 게 아니야."},
       {"speaker": "Ratu Josefa", "text": "잊지 마시오."}
     ]
   },
@@ -300,14 +300,14 @@
 
   "ch3_ratu_after": {
     "lines": [
-      {"speaker": "Ratu Josefa", "text": "...다음에 올 때도 양고나 가져오시오."}
+      {"speaker": "Ratu Josefa", "text": "...다음에 올 때도 yaqona 가져오시오."}
     ]
   },
 
   "ch3_lani_after": {
     "lines": [
       {"speaker": "Lani", "text": "아까 마을에서 직접 관리한다고 했죠?"},
-      {"speaker": "Lani", "text": "우리 마을에 기술자가 한 명 있어요. Josua 삼촌이요. 배관 좀 알아요."},
+      {"speaker": "Lani", "text": "우리 vanua에 기술자가 한 명 있어요. Josua 삼촌이요. 배관 좀 알아요."},
       {"speaker": "Lani", "text": "10년 전에 수리 요청했는데 본부에서 '절차상 안 된다'고 했대요. 그래서 탱크가 녹슬었고요."},
       {"speaker": "Lani", "text": "마을 사람이 직접 고칠 수 있게만 해주면... 달라지긴 하겠네요."}
     ],
@@ -348,13 +348,13 @@
   "ch3_mere_first": {
     "lines": [
       {"speaker": "Mere", "text": "아, 왔네요. 연락하려던 참이었어요."},
-      {"speaker": "Mere", "text": "말한 대로 먼저 와서 조사했어요. 며칠 돌아다니면서 마을 사람들 얘기 들었거든요."},
-      {"speaker": "Mere", "text": "결과부터 말하면 — 10년 전 사업 때 시공사가 마을 상의 없이 위치를 정했대요."},
+      {"speaker": "Mere", "text": "말한 대로 먼저 와서 조사했어요. 며칠 돌아다니면서 마을 사람들과 talanoa했거든요."},
+      {"speaker": "Mere", "text": "결과부터 말하면 — 10년 전 사업 때 시공사가 vanua와 상의 없이 위치를 정했대요."},
       {"speaker": "Mere", "text": "저수조가 밭 한가운데 세워져서 농사를 못 짓게 된 집도 있었고요."},
       {"speaker": "Mere", "text": "주민들이 분노한 건 저수조가 고장 나서가 아니라, 의견을 안 물어봤기 때문이에요."},
-      {"speaker": "Mere", "text": "Ratu Josefa한테 인사드릴 때, '우리가 결정권 있다'는 걸 보여주는 게 중요해요."},
-      {"speaker": "Mere", "text": "그리고 — 양고나 챙겼어요? 세부세부 의식에 꼭 필요해요."},
-      {"speaker": "Mere", "text": "만약 안 챙겼으면, 번거롭지만 수바로 돌아가서 사오는 게 좋겠어요. 양고나 없이 가면 첫인상이 확 달라져요."},
+      {"speaker": "Mere", "text": "Ratu Josefa한테 인사드릴 때, '이 vanua에 결정권이 있다'는 걸 보여주는 게 중요해요."},
+      {"speaker": "Mere", "text": "그리고 — yaqona 챙겼어요? sevusevu 의식에 꼭 필요해요."},
+      {"speaker": "Mere", "text": "만약 안 챙겼으면, 번거롭지만 수바로 돌아가서 사오는 게 좋겠어요. yaqona 없이 가면 첫 talanoa가 확 달라져요."},
       {"speaker": "Mere", "text": "Lani한테도 꼭 말 걸어봐요. 마을 청년회 리더예요."}
     ],
     "choices": [
@@ -379,10 +379,10 @@
 
   "ch3_mere_after_ratu": {
     "lines": [
-      {"speaker": "Mere", "text": "여기 사람들 말 잘 들어봐요. 서류엔 없는 얘기들이에요."},
+      {"speaker": "Mere", "text": "여기 사람들 talanoa 잘 들어봐요. 서류엔 없는 얘기들이에요."},
       {"speaker": "Mere", "text": "10년 전에 뭐가 잘못됐는지 직접 듣는 게 제일 빨라요."},
       {"speaker": "Mere", "text": "아까 Lani 봤어요? 마을 청년회 리더예요."},
-      {"speaker": "Mere", "text": "주민들 사이에서 영향력 있어요. 그 사람 설득하는 게 핵심이에요."}
+      {"speaker": "Mere", "text": "마을 사람들 사이에서 영향력 있어요. 그 사람 설득하는 게 핵심이에요."}
     ]
   },
 
@@ -429,7 +429,7 @@
     ],
     "choices": [
       {
-        "text": "\"이번엔 마을이 직접 관리합니다. 마을 청년들이 운영위원회에 참여해요.\"",
+        "text": "\"이번엔 vanua가 직접 관리합니다. 마을 청년들이 운영위원회에 참여해요.\"",
         "effects": {"ratu_josefa": 10, "lani": 15},
         "next": "ch3_consent_sign"
       },
@@ -450,7 +450,7 @@
       {"speaker": "Ratu Josefa", "text": "...그래?"},
       {"speaker": "", "text": "Ratu가 Lani를 보며 잠깐 웃었다."},
       {"speaker": "", "text": "Ratu가 펜을 들어 서명했다."},
-      {"speaker": "Ratu Josefa", "text": "이 서명은 마을 사람들한테 한 약속이오. 당신한테 한 게 아니야."},
+      {"speaker": "Ratu Josefa", "text": "이 서명은 우리 vanua 사람들한테 한 약속이오. 당신한테 한 게 아니야."},
       {"speaker": "Ratu Josefa", "text": "잊지 마시오."}
     ]
   },
@@ -461,7 +461,7 @@
       {"speaker": "Ratu Josefa", "text": "...기다리라는 말은 안 하겠소."},
       {"speaker": "", "text": "Ratu가 서류를 읽기 시작했다."},
       {"speaker": "", "text": "Ratu가 펜을 들어 서명했다."},
-      {"speaker": "Ratu Josefa", "text": "이 서명은 마을 사람들한테 한 약속이오. 당신한테 한 게 아니야."},
+      {"speaker": "Ratu Josefa", "text": "이 서명은 우리 vanua 사람들한테 한 약속이오. 당신한테 한 게 아니야."},
       {"speaker": "Ratu Josefa", "text": "잊지 마시오."}
     ]
   },
@@ -477,7 +477,7 @@
 
   "ch3_consent_done": {
     "lines": [
-      {"speaker": "Ratu Josefa", "text": "서명은 했소. 약속 지키시오."}
+      {"speaker": "Ratu Josefa", "text": "서명은 했소. vanua와 한 약속, 지키시오."}
     ]
   },
 

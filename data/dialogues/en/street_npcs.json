@@ -3,11 +3,11 @@
     "lines": [
       {
         "speaker": "Man",
-        "text": "Bula, bro! Have you played rugby?"
+        "text": "Bula vinaka, bro! Have you played rugby?"
       },
       {
         "speaker": "Man",
-        "text": "This is Albert Park. The most famous sports ground in Fiji."
+        "text": "This is Albert Park. Rugby talanoa can go on all afternoon here."
       },
       {
         "speaker": "Man",
@@ -15,7 +15,7 @@
       },
       {
         "speaker": "Man",
-        "text": "Fijians love rugby, seriously. Want to play a round? haha"
+        "text": "We iTaukei love rugby, seriously. Want to play a round? haha"
       }
     ]
   },
@@ -23,7 +23,7 @@
     "lines": [
       {
         "speaker": "Man",
-        "text": "Ah, you're from KODA! Working on the Naitamba project, right?"
+        "text": "Io, you're from KODA! Working on the Naitamba project, right?"
       },
       {
         "speaker": "Man",
@@ -31,7 +31,7 @@
       },
       {
         "speaker": "Man",
-        "text": "If you want to work well with island people, don't charge ahead alone. You have to pass."
+        "text": "If you want to work well with island people, start with talanoa. Don't charge ahead alone."
       },
       {
         "speaker": "Man",
@@ -47,7 +47,7 @@
       },
       {
         "speaker": "Woman",
-        "text": "Nice weather today. Good thing it isn't raining."
+        "text": "Nice weather today. Io, good thing it isn't raining."
       },
       {
         "speaker": "Woman",
@@ -67,7 +67,7 @@
       },
       {
         "speaker": "Woman",
-        "text": "Vinaka vakalevu means thank you very much. Good phrase to remember. haha"
+        "text": "Vinaka vakalevu means thank you very much. Kerekere, remember that one. haha"
       }
     ]
   },
@@ -75,7 +75,7 @@
     "lines": [
       {
         "speaker": "Vendor",
-        "text": "Bula bro! Welcome to Pacific City."
+        "text": "Bula vinaka, bro! Welcome to Pacific City."
       },
       {
         "speaker": "Vendor",
@@ -99,7 +99,7 @@
       },
       {
         "speaker": "Vendor",
-        "text": "Visiting a village? Then you need a gift. What will it be?"
+        "text": "Visiting a village? Then respect the vanua with a proper gift. What will it be?"
       }
     ],
     "choices": [
@@ -129,11 +129,11 @@
     "lines": [
       {
         "speaker": "Vendor",
-        "text": "Root! Good choice, bro."
+        "text": "Root! Vinaka, good choice, bro."
       },
       {
         "speaker": "Vendor",
-        "text": "Village elders prefer the traditional way. You pound it yourself for sevusevu."
+        "text": "Village elders prefer the traditional way. You pound the yaqona yourself for sevusevu."
       },
       {
         "speaker": "Vendor",
@@ -153,11 +153,11 @@
       },
       {
         "speaker": "Vendor",
-        "text": "Honestly, village elders prefer root over powder."
+        "text": "Honestly, village elders prefer the yaqona root over powder."
       },
       {
         "speaker": "Vendor",
-        "text": "Still, better than nothing. Here you go."
+        "text": "Still, better than nothing. Here you go, sega na leqa."
       },
       {
         "speaker": "",
@@ -197,7 +197,7 @@
     "lines": [
       {
         "speaker": "Vendor",
-        "text": "Give them the yaqona well! Come back to Pacific City anytime, bro."
+        "text": "Present the yaqona well! Come back to Pacific City anytime, bro. Vinaka!"
       }
     ]
   },
@@ -205,7 +205,7 @@
     "lines": [
       {
         "speaker": "Police Officer",
-        "text": "Bula! Welcome to Fiji."
+        "text": "Bula vinaka! Welcome to Fiji."
       },
       {
         "speaker": "Police Officer",
@@ -221,7 +221,7 @@
     "lines": [
       {
         "speaker": "Woman",
-        "text": "Namaste."
+        "text": "Namaste, ji."
       },
       {
         "speaker": "Woman",
@@ -229,7 +229,7 @@
       },
       {
         "speaker": "Woman",
-        "text": "Our shop is across the street. Stop by later and I'll make you tea."
+        "text": "Our little shop is across the street. Stop by later and I'll make you hot tea."
       }
     ]
   },
@@ -237,7 +237,7 @@
     "lines": [
       {
         "speaker": "Man",
-        "text": "Good morning."
+        "text": "Namaste. Good morning."
       },
       {
         "speaker": "Man",
@@ -245,11 +245,11 @@
       },
       {
         "speaker": "Man",
-        "text": "We Fijians know that island's story well."
+        "text": "People in our Indo-Fijian community know that island's story too."
       },
       {
         "speaker": "Man",
-        "text": "If you're talking to government... be careful with Vikash. He's difficult."
+        "text": "If you're talking to government... be careful with Vikash ji. He is very strict about documents."
       }
     ]
   },
@@ -269,7 +269,7 @@
     "lines": [
       {
         "speaker": "Man",
-        "text": "Did you meet Vikash? How was he?"
+        "text": "Did you meet Vikash ji? How was he?"
       },
       {
         "speaker": "Man",
@@ -277,7 +277,7 @@
       },
       {
         "speaker": "Man",
-        "text": "Bring clean documents. He likes that."
+        "text": "Bring clean documents. He likes a clear paper trail."
       }
     ]
   },
@@ -305,7 +305,7 @@
       },
       {
         "speaker": "Woman",
-        "text": "I hope it works out. Naitamba people have waited a long time."
+        "text": "I hope it works out. The Naitamba vanua has waited a long time."
       }
     ]
   },
@@ -329,7 +329,7 @@
       },
       {
         "speaker": "Elder",
-        "text": "We asked for repairs, but no one came from Suva. Ten years now."
+        "text": "We asked for repairs, but no one came from Suva. Our vanua has remembered it for ten years."
       }
     ]
   },
@@ -385,7 +385,7 @@
       },
       {
         "speaker": "Young Man",
-        "text": "If this happens the same way again, better to let the village manage it ourselves."
+        "text": "If this happens the same way again, better for our vanua to manage it directly."
       }
     ]
   },
@@ -409,7 +409,7 @@
       },
       {
         "speaker": "Woman",
-        "text": "Life on this island is not bad. We have the sea and good people."
+        "text": "Life on this island is not bad. We have the sea, and the vanua looks after one another."
       },
       {
         "speaker": "Woman",

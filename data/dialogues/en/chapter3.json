@@ -35,11 +35,11 @@
     "lines": [
       {
         "speaker": "Ratu Josefa",
-        "text": "Welcome."
+        "text": "Bula vinaka. Welcome."
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "They said you came from KODA."
+        "text": "They told me you came from KODA."
       }
     ],
     "choices": [
@@ -56,11 +56,11 @@
     "lines": [
       {
         "speaker": "Ratu Josefa",
-        "text": "Welcome."
+        "text": "Bula vinaka. Welcome."
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "They said you came from KODA."
+        "text": "They told me you came from KODA."
       }
     ],
     "choices": [
@@ -77,7 +77,7 @@
     "lines": [
       {
         "speaker": "Ratu Josefa",
-        "text": "...Powder. Some people use this nowadays."
+        "text": "...Powder. Io, some people use this nowadays."
       },
       {
         "speaker": "",
@@ -97,7 +97,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "There are things I remember. The promise ten years ago. Nothing remained."
+        "text": "There are things our vanua remembers. The promise ten years ago. Nothing remained."
       },
       {
         "speaker": "Ratu Josefa",
@@ -125,11 +125,11 @@
     "lines": [
       {
         "speaker": "Ratu Josefa",
-        "text": "Welcome."
+        "text": "Bula vinaka. Welcome."
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "They said you came from KODA."
+        "text": "They told me you came from KODA."
       }
     ],
     "choices": [
@@ -150,7 +150,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "Usually, yaqona is what you bring here."
+        "text": "Usually, when you first enter this vanua, yaqona is what you bring."
       },
       {
         "speaker": "",
@@ -162,7 +162,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "Sit. I should at least hear you out."
+        "text": "Sit. I should still hear you out."
       },
       {
         "speaker": "",
@@ -170,7 +170,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "There are things I remember. The promise ten years ago. Nothing remained."
+        "text": "There are things our vanua remembers. The promise ten years ago. Nothing remained."
       },
       {
         "speaker": "Ratu Josefa",
@@ -198,11 +198,11 @@
     "lines": [
       {
         "speaker": "Ratu Josefa",
-        "text": "Welcome."
+        "text": "Bula vinaka. Welcome."
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "They said you came from KODA."
+        "text": "They told me you came from KODA."
       }
     ],
     "choices": [
@@ -219,11 +219,11 @@
     "lines": [
       {
         "speaker": "Ratu Josefa",
-        "text": "...You came knowing the custom."
+        "text": "...You came knowing the custom. Vinaka."
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "Come in. Let us sit together."
+        "text": "Come in. Let us sit together for talanoa."
       },
       {
         "speaker": "",
@@ -259,7 +259,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "There are things I remember. The promise ten years ago. Nothing remained."
+        "text": "There are things our vanua remembers. The promise ten years ago. Nothing remained."
       },
       {
         "speaker": "Ratu Josefa",
@@ -291,7 +291,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "We have more to say, but ask the village people too."
+        "text": "We have more to say, but hold talanoa with the village people too."
       },
       {
         "speaker": "Ratu Josefa",
@@ -323,7 +323,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "There are things I remember. The promise ten years ago. Nothing remained."
+        "text": "There are things our vanua remembers. The promise ten years ago. Nothing remained."
       },
       {
         "speaker": "Ratu Josefa",
@@ -351,7 +351,7 @@
     "lines": [
       {
         "speaker": "Lani",
-        "text": "...Greet Ratu first. Here, that's the order."
+        "text": "...Greet Ratu first. In this vanua, that's the order."
       }
     ]
   },
@@ -363,7 +363,7 @@
       },
       {
         "speaker": "Lani",
-        "text": "Let me ask one thing. This project - did anyone ask us? Whether this is what we want?"
+        "text": "Let me ask one thing. This project - did anyone ask this vanua whether this is what we want?"
       },
       {
         "speaker": "Lani",
@@ -409,7 +409,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "What we want is not simply a new tank."
+        "text": "What our vanua wants is not simply a new tank."
       },
       {
         "speaker": "Ratu Josefa",
@@ -417,7 +417,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "What we want is this: someone who remains responsible afterward."
+        "text": "What our vanua wants is this: someone who remains responsible afterward."
       },
       {
         "speaker": "",
@@ -467,7 +467,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "You build and leave. We are the ones who remain."
+        "text": "You build and leave. It is our vanua that remains."
       }
     ],
     "choices": [
@@ -501,7 +501,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "...Let's stop here today."
+        "text": "...Let's stop this talanoa here today."
       }
     ]
   },
@@ -509,7 +509,7 @@
     "lines": [
       {
         "speaker": "Ratu Josefa",
-        "text": "...Ourselves."
+        "text": "Io... ourselves."
       },
       {
         "speaker": "Ratu Josefa",
@@ -529,7 +529,7 @@
     "lines": [
       {
         "speaker": "Ratu Josefa",
-        "text": "...Ourselves."
+        "text": "Io... ourselves."
       },
       {
         "speaker": "Ratu Josefa",
@@ -561,7 +561,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "This signature is a promise to the village people. Not to you."
+        "text": "This signature is a promise to our vanua. Not to you."
       },
       {
         "speaker": "Ratu Josefa",
@@ -601,7 +601,7 @@
       },
       {
         "speaker": "Lani",
-        "text": "There is one technician in our village. Uncle Josua. He knows pipes."
+        "text": "There is one technician in our vanua. Uncle Josua. He knows pipes."
       },
       {
         "speaker": "Lani",
@@ -669,11 +669,11 @@
       },
       {
         "speaker": "Mere",
-        "text": "I came ahead as we discussed and investigated. I've spent a few days listening to villagers."
+        "text": "I came ahead as we discussed and investigated. I've spent a few days in talanoa with the villagers."
       },
       {
         "speaker": "Mere",
-        "text": "Bottom line: during the project ten years ago, the contractor chose the location without consulting the village."
+        "text": "Bottom line: during the project ten years ago, the contractor chose the location without consulting the vanua."
       },
       {
         "speaker": "Mere",
@@ -685,7 +685,7 @@
       },
       {
         "speaker": "Mere",
-        "text": "When you greet Ratu Josefa, it is important to show that the village has decision-making power."
+        "text": "When you greet Ratu Josefa, it is important to show that this vanua has decision-making power."
       },
       {
         "speaker": "Mere",
@@ -693,7 +693,7 @@
       },
       {
         "speaker": "Mere",
-        "text": "If you didn't, it is inconvenient, but you should return to Suva and buy some. Going without yaqona changes the first impression."
+        "text": "If you didn't, it is inconvenient, but you should return to Suva and buy some. Going without yaqona changes the first talanoa."
       },
       {
         "speaker": "Mere",
@@ -729,7 +729,7 @@
     "lines": [
       {
         "speaker": "Mere",
-        "text": "Listen carefully to people here. These stories aren't in the documents."
+        "text": "Listen carefully to the talanoa here. These stories aren't in the documents."
       },
       {
         "speaker": "Mere",
@@ -741,7 +741,7 @@
       },
       {
         "speaker": "Mere",
-        "text": "Lani has influence among the residents. Winning Lani over is key."
+        "text": "Lani has influence among the village people. Winning Lani over is key."
       }
     ]
   },
@@ -822,7 +822,7 @@
     ],
     "choices": [
       {
-        "text": "\"This time, the village manages it directly. Village youth will join the committee.\"",
+        "text": "\"This time, the vanua manages it directly. Village youth will join the committee.\"",
         "effects": {
           "ratu_josefa": 10,
           "lani": 15
@@ -871,7 +871,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "This signature is a promise to the village people. Not to you."
+        "text": "This signature is a promise to our vanua. Not to you."
       },
       {
         "speaker": "Ratu Josefa",
@@ -899,7 +899,7 @@
       },
       {
         "speaker": "Ratu Josefa",
-        "text": "This signature is a promise to the village people. Not to you."
+        "text": "This signature is a promise to our vanua. Not to you."
       },
       {
         "speaker": "Ratu Josefa",
@@ -931,7 +931,7 @@
     "lines": [
       {
         "speaker": "Ratu Josefa",
-        "text": "I signed. Keep your promise."
+        "text": "I signed. Keep your promise to the vanua."
       }
     ]
   },

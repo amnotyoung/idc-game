@@ -8,23 +8,23 @@
       {"speaker": "", "text": "Sela(토지청)가 옆자리에 앉았다. James(APAT, 호주태평양기술지원기구)가 문을 열고 들어왔다."},
       {"speaker": "", "text": "Ratu Josefa와 Lani가 나이탬바에서 올라왔다. Mere가 자리를 안내했다."},
       {"speaker": "", "text": "이 사업에 관계된 모든 사람이 처음으로 한 방에 모였다."},
-      {"speaker": "Mere", "text": "커피 있어요. Milo도 있고요. 드시면서 하죠."},
+      {"speaker": "Mere", "text": "Bula, 커피 있어요. Milo도 있고요. 드시면서 하죠."},
       {"speaker": "", "text": "잠깐의 tea time. 어색한 공기가 조금씩 풀렸다."}
     ]
   },
 
   "ch5_mere_report": {
     "lines": [
-      {"speaker": "Mere", "text": "현장 조사 결과부터 공유할게요."},
+      {"speaker": "Mere", "text": "현장 talanoa와 조사 결과부터 공유할게요."},
       {"speaker": "Mere", "text": "나이탬바 본섬의 기존 수도 시설은 배관 노후와 저수조 파손이 주요 문제입니다."},
       {"speaker": "Mere", "text": "수원지 자체는 안정적이에요. 인프라를 교체하고 유지보수 체계만 잡으면 됩니다."},
-      {"speaker": "Mere", "text": "핵심은 — 설치 후 관리 주체예요. 10년 전처럼 짓고 떠나면 같은 결과입니다."}
+      {"speaker": "Mere", "text": "핵심은 — 설치 후 관리 주체예요. vanua가 주체가 아니면 10년 전처럼 같은 결과입니다."}
     ]
   },
 
   "ch5_timoci_response_good": {
     "lines": [
-      {"speaker": "Vikash", "text": "국가계획부 검토 결과 전달합니다."},
+      {"speaker": "Vikash", "text": "Namaste. 국가계획부 검토 결과 전달합니다."},
       {"speaker": "Vikash", "text": "마을 기반 관리 모델을 포함한 사업계획이면 승인 가능합니다."},
       {"speaker": "Vikash", "text": "지난번 회의에서 논의했던 방향이 반영돼서 다행이에요."}
     ]
@@ -32,7 +32,7 @@
 
   "ch5_timoci_response_neutral": {
     "lines": [
-      {"speaker": "Vikash", "text": "서류는 대충 왔는데..."},
+      {"speaker": "Vikash", "text": "서류는 들어왔습니다만..."},
       {"speaker": "Vikash", "text": "마을 관리 계획이 좀 부실해요. 보완 자료 필요합니다."},
       {"speaker": "Vikash", "text": "이대로는 조건부 승인밖에 못 드려요."}
     ]
@@ -40,7 +40,7 @@
 
   "ch5_timoci_response_bad": {
     "lines": [
-      {"speaker": "Vikash", "text": "솔직히 말하면 —"},
+      {"speaker": "Vikash", "text": "솔직히 말씀드리면 —"},
       {"speaker": "Vikash", "text": "이 사업계획은 10년 전이랑 뭐가 다른지 모르겠어요."},
       {"speaker": "Vikash", "text": "기한 내 승인은 어렵습니다."}
     ]
@@ -92,7 +92,7 @@
     ],
     "choices": [
       {
-        "text": "\"마을이 직접 운영하는 모델로 가겠습니다. 모두의 협력이 필요합니다.\"",
+        "text": "\"vanua가 직접 운영하는 모델로 가겠습니다. 모두의 협력이 필요합니다.\"",
         "effects": {"mere": 15, "timoci": 15, "james": 10, "lani": 10},
         "next": "ch5_resolve"
       },
@@ -121,22 +121,22 @@
       {"speaker": "", "text": "Mere가 카메라를 꺼내 현장 사진을 찍고 있다."},
       {"speaker": "", "text": "Ratu Josefa가 앞으로 나왔다. 마을 사람들이 조용해졌다."},
       {"speaker": "Ratu Josefa", "text": "10년을 기다렸소."},
-      {"speaker": "Ratu Josefa", "text": "이번에는... 우리가 주인이오."},
-      {"speaker": "", "text": "Ratu가 양고나를 타노아에 부었다. 축복의 세부세부가 시작됐다."},
-      {"speaker": "", "text": "양고나 잔이 돌았다. 모두가 한 번 박수를 치고, 한 입에 마시고, 세 번 박수를 쳤다."},
+      {"speaker": "Ratu Josefa", "text": "이번에는... 우리 vanua가 주인이오."},
+      {"speaker": "", "text": "Ratu가 yaqona를 타노아에 부었다. 축복의 sevusevu가 시작됐다."},
+      {"speaker": "", "text": "yaqona 잔이 돌았다. 모두가 한 번 박수를 치고, 한 입에 마시고, 세 번 박수를 쳤다."},
       {"speaker": "", "text": "Lani가 저수조 밸브 앞에 섰다."},
-      {"speaker": "Lani", "text": "...돌려도 돼요?"},
-      {"speaker": "Ratu Josefa", "text": "돌려라."},
+      {"speaker": "Lani", "text": "...Ratu, 돌려도 돼요?"},
+      {"speaker": "Ratu Josefa", "text": "Io, 돌려라."},
       {"speaker": "", "text": "Lani가 밸브를 열었다. 배관에서 물이 흘러나왔다."},
       {"speaker": "", "text": "아이들이 환호했다. 누군가 박수를 치기 시작했다."},
       {"speaker": "", "text": "마을 청년들이 메케(전통 춤)를 추기 시작했다. 북소리가 울렸다."},
-      {"speaker": "Mere", "text": "...잘했어요. 진짜로."},
+      {"speaker": "Mere", "text": "...Vinaka. 잘했어요, 진짜로."},
       {"speaker": "James", "text": "이번엔 제대로 됐네요."},
-      {"speaker": "Vikash", "text": "장관님한테 보고할 게 생겼네요. 좋은 보고요."},
+      {"speaker": "Vikash", "text": "장관님께 보고할 게 생겼네요. 좋은 보고입니다."},
       {"speaker": "", "text": "바람이 불었다. 야자수가 흔들렸다."},
       {"speaker": "", "text": "저수조 옆 표지판에 적혀 있다:"},
       {"speaker": "", "text": "\"나이탬바 마을 수도 시설 — 마을 운영위원회 관리\""},
-      {"speaker": "", "text": "이번엔 마을이 주인이다."}
+      {"speaker": "", "text": "이번엔 vanua가 주인이다."}
     ]
   },
 
@@ -148,8 +148,8 @@
       {"speaker": "", "text": "마을 사람들이 공사 현장에 나와 있다. 이번에는 지켜보는 게 아니라 참여하고 있다."},
       {"speaker": "Mere", "text": "100%는 아니에요. 하지만 10년 전과는 확실히 달라요."},
       {"speaker": "Mere", "text": "이 정도면 잘한 거예요. 진심으로요."},
-      {"speaker": "Ratu Josefa", "text": "...아직 끝난 건 아니오. 하지만 이번엔 기대해봐도 되겠소."},
-      {"speaker": "Lani", "text": "완공되면 마을 잔치 열기로 했어요. 꼭 오세요."},
+      {"speaker": "Ratu Josefa", "text": "...아직 끝난 건 아니오. 하지만 이번엔 우리 vanua도 기대해봐도 되겠소."},
+      {"speaker": "Lani", "text": "완공되면 우리 vanua에서 잔치 열기로 했어요. 꼭 오세요."},
       {"speaker": "", "text": "바람이 불었다. 야자수가 흔들렸다."},
       {"speaker": "", "text": "완벽하지 않다. 하지만 방향은 맞다."},
       {"speaker": "", "text": "그리고 혼자가 아니다."}

@@ -48,7 +48,7 @@
     "lines": [
       { "speaker": "Mere", "text": "...솔직하네요." },
       { "speaker": "Mere", "text": "그래도 왔으면 다행이에요." },
-      { "speaker": "Mere", "text": "저는 Mere예요. Pacific Roots NGO." },
+      { "speaker": "Mere", "text": "저는 Mere예요. Pacific Roots NGO에서 왔어요." },
       { "speaker": "Mere", "text": "나이탬바 섬 사업 때문에 왔어요." },
       { "speaker": "Mere", "text": "6개월째 아무 진전이 없어요. 섬 주민들은 기다리다 지쳤고요." },
       { "speaker": "Mere", "text": "...상황이 어떤지는 아세요?" }
@@ -116,10 +116,10 @@
   "ch1_mere_strategy": {
     "lines": [
       { "speaker": "Mere", "text": "좋아요. 한 가지만 기억해요." },
-      { "speaker": "Mere", "text": "이 사업은 서류가 아니라 사람이에요. 수치만 맞추면 되는 게 아니거든요." },
+      { "speaker": "Mere", "text": "이 사업은 서류가 아니라 사람, 그리고 vanua예요. 수치만 맞추면 되는 게 아니거든요." },
       { "speaker": "Mere", "text": "10년 전 실패한 이유가 바로 그거예요. 절차만 밟고, 사람은 안 봤어요." },
-      { "speaker": "Mere", "text": "저는 먼저 나이탬바에 가볼게요. Ratu Josefa 배경 좀 더 파봐야 할 것 같아서요." },
-      { "speaker": "Mere", "text": "결과 나오면 연락할게요. 섬에서 봐요." },
+      { "speaker": "Mere", "text": "저는 먼저 나이탬바에 가볼게요. Ratu Josefa와 마을 사람들 talanoa를 직접 들어봐야겠어요." },
+      { "speaker": "Mere", "text": "결과 나오면 연락할게요. 섬에서 봐요. Vinaka." },
       { "speaker": "나", "text": "(국가계획부 면담부터 잡아야겠다. Wati한테 일정 조율 부탁해야지.)" }
     ]
   },
@@ -173,12 +173,12 @@
 
   "ch1_wati_intro": {
     "lines": [
-      {"speaker": "Wati", "text": "아, 면담 잡으려고요? 국가계획부 Vikash 씨 건이죠."},
+      {"speaker": "Wati", "text": "Bula, 면담 잡으려고요? 국가계획부 Vikash 씨 건이죠."},
       {"speaker": "Wati", "text": "여기 피지 정부 쪽은 제가 5년째 창구 맡고 있어요. 어디든 제가 잡아드릴게요."},
       {"speaker": "Wati", "text": "Vikash 씨 쪽에 연락해볼게요. 약속 잡히면 알려드릴게요."},
       {"speaker": "Wati", "text": "아 그리고 — 팁 하나 드릴게요."},
-      {"speaker": "Wati", "text": "피지는 한 다리 건너면 다 아는 사이예요. 거리 사람들이랑도 적극 얘기해보세요."},
-      {"speaker": "Wati", "text": "의외로 정부청사 분위기라든지, 마을 사정이라든지 — 현지 사람들한테 배울 게 많아요."},
+      {"speaker": "Wati", "text": "피지는 한 다리 건너면 다 아는 사이예요. 거리 사람들과 talanoa해보면 길이 열릴 때가 많아요."},
+      {"speaker": "Wati", "text": "의외로 정부청사 분위기라든지, vanua 사정이라든지 — 현지 사람들한테 배울 게 많아요."},
       {"speaker": "Wati", "text": "그리고 저기 컴퓨터에서 이해관계자한테 진행 현황 메일도 보낼 수 있어요. 작은 소통이 신뢰를 쌓아요."},
       {"speaker": "Wati", "text": "이동은 방향키, 대화는 스페이스바예요. 천천히 둘러보고 싶으면 Shift 누르면 걸어요."},
       {"speaker": "Wati", "text": "약속 잡히는 동안 시내라도 한번 둘러보고 오세요. 밖으로 나가면 Victoria Parade예요."}
@@ -187,7 +187,7 @@
 
   "ch1_wati_waiting": {
     "lines": [
-      {"speaker": "Wati", "text": "아직 답장 없어요. 밖에 나가서 좀 둘러보고 오세요. 잡히면 알려줄게요."}
+      {"speaker": "Wati", "text": "Sega na leqa, 아직 답장 없어요. 밖에 나가서 좀 둘러보고 오세요. 잡히면 알려줄게요."}
     ]
   },
 
@@ -199,11 +199,11 @@
 
   "ch1_wati_appointment_ready": {
     "lines": [
-      {"speaker": "Wati", "text": "연락 왔어요. 약속 잡혔어요."},
+      {"speaker": "Wati", "text": "Io, 연락 왔어요. 약속 잡혔어요."},
       {"speaker": "Wati", "text": "정부청사 3층, 국가계획부예요."},
       {"speaker": "Wati", "text": "Vikash 씨는 국가계획부 ODA 담당 과장이에요. 사업 심사 실무를 맡고 있어요."},
       {"speaker": "Wati", "text": "최종 승인은 장관 결재라서 본인이 결정권자는 아니에요. 근데 실무에서 막으면 위로 안 올라가요."},
-      {"speaker": "Wati", "text": "요즘 부처 내 예산 감사 때문에 좀 예민하다고 하더라고요. 첫 미팅이니까 압박보다는 상황 파악 위주로 가는 게 나을 것 같아요."}
+      {"speaker": "Wati", "text": "요즘 부처 내 예산 감사 때문에 좀 예민하다고 하더라고요. 첫 미팅이니까 압박보다는 차분히 듣고 상황 파악 위주로 가는 게 나을 것 같아요."}
     ]
   },
 

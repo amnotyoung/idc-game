@@ -239,7 +239,7 @@
       },
       {
         "speaker": "Mere",
-        "text": "This project is not paperwork. It's people. It isn't enough to make the numbers add up."
+        "text": "This project is not paperwork. It's people, and it's vanua. It isn't enough to make the numbers add up."
       },
       {
         "speaker": "Mere",
@@ -247,11 +247,11 @@
       },
       {
         "speaker": "Mere",
-        "text": "I'll go to Naitamba first. I need to understand more about Ratu Josefa."
+        "text": "I'll go to Naitamba first. I need to hear the talanoa from Ratu Josefa and the village people directly."
       },
       {
         "speaker": "Mere",
-        "text": "I'll contact you when I have findings. See you on the island."
+        "text": "I'll contact you when I have findings. See you on the island. Vinaka."
       },
       {
         "speaker": "Me",
@@ -355,7 +355,7 @@
     "lines": [
       {
         "speaker": "Wati",
-        "text": "Ah, you're trying to set up a meeting? This is about Vikash at National Planning, right?"
+        "text": "Bula, you're trying to set up a meeting? This is about Vikash at National Planning, right?"
       },
       {
         "speaker": "Wati",
@@ -371,11 +371,11 @@
       },
       {
         "speaker": "Wati",
-        "text": "In Fiji, everyone is one connection away from everyone else. Talk to people on the street too."
+        "text": "In Fiji, everyone is one connection away from everyone else. A little talanoa with people on the street can open doors."
       },
       {
         "speaker": "Wati",
-        "text": "You can learn a lot from locals - the mood around government, village realities, that sort of thing."
+        "text": "You can learn a lot from locals - the mood around government, what people in the vanua are really saying, that sort of thing."
       },
       {
         "speaker": "Wati",
@@ -395,7 +395,7 @@
     "lines": [
       {
         "speaker": "Wati",
-        "text": "No reply yet. Go outside and look around. I'll tell you when it's set."
+        "text": "Sega na leqa, no reply yet. Go outside and look around. I'll tell you when it's set."
       }
     ]
   },
@@ -411,7 +411,7 @@
     "lines": [
       {
         "speaker": "Wati",
-        "text": "They replied. The appointment is set."
+        "text": "Io, they replied. The appointment is set."
       },
       {
         "speaker": "Wati",
@@ -427,7 +427,7 @@
       },
       {
         "speaker": "Wati",
-        "text": "The ministry is sensitive because of a budget audit these days. Since it's the first meeting, focus on understanding the situation rather than applying pressure."
+        "text": "The ministry is sensitive because of a budget audit these days. Since it's the first meeting, listen carefully and focus on understanding the situation rather than applying pressure."
       }
     ]
   },
