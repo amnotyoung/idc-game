@@ -83,6 +83,16 @@ scenes/
 docs/design/  — story, characters, 레퍼런스 자료
 ```
 
+## 라이선스
+
+이 프로젝트는 재사용과 상업적 활용을 허용하되, 원저작자 credit 표시를 요구합니다.
+
+- 코드, Godot 프로젝트 파일, 빌드 도구: [MIT License](LICENSE.md)
+- 스토리, 대화, 문서, 오리지널 아트·음악 등 비코드 창작물: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+- 권장 표시: `Aid World by amnotyoung` + 이 저장소 링크
+
+제3자 자료는 각자의 원 라이선스를 따릅니다. Nanum Gothic 폰트는 SIL Open Font License 1.1로 배포되며, 일부 스프라이트는 Kenney 에셋을 기반으로 제작되었습니다.
+
 ## 크레딧
 
 - 일부 스프라이트는 [Kenney](https://kenney.nl/) 에셋을 기반으로 제작되었습니다.
